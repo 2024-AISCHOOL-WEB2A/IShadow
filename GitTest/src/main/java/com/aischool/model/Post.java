@@ -1,32 +1,38 @@
 package com.aischool.model;
 
-import java.security.Timestamp;
+import java.sql.Date;
 
 public class Post {
 	
 	private int idx;
 	private String title;
 	private String content;
-	private Timestamp create_at;
+	private String file;
+	private Date create_at;
 	private int views;
 	private String answer;
 	private String category;
 	private String level;
 	private String user_idx;
 	
-	public Post(int idx, String title, String content, Timestamp create_at, int views, String answer, String category,
-			String level, String user_idx) {
+	public Post() {};
+	
+	public Post(int idx, String title, String content, String file, Date date, int views, String answer,
+			String category, String level, String user_idx) {
 		super();
 		this.idx = idx;
 		this.title = title;
 		this.content = content;
-		this.create_at = create_at;
+		this.file = file;
+		this.create_at = date;
 		this.views = views;
 		this.answer = answer;
 		this.category = category;
 		this.level = level;
 		this.user_idx = user_idx;
 	}
+
+
 
 	public int getIdx() {
 		return idx;
@@ -51,12 +57,18 @@ public class Post {
 	public void setContent(String content) {
 		this.content = content;
 	}
+	public String getFile() {
+		return file;
+	}
 
-	public Timestamp getCreate_at() {
+	public void setFile(String file) {
+		this.file = file;
+	}
+	public Date getCreate_at() {
 		return create_at;
 	}
 
-	public void setCreate_at(Timestamp create_at) {
+	public void setCreate_at(Date create_at) {
 		this.create_at = create_at;
 	}
 
