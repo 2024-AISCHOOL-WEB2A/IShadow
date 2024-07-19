@@ -3,17 +3,17 @@ package com.aischool.model;
 public class Stories {
 	
 	private int idx;
-	private String viedo;
+	private String video;
 	private String anser;
 	private int next_story_idx;
 	private String hint;
 	
 	public Stories() {};
 	
-	public Stories(int idx, String viedo, String anser, int next_story_idx, String hint) {
+	public Stories(int idx, String video, String anser, int next_story_idx, String hint) {
 		super();
 		this.idx = idx;
-		this.viedo = viedo;
+		this.video = video;
 		this.anser = anser;
 		this.next_story_idx = next_story_idx;
 		this.hint = hint;
@@ -28,11 +28,11 @@ public class Stories {
 	}
 
 	public String getViedo() {
-		return viedo;
+		return video;
 	}
 
 	public void setViedo(String viedo) {
-		this.viedo = viedo;
+		this.video = viedo;
 	}
 
 	public String getAnser() {
