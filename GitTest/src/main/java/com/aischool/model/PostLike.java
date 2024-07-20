@@ -1,14 +1,14 @@
 package com.aischool.model;
 
-public class Post_Like {
+public class PostLike {
 	
 	private int idx;
 	private int post_idx;
 	private String user_idx;
 	
-	public Post_Like() {};
+	public PostLike() {};
 	
-	public Post_Like(int idx, int post_idx, String user_idx) {
+	public PostLike(int idx, int post_idx, String user_idx) {
 		super();
 		this.idx = idx;
 		this.post_idx = post_idx;

@@ -2,16 +2,16 @@ package com.aischool.model;
 
 import java.security.Timestamp;
 
-public class Post_Comments {
+public class PostComments {
 	private int idx;
 	private int post_idx;
 	private Timestamp created_at;
 	private int cmt_likes;
 	private String user_id;
 	
-	public Post_Comments() {};
+	public PostComments() {};
 	
-	public Post_Comments(int idx, int post_idx, Timestamp created_at, int cmt_likes, String user_id) {
+	public PostComments(int idx, int post_idx, Timestamp created_at, int cmt_likes, String user_id) {
 		super();
 		this.idx = idx;
 		this.post_idx = post_idx;

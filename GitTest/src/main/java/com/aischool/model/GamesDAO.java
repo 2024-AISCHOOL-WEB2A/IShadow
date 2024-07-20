@@ -5,14 +5,13 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 
-public class UserDAO {
-	
+public class GamesDAO {
+
 	private Connection conn;
 	private PreparedStatement pst;
 	private ResultSet rs;
-    
+	
 	//DB connect
     public void connect() {
 		try {
@@ -57,6 +56,4 @@ public class UserDAO {
 			e.printStackTrace();
 		}
 	}
-    
-    
 }

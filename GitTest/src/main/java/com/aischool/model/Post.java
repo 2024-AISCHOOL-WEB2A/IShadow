@@ -19,7 +19,6 @@ public class Post {
 	
 	public Post(int idx, String title, String content, String file, Date date, int views, String answer,
 			String category, String level, String user_idx) {
-		super();
 		this.idx = idx;
 		this.title = title;
 		this.content = content;
@@ -111,8 +110,4 @@ public class Post {
 	public void setUser_idx(String user_idx) {
 		this.user_idx = user_idx;
 	}
-	
-	
-	
-	
 }
