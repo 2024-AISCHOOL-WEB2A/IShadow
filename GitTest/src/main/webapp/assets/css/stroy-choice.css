@@ -1,4 +1,8 @@
 /* screen - stroy-choice */
+@font-face {
+    font-family: 'Maplestory Bold';
+    src: url('../font/Maplestory Bold.ttf') format('truetype');
+}
 
 .stroy-choice {
   align-items: flex-start;
@@ -16,8 +20,8 @@
   background-size: cover;
   display: flex;
   flex-direction: column;
-  gap: 2.08vw;
-  min-height: 68.96vw;
+  gap: 0vw;
+  min-height: 50vw;
   width: 100.0vw;
 }
 
@@ -47,15 +51,15 @@
   display: flex;
   flex-direction: column;
   gap: 2.08vw;
-  min-height: 23.54vw;
+  min-height: 20vw;
   width: 19.51vw;
 }
 
 .stroy-choice .ellipse-1 {
-  height: 19.38vw;
+  height: 15vw;
   margin-right: 0.14vw;
   object-fit: cover;
-  width: 19.38vw;
+  width: 15vw;
 }
 
 .stroy-choice .text-3 {
@@ -182,8 +186,8 @@
   align-items: flex-start;
   align-self: center;
   display: flex;
-  gap: 12.43vw;
-  height: 23.54vw;
+  gap: 8vw;
+  height: 19.5vw;
   margin-left: 0.21vw;
   min-width: 51.46vw;
 }
@@ -199,14 +203,20 @@
 }
 
 .stroy-choice .text-40 {
-  letter-spacing: 0;
-  line-height: normal;
-  margin-right: 0.14vw;
-  min-height: 2.08vw;
-  min-width: 13.82vw;
-  text-align: center;
-  white-space: nowrap;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-right: 0.14vw;
+    min-height: 2.08vw;
+    min-width: 13.82vw;
+    text-align: center;
+    white-space: nowrap;
+    font-family: 'Maplestory Bold', sans-serif; /* 폰트 패밀리 추가 */
+    color: var(--white);
+    font-size: var(--font-size-xxl);
+    font-style: normal;
+    font-weight: 400;
 }
+
 
 .stroy-choice .flex-col-3 {
   align-items: flex-start;
