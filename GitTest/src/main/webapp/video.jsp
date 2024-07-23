@@ -14,31 +14,26 @@
     <link rel="stylesheet" type="text/css" href="assets/css/styleguide.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/globals.css" />
   </head>
+  <Style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+</Style>
   <body style="margin: 0; background: #000000">
     <input type="hidden" id="anPageName" name="page" value="video" />
     <div class="container-center-horizontal">
       <div class="video screen">
         <div class="overlap-group1">
-          <img class="zcc-1 animate-enter2" src="assets/img/zcc-4.png" alt="zcc 4" />
-          <div class="overlap-group">
-            <div class="text-60 valign-text-middle single-linebody-base">게시판</div>
-            <div class="group-2613110">
-              <div class="group-2613107">
-                <img class="frame" src="assets/img/frame-10.svg" alt="Frame" />
-                <img class="image-9" src="assets/img/image-9.png" alt="image 9" />
-                <img class="frame-1" src="assets/img/frame-11.svg" alt="Frame" />
-                <img class="image-9-1" src="assets/img/image-9-1.png" alt="image 9" />
-              </div>
-              <div class="text-container single-linebody-base">
-                <div class="text-61 valign-text-middle">동화</div>
-                <div class="text-62 valign-text-middle">캐치마인드</div>
-                <div class="text-63 valign-text-middle">공유하기</div>
-              </div>
-            </div>
-          </div>
-          <a href="story-quiz.html">
-            <div class="link-sns_item"><div class="text-64 valign-text-middle">넘어가기</div></div></a
-          >
+
+            <!-- header -->
+            <%@ include file="header.jsp" %>
+            
+          <a href="story-quiz.jsp">
+            <div class="link-sns_item"><div class="text-64 valign-text-middle">넘어가기</div></div></a>
           <div class="rectangle-7"></div>
           <img class="line-1" src="assets/img/line-1.svg" alt="Line 1" />
           <div class="ellipse-2"></div>

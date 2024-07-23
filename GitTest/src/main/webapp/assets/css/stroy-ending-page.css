@@ -15,6 +15,18 @@
   width: 100.0vw;
 }
 
+.stroy-ending-page .flex-col {
+  align-items: flex-start;
+  background-image: url(../img/background.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  gap: 0vw;
+  min-height: 50vw;
+  width: 100.0vw;
+}
+
 .stroy-ending-page .background-2 {
   height: 68.96vw;
   left: 0;
@@ -25,11 +37,10 @@
 }
 
 .stroy-ending-page .overlap-group-1 {
-  height: 8.26vw;
-  left: 37.92vw;
-  position: absolute;
-  top: 0;
-  width: 30.69vw;
+  height: 71.39vw;
+  margin-top: -0.28vw;
+  position: relative;
+  width: 100.0vw;
 }
 
 .stroy-ending-page .text-95 {
@@ -97,17 +108,28 @@
   text-align: center;
   white-space: nowrap;
 }
-
 .stroy-ending-page .group-3 {
-  align-items: flex-start;
-  cursor: pointer;
-  display: flex;
-  height: 20.21vw;
-  left: 54.24vw;
-  min-width: 18.61vw;
-  position: absolute;
-  top: 24.51vw;
+    align-items: flex-start;
+    cursor: pointer;
+    display: flex;
+    height: 20.21vw;
+    left: 54.24vw;
+    min-width: 18.61vw;
+    position: absolute;
+    top: 17vw; /* 위치를 위로 조정 */
 }
+
+.stroy-ending-page .group-4 {
+    align-items: flex-start;
+    cursor: pointer;
+    display: flex;
+    height: 20.21vw;
+    left: 26.81vw;
+    min-width: 18.61vw;
+    position: absolute;
+    top: 17vw; /* 위치를 위로 조정 */
+}
+
 
 .stroy-ending-page .overlap-group {
   border-radius: 3.26vw;
@@ -144,17 +166,6 @@
   position: absolute;
   top: 0;
   width: 18.47vw;
-}
-
-.stroy-ending-page .group-4 {
-  align-items: flex-start;
-  cursor: pointer;
-  display: flex;
-  height: 20.21vw;
-  left: 26.81vw;
-  min-width: 18.61vw;
-  position: absolute;
-  top: 24.51vw;
 }
 
 .stroy-ending-page .text-100 {

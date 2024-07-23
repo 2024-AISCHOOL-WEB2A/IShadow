@@ -132,30 +132,11 @@
   </head>
   <body onload="init()">
     <div class="container">
-      <img class="header-img" src="assets/img/---1.png" alt="아이 Shadow" />
-      <div class="nav">
-        <div>
-          <img src="assets/img/frame-4.svg" alt="동화" />
-          <div>동화</div>
-        </div>
-        <div>
-          <img src="assets/img/frame-5.svg" alt="캐치마인드" />
-          <div>캐치마인드</div>
-        </div>
-        <div>
-          <img src="assets/img/image-9.png" alt="게시판" />
-          <div>게시판</div>
-        </div>
-        <div>
-          <img src="assets/img/image-9-1.png" alt="공유하기" />
-          <div>공유하기</div>
-        </div>
-      </div>
+      <!-- header -->
+      <%@ include file="header.jsp" %>
       <div class="circles">
         <div class="circle" id="story-quiz">
           <!-- 동화에 대한 문제 화면을 여기에 추가 -->
-          <h3>동화 문제</h3>
-          <p>여기에 동화 문제를 추가하세요.</p>
         </div>
         <div class="circle red">
           <div id="webcam-container"></div>
@@ -164,7 +145,7 @@
       </div>
       <div class="buttons">
         <button class="button">힌트 보기</button>
-        <button class="button">넘어 가기</button>
+        <button class="button"><a href = "story-ending-page.jsp">넘어 가기</a></button>
       </div>
     </div>
   </body>
