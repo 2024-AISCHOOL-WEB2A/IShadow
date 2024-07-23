@@ -22,6 +22,7 @@ public class TestService extends HttpServlet {
 		UserDAO dao = new UserDAO();
 		dao.connect();
 		dao.close();
+		System.out.println("테스트");
 		
 	}
 
