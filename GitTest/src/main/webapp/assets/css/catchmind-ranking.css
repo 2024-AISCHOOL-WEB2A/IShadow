@@ -1,0 +1,361 @@
+/* screen - catchmind-ranking */
+
+.catchmind-ranking {
+  align-items: flex-start;
+  background-color: var(--white);
+  display: flex;
+  height: 71.11vw;
+  width: 100.0vw;
+}
+
+.catchmind-ranking .overlap-group4 {
+  height: 69.24vw;
+  margin-top: -0.28vw;
+  position: relative;
+  width: 100.0vw;
+}
+
+.catchmind-ranking .background {
+  height: 68.96vw;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0.28vw;
+  width: 100.0vw;
+}
+
+.catchmind-ranking .x1 {
+  height: 6.25vw;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 18.89vw;
+}
+
+.catchmind-ranking .overlap-group {
+  height: 8.26vw;
+  left: 37.57vw;
+  position: absolute;
+  top: 1.67vw;
+  width: 30.69vw;
+}
+
+.catchmind-ranking .text-1 {
+  color: var(--white);
+  font-weight: 400;
+  height: 1.11vw;
+  left: 18.61vw;
+  line-height: 1.11vw;
+  position: absolute;
+  text-align: center;
+  top: 7.15vw;
+  white-space: nowrap;
+}
+
+.catchmind-ranking .group-2613107 {
+  align-items: center;
+  display: flex;
+  gap: 3.54vw;
+  min-width: 30.21vw;
+}
+
+.catchmind-ranking .frame {
+  align-self: flex-start;
+  height: 6.04vw;
+  margin-top: 0;
+  width: 6.04vw;
+}
+
+.catchmind-ranking .text-container {
+  align-items: flex-start;
+  align-self: flex-end;
+  display: flex;
+  min-width: 28.4vw;
+}
+
+.catchmind-ranking .text-2 {
+  color: var(--white);
+  font-weight: 400;
+  height: 1.11vw;
+  line-height: 1.11vw;
+  min-width: 2.08vw;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.catchmind-ranking .text-3 {
+  color: var(--white);
+  font-weight: 400;
+  height: 1.11vw;
+  line-height: 1.11vw;
+  margin-left: 4.86vw;
+  min-width: 5.14vw;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.catchmind-ranking .text-4 {
+  color: var(--white);
+  font-weight: 400;
+  height: 1.11vw;
+  line-height: 1.11vw;
+  margin-left: 12.22vw;
+  min-width: 4.1vw;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.catchmind-ranking .overlap-group1 {
+  border-radius: 3.26vw;
+  height: 20.21vw;
+  left: 74.72vw;
+  position: absolute;
+  top: 40.97vw;
+  width: 18.47vw;
+}
+
+.catchmind-ranking .text-5 {
+  left: 4.1vw;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 13.33vw;
+  white-space: nowrap;
+}
+
+.catchmind-ranking .image {
+  height: 10.56vw;
+  left: 2.85vw;
+  object-fit: cover;
+  position: absolute;
+  top: 2.22vw;
+  width: 12.78vw;
+}
+
+.catchmind-ranking .view {
+  border: 0.49vw solid;
+  border-color: var(--dandelion);
+  border-radius: 3.26vw;
+  height: 20.21vw;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 18.47vw;
+}
+
+.catchmind-ranking .overlap-group2 {
+  border-radius: 3.26vw;
+  height: 20.21vw;
+  left: 74.31vw;
+  position: absolute;
+  top: 18.4vw;
+  width: 18.47vw;
+}
+
+.catchmind-ranking .text-6 {
+  left: 4.1vw;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 14.24vw;
+  white-space: nowrap;
+}
+
+.catchmind-ranking .title {
+  color: var(--white);
+  font-family: var(--font-family-inter);
+  font-size: 6.67vw;
+  font-style: italic;
+  font-weight: 700;
+  left: 37.57vw;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 7.64vw;
+}
+
+.catchmind-ranking .overlap-group3 {
+  border-radius: 3.4vw;
+  height: 42.78vw;
+  left: 20.0vw;
+  position: absolute;
+  top: 18.4vw;
+  width: 51.67vw;
+}
+
+.catchmind-ranking .x5th {
+  align-items: flex-start;
+  display: flex;
+  height: 5.97vw;
+  left: 3.06vw;
+  min-width: 47.85vw;
+  position: absolute;
+  top: 33.06vw;
+}
+
+.catchmind-ranking .x5th-1 {
+  letter-spacing: 0;
+  line-height: normal;
+  min-height: 5.97vw;
+  text-align: center;
+  width: 6.94vw;
+}
+
+.catchmind-ranking .text-7 {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-left: 3.47vw;
+  min-height: 5.97vw;
+  width: 14.65vw;
+}
+
+.catchmind-ranking .scrates {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-left: 3.89vw;
+  min-height: 5.97vw;
+  width: 18.47vw;
+}
+
+.catchmind-ranking .x4th {
+  align-items: flex-start;
+  display: flex;
+  height: 5.97vw;
+  left: 3.06vw;
+  min-width: 40.28vw;
+  position: absolute;
+  top: 26.04vw;
+}
+
+.catchmind-ranking .x4th-1 {
+  letter-spacing: 0;
+  line-height: normal;
+  min-height: 5.97vw;
+  text-align: center;
+  width: 7.08vw;
+}
+
+.catchmind-ranking .text {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-left: 3.33vw;
+  min-height: 5.97vw;
+  width: 14.79vw;
+}
+
+.catchmind-ranking .crow {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-left: 3.68vw;
+  min-height: 5.97vw;
+  width: 10.9vw;
+}
+
+.catchmind-ranking .x3rd {
+  align-items: flex-start;
+  display: flex;
+  height: 5.97vw;
+  left: 3.06vw;
+  min-width: 39.86vw;
+  position: absolute;
+  top: 19.03vw;
+}
+
+.catchmind-ranking .x3rd-1 {
+  letter-spacing: 0;
+  line-height: normal;
+  min-height: 5.97vw;
+  text-align: center;
+  width: 7.08vw;
+}
+
+.catchmind-ranking .naile {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-left: 3.75vw;
+  min-height: 5.97vw;
+  width: 10.49vw;
+}
+
+.catchmind-ranking .x2nd {
+  align-items: flex-start;
+  display: flex;
+  height: 5.97vw;
+  left: 3.06vw;
+  min-width: 42.57vw;
+  position: absolute;
+  top: 12.01vw;
+}
+
+.catchmind-ranking .x2nd-1 {
+  letter-spacing: 0;
+  line-height: normal;
+  min-height: 5.97vw;
+  text-align: center;
+  width: 7.99vw;
+}
+
+.catchmind-ranking .text-10 {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-left: 2.5vw;
+  min-height: 5.97vw;
+  width: 14.65vw;
+}
+
+.catchmind-ranking .c-h-w {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-left: 3.89vw;
+  min-height: 5.97vw;
+  width: 13.19vw;
+}
+
+.catchmind-ranking .x1st {
+  align-items: flex-start;
+  display: flex;
+  height: 5.97vw;
+  left: 3.06vw;
+  min-width: 40.83vw;
+  position: absolute;
+  top: 4.93vw;
+}
+
+.catchmind-ranking .x1st-1 {
+  letter-spacing: 0;
+  line-height: normal;
+  min-height: 5.97vw;
+  text-align: center;
+  width: 5.97vw;
+}
+
+.catchmind-ranking .text-11 {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-left: 4.51vw;
+  min-height: 5.97vw;
+  width: 14.03vw;
+}
+
+.catchmind-ranking .k-d-y {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-left: 4.44vw;
+  min-height: 5.97vw;
+  width: 11.46vw;
+}
+
+.catchmind-ranking .view-1 {
+  border: 0.49vw solid;
+  border-color: var(--dandelion);
+  border-radius: 3.4vw;
+  height: 42.78vw;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 51.67vw;
+}

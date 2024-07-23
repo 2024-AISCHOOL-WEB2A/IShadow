@@ -1,0 +1,87 @@
+:root { 
+  --alto: #d9d9d9;
+  --black: #00000008;
+  --black-squeeze: #f2f6f9;
+  --cloud: #c6c6c6;
+  --dandelion: #fecc6d;
+  --goldenrod: #ffe077;
+  --jrnavercomdawn: #a2a1a0;
+  --jrnavercomnero: #000000;
+  --jrnavercomsherpa-blue: #ff4747;
+  --mercury: #e1e3e5;
+  --soapstone: #fff9f9;
+  --tulip-tree: #f2aa3e;
+  --white: #ffffff;
+ 
+  --font-size-14px: 14px;
+  --font-size-l: 17.6px;
+  --font-size-m: 16px;
+  --font-size-s: 12.9px;
+  --font-size-xl: 20px;
+  --font-size-xxl: 25px;
+  --font-size-xxxl: 40px;
+  --font-size-xxxxl: 55px;
+ 
+  --font-family-arial-black: "Arial-Black", Helvetica;
+  --font-family-arial-narrow: "Arial-Narrow", Helvetica;
+  --font-family-crimson_text: "Crimson Text", Helvetica;
+  --font-family-inter: "Inter", Helvetica;
+  --font-family-noto_sans-bold: "Noto Sans-Bold", Helvetica;
+  --font-family-noto_sans-regular: "Noto Sans-Regular", Helvetica;
+  --font-family-pretendard-regular: "Pretendard-Regular", Helvetica;
+}
+.jrnavercomarialblack-16 {
+  font-family: var(--font-family-arial-black);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 900;
+  letter-spacing: -0.7px;
+}
+
+.jrnavercomarialnarrow-14 {
+  font-family: var(--font-family-arial-narrow);
+  font-size: var(--font-size-14px);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -0.7px;
+}
+
+.single-linebody-base {
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.inter-normal-white-55px {
+  color: var(--white);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xxxxl);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.inter-normal-white-40px {
+  color: var(--white);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xxxl);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.arial-black-white-17-6px {
+  color: var(--white);
+  font-family: var(--font-family-arial-black);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 900;
+}
+
+.inter-normal-white-25px {
+  color: var(--white);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 400;
+}

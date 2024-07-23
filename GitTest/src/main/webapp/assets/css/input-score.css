@@ -1,0 +1,77 @@
+/* screen - input-score */
+
+.input-score {
+  align-items: center;
+  background-color: #02173a;
+  display: flex;
+  flex-direction: column;
+  height: 67.99vw;
+  padding: 5.43vw 16.97vw;
+  width: 100.0vw;
+}
+
+.input-score .title {
+  color: var(--white);
+  font-family: var(--font-family-inter);
+  font-size: 14.48vw;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-right: 0.11vw;
+  margin-top: 8.82vw;
+  min-height: 17.53vw;
+  min-width: 60.52vw;
+  text-align: center;
+}
+
+.input-score .overlap-group1 {
+  align-items: flex-start;
+  align-self: flex-end;
+  height: 15.16vw;
+  margin-top: 5.43vw;
+  min-width: 61.88vw;
+  padding: 4.98vw 3.05vw;
+}
+
+.input-score .text-50 {
+  font-size: 4.07vw;
+  min-height: 4.98vw;
+  min-width: 36.09vw;
+}
+
+.input-score .group-2 {
+  align-items: flex-start;
+  cursor: pointer;
+  display: flex;
+  margin-left: 0.23vw;
+  margin-top: 5.2vw;
+  min-width: 15.61vw;
+}
+
+.input-score .overlap-group {
+  align-items: center;
+  height: 4.98vw;
+  min-width: 15.38vw;
+  padding: 0 5.6vw;
+}
+
+.input-score .text-49 {
+  font-size: var(--font-size-xl);
+  min-height: 2.71vw;
+  white-space: nowrap;
+  width: 4.19vw;
+}
+
+.input-score .overlap {
+  background-color: var(--alto);
+  display: flex;
+}
+
+.input-score .text {
+  color: var(--jrnavercomnero);
+  font-family: var(--font-family-inter);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  text-align: center;
+}

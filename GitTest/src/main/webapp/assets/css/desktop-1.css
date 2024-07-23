@@ -1,0 +1,307 @@
+/* screen - desktop-1 */
+
+.desktop-1 {
+  align-items: flex-start;
+  background-color: var(--jrnavercomnero);
+  display: flex;
+  height: 71.11vw;
+  overflow: hidden;
+  width: 100.0vw;
+}
+
+.desktop-1 .overlap-group4 {
+  height: 72.15vw;
+  margin-top: -0.49vw;
+  position: relative;
+  width: 100.0vw;
+}
+
+.desktop-1 .overlap-group2 {
+  height: 65.69vw;
+  left: 0;
+  position: absolute;
+  top: 5.9vw;
+  width: 100.0vw;
+}
+
+.desktop-1 .zcc-4 {
+  display: block;
+  height: 65.69vw;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transform: translate(1.74vw, 0);
+  width: 100.0vw;
+}
+
+.desktop-1 .zcc-4.animate-enter1 {
+  animation: animate-enter1-frames 3.00s ease-in-out 0.00s 1 normal forwards;
+  display: block;
+  opacity: 0;
+  transform: translate(1.74vw, 0);
+}
+
+@keyframes animate-enter1-frames {
+  from{opacity: 0;
+transform: translate(25px, 0);
+}
+to{opacity: 1;
+transform: translate(0,0);
+}
+}
+
+.desktop-1 .group-2613103 {
+  align-items: flex-start;
+  display: flex;
+  gap: 11.88vw;
+  height: 43.61vw;
+  left: 18.68vw;
+  min-width: 66.04vw;
+  position: absolute;
+  top: 20.0vw;
+}
+
+.desktop-1 .group-2613103-item {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 3.96vw;
+  min-height: 43.61vw;
+  width: 14.1vw;
+}
+
+.desktop-1 .link {
+  align-items: flex-end;
+  cursor: pointer;
+  display: flex;
+  overflow: hidden;
+  width: 14.1vw;
+}
+
+.desktop-1 .overlap-group {
+  align-items: flex-end;
+  background-image: url(../img/165x233-ebook-jpg@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 0.28vw;
+  display: flex;
+  gap: 1.39vw;
+  height: 19.86vw;
+  justify-content: flex-end;
+  margin-bottom: -0.04vw;
+  min-width: 14.1vw;
+  padding: 0.56vw 0.56vw;
+}
+
+.desktop-1 .container {
+  align-items: flex-start;
+  display: flex;
+  margin-bottom: 0.69vw;
+  width: 7.99vw;
+}
+
+.desktop-1 .text-5 {
+  color: var(--jrnavercomnero);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-s);
+  font-weight: 400;
+  height: 1.39vw;
+  letter-spacing: 0;
+  line-height: 1.39vw;
+  margin-top: -0.07vw;
+  white-space: nowrap;
+}
+
+.desktop-1 .background-shadow {
+  align-items: flex-start;
+  background-color: #f43f5e;
+  border-radius: 694.38vw;
+  box-shadow: 0.0vw 0.14vw 0.28vw -0.14vw #0000001a , 0.0vw 0.28vw 0.42vw -0.07vw #0000001a;
+  display: flex;
+  height: 2.78vw;
+  overflow: hidden;
+  padding: 0.62vw 0.68vw;
+  width: 2.78vw;
+}
+
+.desktop-1 .text-5-1 {
+  color: var(--jrnavercomnero);
+  font-family: var(--font-family-inter);
+  font-size: 0.9vw;
+  font-weight: 400;
+  height: 1.39vw;
+  letter-spacing: 0;
+  line-height: 1.39vw;
+  white-space: nowrap;
+}
+
+.desktop-1 .x165x233ebookjpg {
+  background-image: url(../img/165x233-ebook-jpg-3@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 0.28vw;
+  height: 19.86vw;
+  margin-bottom: -0.04vw;
+  width: 14.1vw;
+}
+
+.desktop-1 .x165x233ebookjpg-1 {
+  background-image: url(../img/165x233-ebook-jpg-1@2x.png);
+}
+
+.desktop-1 .overlap-group1 {
+  align-items: flex-end;
+  background-image: url(../img/165x233-ebook-jpg-4@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 0.28vw;
+  display: flex;
+  gap: 1.39vw;
+  height: 19.86vw;
+  justify-content: flex-end;
+  margin-bottom: -0.04vw;
+  min-width: 14.1vw;
+  padding: 0.56vw;
+}
+
+.desktop-1 .background-shadow-1 {
+  align-items: flex-start;
+  background-color: #f59e0b;
+  border-radius: 694.38vw;
+  box-shadow: 0.0vw 0.14vw 0.28vw -0.14vw #0000001a , 0.0vw 0.28vw 0.42vw -0.07vw #0000001a;
+  display: flex;
+  height: 2.78vw;
+  overflow: hidden;
+  padding: 0.62vw 0.68vw;
+  width: 2.78vw;
+}
+
+.desktop-1 .x165x233ebookjpg-2 {
+  background-image: url(../img/165x233-ebook-jpg-2@2x.png);
+}
+
+.desktop-1 .x165x233ebookjpg-3 {
+  background-image: url(../img/165x233-ebook-jpg-5@2x.png);
+}
+
+.desktop-1 .rectangle-67 {
+  height: 2.78vw;
+  left: 30.21vw;
+  position: absolute;
+  top: 16.81vw;
+  width: 41.53vw;
+}
+
+.desktop-1 .icon-magnifying-glass {
+  height: 2.22vw;
+  left: 67.43vw;
+  position: absolute;
+  top: 17.36vw;
+  width: 2.22vw;
+}
+
+.desktop-1 .text-55 {
+  color: var(--white);
+  font-family: var(--font-family-inter);
+  font-size: 3.47vw;
+  font-weight: 700;
+  left: 45.28vw;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 9.58vw;
+  width: 51.32vw;
+}
+
+.desktop-1 .overlap-group3 {
+  height: 8.26vw;
+  left: 34.65vw;
+  position: absolute;
+  top: 0;
+  width: 30.69vw;
+}
+
+.desktop-1 .text-56 {
+  color: var(--white);
+  font-weight: 400;
+  height: 1.11vw;
+  left: 18.61vw;
+  line-height: 1.11vw;
+  position: absolute;
+  text-align: center;
+  top: 7.15vw;
+  white-space: nowrap;
+}
+
+.desktop-1 .group-2613107 {
+  align-items: center;
+  display: flex;
+  gap: 3.54vw;
+  height: 6.04vw;
+  min-width: 30.21vw;
+}
+
+.desktop-1 .frame {
+  align-self: flex-end;
+  height: 5.56vw;
+  margin-bottom: 0;
+  width: 6.04vw;
+}
+
+.desktop-1 .text-container {
+  align-items: flex-start;
+  align-self: flex-end;
+  display: flex;
+  min-width: 28.4vw;
+}
+
+.desktop-1 .text-57 {
+  color: var(--white);
+  font-weight: 400;
+  height: 1.11vw;
+  line-height: 1.11vw;
+  min-width: 2.08vw;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.desktop-1 .text-58 {
+  color: var(--white);
+  font-weight: 400;
+  height: 1.11vw;
+  line-height: 1.11vw;
+  margin-left: 4.86vw;
+  min-width: 5.14vw;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.desktop-1 .text-59 {
+  color: var(--white);
+  font-weight: 400;
+  height: 1.11vw;
+  line-height: 1.11vw;
+  margin-left: 12.22vw;
+  min-width: 4.1vw;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.desktop-1 .x1 {
+  height: 6.25vw;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0.21vw;
+  width: 18.89vw;
+}
+
+.desktop-1 .x165x233ebookjpg-4 {
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 0.28vw;
+  height: 19.86vw;
+  margin-bottom: -0.04vw;
+  width: 14.1vw;
+}

@@ -1,0 +1,182 @@
+/* screen - catchmind */
+
+.catchmind {
+  align-items: flex-start;
+  background-color: var(--white);
+  display: flex;
+  height: 71.11vw;
+  width: 100.0vw;
+}
+
+.catchmind .overlap-group1 {
+  height: 69.24vw;
+  margin-top: -0.28vw;
+  position: relative;
+  width: 100.0vw;
+}
+
+.catchmind .background-2 {
+  height: 68.96vw;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0.28vw;
+  width: 100.0vw;
+}
+
+.catchmind .x1 {
+  height: 6.25vw;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 18.89vw;
+}
+
+.catchmind .overlap-group {
+  height: 8.26vw;
+  left: 34.44vw;
+  position: absolute;
+  top: 0.14vw;
+  width: 30.69vw;
+}
+
+.catchmind .text-29 {
+  color: var(--white);
+  font-weight: 400;
+  height: 1.11vw;
+  left: 18.61vw;
+  line-height: 1.11vw;
+  position: absolute;
+  text-align: center;
+  top: 7.15vw;
+  white-space: nowrap;
+}
+
+.catchmind .group-2613107 {
+  align-items: center;
+  display: flex;
+  gap: 3.54vw;
+  height: 6.04vw;
+  min-width: 30.21vw;
+  padding: 0.0vw 0;
+}
+
+.catchmind .frame {
+  align-self: flex-end;
+  height: 5.9vw;
+  width: 6.04vw;
+}
+
+.catchmind .text-container {
+  align-items: flex-start;
+  align-self: flex-end;
+  display: flex;
+  min-width: 28.4vw;
+}
+
+.catchmind .text-30 {
+  color: var(--white);
+  font-weight: 400;
+  height: 1.11vw;
+  line-height: 1.11vw;
+  min-width: 2.08vw;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.catchmind .text-31 {
+  color: var(--white);
+  font-weight: 400;
+  height: 1.11vw;
+  line-height: 1.11vw;
+  margin-left: 4.86vw;
+  min-width: 5.14vw;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.catchmind .text-32 {
+  color: var(--white);
+  font-weight: 400;
+  height: 1.11vw;
+  line-height: 1.11vw;
+  margin-left: 12.22vw;
+  min-width: 4.1vw;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.catchmind .image {
+  height: 33.89vw;
+  left: 29.24vw;
+  position: absolute;
+  top: 21.74vw;
+  width: 33.75vw;
+}
+
+.catchmind .view {
+  background-color: var(--white);
+  border-radius: 24.13vw;
+  height: 48.26vw;
+  left: 44.58vw;
+  position: absolute;
+  top: 11.74vw;
+  width: 48.26vw;
+}
+
+.catchmind .view-1 {
+  background-color: var(--alto);
+  border-radius: 15.69vw;
+  height: 31.39vw;
+  left: 8.19vw;
+  position: absolute;
+  top: 28.54vw;
+  width: 31.39vw;
+}
+
+.catchmind .group-5 {
+  align-items: flex-start;
+  display: flex;
+  gap: 0.14vw;
+  height: 6.94vw;
+  left: 6.25vw;
+  min-width: 35.28vw;
+  position: absolute;
+  top: 19.44vw;
+}
+
+.catchmind .rectangle {
+  height: 6.94vw;
+  object-fit: cover;
+  width: 6.94vw;
+}
+
+.catchmind .rectangle-11 {
+  background-color: #ffffff80;
+  border-radius: 0.83vw;
+  height: 3.47vw;
+  left: 6.25vw;
+  position: absolute;
+  top: 15.21vw;
+  width: 40.83vw;
+}
+
+.catchmind .title {
+  left: 7.15vw;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 15.28vw;
+  white-space: nowrap;
+}
+
+.catchmind .rectangle-12 {
+  background-color: #ffcd38;
+  height: 0.76vw;
+  left: 14.17vw;
+  position: absolute;
+  top: 16.6vw;
+  width: 6.25vw;
+}

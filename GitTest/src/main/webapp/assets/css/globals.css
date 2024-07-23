@@ -1,0 +1,80 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css?family=Inter:400,700,700italic|Crimson+Text:700");
+/* The following line is used to measure usage of this code. You can remove it if you want. */
+@import url("https://px.animaapp.com/66978efd32459a0715d8c2b6.66978efe32459a0715d8c2bd.TBoubQF.hcp.png");
+
+
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.align-self-flex-end {
+  align-self: flex-end;
+}
+
+.valign-text-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.group-2613110 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 1.11vw;
+  left: 0;
+  min-height: 8.26vw;
+  position: absolute;
+  top: 0;
+  width: 30.69vw;
+}
+
+.image-9 {
+  height: 4.51vw;
+  margin-top: 0.25vw;
+  object-fit: cover;
+  width: 4.51vw;
+}
+
+.frame-1 {
+  height: 4.51vw;
+  margin-top: 0.11vw;
+  width: 4.51vw;
+}
+
+.image-9-1 {
+  align-self: flex-end;
+  height: 4.51vw;
+  margin-bottom: 0.16vw;
+  object-fit: cover;
+  width: 4.51vw;
+}
+
+.image-1 {
+  height: 11.46vw;
+  left: 4.03vw;
+  object-fit: cover;
+  position: absolute;
+  top: 2.64vw;
+  width: 10.42vw;
+}
