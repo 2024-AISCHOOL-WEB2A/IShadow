@@ -1,6 +1,6 @@
 package com.aischool.model;
 
-import java.security.Timestamp;
+import java.sql.Date;
 
 public class User {
 	private String id;
@@ -9,12 +9,12 @@ public class User {
 	private String nick;
 	private String profile_img;
 	private char exit;
-	private Timestamp joindate;
+	private Date joindate;
 	private String type;
 	
 	public User() {};
 	
-	public User(String id, String pw, String email, String nick, String profile_img, char exit, Timestamp joindate,
+	public User(String id, String pw, String email, String nick, String profile_img, char exit, Date joindate,
 			String type) {
 		super();
 		this.id = id;
@@ -64,10 +64,10 @@ public class User {
 	public void setExit(char exit) {
 		this.exit = exit;
 	}
-	public Timestamp getJoindate() {
+	public Date getJoindate() {
 		return joindate;
 	}
-	public void setJoindate(Timestamp joindate) {
+	public void setJoindate(Date joindate) {
 		this.joindate = joindate;
 	}
 	public String getType() {
