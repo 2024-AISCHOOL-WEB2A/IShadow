@@ -19,13 +19,13 @@
     <div class="container-center-horizontal">
       <div class="login-page screen">
         <div class="overlap-group2">
-          <img class="zcc-2 animate-enter4" src="img/zcc-1-1.png" alt="zcc 2" />
+          <img class="zcc-2 animate-enter4" src="assets/img/zcc-1-1.png" alt="zcc 2" />
           <div class="btndefault"><div class="text-76 text-1">로그인</div></div>
           <div class="loginidstate3">
             <div class="overlap-group">
               <div class="group-3">
                 <div class="ellipse-5"></div>
-                <img class="rectangle-8" src="img/rectangle-8.svg" alt="Rectangle 8" />
+                <img class="rectangle-8" src="assets/img/rectangle-8.svg" alt="Rectangle 8" />
               </div>
               <div class="text">아이디</div>
             </div>
@@ -34,7 +34,7 @@
             <div class="overlap-group">
               <div class="group-3">
                 <div class="ellipse-5"></div>
-                <img class="rectangle-8" src="img/rectangle-8.svg" alt="Rectangle 8" />
+                <img class="rectangle-8" src="assets/img/rectangle-8.svg" alt="Rectangle 8" />
               </div>
               <div class="text">비밀번호</div>
             </div>

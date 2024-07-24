@@ -19,7 +19,7 @@
     <div class="container-center-horizontal">
       <div class="board-inpage screen">
         <div class="overlap-group1 single-linebody-base">
-          <img class="zcc-4 animate-enter" src="img/zcc-4.png" alt="zcc 4" />
+          <img class="zcc-4 animate-enter" src="assets/image/zcc-4.png" alt="zcc 4" />
           <div class="rectangle-37 rectangle"></div>
           <div class="rectangle-39 rectangle"></div>
           <div class="rectangle-43 rectangle"></div>
@@ -28,7 +28,7 @@
           <div class="rectangle-40 rectangle"></div>
           <div class="rectangle-41 rectangle"></div>
           <div class="rectangle-42 rectangle"></div>
-          <img class="image-5" src="img/image-5.png" alt="image 5" />
+          <img class="image-5" src="assets/image/image-5.png" alt="image 5" />
           <div class="user">user 님의 작품</div>
           <div class="text-13">정답</div>
           <div class="text-14">정답 입력창</div>
@@ -39,10 +39,10 @@
             <div class="text-18 valign-text-middle single-linebody-base">게시판</div>
             <div class="group-2613110">
               <div class="group-2613107">
-                <img class="frame" src="img/frame-2.svg" alt="Frame" />
-                <img class="image-9" src="img/image-9.png" alt="image 9" />
-                <img class="frame-1" src="img/frame-3.svg" alt="Frame" />
-                <img class="image-9-1" src="img/image-9-1.png" alt="image 9" />
+                <img class="frame" src="assets/image/frame-2.svg" alt="Frame" />
+                <img class="image-9" src="assets/image/image-9.png" alt="image 9" />
+                <img class="frame-1" src="assets/image/frame-3.svg" alt="Frame" />
+                <img class="image-9-1" src="assets/image/image-9-1.png" alt="image 9" />
               </div>
               <div class="text-container single-linebody-base">
                 <div class="text-19 valign-text-middle">동화</div>
@@ -51,7 +51,7 @@
               </div>
             </div>
           </div>
-          <img class="x1" src="img/---1.png" alt="1" />
+          <img class="x1" src="assets/image/---1.png" alt="1" />
         </div>
       </div>
     </div>

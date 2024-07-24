@@ -20,7 +20,7 @@
       <div class="input-score screen">
         <h1 class="title">00m 00s</h1>
         <div class="overlap-group1 overlap"><div class="text-50 text">닉네임을 입력하세요.</div></div>
-        <a href="catchmind-result.html">
+        <a href="catchmind-result.jsp">
           <div class="group-2">
             <div class="overlap-group overlap"><div class="text-49 text">확인</div></div>
           </div></a
