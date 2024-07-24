@@ -19,21 +19,19 @@
     <div class="container-center-horizontal">
       <div class="catchmindu95ranking screen">
         <div class="overlap-group3">
-          <img
-            class="create-a-high-resolu"
-            src="assets/img/background.png"
-            alt="Create a high-resolution illustration for a presentation thumbnail with a _The L s-1584004691 2"
-          />
+          <img class="create-a-high-resolu" src="assets/img/background.png" alt="BackGround" />
           <div class="overlap-group">
             <img class="image" src="assets/img/------.png" alt="image" />
-            <div class="view view-2"></div>
+            <div class="view view-2">
+            	<div class="text-1">다시하기</div>
+            </div>
           </div>
           <div class="overlap-group1">
             <img class="image-1" src="assets/img/--------.png" alt="image" />
             <div class="view-1 view-2"></div>
           </div>
           <div class="group-11"></div>
-          <div class="text-1">다시하기</div>
+          
           <div class="text-2">처음으로</div>
           <div class="x1st-01-00-kdy inter-bold-white-40px">1st 01: 00 KDY</div>
           <div class="x2nd-02-00-chw inter-bold-white-40px">2nd 02: 00 CHW</div>

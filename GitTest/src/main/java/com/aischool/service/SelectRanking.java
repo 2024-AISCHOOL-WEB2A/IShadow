@@ -27,10 +27,10 @@ public class SelectRanking extends HttpServlet {
 		if(!ranking.isEmpty()) {
 			request.setAttribute("ranking", ranking);
 			
-			request.getRequestDispatcher("catchmind-ranking.jsp").forward(request, response);
+			request.getRequestDispatcher("catchmind_ranking.jsp").forward(request, response);
 			System.out.println("ranking간다!");
 		}else {
-			response.sendRedirect("TestGameBefore.jsp");
+			response.sendRedirect("catchmind.jsp");
 			System.out.println("ranking비었다 ㅜㅜ");
 		}
 		

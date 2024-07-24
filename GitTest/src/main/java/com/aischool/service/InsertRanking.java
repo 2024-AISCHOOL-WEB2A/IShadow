@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.aischool.model.Ranking;
+import com.aischool.model.RankingDAO;
 
 @WebServlet("/InsertRanking")
 public class InsertRanking extends HttpServlet {
@@ -34,9 +35,10 @@ public class InsertRanking extends HttpServlet {
 		if (hiddenTimeParam != null && !hiddenTimeParam.isEmpty()) {
 			// hiddenTimeParam 값을 HH:mm:ss 형식의 Time 객체로 변환합니다.
 			try {
-				SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+				SimpleDateFormat sdf = new SimpleDateFormat("mm:ss");
 				long ms = sdf.parse(hiddenTimeParam).getTime();
-				Time hiddenTime = new Time(ms);
+				// 시간 정보는 없으므로 0시 0분을 기준으로 설정합니다.
+		        Time hiddenTime = new Time(ms - Time.valueOf("00:00:00").getTime());
 
 				// Ranking 객체에 설정합니다.
 				ranking.setTime(hiddenTime);
@@ -44,16 +46,17 @@ public class InsertRanking extends HttpServlet {
 			} catch (ParseException e) {
 				e.printStackTrace();
 			}
-
+		RankingDAO dao = new RankingDAO();
+		
+		int cnt = dao.insertRanking(ranking);
+		
 			request.setCharacterEncoding("UTF-8");
 
-			if (ranking != null) {
-				request.setAttribute("ranking", ranking);
-				request.getRequestDispatcher("catchmind-ranking.jsp").forward(request, response);
-				System.out.println("ranking간다!");
+			if (cnt > 0) {
+				response.sendRedirect("SelectRanking");
 			} else {
-				response.sendRedirect("TestGameBefore.jsp");
-				System.out.println("ranking비었다 ㅜㅜ");
+				response.sendRedirect("catchmind.jsp");
+				System.out.println("ranking등록 실패 ㅜㅜ");
 			}
 
 		}
