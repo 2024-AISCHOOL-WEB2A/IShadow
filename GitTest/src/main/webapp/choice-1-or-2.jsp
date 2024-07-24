@@ -54,40 +54,7 @@
                   </div></a
                 >
               </div>
-              <div class="item">
-                <a href="https://jr.naver.com/character" target="_blank">
-                  <div class="link">
-                    <img class="container-1" src="assets/img/container-44@2x.png" alt="Container" />
-                    <a href="https://jr.naver.com/character" onclick="window.event.stopPropagation()" target="_blank"
-                      ><div class="text-10 valign-text-middle jrnavercomarialnarrow-14">캐릭터</div>
-                    </a>
-                  </div></a
-                >
-              </div>
-              <div class="item">
-                <a href="https://jr.naver.com/category" target="_blank">
-                  <div class="link">
-                    <img class="container-2" src="assets/img/container-44@2x.png" alt="Container" />
-                    <a href="https://jr.naver.com/category" onclick="window.event.stopPropagation()" target="_blank"
-                      ><div class="text-10 valign-text-middle jrnavercomarialnarrow-14">카테고리</div>
-                    </a>
-                  </div></a
-                >
-              </div>
-              <div class="item">
-                <a href="https://jr.naver.com/favorite" target="_blank">
-                  <div class="link">
-                    <img class="container-3" src="assets/img/container-44@2x.png" alt="Container" />
-                    <a href="https://jr.naver.com/favorite" onclick="window.event.stopPropagation()" target="_blank"
-                      ><div class="text-10 valign-text-middle jrnavercomarialnarrow-14">즐겨찾기</div>
-                    </a>
-                  </div></a
-                >
-              </div>
-            </div>
-            <div class="container-4">
-              <div class="background-1"></div>
-            </div>
+              
           </div>
         </div>
       </div>
