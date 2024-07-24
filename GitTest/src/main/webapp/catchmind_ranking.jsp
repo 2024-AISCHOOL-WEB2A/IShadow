@@ -1,5 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@page import="com.aischool.model.Ranking"%>
+<%@page import="java.util.ArrayList"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%	
+	Ranking rank = new Ranking();
+	ArrayList<Ranking> ranking = (ArrayList<Ranking>)request.getAttribute("ranking");
+%>
 <!DOCTYPE html>
 <html>
   <head>
@@ -19,24 +24,27 @@
     <div class="container-center-horizontal">
       <div class="catchmindu95ranking screen">
         <div class="overlap-group3">
-          <img class="create-a-high-resolu" src="assets/img/background.png" alt="BackGround" />
+          <img
+            class="create-a-high-resolu"
+            src="assets/img/background.png"
+            alt="Create a high-resolution illustration for a presentation thumbnail with a _The L s-1584004691 2"
+          />
           <div class="overlap-group">
             <img class="image" src="assets/img/------.png" alt="image" />
-            <div class="view view-2">
-            	<div class="text-1">다시하기</div>
-            </div>
+            <div class="view view-2"></div>
           </div>
           <div class="overlap-group1">
             <img class="image-1" src="assets/img/--------.png" alt="image" />
             <div class="view-1 view-2"></div>
           </div>
           <div class="group-11"></div>
-          
+          <div class="text-1">다시하기</div>
           <div class="text-2">처음으로</div>
-          <div class="x1st-01-00-kdy inter-bold-white-40px">1st 01: 00 KDY</div>
-          <div class="x2nd-02-00-chw inter-bold-white-40px">2nd 02: 00 CHW</div>
-          <div class="x3rd-03-00-naile inter-bold-white-40px">3rd 03: 00 Naile</div>
-          <div class="x4th-04-00-crow inter-bold-white-40px">4th 04: 00 Crow</div>
+          
+          <div class="x1st-01-00-kdy inter-bold-white-40px">1st <%=ranking.get(0).getTime()%> <%=ranking.get(0).getNickName()%></div>
+          <div class="x2nd-02-00-chw inter-bold-white-40px">2nd <%=ranking.get(1).getTime()%> <%=ranking.get(1).getNickName()%></div>
+          <div class="x3rd-03-00-naile inter-bold-white-40px">3rd <%=ranking.get(2).getTime()%> <%=ranking.get(2).getNickName()%></div>
+          <div class="x4th-04-00-crow inter-bold-white-40px">4th <%=ranking.get(3).getTime()%> <%=ranking.get(3).getNickName()%></div> -->
           <h1 class="title">Ranking</h1>
           <div class="overlap-group2">
             <div class="text-3 valign-text-middle single-linebody-base">게시판</div>

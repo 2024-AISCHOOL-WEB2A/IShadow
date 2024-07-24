@@ -109,7 +109,7 @@ public class RankingDAO {
         ArrayList<Ranking> ranking = new ArrayList<Ranking>();
         try {
             
-            String sql = "SELECT * FROM ranking ORDER BY rank_time LIMIT 5";
+            String sql = "SELECT * FROM ranking ORDER BY rank_time LIMIT 4";
             
             pst = conn.prepareStatement(sql);
             rs = pst.executeQuery(sql);
