@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/admin-page1.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/styleguide.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/globals.css" />
+    
   </head>
   <body style="margin: 0; background: #1e0338">
     <input type="hidden" id="anPageName" name="page" value="admin-page1" />
