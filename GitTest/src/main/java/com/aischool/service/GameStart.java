@@ -32,17 +32,13 @@ public class GameStart extends HttpServlet {
 		if(!games.isEmpty()) {
 			request.setAttribute("games", games);
 			
-			request.getRequestDispatcher("TestGame.jsp").forward(request, response);
+			request.getRequestDispatcher("catchmind.jsp").forward(request, response);
 			System.out.println("games간다!");
 		}else {
-			response.sendRedirect("TestGameBefore.jsp");
+			response.sendRedirect("main.jsp");
 			System.out.println("games비었다 ㅜㅜ");
 		}
-		
-		
-		
-		
-		
+
 	}
 
 }

@@ -213,14 +213,15 @@
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
             <p id="modal-time-display">00m 00s</p>
-            <form action="SelectRanking" method="post" id="rankingForm">
-                <div class="input-container">
-                    <input type="text" placeholder="닉네임을 입력하세요." name="nickName" required>
-	                <input type="hidden" id="hidden-time" name="hiddenTime">
-	                <input type="submit" value="등록">
-                </div>
-            </form>
-        </div>
+            <div class="input-container">
+	            <form action="SelectRanking" method="post" id="rankingForm">
+	            	<!--required는 필수 입력-->
+	            	<input type="text" placeholder="닉네임을 입력하세요." name="nickName" required>
+	    	      	<input type="hidden" id="hidden-time" name="hiddenTime">
+	 	          	<input type="submit" value="등록">
+           		</form>
+           </div>
+       </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
@@ -413,7 +414,7 @@
         }
 
         function closeModal() {
-            document.getElementById('myModal').style.display = 'none';
+            window.location.href = 'SelectRanking';
         }
 
         window.onload = function() {
