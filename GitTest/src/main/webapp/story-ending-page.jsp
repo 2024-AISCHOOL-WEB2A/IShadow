@@ -29,7 +29,7 @@ html, body {
 }
 .text-48 {
 	position: absolute;
-	bottom: 10px; /* Adjust to position text inside the rectangle */
+	bottom: 25px; /* Adjust to position text inside the rectangle */
 	left: 50%; /* Center the text */
 	transform: translateX(-50%);
 	color: white;
@@ -44,17 +44,17 @@ html, body {
 	
 }
 .image {
-	width: 100%;
+	width: 65%;
 	height: auto;
 	position: relative;
-	margin-top: 10%; /* Adjust this value to move the image down */
+	margin-top: 5%; /* Adjust this value to move the image down */
 	left: 0;
 }
 .image-1 {
-	width: 70%;
+	width: 65%;
 	height: auto;
 	position: absolute;
-	top: 50%;
+	top: 45%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 }

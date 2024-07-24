@@ -57,20 +57,20 @@
 	<!-- header 이미지 -->
 	<div class="header-menu">
 		<div class="header-menu-item">
-			<img src="assets/img/frame-8.svg" alt="게시판" />
-			<div>게시판</div>
-		</div>
-		<div class="header-menu-item">
-			<img src="assets/img/image-9.png" alt="동화" />
+			<img src="assets/img/story.svg" alt="동화" />
 			<div>동화</div>
 		</div>
 		<div class="header-menu-item">
-			<img src="assets/img/frame-9.svg" alt="캐치마인드" />
+			<img src="assets/img/game.png" alt="캐치마인드" />
 			<div>캐치마인드</div>
 		</div>
 		<div class="header-menu-item">
-			<img src="assets/img/image-9-1.png" alt="공유하기" />
-			<div>공유하기</div>
+			<img src="assets/img/commu.png" alt="커뮤니티" />
+			<div>커뮤니티</div>
+		</div>
+		<div class="header-menu-item">
+			<img src="assets/img/QA.png" alt="Q&A" />
+			<div>Q&A</div>
 		</div>
 	</div>
 </div>

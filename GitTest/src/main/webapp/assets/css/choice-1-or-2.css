@@ -1,4 +1,8 @@
 /* screen - choice-1-or-2 */
+@font-face {
+    font-family: 'Maplestory Bold';
+    src: url('../font/Maplestory Bold.ttf') format('truetype');
+}
 
 .choice-1-or-2 {
   align-items: flex-start;
@@ -13,10 +17,11 @@
   background-image: url(../img/background.png);
   background-position: 50% 50%;
   background-size: cover;
-  height: 68.96vw;
+  height: 50.96vw;
   position: relative;
   width: 100.0vw;
 }
+
 
 .choice-1-or-2 .background-3 {
   height: 68.96vw;
@@ -35,6 +40,8 @@
   text-align: center;
   top: 37.64vw;
   white-space: nowrap;
+  color: white; /* 텍스트 색상을 흰색으로 설정 */
+  font-family: 'Maplestory Bold', sans-serif; /* 폰트 패밀리 추가 */
 }
 
 .choice-1-or-2 .rectangle-5 {
@@ -49,6 +56,8 @@
   text-align: center;
   top: 38.54vw;
   white-space: nowrap;
+  color: white; /* 텍스트 색상을 흰색으로 설정 */
+  font-family: 'Maplestory Bold', sans-serif; /* 폰트 패밀리 추가 */
 }
 
 .choice-1-or-2 .rectangle-4 {
