@@ -8,6 +8,9 @@
   height: 1080px;
   padding: 91px 99px;
   width: 1920px;
+  font-family:Maplestory Bold;
+  font-size:25px;	
+  color:#ffffff;
 }
 
 .admin-page1 .group-2613113 {
@@ -23,6 +26,9 @@
   height: 120px;
   margin-right: 7.0px;
   width: 120px;
+  font-family:Maplestory Bold;
+  font-size:25px;	
+  color:#ffffff;
 }
 
 .admin-page1 .text-1 {
@@ -37,6 +43,9 @@
   min-height: 40px;
   min-width: 138px;
   white-space: nowrap;
+  font-family:Maplestory Bold;
+  font-size:25px;	
+  color:#ffffff;
 }
 
 .admin-page1 .overlap-group-container {
@@ -69,6 +78,9 @@
   line-height: normal;
   min-height: 15px;
   width: 56px;
+  font-family:Maplestory Bold;
+  font-size:10px;	
+  color:#ffffff;
 }
 
 .admin-page1 .overlap-group-2 {
@@ -90,6 +102,9 @@
   letter-spacing: 0;
   line-height: normal;
   min-height: 18px;
+  font-family:Maplestory Bold;
+  font-size:10px;	
+  color:#000000;
 }
 
 .admin-page1 .group-2613114 {
@@ -111,6 +126,9 @@
   line-height: 32.7px;
   min-height: 54px;
   width: 130px;
+  font-family:Maplestory Bold;
+  font-size:25px;	
+  color:#ffffff;
 }
 
 .admin-page1 .navbar-link-place {
@@ -127,6 +145,9 @@
   margin-left: 122px;
   min-height: 54px;
   width: 169px;
+  font-family:Maplestory Bold;
+  font-size:25px;	
+  color:#ffffff;
 }
 
 .admin-page1 .navbar-link-delete {
@@ -135,6 +156,7 @@
   margin-left: 299px;
   min-height: 54px;
   width: 103px;
+  
 }
 
 .admin-page1 .overlap-group3 {
@@ -158,6 +180,9 @@
   margin-bottom: 1.0px;
   min-height: 32px;
   width: 8px;
+  font-family:Maplestory Bold;
+  font-size:25px;	
+  color:#ffffff;
 }
 
 .admin-page1 .date {
@@ -168,6 +193,9 @@
   min-height: 28px;
   white-space: nowrap;
   width: 143px;
+  font-family:Maplestory Bold;
+  font-size:25px;	
+  color:#ffffff;
 }
 
 .admin-page1 .nlnh {
@@ -178,6 +206,9 @@
   min-height: 22px;
   text-align: center;
   width: 136px;
+  font-family:Maplestory Bold;
+  font-size:25px;	
+  color:#ffffff;
 }
 
 .admin-page1 .overlap-group10 {
@@ -199,6 +230,9 @@
   min-height: 32px;
   text-align: center;
   width: 70px;
+  font-family:Maplestory Bold;
+  font-size:15px;	
+  color:#ffffff;
 }
 
 .admin-page1 .overlap-group4 {
@@ -222,11 +256,17 @@
   min-height: 28px;
   white-space: nowrap;
   width: 9px;
+  font-family:Maplestory Bold;
+  font-size:25px;	
+  color:#ffffff;
 }
 
 .admin-page1 .date-1 {
   margin-left: 213px;
   width: 86px;
+  font-family:Maplestory Bold;
+  font-size:25px;	
+  color:#ffffff;
 }
 
 .admin-page1 .shs {
@@ -239,6 +279,9 @@
   text-align: center;
   white-space: nowrap;
   width: 136px;
+  font-family:Maplestory Bold;
+  font-size:25px;	
+  color:#ffffff;
 }
 
 .admin-page1 .overlap-group11 {
@@ -260,6 +303,9 @@
   min-height: 32px;
   text-align: center;
   width: 70px;
+  font-family:Maplestory Bold;
+  font-size:15px;	
+  color:#ffffff;
 }
 
 .admin-page1 .overlap-group9 {
@@ -284,12 +330,18 @@
   min-height: 28px;
   white-space: nowrap;
   width: 11px;
+  font-family:Maplestory Bold;
+  font-size:25px;	
+  color:#ffffff;
 }
 
 .admin-page1 .date-2 {
   align-self: center;
   margin-left: 211px;
   width: 92px;
+  font-family:Maplestory Bold;
+  font-size:25px;	
+  color:#ffffff;
 }
 
 .admin-page1 .place {
@@ -301,6 +353,9 @@
   text-align: center;
   white-space: nowrap;
   width: 136px;
+  font-family:Maplestory Bold;
+  font-size:25px;	
+  color:#ffffff;
 }
 
 .admin-page1 .overlap-group12 {
@@ -340,6 +395,9 @@
 .admin-page1 .date-3 {
   margin-left: 210px;
   width: 92px;
+  font-family:Maplestory Bold;
+  font-size:25px;	
+  color:#ffffff;
 }
 
 .admin-page1 .gjgj {
@@ -372,6 +430,10 @@
   min-width: 52px;
   text-align: center;
   white-space: nowrap;
+   font-family:Maplestory Bold;
+  font-size:15px;	
+  color:#ffffff;
+  
 }
 
 .admin-page1 .overlap-group8 {

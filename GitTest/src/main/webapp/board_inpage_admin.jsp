@@ -15,9 +15,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/globals.css" />
   </head>
   <body style="margin: 0">
-  
     <input type="hidden" id="anPageName" name="page" value="board-inpage-admin1-1" />
-    
     <div class="container-center-horizontal">
       <div class="board-inpage-admin1-1 screen">
         <div class="overlap-group2">
