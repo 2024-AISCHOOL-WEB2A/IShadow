@@ -19,7 +19,7 @@
     <div class="container-center-horizontal">
       <div class="mypage screen">
         <div class="overlap-group9">
-          <img class="zcc-3 animate-enter5" src="assets/img/zcc-1.png" alt="zcc 3" />
+          <img class="zcc-4 animate-enter1" src="assets/img/zcc-4.png" alt="zcc 4" />
           <a href="board-inpage.html">
             <div class="link link-6">
               <div class="overlap-group">

@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
     <meta name="og:type" content="website" />
@@ -11,6 +11,12 @@
     <link rel="stylesheet" type="text/css" href="css/styleguide.css" />
     <link rel="stylesheet" type="text/css" href="css/globals.css" />
     <style>
+      html, body {
+        overflow: hidden; /* Disable scroll */
+        margin: 0; /* Remove default margin */
+        padding: 0; /* Remove default padding */
+        height: 100%; /* Ensure body takes full height */
+      }
       .container {
         position: relative;
         text-align: center;
@@ -51,27 +57,30 @@
         left: 50%;
         transform: translate(-50%, -50%);
         display: flex;
-        gap: 20px;
+        gap: 0px; /* No gap between the elements */
+        align-items: center;
       }
       .circle {
-        width: 300px;
-        height: 300px;
+        width: 400px; /* Adjusted size */
+        height: 400px; /* Adjusted size */
         border-radius: 50%;
         background-color: white;
         display: flex;
         justify-content: center;
         align-items: center;
         overflow: hidden;
+        margin-top: 150px; /* Move the white circle down */
       }
       .circle.red {
-        width: 300px;
-        height: 300px;
+        width: 620px; /* Adjusted size */
+        height: 620px; /* Adjusted size */
         border-radius: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
         overflow: hidden;
-        background-color: transparent; /* Remove background color */
+        background-color: red;
+        margin-top: 0px; /* Ensure red circle is not affected */
       }
       .buttons {
         position: absolute;
@@ -105,6 +114,11 @@
         object-fit: cover;
         border-radius: 50%;
       }
+      .image {
+        width: auto;
+        height: 350px; /* Adjust this height as needed */
+        margin: 0 -100px; /* Further adjust negative margin to move the image closer to the circles */
+      }
     </style>
     <script>
       async function init() {
@@ -114,8 +128,8 @@
 
         const constraints = {
           video: {
-            width: 300,
-            height: 300,
+            width: 700, /* Adjusted size to match the red circle */
+            height: 700, /* Adjusted size to match the red circle */
             facingMode: 'user'
           }
         };
@@ -138,6 +152,7 @@
         <div class="circle" id="story-quiz">
           <!-- 동화에 대한 문제 화면을 여기에 추가 -->
         </div>
+        <img class="image" src="assets/img/----.svg" alt="image" />
         <div class="circle red">
           <div id="webcam-container"></div>
           <div id="label-container"></div>
@@ -145,7 +160,7 @@
       </div>
       <div class="buttons">
         <button class="button">힌트 보기</button>
-        <button class="button"><a href = "story-ending-page.jsp">넘어 가기</a></button>
+        <button class="button"><a href="story-ending-page.jsp">넘어 가기</a></button>
       </div>
     </div>
   </body>
