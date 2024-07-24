@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -114,6 +115,11 @@
     .modal-btn:hover {
         opacity: 0.8;
     }
+    .modal-video {
+        width: 100%;
+        max-width: 400px;
+        margin: auto;
+    }
 </style>
 </head>
 <body>
@@ -126,7 +132,7 @@
                 <!-- 들어가는 버튼 -->
                 <div class="view-container">
                     <!-- 튜토리얼 -->
-                    <a href="#">
+                    <a href="javascript:void(0);" id="tutorial-btn">
                         <div class="view"></div>
                     </a>
                     <!-- 동화 -->
@@ -134,7 +140,7 @@
                         <div class="view"></div>
                     </a>
                     <!-- 캐치마인드 -->
-                    <a href="GameStart">
+                    <a href="javascript:void(0);" id="catchmind-btn">
                         <div class="view"></div>
                     </a>
                     <!-- 캐치마인드 -->
@@ -147,48 +153,97 @@
         </div>
     </div>
 
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
+    <!-- 튜토리얼 모달 -->
+    <div id="tutorialModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <img src="assets/img/before_game.png" alt="Modal PNG" style="width:100%; max-width:400px;" />
-            <button class="modal-btn" id="confirm-btn">확인</button>
+            <video class="modal-video" controls>
+                <source src="assets/video/tutorial.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <button class="modal-btn" id="tutorial-confirm-btn">확인</button>
+        </div>
+    </div>
+
+    <!-- 동화 모달 -->
+    <div id="storyModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img src="assets/img/before_game.gif" alt="Story GIF" style="width:100%; max-width:400px;" />
+            <button class="modal-btn" id="story-confirm-btn">확인</button>
+        </div>
+    </div>
+
+    <!-- 캐치마인드 모달 -->
+    <div id="catchmindModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img src="assets/img/before_game.gif" alt="Catchmind GIF" style="width:100%; max-width:400px;" />
+            <button class="modal-btn" id="catchmind-confirm-btn">확인</button>
         </div>
     </div>
 
     <script>
-        // Get the modal
-        var modal = document.getElementById("myModal");
+        // Get the modals
+        var tutorialModal = document.getElementById("tutorialModal");
+        var storyModal = document.getElementById("storyModal");
+        var catchmindModal = document.getElementById("catchmindModal");
 
-        // Get the button that opens the modal
-        var btn = document.getElementById("story-btn");
+        // Get the buttons that open the modals
+        var tutorialBtn = document.getElementById("tutorial-btn");
+        var storyBtn = document.getElementById("story-btn");
+        var catchmindBtn = document.getElementById("catchmind-btn");
 
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
+        // Get the <span> elements that close the modals
+        var spans = document.getElementsByClassName("close");
 
-        // Get the confirm button
-        var confirmBtn = document.getElementById("confirm-btn");
+        // Get the confirm buttons
+        var tutorialConfirmBtn = document.getElementById("tutorial-confirm-btn");
+        var storyConfirmBtn = document.getElementById("story-confirm-btn");
+        var catchmindConfirmBtn = document.getElementById("catchmind-confirm-btn");
 
-        // When the user clicks the button, open the modal 
-        btn.onclick = function() {
-            modal.style.display = "flex";
+        // When the user clicks the button, open the tutorial modal 
+        tutorialBtn.onclick = function() {
+            tutorialModal.style.display = "flex";
+        }
+
+        // When the user clicks the button, open the story modal 
+        storyBtn.onclick = function() {
+            storyModal.style.display = "flex";
+        }
+
+        // When the user clicks the button, open the catchmind modal 
+        catchmindBtn.onclick = function() {
+            catchmindModal.style.display = "flex";
         }
 
         // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
-            modal.style.display = "none";
+        for (var i = 0; i < spans.length; i++) {
+            spans[i].onclick = function() {
+                this.parentElement.parentElement.style.display = "none";
+            }
         }
 
         // When the user clicks anywhere outside of the modal, close it
         window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
+            if (event.target == tutorialModal) {
+                tutorialModal.style.display = "none";
+            } else if (event.target == storyModal) {
+                storyModal.style.display = "none";
+            } else if (event.target == catchmindModal) {
+                catchmindModal.style.display = "none";
             }
         }
 
-        // When the user clicks the confirm button, redirect to story-choice.jsp
-        confirmBtn.onclick = function() {
+        // When the user clicks the confirm button, redirect to appropriate page
+        tutorialConfirmBtn.onclick = function() {
+            tutorialModal.style.display = "none";
+        }
+        storyConfirmBtn.onclick = function() {
             window.location.href = "story-choice.jsp";
+        }
+        catchmindConfirmBtn.onclick = function() {
+            window.location.href = "catchmind.jsp";
         }
     </script>
 </body>
