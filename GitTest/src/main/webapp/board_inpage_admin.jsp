@@ -6,52 +6,54 @@
     <meta charset="utf-8" />
     <!--<meta name=description content="This site was generated with Anima. www.animaapp.com"/>-->
     <!-- <link rel="shortcut icon" type=image/png href="https://animaproject.s3.amazonaws.com/home/favicon.png" /> -->
-    <meta name="viewport" content="width=1440, maximum-scale=1.0" />
+    <meta name="viewport" content="width=1920, maximum-scale=1.0" />
     <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
     <meta name="og:type" content="website" />
     <meta name="twitter:card" content="photo" />
-    <link rel="stylesheet" type="text/css" href="assets/css/board-inpage.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/board-inpage-admin1-1.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/styleguide.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/globals.css" />
   </head>
-  <body style="margin: 0; background: #000000">
-    <input type="hidden" id="anPageName" name="page" value="board-inpage" />
+  <body style="margin: 0">
+  
+    <input type="hidden" id="anPageName" name="page" value="board-inpage-admin1-1" />
+    
     <div class="container-center-horizontal">
-      <div class="board-inpage screen">
-        <div class="overlap-group1 single-linebody-base">
-          <img class="zcc-4 animate-enter" src="assets/image/zcc-4.png" alt="zcc 4" />
-          <div class="rectangle-37 rectangle"></div>
-          <div class="rectangle-39 rectangle"></div>
-          <div class="rectangle-43 rectangle"></div>
-          <div class="text-12">힌트1 보기</div>
-          <div class="rectangle-44 rectangle"></div>
-          <div class="rectangle-40 rectangle"></div>
-          <div class="rectangle-41 rectangle"></div>
-          <div class="rectangle-42 rectangle"></div>
-          <img class="image-5" src="assets/img/image-5.png" alt="image 5" />
-          <div class="user">user 님의 작품</div>
-          <div class="text-13">정답</div>
-          <div class="text-14">정답 입력창</div>
-          <div class="text-15">확인해보기</div>
-          <div class="text-16">힌트3 보기</div>
-          <div class="text-17">힌트2 보기</div>
-          <div class="overlap-group">
-            <div class="text-18 valign-text-middle single-linebody-base">게시판</div>
-            <div class="group-2613110">
-              <div class="group-2613107">
-                <img class="frame" src="assets/img/frame-2.svg" alt="Frame" />
-                <img class="image-9" src="assets/img/image-9.png" alt="image 9" />
-                <img class="frame-1" src="assets/img/frame-3.svg" alt="Frame" />
-                <img class="image-9-1" src="assets/img/image-9-1.png" alt="image 9" />
-              </div>
-              <div class="text-container single-linebody-base">
-                <div class="text-19 valign-text-middle">동화</div>
-                <div class="text-20 valign-text-middle">캐치마인드</div>
-                <div class="text-21 valign-text-middle">공유하기</div>
+      <div class="board-inpage-admin1-1 screen">
+        <div class="overlap-group2">
+          <div class="board-inpage-admin1">
+            <img class="rectangle-45" src="assets/img/rectangle-45.png" alt="Rectangle 45" />
+            <div class="flex-row">
+              <img class="x1" src="assets/img/---1.png" alt="1" />
+              <div class="overlap-group">
+                <div class="text-2 valign-text-middle single-linebody-base">게시판</div>
+                <div class="group-2613110">
+                  <div class="group-2613107">
+                    <img class="frame" src="assets/img/frame-2.svg" alt="Frame" />
+                    <img class="image-9" src="assets/img/image-9.png" alt="image 9" />
+                    <img class="frame-1" src="assets/img/frame-3.svg" alt="Frame" />
+                    <img class="image-9-1" src="assets/img/image-9-1.png" alt="image 9" />
+                  </div>
+                  <div class="text-container single-linebody-base">
+                    <div class="text-3 valign-text-middle">동화</div>
+                    <div class="text-4 valign-text-middle">캐치마인드</div>
+                    <div class="text-5 valign-text-middle">공유하기</div>
+                  </div>
+                </div>
               </div>
             </div>
+            <div class="overlap-group1">
+              <div class="zcc-4 animate-enter"></div>
+              <div class="rectangle-43"></div>
+              <h1 class="title">USER</h1>
+              <div class="rectangle-46"></div>
+              <div class="text-1 single-linebody-base">/</div>
+              <img class="image-5" src="assets/img/image-5.png" alt="image 5" />
+              <img class="line-9 line" src="assets/img/line-9.svg" alt="Line 9" />
+              <img class="line-11 line" src="assets/img/line-11.svg" alt="Line 11" />
+              <div class="text-6">삭제하기</div>
+            </div>
           </div>
-          <img class="x1" src="assets/img/---1.png" alt="1" />
         </div>
       </div>
     </div>
