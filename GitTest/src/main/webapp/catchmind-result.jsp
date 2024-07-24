@@ -38,7 +38,7 @@
               </div>
             </div>
           </div>
-          <a href="main-u4370u4458u4358u4455u4523.jsp">
+          <a href="main.jsp">
             <div class="group-3">
               <div class="overlap-group">
                 <div class="text-4 inter-normal-white-40px">처음으로</div>
@@ -52,7 +52,7 @@
                 <img class="image" src="assets/img/-------1.png" alt="image" />
                 <div class="rectangle"></div>
               </div></div></a
-          ><a href="stroy-choice.jsp">
+          ><a href="choice-1-or-2.jsp">
             <div class="group-4">
               <div class="overlap-group">
                 <div class="text-48 inter-normal-white-40px">다시하기</div>
