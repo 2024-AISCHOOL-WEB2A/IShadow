@@ -214,7 +214,7 @@
             <span class="close" onclick="closeModal()">&times;</span>
             <p id="modal-time-display">00m 00s</p>
             <div class="input-container">
-	            <form action="SelectRanking" method="post" id="rankingForm">
+	            <form action="InsertRanking" method="post" id="rankingForm">
 	            	<!--required는 필수 입력-->
 	            	<input type="text" placeholder="닉네임을 입력하세요." name="nickName" required>
 	    	      	<input type="hidden" id="hidden-time" name="hiddenTime">
@@ -396,12 +396,16 @@
             // 퀴즈 종료 시간 저장
             const minute = Math.floor(timeLeft / 60);
             const second = Math.floor(timeLeft % 60);
-            const formattedTime = minute.toString().padStart(2, '0') + 'm ' + second.toString().padStart(2, '0') + 's';
+            const formattedTime = minute.toString().padStart(2, '0') + ':' + second.toString().padStart(2, '0'); // "mm:ss" 형식
 
-            // 숨겨진 필드에 시간 설정
+         	// 자바스크립트에서 시간을 "HH:mm:ss" 형식으로 변환
+            const timeString = '00:' + formattedTime; // "00:mm:ss" 형식
+
+         	// 숨겨진 필드에 시간 설정
             const hiddenTimeInput = document.getElementById('hidden-time');
-            hiddenTimeInput.value = formattedTime;
-
+            hiddenTimeInput.value = timeString;
+			
+            
             setTimeout(() => {
                 // 모달 창에 경과 시간 표시
                 const modal = document.getElementById('myModal');

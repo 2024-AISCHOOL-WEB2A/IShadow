@@ -20,6 +20,14 @@
     <link rel="stylesheet" type="text/css" href="assets/css/globals.css" />
   </head>
   <body style="margin: 0; background: #000000">
+  <script>
+  	function moveMain(){
+  		window.location.href = 'main.jsp';
+  	}
+  	function reTry(){
+  		window.location.href = 'GameStart';
+  	}
+  </script>
     <input type="hidden" id="anPageName" name="page" value="catchmindu95ranking" />
     <div class="container-center-horizontal">
       <div class="catchmindu95ranking screen">
@@ -29,40 +37,38 @@
             src="assets/img/background.png"
             alt="Create a high-resolution illustration for a presentation thumbnail with a _The L s-1584004691 2"
           />
-          <div class="overlap-group">
+          <%@ include file="header.jsp" %>
+          <div class="overlap-group" onclick="moveMain()">
             <img class="image" src="assets/img/------.png" alt="image" />
             <div class="view view-2"></div>
+            <div class="gText">처음으로</div>
           </div>
-          <div class="overlap-group1">
+          <div class="overlap-group1" onclick="reTry()">
             <img class="image-1" src="assets/img/--------.png" alt="image" />
             <div class="view-1 view-2"></div>
+            <div class="gText">다시하기</div>
           </div>
-          <div class="group-11"></div>
-          <div class="text-1">다시하기</div>
-          <div class="text-2">처음으로</div>
-          
-          <div class="x1st-01-00-kdy inter-bold-white-40px">1st <%=ranking.get(0).getTime()%> <%=ranking.get(0).getNickName()%></div>
-          <div class="x2nd-02-00-chw inter-bold-white-40px">2nd <%=ranking.get(1).getTime()%> <%=ranking.get(1).getNickName()%></div>
-          <div class="x3rd-03-00-naile inter-bold-white-40px">3rd <%=ranking.get(2).getTime()%> <%=ranking.get(2).getNickName()%></div>
-          <div class="x4th-04-00-crow inter-bold-white-40px">4th <%=ranking.get(3).getTime()%> <%=ranking.get(3).getNickName()%></div> -->
-          <h1 class="title">Ranking</h1>
-          <div class="overlap-group2">
-            <div class="text-3 valign-text-middle single-linebody-base">게시판</div>
-            <div class="group-2613110">
-              <div class="group-2613107">
-                <img class="frame" src="assets/img/frame-2.svg" alt="Frame" />
-                <img class="image-9" src="assets/img/image-9.png" alt="image 9" />
-                <img class="frame-1" src="assets/img/frame-3.svg" alt="Frame" />
-                <img class="image-9-1" src="assets/img/image-9-1.png" alt="image 9" />
+          <div class="ranking-container">
+            <h1 class="title">Ranking</h1>
+            <div class="group-11">
+              <div class="ranking-item">
+                <div class="rank-time">1st <%=ranking.get(0).getTime()%></div>
+                <div class="rank-name"><%=ranking.get(0).getNickName()%></div>
               </div>
-              <div class="text-container single-linebody-base">
-                <div class="text-4 valign-text-middle">동화</div>
-                <div class="text-5 valign-text-middle">캐치마인드</div>
-                <div class="text-6 valign-text-middle">공유하기</div>
+              <div class="ranking-item">
+                <div class="rank-time">2nd <%=ranking.get(1).getTime()%></div>
+                <div class="rank-name"><%=ranking.get(1).getNickName()%></div>
+              </div>
+              <div class="ranking-item">
+                <div class="rank-time">3rd <%=ranking.get(2).getTime()%></div>
+                <div class="rank-name"><%=ranking.get(2).getNickName()%></div>
+              </div>
+              <div class="ranking-item">
+                <div class="rank-time">4th <%=ranking.get(3).getTime()%></div>
+                <div class="rank-name"><%=ranking.get(3).getNickName()%></div>
               </div>
             </div>
           </div>
-          <img class="x1" src="assets/img/---1.png" alt="1" />
         </div>
       </div>
     </div>

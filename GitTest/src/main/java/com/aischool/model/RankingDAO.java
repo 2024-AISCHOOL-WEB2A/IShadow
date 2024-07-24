@@ -5,22 +5,21 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Time;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class RankingDAO {
     
-    private Connection conn;
-    private PreparedStatement pst;
-    private ResultSet rs;
-
-    // DB connect
-    public void connect() {
+    private Connection connect() {
+        Connection conn = null;
         try {
-            // 1.OracleDriver 동적 로딩
+            // 1. OracleDriver 동적 로딩
             Class.forName("com.mysql.cj.jdbc.Driver");
 
-            // 2.Connection 객체 생성 (DB연결)
-            // - url, user, password 필요
+            // 2. Connection 객체 생성 (DB연결)
             String url = "jdbc:mysql://project-db-stu3.smhrd.com:3307/Insa5_SpringA_hacksim_2";
             String user = "Insa5_SpringA_hacksim_2";
             String password = "aischool2";
@@ -28,20 +27,19 @@ public class RankingDAO {
             conn = DriverManager.getConnection(url, user, password);
 
             if (conn == null) {
-                System.out.println("DB연결 실패...");
+                System.out.println("DB 연결 실패...");
             } else {
-                System.out.println("DB연결 성공!");
+                System.out.println("DB 연결 성공!");
             }
 
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (SQLException e) {
+        } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         }
+        return conn;
     }
 
     // DB close()
-    public void close() {
+    private void close(Connection conn, PreparedStatement pst, ResultSet rs) {
         try {
             if (rs != null) {
                 rs.close();
@@ -58,102 +56,90 @@ public class RankingDAO {
     }
 
     // 비어있는 인덱스를 찾는 메서드
-    public Integer findMissingIndex() {
-        connect();
-        try {
-            String findMissingIndexQuery = "SELECT t1.ranking_idx + 1 AS missing_idx " +
-                                           "FROM ranking t1 " +
-                                           "LEFT JOIN ranking t2 ON t1.ranking_idx + 1 = t2.ranking_idx " +
-                                           "WHERE t2.ranking_idx IS NULL " +
-                                           "ORDER BY t1.ranking_idx " +
-                                           "LIMIT 1";
-            pst = conn.prepareStatement(findMissingIndexQuery);
-            rs = pst.executeQuery();
+    private Integer findMissingIndex(Connection conn) throws SQLException {
+        String findMissingIndexQuery = "SELECT t1.ranking_idx + 1 AS missing_idx " +
+                                       "FROM ranking t1 " +
+                                       "LEFT JOIN ranking t2 ON t1.ranking_idx + 1 = t2.ranking_idx " +
+                                       "WHERE t2.ranking_idx IS NULL " +
+                                       "ORDER BY t1.ranking_idx " +
+                                       "LIMIT 1";
+        try (PreparedStatement pst = conn.prepareStatement(findMissingIndexQuery);
+             ResultSet rs = pst.executeQuery()) {
             if (rs.next()) {
                 return rs.getInt("missing_idx");
             } else {
                 return null; // No missing index found
             }
-        } catch (SQLException e) {
-            e.printStackTrace();
-            return null;
-        } finally {
-            close();
         }
     }
 
     // 가장 큰 인덱스를 찾는 메서드
-    public int findMaxIndex() {
-        connect();
-        try {
-            String findMaxIndexQuery = "SELECT MAX(ranking_idx) AS max_idx FROM ranking";
-            pst = conn.prepareStatement(findMaxIndexQuery);
-            rs = pst.executeQuery();
+    private int findMaxIndex(Connection conn) throws SQLException {
+        String findMaxIndexQuery = "SELECT MAX(ranking_idx) AS max_idx FROM ranking";
+        try (PreparedStatement pst = conn.prepareStatement(findMaxIndexQuery);
+             ResultSet rs = pst.executeQuery()) {
             if (rs.next()) {
                 return rs.getInt("max_idx");
             } else {
                 throw new SQLException("Failed to find the maximum index");
             }
-        } catch (SQLException e) {
-            e.printStackTrace();
-            return -1; // Error indicator
-        } finally {
-            close();
         }
     }
 
     public ArrayList<Ranking> getRanking() {
-        
-        connect();
-        
-        ArrayList<Ranking> ranking = new ArrayList<Ranking>();
+        Connection conn = connect();
+        ArrayList<Ranking> ranking = new ArrayList<>();
         try {
-            
             String sql = "SELECT * FROM ranking ORDER BY rank_time LIMIT 4";
-            
-            pst = conn.prepareStatement(sql);
-            rs = pst.executeQuery(sql);
-            
-            while(rs.next()) {
-                Ranking rank = new Ranking(rs.getInt(1), rs.getString(2), rs.getTime(3), rs.getDate(4));
-                ranking.add(rank);
+            try (PreparedStatement pst = conn.prepareStatement(sql);
+                 ResultSet rs = pst.executeQuery()) {
+                while (rs.next()) {
+                    Ranking rank = new Ranking(rs.getInt(1), rs.getString(2), rs.getTime(3), rs.getDate(4));
+                    ranking.add(rank);
+                }
             }
-            
         } catch (SQLException e) {
             e.printStackTrace();
-        }finally {
-            close();
+        } finally {
+            close(conn, null, null);
         }
         return ranking;
     }
 
-    public int insertRanking(Ranking ranking) {
-        
-        connect();
+    public int insertRanking(String nickName, String timeString, Date date) {
+        Connection conn = connect();
         int cnt = 0;
         try {
-            Integer missingIdx = findMissingIndex();
+            Integer missingIdx = findMissingIndex(conn);
 
             int newIdx;
             if (missingIdx != null) {
                 newIdx = missingIdx;
             } else {
-                newIdx = findMaxIndex() + 1;
+                newIdx = findMaxIndex(conn) + 1;
             }
 
+            // String 형식을 Time 형식으로 변환
+            SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+            Time time = new Time(sdf.parse(timeString).getTime());
+
+            // Date 객체를 java.sql.Date로 변환
+            java.sql.Date sqlDate = new java.sql.Date(date.getTime());
+
             String insertQuery = "INSERT INTO ranking (ranking_idx, rank_nickname, rank_time, rank_date) VALUES (?, ?, ?, ?)";
-            pst = conn.prepareStatement(insertQuery);
-            pst.setInt(1, newIdx);
-            pst.setString(2, ranking.getNickName());
-            pst.setTime(3, ranking.getTime());
-            pst.setDate(4, ranking.getDate());
-            cnt = pst.executeUpdate();
-            
+            try (PreparedStatement pst = conn.prepareStatement(insertQuery)) {
+                pst.setInt(1, newIdx);
+                pst.setString(2, nickName);
+                pst.setTime(3, time);
+                pst.setDate(4, sqlDate);
+                cnt = pst.executeUpdate();
+            }
+
             System.out.println("New ranking data inserted successfully.");
-        } catch (SQLException e) {
+        } catch (SQLException | ParseException e) {
             e.printStackTrace();
         } finally {
-            close();
+            close(conn, null, null);
         }
         return cnt;
     }

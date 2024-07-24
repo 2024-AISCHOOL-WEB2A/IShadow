@@ -243,7 +243,7 @@
             window.location.href = "story-choice.jsp";
         }
         catchmindConfirmBtn.onclick = function() {
-            window.location.href = "catchmind.jsp";
+            window.location.href = "GameStart";
         }
     </script>
 </body>

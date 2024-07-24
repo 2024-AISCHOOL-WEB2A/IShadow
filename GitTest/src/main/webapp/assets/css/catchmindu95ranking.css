@@ -1,4 +1,17 @@
 /* screen - catchmindu95ranking */
+@font-face {
+    font-family: 'Maplestory Bold';
+    src: url('../font/Maplestory Bold.ttf') format('truetype');
+}
+.catchmindu95ranking .ranking-item {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  font-family: 'Maplestory Bold', sans-serif; /* 폰트 패밀리 추가 */
+  font-size: 25px;
+  color: var(--white);
+  text-align: center;
+}
 
 .catchmindu95ranking {
   align-items: flex-start;
@@ -17,7 +30,7 @@
 }
 
 .catchmindu95ranking .create-a-high-resolu {
-  height: 1088px;
+  height: auto;
   left: 0;
   object-fit: cover;
   position: absolute;
@@ -80,32 +93,22 @@
   position: absolute;
   top: 275px;
   width: 505px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* 요소 간 간격을 설정할 수 있습니다 */
 }
 
-.catchmindu95ranking .text-1 {
-  color: var(--white);
-  font-family: var(--font-family-inter);
-  font-size: var(--font-size-s);
-  font-weight: 700;
-  left: 1167px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 439px;
-}
 
-.catchmindu95ranking .text-2 {
-  color: var(--white);
-  font-family: var(--font-family-inter);
-  font-size: var(--font-size-s);
-  font-weight: 700;
-  left: 1167px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
+.catchmindu95ranking .gText {
+  font-size:200%;
+  color:white;
+  font-family: 'Maplestory Bold', sans-serif; /* 폰트 패밀리 추가 */
   text-align: center;
-  top: 684px;
+  position: absolute;
+  top: 75%;
+  left: 25%;
 }
 
 .catchmindu95ranking .x1st-01-00-kdy {
@@ -115,6 +118,8 @@
   position: absolute;
   text-align: center;
   top: 332px;
+  font-family: 'Maplestory Bold', sans-serif; /* 폰트 패밀리 추가 */
+  font-size:25px;
 }
 
 .catchmindu95ranking .x2nd-02-00-chw {
@@ -125,6 +130,8 @@
   text-align: center;
   top: 422px;
   width: 325px;
+  font-family: 'Maplestory Bold', sans-serif; /* 폰트 패밀리 추가 */
+  font-size:25px;
 }
 
 .catchmindu95ranking .x3rd-03-00-naile {
@@ -134,6 +141,8 @@
   position: absolute;
   text-align: center;
   top: 523px;
+  font-family: 'Maplestory Bold', sans-serif; /* 폰트 패밀리 추가 */
+  font-size:25px;
 }
 
 .catchmindu95ranking .x4th-04-00-crow {
@@ -143,12 +152,14 @@
   position: absolute;
   text-align: center;
   top: 611px;
+  font-family: 'Maplestory Bold', sans-serif; /* 폰트 패밀리 추가 */
+  font-size:25px;
 }
 
 .catchmindu95ranking .title {
   color: var(--white);
   font-family: var(--font-family-inter);
-  font-size: var(--font-size-l);
+  font-size: 300%;
   font-style: italic;
   font-weight: 700;
   left: 732px;
@@ -158,6 +169,7 @@
   text-align: center;
   top: 173px;
   width: 441px;
+  font-family: 'Maplestory Bold', sans-serif; /* 폰트 패밀리 추가 */
 }
 
 .catchmindu95ranking .overlap-group2 {
