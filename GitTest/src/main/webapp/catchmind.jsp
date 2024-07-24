@@ -19,16 +19,16 @@
     <div class="container-center-horizontal">
       <div class="catchmind screen">
         <div class="overlap-group1">
-          <img class="background-2" src="img/background.png" alt="background 2" />
-          <img class="x1" src="img/---1.png" alt="1" />
+          <img class="background-2" src="assets/img/background.png" alt="background 2" />
+          <img class="x1" src="assets/img/---1.png" alt="1" />
           <div class="overlap-group">
             <div class="text-29 valign-text-middle single-linebody-base">게시판</div>
             <div class="group-2613110">
               <div class="group-2613107">
-                <img class="frame" src="img/frame-8.svg" alt="Frame" />
-                <img class="image-9" src="img/image-9.png" alt="image 9" />
-                <img class="frame-1" src="img/frame-9.svg" alt="Frame" />
-                <img class="image-9-1" src="img/image-9-1.png" alt="image 9" />
+                <img class="frame" src="assets/img/frame-8.svg" alt="Frame" />
+                <img class="image-9" src="assets/img/image-9.png" alt="image 9" />
+                <img class="frame-1" src="assets/img/frame-9.svg" alt="Frame" />
+                <img class="image-9-1" src="assets/img/image-9-1.png" alt="image 9" />
               </div>
               <div class="text-container single-linebody-base">
                 <div class="text-30 valign-text-middle">동화</div>
@@ -37,15 +37,15 @@
               </div>
             </div>
           </div>
-          <img class="image" src="img/----.svg" alt="image" />
+          <img class="image" src="assets/img/----.svg" alt="image" />
           <div class="view"></div>
           <div class="view-1"></div>
           <div class="group-5">
-            <img class="rectangle" src="img/rectangle-6.png" alt="Rectangle 6" />
-            <img class="rectangle" src="img/rectangle-6.png" alt="Rectangle 9" />
-            <img class="rectangle" src="img/rectangle-6.png" alt="Rectangle 7" />
-            <img class="rectangle" src="img/rectangle-6.png" alt="Rectangle 8" />
-            <img class="rectangle" src="img/rectangle-6.png" alt="Rectangle 10" />
+            <img class="rectangle" src="assets/img/rectangle-6.png" alt="Rectangle 6" />
+            <img class="rectangle" src="assets/img/rectangle-6.png" alt="Rectangle 9" />
+            <img class="rectangle" src="assets/img/rectangle-6.png" alt="Rectangle 7" />
+            <img class="rectangle" src="assets/img/rectangle-6.png" alt="Rectangle 8" />
+            <img class="rectangle" src="assets/img/rectangle-6.png" alt="Rectangle 10" />
           </div>
           <div class="rectangle-11"></div>
           <h1 class="title inter-normal-white-40px">Time</h1>

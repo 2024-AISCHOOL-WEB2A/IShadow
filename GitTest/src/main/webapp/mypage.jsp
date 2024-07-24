@@ -19,7 +19,7 @@
     <div class="container-center-horizontal">
       <div class="mypage screen">
         <div class="overlap-group9">
-          <img class="zcc-3 animate-enter5" src="img/zcc-1.png" alt="zcc 3" />
+          <img class="zcc-3 animate-enter5" src="assets/img/zcc-1.png" alt="zcc 3" />
           <a href="board-inpage.html">
             <div class="link link-6">
               <div class="overlap-group">
@@ -31,7 +31,7 @@
                 </div>
               </div>
             </div></a
-          ><a href="board-inpage.html">
+          ><a href="board-inpage.jsp">
             <div class="link-1 link-6">
               <div class="overlap-group">
                 <div class="x1719813394355jpg"></div>
@@ -51,12 +51,12 @@
             <div class="rectangle-59"></div>
             <div class="text-8-1 valign-text-middle">더보기</div>
           </div>
-          <img class="line-2" src="img/line-2.svg" alt="Line 2" />
+          <img class="line-2" src="assets/img/line-2.svg" alt="Line 2" />
           <div class="rectangle-61"></div>
           <h1 class="nlnh">NLNH님 안녕하세요!</h1>
           <div class="rectangle-62"></div>
           <div class="ellipse-22"></div>
-          <a href="board-inpage.html">
+          <a href="board-inpage.jsp">
             <div class="link-2 link-6">
               <div class="overlap-group">
                 <div class="x1713773510791png"></div>
@@ -67,7 +67,7 @@
                 </div>
               </div>
             </div></a
-          ><a href="board-inpage.html">
+          ><a href="board-inpage.jsp">
             <div class="link-3 link-6">
               <div class="overlap-group">
                 <div class="x1713773510791png"></div>
@@ -78,7 +78,7 @@
                 </div>
               </div>
             </div></a
-          ><a href="board-inpage.html">
+          ><a href="board-inpage.jsp">
             <div class="link-4 link-6">
               <div class="overlap-group">
                 <div class="x1713773510791png"></div>
@@ -89,7 +89,7 @@
                 </div>
               </div>
             </div></a
-          ><a href="board-inpage.html">
+          ><a href="board-inpage.jsp">
             <div class="link-5 link-6">
               <div class="overlap-group">
                 <div class="x1713773510791png"></div>
@@ -103,10 +103,10 @@
           >
           <div class="group-2613108">
             <div class="group-2613107">
-              <img class="frame" src="img/frame-6.svg" alt="Frame" />
-              <img class="image-9" src="img/image-9.png" alt="image 9" />
-              <img class="frame-1" src="img/frame-3.svg" alt="Frame" />
-              <img class="image-9-1" src="img/image-9-1.png" alt="image 9" />
+              <img class="frame" src="assets/img/frame-6.svg" alt="Frame" />
+              <img class="image-9" src="assets/img/image-9.png" alt="image 9" />
+              <img class="frame-1" src="assets/img/frame-3.svg" alt="Frame" />
+              <img class="image-9-1" src="assets/img/image-9-1.png" alt="image 9" />
             </div>
             <div class="text-container single-linebody-base">
               <div class="text valign-text-middle">동화</div>
@@ -118,10 +118,10 @@
             <div class="text-91 valign-text-middle single-linebody-base">게시판</div>
             <div class="group-2613110">
               <div class="group-2613107">
-                <img class="frame" src="img/frame-8.svg" alt="Frame" />
-                <img class="image-9" src="img/image-9.png" alt="image 9" />
-                <img class="frame-1" src="img/frame-3.svg" alt="Frame" />
-                <img class="image-9-1" src="img/image-9-1.png" alt="image 9" />
+                <img class="frame" src="assets/img/frame-8.svg" alt="Frame" />
+                <img class="image-9" src="assets/img/image-9.png" alt="image 9" />
+                <img class="frame-1" src="assets/img/frame-3.svg" alt="Frame" />
+                <img class="image-9-1" src="assets/img/image-9-1.png" alt="image 9" />
               </div>
               <div class="text-container-1 single-linebody-base">
                 <div class="text valign-text-middle">동화</div>
@@ -130,7 +130,7 @@
               </div>
             </div>
           </div>
-          <img class="a-1" src="img/--a-1.png" alt="a 1" />
+          <img class="a-1" src="assets/img/--a-1.png" alt="a 1" />
         </div>
       </div>
     </div>

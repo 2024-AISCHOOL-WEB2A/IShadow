@@ -37,7 +37,7 @@
           <div class="rectangle-7"></div>
           <img class="line-1" src="assets/img/line-1.svg" alt="Line 1" />
           <div class="ellipse-2"></div>
-          <img class="x1" src="img/---1.png" alt="1" />
+          <img class="x1" src="assets/img/---1.png" alt="1" />
         </div>
       </div>
     </div>

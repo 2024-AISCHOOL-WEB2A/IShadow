@@ -19,7 +19,7 @@
     <div class="container-center-horizontal">
       <div class="post-page screen">
         <div class="overlap-group1 single-linebody-base">
-          <img class="zcc-1 animate-enter3" src="img/zcc-1-1.png" alt="zcc 1" />
+          <img class="zcc-1 animate-enter3" src="assets/img/zcc-1-1.png" alt="zcc 1" />
           <div class="rectangle-24"></div>
           <div class="text-65">파일첨부</div>
           <div class="rectangle-25"></div>
@@ -44,10 +44,10 @@
             <div class="text-72 valign-text-middle single-linebody-base">게시판</div>
             <div class="group-2613110">
               <div class="group-2613107">
-                <img class="frame" src="img/frame-2.svg" alt="Frame" />
-                <img class="image-9" src="img/image-9.png" alt="image 9" />
-                <img class="frame-1" src="img/frame-3.svg" alt="Frame" />
-                <img class="image-9-1" src="img/image-9-1.png" alt="image 9" />
+                <img class="frame" src="assets/img/frame-2.svg" alt="Frame" />
+                <img class="image-9" src="assets/img/image-9.png" alt="image 9" />
+                <img class="frame-1" src="assets/img/frame-3.svg" alt="Frame" />
+                <img class="image-9-1" src="assets/img/image-9-1.png" alt="image 9" />
               </div>
               <div class="text-container single-linebody-base">
                 <div class="text-73 valign-text-middle">동화</div>

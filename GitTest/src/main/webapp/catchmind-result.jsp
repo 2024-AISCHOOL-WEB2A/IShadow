@@ -19,17 +19,17 @@
     <div class="container-center-horizontal">
       <div class="catchmind-result screen">
         <div class="overlap-group4">
-          <img class="background" src="img/background.png" alt="background 2" />
-          <img class="background" src="img/background.png" alt="background 3" />
-          <img class="x1" src="img/---1.png" alt="1" />
+          <img class="background" src="assets/img/background.png" alt="background 2" />
+          <img class="background" src="assets/img/background.png" alt="background 3" />
+          <img class="x1" src="assets/img/---1.png" alt="1" />
           <div class="overlap-group-1">
             <div class="text-42 valign-text-middle single-linebody-base">게시판</div>
             <div class="group-2613110">
               <div class="group-2613107">
-                <img class="frame" src="img/frame-12.svg" alt="Frame" />
-                <img class="image-9" src="img/image-9.png" alt="image 9" />
-                <img class="frame-1" src="img/frame-13.svg" alt="Frame" />
-                <img class="image-9-1" src="img/image-9-1.png" alt="image 9" />
+                <img class="frame" src="assets/img/frame-12.svg" alt="Frame" />
+                <img class="image-9" src="assets/img/image-9.png" alt="image 9" />
+                <img class="frame-1" src="assets/img/frame-13.svg" alt="Frame" />
+                <img class="image-9-1" src="assets/img/image-9-1.png" alt="image 9" />
               </div>
               <div class="text-container single-linebody-base">
                 <div class="text-43 valign-text-middle">동화</div>
@@ -38,25 +38,25 @@
               </div>
             </div>
           </div>
-          <a href="main-u4370u4458u4358u4455u4523.html">
+          <a href="main-u4370u4458u4358u4455u4523.jsp">
             <div class="group-3">
               <div class="overlap-group">
                 <div class="text-4 inter-normal-white-40px">처음으로</div>
-                <img class="image" src="img/------.png" alt="image" />
+                <img class="image" src="assets/img/------.png" alt="image" />
                 <div class="rectangle"></div>
               </div></div></a
-          ><a href="catchmind-ranking.html">
+          ><a href="catchmind-ranking.jsp">
             <div class="group-5">
               <div class="overlap-group">
                 <div class="text-4 inter-normal-white-40px">랭킹보기</div>
-                <img class="image" src="img/-------1.png" alt="image" />
+                <img class="image" src="assets/img/-------1.png" alt="image" />
                 <div class="rectangle"></div>
               </div></div></a
-          ><a href="stroy-choice.html">
+          ><a href="stroy-choice.jsp">
             <div class="group-4">
               <div class="overlap-group">
                 <div class="text-48 inter-normal-white-40px">다시하기</div>
-                <img class="image-1" src="img/--------.png" alt="image" />
+                <img class="image-1" src="assets/img/--------.png" alt="image" />
                 <div class="rectangle"></div>
               </div></div
           ></a>

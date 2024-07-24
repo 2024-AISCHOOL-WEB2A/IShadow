@@ -20,26 +20,26 @@
       <div class="desktop-1 screen">
         <div class="overlap-group4">
           <div class="overlap-group2">
-            <img class="zcc-4 animate-enter1" src="img/zcc-4.png" alt="zcc 4" />
+            <img class="zcc-4 animate-enter1" src="assets/img/zcc-4.png" alt="zcc 4" />
             <div class="group-2613103">
               <div class="group-2613103-item">
-                <a href="board-inpage.html">
+                <a href="board-inpage.jsp">
                   <div class="link">
                     <div class="overlap-group">
                       <div class="container"><div class="text-5 valign-text-middle">문학 / 인물.전기</div></div>
                       <div class="background-shadow"><div class="text-5-1 valign-text-middle">초3</div></div>
                     </div>
                   </div></a
-                ><a href="board-inpage.html">
+                ><a href="board-inpage.jsp">
                   <div class="link">
                     <div class="x165x233ebookjpg"></div></div
                 ></a>
               </div>
               <div class="group-2613103-item">
-                <a href="board-inpage.html">
+                <a href="board-inpage.jsp">
                   <div class="link">
                     <div class="x165x233ebookjpg-1 x165x233ebookjpg-4"></div></div></a
-                ><a href="board-inpage.html">
+                ><a href="board-inpage.jsp">
                   <div class="link">
                     <div class="overlap-group1">
                       <div class="container"><div class="text-5 valign-text-middle">과학 / 천문</div></div>
@@ -49,20 +49,20 @@
                 >
               </div>
               <div class="group-2613103-item">
-                <a href="board-inpage.html">
+                <a href="board-inpage.jsp">
                   <div class="link">
                     <div class="x165x233ebookjpg-2 x165x233ebookjpg-4"></div></div></a
-                ><a href="board-inpage.html">
+                ><a href="board-inpage.jsp">
                   <div class="link">
                     <div class="x165x233ebookjpg-3 x165x233ebookjpg-4"></div></div
                 ></a>
               </div>
             </div>
           </div>
-          <img class="rectangle-67" src="img/rectangle-67.svg" alt="Rectangle 67" />
+          <img class="rectangle-67" src="assets/img/rectangle-67.svg" alt="Rectangle 67" />
           <img
             class="icon-magnifying-glass"
-            src="img/---icon--magnifying-glass-@2x.png"
+            src="assets/img/---icon--magnifying-glass-@2x.png"
             alt="icon &#34;magnifying glass&#34;"
           />
           <h1 class="text-55">게시판</h1>
@@ -70,10 +70,10 @@
             <div class="text-56 valign-text-middle single-linebody-base">게시판</div>
             <div class="group-2613110">
               <div class="group-2613107">
-                <img class="frame" src="img/frame-11.svg" alt="Frame" />
-                <img class="image-9" src="img/image-9.png" alt="image 9" />
-                <img class="frame-1" src="img/frame-3.svg" alt="Frame" />
-                <img class="image-9-1" src="img/image-9-1.png" alt="image 9" />
+                <img class="frame" src="assets/img/frame-11.svg" alt="Frame" />
+                <img class="image-9" src="assets/img/image-9.png" alt="image 9" />
+                <img class="frame-1" src="assets/img/frame-3.svg" alt="Frame" />
+                <img class="image-9-1" src="assets/img/image-9-1.png" alt="image 9" />
               </div>
               <div class="text-container single-linebody-base">
                 <div class="text-57 valign-text-middle">동화</div>
@@ -82,7 +82,7 @@
               </div>
             </div>
           </div>
-          <img class="x1" src="img/---1.png" alt="1" />
+          <img class="x1" src="assets/img/---1.png" alt="1" />
         </div>
       </div>
     </div>

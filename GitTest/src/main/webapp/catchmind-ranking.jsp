@@ -19,16 +19,16 @@
     <div class="container-center-horizontal">
       <div class="catchmind-ranking screen">
         <div class="overlap-group4">
-          <img class="background" src="img/background.png" alt="background" />
-          <img class="x1" src="img/---1.png" alt="1" />
+          <img class="background" src="assets/img/background.png" alt="background" />
+          <img class="x1" src="assets/img/---1.png" alt="1" />
           <div class="overlap-group">
             <div class="text-1 valign-text-middle single-linebody-base">게시판</div>
             <div class="group-2613110">
               <div class="group-2613107">
-                <img class="frame" src="img/frame.svg" alt="Frame" />
-                <img class="image-9" src="img/image-9.png" alt="image 9" />
-                <img class="frame-1" src="img/frame-1.svg" alt="Frame" />
-                <img class="image-9-1" src="img/image-9-1.png" alt="image 9" />
+                <img class="frame" src="assets/img/frame.svg" alt="Frame" />
+                <img class="image-9" src="assets/img/image-9.png" alt="image 9" />
+                <img class="frame-1" src="assets/img/frame-1.svg" alt="Frame" />
+                <img class="image-9-1" src="assets/img/image-9-1.png" alt="image 9" />
               </div>
               <div class="text-container single-linebody-base">
                 <div class="text-2 valign-text-middle">동화</div>
@@ -39,12 +39,12 @@
           </div>
           <div class="overlap-group1">
             <div class="text-5 inter-normal-white-40px">처음으로</div>
-            <img class="image" src="img/------.png" alt="image" />
+            <img class="image" src="assets/img/------.png" alt="image" />
             <div class="view"></div>
           </div>
           <div class="overlap-group2">
             <div class="text-6 inter-normal-white-40px">다시하기</div>
-            <img class="image-1" src="img/--------.png" alt="image" />
+            <img class="image-1" src="assets/img/--------.png" alt="image" />
             <div class="view"></div>
           </div>
           <h1 class="title">Ranking</h1>
