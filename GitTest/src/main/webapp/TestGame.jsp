@@ -28,14 +28,14 @@
             transition: background-color 0.5s;
         }
         .view {
-	        position: relative;
-	        width: 48.26vw;
-	        height: 48.26vw;
-	        margin: auto;
-	        border-radius: 50%;
-	        overflow: hidden;
-	        clip-path: circle(50%);
-	    }
+            position: relative;
+            width: 48.26vw;
+            height: 48.26vw;
+            margin: auto;
+            border-radius: 50%;
+            overflow: hidden;
+            clip-path: circle(50%);
+        }
         .view canvas {
             width: 100%;
             height: 100%;
@@ -87,7 +87,7 @@
         .timer-bar {
             height: 100%;
             background-color: #ff0000;
-            transition: width 1s linear;
+            transition: width 0.1s linear;
         }
         .time-display {
             position: absolute;
@@ -160,7 +160,7 @@
             border-radius: 5px;
             border: 1px solid #ccc;
         }
-        .input-container button {
+        .input-container input[type="submit"] {
             margin-top: 10px;
             padding: 10px 20px;
             border: none;
@@ -211,12 +211,15 @@
     </div>
     <div id="myModal" class="modal">
         <div class="modal-content">
-            <span class="close">&times;</span>
+            <span class="close" onclick="closeModal()">&times;</span>
             <p id="modal-time-display">00m 00s</p>
-            <div class="input-container">
-                <input type="text" placeholder="닉네임을 입력하세요.">
-                <button>확인</button>
-            </div>
+            <form action="SelectRanking" method="post" id="rankingForm">
+                <div class="input-container">
+                    <input type="text" placeholder="닉네임을 입력하세요." name="nickName" required>
+	                <input type="hidden" id="hidden-time" name="hiddenTime">
+	                <input type="submit" value="등록">
+                </div>
+            </form>
         </div>
     </div>
 
@@ -229,6 +232,7 @@
         let timerId;
         let duration = 5; // 타이머 시간 (초)
         let currentGameIndex = 0;
+        let gameEnded = false;
 
         <% Games game;
         ArrayList<Games> gamesList = (ArrayList<Games>) request.getAttribute("games");
@@ -244,18 +248,27 @@
         function startTimer() {
             const timerBar = document.getElementById('timer-bar');
             const timeDisplay = document.getElementById('time-display');
+            
+            // 타이머 바의 초기 너비를 0%로 설정
+            timerBar.style.width = '0%';
+            
             timerId = setInterval(() => {
-                timeLeft++;
-                updateTimer(timerBar, timeDisplay);
-                if (timeLeft >= duration) {
-                    endQuiz();
+                if (!gameEnded) {
+                    timeLeft += 0.1; // 100밀리초마다 0.1초씩 증가
+                    updateTimer(timerBar, timeDisplay);
                 }
-            }, 1000);
+            }, 100);
         }
 
         function updateTimer(timerBar, timeDisplay) {
-            timerBar.style.width = (timeLeft / duration) * 100 + '%';
-            timeDisplay.textContent = timeLeft + '초';
+            const percentage = (timeLeft / duration) * 100;
+            timerBar.style.width = percentage + '%';
+            timeDisplay.textContent = Math.floor(timeLeft) + '초';
+
+            // 타이머 바가 100%로 채워지는 시점과 웹캠 멈추는 시점 일치
+            if (percentage >= 100) {
+                endQuiz();
+            }
         }
 
         const URL = "model/";
@@ -264,7 +277,6 @@
         async function init() {
             document.getElementById('loading').style.display = 'block';
 
-            startTimer();
             const modelURL = URL + "model.json";
             const metadataURL = URL + "metadata.json";
 
@@ -298,12 +310,15 @@
 
             loadImage();
             document.getElementById('loading').style.display = 'none';
+            startTimer();
         }
 
         async function loop(timestamp) {
-            webcam.update();
-            await predict();
-            window.requestAnimationFrame(loop);
+            if (!gameEnded) {
+                webcam.update();
+                await predict();
+                window.requestAnimationFrame(loop);
+            }
         }
 
         let correctAnswers = 0;
@@ -371,6 +386,7 @@
         }
 
         function endQuiz() {
+            gameEnded = true;
             if (webcam && webcam.stream && webcam.stream.getTracks) {
                 webcam.stream.getTracks().forEach(track => track.stop());
             }
@@ -378,31 +394,34 @@
 
             // 퀴즈 종료 시간 저장
             const minute = Math.floor(timeLeft / 60);
-            const second = timeLeft % 60;
+            const second = Math.floor(timeLeft % 60);
+            const formattedTime = minute.toString().padStart(2, '0') + 'm ' + second.toString().padStart(2, '0') + 's';
 
-            // 모달 창에 경과 시간 표시
-            const modal = document.getElementById('myModal');
-            const modalTimeDisplay = document.getElementById('modal-time-display');
-            modalTimeDisplay.textContent = minute.toString().padStart(2, '0') + 'm ' + second.toString().padStart(2, '0') + 's';
+            // 숨겨진 필드에 시간 설정
+            const hiddenTimeInput = document.getElementById('hidden-time');
+            hiddenTimeInput.value = formattedTime;
 
-            // 모달 창 열기
-            modal.style.display = 'flex';
+            setTimeout(() => {
+                // 모달 창에 경과 시간 표시
+                const modal = document.getElementById('myModal');
+                const modalTimeDisplay = document.getElementById('modal-time-display');
+                modalTimeDisplay.textContent = formattedTime;
 
-            // 모달 창 닫기 기능 추가
-            const closeModalBtn = document.getElementsByClassName('close')[0];
-            closeModalBtn.onclick = function() {
-                modal.style.display = 'none';
-            }
-
-            // 모달 창 외부 클릭 시 닫기
-            window.onclick = function(event) {
-                if (event.target == modal) {
-                    modal.style.display = 'none';
-                }
-            }
+                // 모달 창 열기
+                modal.style.display = 'flex';
+            }, 1000); // 1초 후에 모달 창 띄우기
         }
 
-        window.onload = init;
+        function closeModal() {
+            document.getElementById('myModal').style.display = 'none';
+        }
+
+        window.onload = function() {
+            // 로딩 중 메시지를 숨기고 퀴즈를 시작합니다.
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('myModal').style.display = 'none';
+            init();
+        }
     </script>
 </body>
 </html>

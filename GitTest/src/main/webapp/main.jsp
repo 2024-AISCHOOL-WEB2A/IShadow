@@ -87,7 +87,7 @@
                         <div class="view"></div>
                     </a>
                     <!-- 캐치마인드 -->
-                    <a href="catchmind.jsp">
+                    <a href="GameStart">
                         <div class="view"></div>
                     </a>
                     <!-- 캐치마인드 -->

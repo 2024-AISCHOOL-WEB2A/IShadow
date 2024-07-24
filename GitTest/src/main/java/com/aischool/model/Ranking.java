@@ -1,21 +1,23 @@
 package com.aischool.model;
 
-import java.time.LocalDate;
-import java.time.LocalTime;
+
+import java.sql.Date;
+import java.sql.Time;
+
 
 public class Ranking {
 	private int idx;
 	private String nickName;
-	private LocalTime time;
-	private LocalDate date;
+	private Time time;
+	private Date date;
 	
 	public Ranking() {}
 
-    public Ranking(int idx, String nickName, LocalTime time, LocalDate date) {
+    public Ranking(int idx, String nickName, Time time, Date date) {
         this.idx = idx;
         this.nickName = nickName;
-        this.time = time;
-        this.date = date;
+        this.setTime(time);
+        this.setDate(date);
     }
 
     public int getIdx() {
@@ -34,19 +36,21 @@ public class Ranking {
         this.nickName = nickName;
     }
 
-    public LocalTime getTime() {
-        return time;
-    }
+	public Time getTime() {
+		return time;
+	}
 
-    public void setTime(LocalTime time) {
-        this.time = time;
-    }
+	public void setTime(Time time) {
+		this.time = time;
+	}
 
-    public LocalDate getDate() {
-        return date;
-    }
+	public Date getDate() {
+		return date;
+	}
 
-    public void setDate(LocalDate date) {
-        this.date = date;
-    }
+	public void setDate(Date date) {
+		this.date = date;
+	}
+
+    
 }
