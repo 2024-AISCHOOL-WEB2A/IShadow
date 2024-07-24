@@ -1,0 +1,569 @@
+/* screen - request-page */
+
+.request-page {
+  align-items: flex-start;
+  display: flex;
+  height: 1080px;
+  overflow: hidden;
+  width: 1920px;
+}
+
+.request-page .overlap-group8 {
+  height: 1120px;
+  margin-top: -4px;
+  position: relative;
+  width: 1920px;
+}
+
+.request-page .create-a-high-resolu {
+  height: 1088px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 5px;
+  width: 1920px;
+}
+
+.request-page .rectangle-355 {
+  background-color: #d9d9d933;
+  border-radius: 30px;
+  height: 799px;
+  left: 197px;
+  position: absolute;
+  top: 265px;
+  width: 1418px;
+}
+
+.request-page .text-1 {
+  color: var(--white);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-l);
+  font-weight: 700;
+  left: 797px;
+  letter-spacing: 0;
+  line-height: 104.6px;
+  position: absolute;
+  top: 154px;
+  white-space: nowrap;
+}
+
+.request-page .overlap-group {
+  height: 119px;
+  left: 659px;
+  position: absolute;
+  top: 5px;
+  width: 442px;
+}
+
+.request-page .text-2 {
+  color: var(--white);
+  font-weight: 400;
+  height: 16px;
+  left: 268px;
+  line-height: 16px;
+  position: absolute;
+  text-align: center;
+  top: 103px;
+  white-space: nowrap;
+}
+
+.request-page .group-2613110 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  left: 0;
+  min-height: 119px;
+  position: absolute;
+  top: 0;
+  width: 442px;
+}
+
+.request-page .group-2613107 {
+  align-items: center;
+  display: flex;
+  gap: 51px;
+  min-width: 435px;
+}
+
+.request-page .frame {
+  align-self: flex-end;
+  height: 87px;
+  margin-bottom: 0;
+  width: 87px;
+}
+
+.request-page .image-9 {
+  height: 65px;
+  margin-top: 3.65px;
+  object-fit: cover;
+  width: 65px;
+}
+
+.request-page .frame-1 {
+  height: 65px;
+  margin-top: 1.65px;
+  width: 65px;
+}
+
+.request-page .image-9-1 {
+  align-self: flex-end;
+  height: 65px;
+  margin-bottom: 2.35px;
+  object-fit: cover;
+  width: 65px;
+}
+
+.request-page .text-container {
+  align-items: flex-start;
+  align-self: flex-end;
+  display: flex;
+  min-width: 409px;
+}
+
+.request-page .text-3 {
+  color: var(--white);
+  font-weight: 400;
+  height: 16px;
+  line-height: 16px;
+  min-width: 30px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.request-page .text-4 {
+  color: var(--white);
+  font-weight: 400;
+  height: 16px;
+  line-height: 16px;
+  margin-left: 70px;
+  min-width: 74px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.request-page .text-5 {
+  color: var(--white);
+  font-weight: 400;
+  height: 16px;
+  line-height: 16px;
+  margin-left: 176px;
+  min-width: 59px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.request-page .place {
+  left: 1083px;
+  letter-spacing: 0;
+  line-height: 32.7px;
+  position: absolute;
+  top: 283px;
+  width: 82px;
+}
+
+.request-page .phone {
+  color: var(--white);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-xxxs);
+  font-weight: 400;
+  left: 1085px;
+  letter-spacing: 0;
+  line-height: 26.1px;
+  position: absolute;
+  top: 1092px;
+  white-space: nowrap;
+  width: 90px;
+}
+
+.request-page .x1 {
+  height: 90px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 272px;
+}
+
+.request-page .group-2613114 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  left: 273px;
+  min-height: 764px;
+  position: absolute;
+  top: 284px;
+  width: 1336px;
+}
+
+.request-page .overlap-group2 {
+  height: 142px;
+  position: relative;
+  width: 1271px;
+}
+
+.request-page .rectangle-325 {
+  height: 91px;
+  left: 0;
+  position: absolute;
+  top: 52px;
+  width: 1271px;
+}
+
+.request-page .text-6 {
+  left: 11px;
+  letter-spacing: 0;
+  line-height: 32.7px;
+  position: absolute;
+  top: 6px;
+  width: 134px;
+}
+
+.request-page .text-7 {
+  left: 271px;
+  letter-spacing: 0;
+  line-height: 58.8px;
+  position: absolute;
+  top: 69px;
+  white-space: nowrap;
+  width: 359px;
+}
+
+.request-page .number {
+  left: 49px;
+  letter-spacing: 0;
+  line-height: 52.3px;
+  position: absolute;
+  top: 69px;
+  white-space: nowrap;
+  width: 8px;
+}
+
+.request-page .nlnh {
+  left: 1020px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 79px;
+  white-space: nowrap;
+  width: 140px;
+}
+
+.request-page .text-8 {
+  left: 302px;
+  letter-spacing: 0;
+  line-height: 32.7px;
+  position: absolute;
+  top: 6px;
+  width: 84px;
+}
+
+.request-page .user-name {
+  left: 1020px;
+  letter-spacing: 0;
+  line-height: 32.7px;
+  position: absolute;
+  top: 0;
+  width: 174px;
+}
+
+.request-page .overlap-group7 {
+  align-items: flex-start;
+  background-image: url(../img/rectangle-331.svg);
+  background-size: 100% 100%;
+  display: flex;
+  height: 91px;
+  margin-top: 9px;
+  min-width: 1271px;
+  padding: 23px 43.0px;
+}
+
+.request-page .number-1 {
+  align-self: center;
+  margin-bottom: 6.78px;
+  min-height: 28px;
+  white-space: nowrap;
+  width: 10px;
+}
+
+.request-page .text-9 {
+  letter-spacing: 0;
+  line-height: 58.8px;
+  margin-left: 218px;
+  min-height: 28px;
+  white-space: nowrap;
+  width: 321px;
+}
+
+.request-page .shs {
+  letter-spacing: 0;
+  line-height: 39.2px;
+  margin-left: 428px;
+  margin-top: 5px;
+  min-height: 22px;
+  text-align: center;
+  white-space: nowrap;
+  width: 140px;
+}
+
+.request-page .overlap-group1 {
+  height: 95px;
+  margin-top: 10px;
+  position: relative;
+  width: 1271px;
+}
+
+.request-page .rectangle-333 {
+  background-color: #ffffff4c;
+  border: 1px solid;
+  border-color: var(--jrnavercomnero);
+  border-radius: 100px;
+  height: 91px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1271px;
+}
+
+.request-page .place-1 {
+  left: 1020px;
+  letter-spacing: 0;
+  line-height: 39.2px;
+  position: absolute;
+  text-align: center;
+  top: 35px;
+  white-space: nowrap;
+  width: 140px;
+}
+
+.request-page .text-10 {
+  left: 271px;
+  letter-spacing: 0;
+  line-height: 58.8px;
+  position: absolute;
+  top: 27px;
+  white-space: nowrap;
+  width: 398px;
+}
+
+.request-page .number-2 {
+  left: 40px;
+  position: absolute;
+  top: 29px;
+  width: 37px;
+}
+
+.request-page .overlap-group4 {
+  height: 98px;
+  margin-top: 15px;
+  position: relative;
+  width: 1271px;
+}
+
+.request-page .rectangle-335 {
+  height: 91px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1271px;
+}
+
+.request-page .text-11 {
+  left: 271px;
+  letter-spacing: 0;
+  line-height: 58.8px;
+  position: absolute;
+  top: 16px;
+  white-space: nowrap;
+  width: 398px;
+}
+
+.request-page .gjgj {
+  left: 1019px;
+  letter-spacing: 0;
+  line-height: 39.2px;
+  position: absolute;
+  text-align: center;
+  top: 28px;
+  white-space: nowrap;
+  width: 140px;
+}
+
+.request-page .number-3 {
+  left: 37px;
+  position: absolute;
+  top: 19px;
+  width: 78px;
+}
+
+.request-page .overlap-group3 {
+  align-items: center;
+  background-image: url(../img/rectangle-337.svg);
+  background-size: 100% 100%;
+  display: flex;
+  height: 91px;
+  margin-top: 7px;
+  min-width: 1271px;
+  padding: 16.7px 40.0px;
+}
+
+.request-page .number-4 {
+  margin-bottom: 1.68px;
+  min-height: 43px;
+  white-space: nowrap;
+  width: 26px;
+}
+
+.request-page .text-14 {
+  align-self: flex-end;
+  letter-spacing: 0;
+  line-height: 58.8px;
+  margin-left: 201px;
+  min-height: 56px;
+  white-space: nowrap;
+  width: 398px;
+}
+
+.request-page .config {
+  letter-spacing: 0;
+  line-height: 39.2px;
+  margin-bottom: 8.36px;
+  margin-left: 324px;
+  min-height: 22px;
+  text-align: center;
+  white-space: nowrap;
+  width: 201px;
+}
+
+.request-page .overlap-group6 {
+  align-items: flex-start;
+  background-image: url(../img/rectangle-337.svg);
+  background-size: 100% 100%;
+  display: flex;
+  height: 91px;
+  margin-top: 15px;
+  min-width: 1271px;
+  padding: 16.7px 46.0px;
+}
+
+.request-page .number-5 {
+  margin-top: 6.32px;
+  min-height: 28px;
+  white-space: nowrap;
+  width: 10px;
+}
+
+.request-page .text-13 {
+  align-self: flex-end;
+  letter-spacing: 0;
+  line-height: 58.8px;
+  margin-left: 215px;
+  min-height: 56px;
+  white-space: nowrap;
+  width: 398px;
+}
+
+.request-page .pong {
+  letter-spacing: 0;
+  line-height: 39.2px;
+  margin-left: 350px;
+  margin-top: 5.32px;
+  min-height: 22px;
+  text-align: center;
+  white-space: nowrap;
+  width: 140px;
+}
+
+.request-page .overlap-group5 {
+  align-items: center;
+  background-image: url(../img/rectangle-341.svg);
+  background-size: 100% 100%;
+  display: flex;
+  height: 88px;
+  margin-left: 9.57px;
+  margin-top: 12px;
+  min-width: 1269px;
+  padding: 12px 39.4px;
+}
+
+.request-page .number-6 {
+  margin-bottom: 8.1px;
+  min-height: 28px;
+  white-space: nowrap;
+  width: 10px;
+}
+
+.request-page .text-12 {
+  align-self: flex-start;
+  letter-spacing: 0;
+  line-height: 58.8px;
+  margin-left: 212px;
+  min-height: 56px;
+  white-space: nowrap;
+  width: 398px;
+}
+
+.request-page .shadow {
+  letter-spacing: 0;
+  line-height: 39.2px;
+  margin-bottom: 7.68px;
+  margin-left: 352px;
+  min-height: 22px;
+  text-align: center;
+  white-space: nowrap;
+  width: 140px;
+}
+
+.request-page .date {
+  left: 1055px;
+  letter-spacing: 0;
+  line-height: 32.7px;
+  position: absolute;
+  top: 363px;
+  white-space: nowrap;
+  width: 137px;
+}
+
+.request-page .date-1 {
+  left: 1055px;
+  top: 459px;
+}
+
+.request-page .date-2 {
+  left: 1055px;
+  top: 562px;
+}
+
+.request-page .date-3 {
+  left: 1055px;
+  top: 673px;
+}
+
+.request-page .date-4 {
+  left: 1055px;
+  top: 778px;
+}
+
+.request-page .date-5 {
+  left: 1056px;
+  top: 882px;
+}
+
+.request-page .date-6 {
+  left: 1055px;
+  top: 985px;
+}
+
+.request-page .date-7 {
+  letter-spacing: 0;
+  line-height: 32.7px;
+  position: absolute;
+  white-space: nowrap;
+  width: 137px;
+}
+
+.request-page .number-7 {
+  letter-spacing: 0;
+  line-height: 52.3px;
+}
