@@ -53,7 +53,7 @@
       }
       .circles {
         position: absolute;
-        top: 50%;
+        top: 55%;
         left: 50%;
         transform: translate(-50%, -50%);
         display: flex;
@@ -159,8 +159,7 @@
         </div>
       </div>
       <div class="buttons">
-        <button class="button">힌트 보기</button>
-        <button class="button"><a href="story-ending-page.jsp">넘어 가기</a></button>
+        <a href="story-ending-page.jsp"><button class="button">넘어 가기</button></a>
       </div>
     </div>
   </body>

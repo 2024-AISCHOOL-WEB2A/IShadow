@@ -60,7 +60,7 @@ html, body {
                     </a>
                     <a href="video.jsp">
                         <div class="view-1">
-                            <assets/img class="ellipse-1" src="assets/img/ellipse-1-1@2x.png" alt="Ellipse 1" />
+                            <img class="ellipse-1" src="assets/img/Heungbun and Nolbun.png" alt="Ellipse 1" />
                             <h1 class="text-40">흥부 놀부</h1>
                         </div>
                     </a>
