@@ -41,6 +41,22 @@ html, body {
     object-fit: cover;
 }
 </style>
+<script>
+function submitForm(name) {
+    let form = document.createElement('form');
+    form.method = 'POST';
+    form.action = 'ChoiceStory';
+
+    let input = document.createElement('input');
+    input.type = 'hidden';
+    input.name = 'story';
+    input.value = name;
+
+    form.appendChild(input);
+    document.body.appendChild(form);
+    form.submit();
+}
+</script>
 </head>
 <body style="margin: 0; background: #000000">
     <input type="hidden" id="anPageName" name="page" value="stroy-choice" />
@@ -52,19 +68,19 @@ html, body {
                 
                 <!-- 동화선택 -->
                 <div class="view-container">
-                    <a href="video.jsp">
+                    <a href="ChoiceStory">
                         <div class="view-1">
                             <img class="ellipse-1" src="assets/img/ellipse-1@2x.png" alt="Ellipse 1" />
                             <h1 class="text-40">빨간 모자</h1>
                         </div>
                     </a>
-                    <a href="video.jsp">
+                    <a href="ChoiceStory">
                         <div class="view-1">
                             <img class="ellipse-1" src="assets/img/Heungbun and Nolbun.png" alt="Ellipse 1" />
                             <h1 class="text-40">흥부 놀부</h1>
                         </div>
                     </a>
-                    <a href="video.jsp">
+                    <a href="ChoiceStory">
                         <div class="view-1">
                             <img class="ellipse-1" src="assets/img/ellipse-1-2@2x.png" alt="Ellipse 1" />
                             <h1 class="text-40">플란다스의 개</h1>
@@ -72,13 +88,14 @@ html, body {
                     </a>
                 </div>
                 <div class="view-container">
-                    <a href="video.jsp">
+                    <div onclick="submitForm(this.querySelector('.hiddenName').name)">
                         <div class="view-1">
                             <img class="ellipse-1" src="assets/img/ellipse-1-3@2x.png" alt="Ellipse 1" />
-                            <div class="text-40">해와 달이된 오누이</div>
+                            <div class="text-40">해와 달이된 오누이></div>
+                            <input class="hiddenName" type="hidden" name="해와 달이 된 오누이">
                         </div>
-                    </a>
-                    <a href="video.jsp">
+                    </div>
+                    <a href="ChoiceStory">
                         <div class="view-1">
                             <img class="ellipse-1" src="assets/img/ellipse-1-4@2x.png" alt="Ellipse 1" />
                             <div class="text-40">토끼와 거북이</div>
