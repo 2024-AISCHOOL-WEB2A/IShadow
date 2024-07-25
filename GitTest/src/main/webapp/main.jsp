@@ -10,7 +10,7 @@
 <meta name="twitter:card" content="photo" />
 <link rel="stylesheet" type="text/css" href="assets/css/main-u4370u4458u4358u4455u4523.css" />
 <link rel="stylesheet" type="text/css" href="assets/css/styleguide.css" />
-<link rel="stylesheet" type="text/css" href="assets/css/globals.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/globals.css" 	/>
 <style>
     body, html {
         margin: 0;
