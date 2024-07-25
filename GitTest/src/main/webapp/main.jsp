@@ -144,7 +144,7 @@
                         <div class="view"></div>
                     </a>
                     <!-- 게시판 -->
-                    <a href="desktop-1.jsp">
+                    <a href="board_page.jsp">
                         <div class="view"></div>
                     </a>
                     <!-- QA -->
@@ -173,7 +173,7 @@
     <div id="storyModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <img src="assets/img/before_game.gif" alt="Story GIF" style="width:100%; max-width:400px;" />
+            <img src="assets/img/main/before_game.gif" style="width:100%; max-width:400px;" />
             <button class="modal-btn" id="story-confirm-btn">확인</button>
         </div>
     </div>
@@ -182,7 +182,7 @@
     <div id="catchmindModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <img src="assets/img/before_game.gif" alt="Catchmind GIF" style="width:100%; max-width:400px;" />
+            <img src="assets/img/main/before_game.gif" style="width:100%; max-width:400px;" />
             <button class="modal-btn" id="catchmind-confirm-btn">확인</button>
         </div>
     </div>
