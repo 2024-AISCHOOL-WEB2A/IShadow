@@ -25,7 +25,7 @@
             <div class="overlap-group">
               <div class="group-3">
                 <div class="ellipse-5"></div>
-                <img class="rectangle-8" src="assets/img/rectangle-8.svg" alt="Rectangle 8" />
+                <img class="rectangle-8" src="assets/img/login_page/rectangle-8.svg" alt="Rectangle 8" />
               </div>
               <div class="text">아이디</div>
             </div>
@@ -34,7 +34,7 @@
             <div class="overlap-group">
               <div class="group-3">
                 <div class="ellipse-5"></div>
-                <img class="rectangle-8" src="assets/img/rectangle-8.svg" alt="Rectangle 8" />
+                <img class="rectangle-8" src="assets/img/login_page/rectangle-8.svg" alt="Rectangle 8" />
               </div>
               <div class="text">비밀번호</div>
             </div>

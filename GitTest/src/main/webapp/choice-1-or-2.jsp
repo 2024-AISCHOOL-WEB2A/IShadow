@@ -13,7 +13,7 @@
 <meta name="twitter:card" content="photo" />
 <link rel="stylesheet" type="text/css"
 	href="assets/css/choice-1-or-2.css" />
-<link rel="stylesheet" type="text/css" href="assets/css/styleguide.css" />
+<link rel="stylesheet" type="text/css" href="	assets/css/styleguide.css" />
 <link rel="stylesheet" type="text/css" href="assets/css/globals.css" />
 <style>
 html, body {

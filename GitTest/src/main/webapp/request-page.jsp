@@ -89,7 +89,7 @@
           <img class="x1" src="assets/img/---1.png" alt="1" />
           <div class="group-2613114">
             <div class="overlap-group2">
-              <img class="rectangle-325" src="assets/img/rectangle-325.svg" alt="Rectangle 325" />
+              <img class="rectangle-325" src="assets/img/request_page/rectangle-325.svg" alt="Rectangle 325" />
               <div class="text-6 Maplestory-bold-white-30px">게시글 번호</div>
               <div class="text-7 Maplestory-normal-black-50px">아기상어 넣어줘요</div>
               <div class="number Maplestory-bold-black-48px">1</div>
@@ -109,7 +109,7 @@
               <div class="number-2 number-7 Maplestory-bold-black-48px">3</div>
             </div>
             <div class="overlap-group4">
-              <img class="rectangle-335" src="assets/img/rectangle-331.svg" alt="Rectangle 335" />
+              <img class="rectangle-335" src="assets/img/request_page/rectangle-331.svg" alt="Rectangle 335" />
               <div class="text-11 Maplestory-normal-black-48px">동물들도 있을까요?</div>
               <div class="gjgj Maplestory-bold-black-48px">GJGJ</div>
               <div class="number-3 number-7 Maplestory-bold-black-48px">4</div>
