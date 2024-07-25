@@ -196,11 +196,11 @@
                     <img id="quiz-image" src="" alt="quiz image" style="display:none;"/>
                 </div>
                 <div class="group-5">
-                    <img class="rectangle rectangle-dark" src="assets/img/rectangle-6.png" alt="Rectangle 6" />
-                    <img class="rectangle rectangle-dark" src="assets/img/rectangle-6.png" alt="Rectangle 9" />
-                    <img class="rectangle rectangle-dark" src="assets/img/rectangle-6.png" alt="Rectangle 7" />
-                    <img class="rectangle rectangle-dark" src="assets/img/rectangle-6.png" alt="Rectangle 8" />
-                    <img class="rectangle rectangle-dark" src="assets/img/rectangle-6.png" alt="Rectangle 10" />
+                    <img class="rectangle rectangle-dark" src="assets/img/catchmind/rectangle-6.png" alt="Rectangle 6" />
+                    <img class="rectangle rectangle-dark" src="assets/img/catchmind/rectangle-6.png" alt="Rectangle 9" />
+                    <img class="rectangle rectangle-dark" src="assets/img/catchmind/rectangle-6.png" alt="Rectangle 7" />
+                    <img class="rectangle rectangle-dark" src="assets/img/catchmind/rectangle-6.png" alt="Rectangle 8" />
+                    <img class="rectangle rectangle-dark" src="assets/img/catchmind/rectangle-6.png" alt="Rectangle 10" />
                 </div>
                 <div class="rectangle-11">
                     <div class="timer-bar" id="timer-bar"></div>

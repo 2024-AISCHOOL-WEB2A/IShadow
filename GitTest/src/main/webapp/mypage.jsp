@@ -51,7 +51,7 @@
             <div class="rectangle-59"></div>
             <div class="text-8-1 valign-text-middle">더보기</div>
           </div>
-          <img class="line-2" src="assets/img/line-2.svg" alt="Line 2" />
+          <img class="line-2" src="assets/img/my_page/line-2.svg" alt="Line 2" />
           <div class="rectangle-61"></div>
           <h1 class="nlnh">NLNH님 안녕하세요!</h1>
           <div class="rectangle-62"></div>
@@ -103,10 +103,10 @@
           >
           <div class="group-2613108">
             <div class="group-2613107">
-              <img class="frame" src="assets/img/frame-6.svg" alt="Frame" />
-              <img class="image-9" src="assets/img/image-9.png" alt="image 9" />
-              <img class="frame-1" src="assets/img/frame-3.svg" alt="Frame" />
-              <img class="image-9-1" src="assets/img/image-9-1.png" alt="image 9" />
+              <img class="frame" src="assets/img/my_page/frame-6.svg" alt="Frame" />
+              <img class="image-9" src="assets/img/my_page/image-9.png" alt="image 9" />
+              <img class="frame-1" src="assets/img/my_page/frame-3.svg" alt="Frame" />
+              <img class="image-9-1" src="assets/img/my_page/image-9-1.png" alt="image 9" />
             </div>
             <div class="text-container single-linebody-base">
               <div class="text valign-text-middle">동화</div>
@@ -130,7 +130,7 @@
               </div>
             </div>
           </div>
-          <img class="a-1" src="assets/img/--a-1.png" alt="a 1" />
+          <img class="a-1" src="assets/img/my_page/--a-1.png" alt="a 1" />
         </div>
       </div>
     </div>
