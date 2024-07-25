@@ -32,8 +32,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	color: white;
-	font-family: 'Maplestory Bold', sans-serif; /* 폰트 패밀리 추가 */
+
 }
 
 .header-menu-item img {

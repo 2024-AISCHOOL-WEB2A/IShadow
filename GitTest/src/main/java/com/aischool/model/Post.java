@@ -6,32 +6,30 @@ public class Post {
 	
 	private int idx;
 	private String title;
-	private String content;
 	private String file;
 	private Date create_at;
 	private int views;
 	private String answer;
-	private String category;
-	private String level;
-	private String user_idx;
+	private String user;
+	private String hint1;
+	private String hint2;
+	private String hint3;
 	
 	public Post() {};
-	
-	public Post(int idx, String title, String content, String file, Date date, int views, String answer,
-			String category, String level, String user_idx) {
+	public Post(int idx, String title, String file, Date create_at, int views, String answer, String user, String hint1,
+			String hint2, String hint3) {
+		super();
 		this.idx = idx;
 		this.title = title;
-		this.content = content;
 		this.file = file;
-		this.create_at = date;
+		this.create_at = create_at;
 		this.views = views;
 		this.answer = answer;
-		this.category = category;
-		this.level = level;
-		this.user_idx = user_idx;
+		this.user = user;
+		this.hint1 = hint1;
+		this.hint2 = hint2;
+		this.hint3 = hint3;
 	}
-
-
 
 	public int getIdx() {
 		return idx;
@@ -49,13 +47,6 @@ public class Post {
 		this.title = title;
 	}
 
-	public String getContent() {
-		return content;
-	}
-
-	public void setContent(String content) {
-		this.content = content;
-	}
 	public String getFile() {
 		return file;
 	}
@@ -63,6 +54,7 @@ public class Post {
 	public void setFile(String file) {
 		this.file = file;
 	}
+
 	public Date getCreate_at() {
 		return create_at;
 	}
@@ -87,27 +79,36 @@ public class Post {
 		this.answer = answer;
 	}
 
-	public String getCategory() {
-		return category;
+	public String getUser() {
+		return user;
 	}
 
-	public void setCategory(String category) {
-		this.category = category;
+	public void setUser(String user) {
+		this.user = user;
 	}
 
-	public String getLevel() {
-		return level;
+	public String getHint1() {
+		return hint1;
 	}
 
-	public void setLevel(String level) {
-		this.level = level;
+	public void setHint1(String hint1) {
+		this.hint1 = hint1;
 	}
 
-	public String getUser_idx() {
-		return user_idx;
+	public String getHint2() {
+		return hint2;
 	}
 
-	public void setUser_idx(String user_idx) {
-		this.user_idx = user_idx;
+	public void setHint2(String hint2) {
+		this.hint2 = hint2;
 	}
+
+	public String getHint3() {
+		return hint3;
+	}
+
+	public void setHint3(String hint3) {
+		this.hint3 = hint3;
+	}
+	
 }
