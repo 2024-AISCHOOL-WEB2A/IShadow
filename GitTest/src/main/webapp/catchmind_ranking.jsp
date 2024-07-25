@@ -38,7 +38,7 @@
             alt="Create a high-resolution illustration for a presentation thumbnail with a _The L s-1584004691 2"
           />
           <%@ include file="header.jsp" %>
-          <div class="overlap-group" onclick="moveMain()">
+          <div class="overlap-group" onclick="mover">
             <img class="image" src="assets/img/------.png" alt="image" />
             <div class="view view-2"></div>
             <div class="gText">처음으로</div>
