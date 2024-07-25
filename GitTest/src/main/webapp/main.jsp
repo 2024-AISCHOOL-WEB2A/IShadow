@@ -143,8 +143,12 @@
                     <a href="javascript:void(0);" id="catchmind-btn">
                         <div class="view"></div>
                     </a>
-                    <!-- 캐치마인드 -->
+                    <!-- 게시판 -->
                     <a href="desktop-1.jsp">
+                        <div class="view"></div>
+                    </a>
+                    <!-- QA -->
+                    <a href="request-page.jsp">
                         <div class="view"></div>
                     </a>
                 </div>
