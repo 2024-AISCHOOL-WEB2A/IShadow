@@ -1,6 +1,7 @@
 package com.aischool.model;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -39,6 +40,39 @@ public class UserDAO {
 			e.printStackTrace();
 		}
 	}
+    
+  //사용자 정보를 가져오는 메소드
+    public ArrayList<User> userSelectAll() {
+    	
+    	connect();
+    	ArrayList<User> users = new ArrayList<User>();
+
+		try {
+			String sql = "select * from users";
+			pst = conn.prepareStatement(sql);
+
+			rs = pst.executeQuery();
+			
+			User user = new User();
+			while (rs.next()) {
+				user.setId(rs.getString(1));
+				user.setNick(rs.getString(3));
+				user.setProfile_img(rs.getString(4));
+				user.setExit(rs.getString(5).charAt(0));
+				user.setJoindate(rs.getDate(6));
+				user.setType(rs.getString(7).charAt(0));
+			}
+			users.add(user);
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			close();
+		}
+
+		return users;
+	}
+    
     
     //DB close()
     public void close() {

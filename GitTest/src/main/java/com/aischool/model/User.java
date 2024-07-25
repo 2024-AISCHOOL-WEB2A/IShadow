@@ -10,12 +10,12 @@ public class User {
 	private String profile_img;
 	private char exit;
 	private Date joindate;
-	private String type;
+	private char type;
 	
 	public User() {};
 	
 	public User(String id, String pw, String email, String nick, String profile_img, char exit, Date joindate,
-			String type) {
+			char type) {
 		super();
 		this.id = id;
 		this.pw = pw;
@@ -70,10 +70,10 @@ public class User {
 	public void setJoindate(Date joindate) {
 		this.joindate = joindate;
 	}
-	public String getType() {
+	public char getType() {
 		return type;
 	}
-	public void setType(String type) {
+	public void setType(char type) {
 		this.type = type;
 	}
 	
