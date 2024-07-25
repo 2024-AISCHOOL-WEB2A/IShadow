@@ -148,7 +148,7 @@
                         <div class="view"></div>
                     </a>
                     <!-- QA -->
-                    <a href="request-page.jsp">
+                    <a href="qaAllSelect">
                         <div class="view"></div>
                     </a>
                 </div>

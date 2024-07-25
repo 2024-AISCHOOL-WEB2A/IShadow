@@ -7,10 +7,6 @@
   overflow: hidden;
   width: 1920px;
 }
-@font-face {
-	font-family: 'Maplestory Bold';
-	src: url('assets/font/Maplestory Light.ttf') format('truetype');
-}
 
 .request-page .overlap-group8 {
   height: 1120px;
@@ -31,11 +27,62 @@
 .request-page .rectangle-355 {
   background-color: #d9d9d933;
   border-radius: 30px;
-  height: 799px;
   left: 197px;
+  padding: 20px;
   position: absolute;
   top: 265px;
   width: 1418px;
+}
+
+.request-page .table-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.request-page .header-item {
+  color: white;
+  font-family: 'Maplestory Bold';
+  font-size: 25px;
+}
+
+.request-page .group-2613114 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.request-page .overlap-group2 {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  margin-bottom: 10px;
+  padding: 20px;
+}
+
+.request-page .number {
+  font-family: 'Maplestory Bold';
+  font-size: 25px;
+  width: 10%;
+}
+
+.request-page .text-7 {
+  font-family: 'Maplestory Bold';
+  font-size: 25px;
+  width: 40%;
+}
+
+.request-page .date {
+  font-family: 'Maplestory Bold';
+  font-size: 25px;
+  width: 25%;
+}
+
+.request-page .user-name {
+  font-family: 'Maplestory Bold';
+  font-size: 25px;
+  width: 25%;
 }
 
 .request-page .text-1 {
@@ -187,457 +234,4 @@
   position: absolute;
   top: 0;
   width: 272px;
-}
-
-.request-page .group-2613114 {
-  align-items: flex-start;
-  display: flex;
-  flex-direction: column;
-  left: 273px;
-  min-height: 764px;
-  position: absolute;
-  top: 284px;
-  width: 1336px;
-}
-
-.request-page .overlap-group2 {
-  height: 142px;
-  position: relative;
-  width: 1271px;
-}
-
-.request-page .rectangle-325 {
-  height: 91px;
-  left: 0;
-  position: absolute;
-  top: 52px;
-  width: 1271px;
-}
-
-.request-page .text-6 {
-  left: 11px;
-  letter-spacing: 0;
-  line-height: 32.7px;
-  position: absolute;
-  top: 6px;
-  width: 134px;
-  font-family:Maplestory Bold;
-  font-size:25px;
-}
-
-.request-page .text-7 {
-  left: 271px;
-  letter-spacing: 0;
-  line-height: 58.8px;
-  position: absolute;
-  top: 69px;
-  white-space: nowrap;
-  width: 359px;
-  font-family:Maplestory Bold;
-  font-size:45px;
-}
-
-.request-page .number {
-  left: 49px;
-  letter-spacing: 0;
-  line-height: 52.3px;
-  position: absolute;
-  top: 69px;
-  white-space: nowrap;
-  width: 8px;
-  font-family:Maplestory Bold;
-  font-size:25px;
-  
-}
-
-.request-page .nlnh {
-  left: 1020px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 79px;
-  white-space: nowrap;
-  width: 140px;
-  font-family:Maplestory Bold;
-  font-size:30px;
-}
-
-.request-page .text-8 {
-  left: 302px;
-  letter-spacing: 0;
-  line-height: 32.7px;
-  position: absolute;
-  top: 6px;
-  width: 84px;
-  font-family:Maplestory Bold;
-  font-size:25px;
-}
-
-.request-page .user-name {
-  left: 1020px;
-  letter-spacing: 0;
-  line-height: 32.7px;
-  position: absolute;
-  top: 0;
-  width: 174px;
-  font-family:Maplestory Bold;
-  font-size:25px;
-  
-}
-
-.request-page .overlap-group7 {
-  align-items: flex-start;
-  background-image: url(../img/rectangle-331.svg);
-  background-size: 100% 100%;
-  display: flex;
-  height: 91px;
-  margin-top: 9px;
-  min-width: 1271px;
-  padding: 23px 43.0px;
-  
-}
-
-.request-page .number-1 {
-  align-self: center;
-  margin-bottom: 6.78px;
-  min-height: 28px;
-  white-space: nowrap;
-  width: 10px;font-family:Maplestory Bold;
-  font-size:25px;
-}
-
-.request-page .text-9 {
-  letter-spacing: 0;
-  line-height: 58.8px;
-  margin-left: 218px;
-  min-height: 28px;
-  white-space: nowrap;
-  width: 321px;
-  font-family:Maplestory Bold;
-  font-size:45px;
-}
-
-.request-page .shs {
-  letter-spacing: 0;
-  line-height: 39.2px;
-  margin-left: 428px;
-  margin-top: 5px;
-  min-height: 22px;
-  text-align: center;
-  white-space: nowrap;
-  width: 140px;
-  font-family:Maplestory Bold;
-  font-size:30px;
-}
-
-.request-page .overlap-group1 {
-  height: 95px;
-  margin-top: 10px;
-  position: relative;
-  width: 1271px;
-}
-
-.request-page .rectangle-333 {
-  background-color: #ffffff4c;
-  border: 1px solid;
-  border-color: var(--jrnavercomnero);
-  border-radius: 100px;
-  height: 91px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 1271px;
-}
-
-.request-page .place-1 {
-  left: 1020px;
-  letter-spacing: 0;
-  line-height: 39.2px;
-  position: absolute;
-  text-align: center;
-  top: 35px;
-  white-space: nowrap;
-  width: 140px;
-  font-family:Maplestory Bold;
-  font-size:30px;
-  
-}
-
-.request-page .text-10 {
-  left: 271px;
-  letter-spacing: 0;
-  line-height: 58.8px;
-  position: absolute;
-  top: 27px;
-  white-space: nowrap;
-  width: 398px;font-family:Maplestory Bold;
-  font-size:45px;
-}
-
-.request-page .number-2 {
-  left: 40px;
-  position: absolute;
-  top: 29px;
-  width: 37px;
-  font-family:Maplestory Bold;
-  font-size:25px;
-}
-
-.request-page .overlap-group4 {
-  height: 98px;
-  margin-top: 15px;
-  position: relative;
-  width: 1271px;
-}
-
-.request-page .rectangle-335 {
-  height: 91px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 1271px;
-  
-}
-
-.request-page .text-11 {
-  left: 271px;
-  letter-spacing: 0;
-  line-height: 58.8px;
-  position: absolute;
-  top: 16px;
-  white-space: nowrap;
-  width: 398px;
-  font-family:Maplestory Bold;
-  font-size:45px;
-}
-
-.request-page .gjgj {
-  left: 1019px;
-  letter-spacing: 0;
-  line-height: 39.2px;
-  position: absolute;
-  text-align: center;
-  top: 28px;
-  white-space: nowrap;
-  width: 140px;
-  font-family:Maplestory Bold;
-  font-size:30px;
-}
-
-.request-page .number-3 {
-  left: 37px;
-  position: absolute;
-  top: 19px;
-  width: 78px;
-  font-family:Maplestory Bold;
-  font-size:25px;
-}
-
-.request-page .overlap-group3 {
-  align-items: center;
-  background-image: url(../img/rectangle-337.svg);
-  background-size: 100% 100%;
-  display: flex;
-  height: 91px;
-  margin-top: 7px;
-  min-width: 1271px;
-  padding: 16.7px 40.0px;
-}
-
-.request-page .number-4 {
-  margin-bottom: 1.68px;
-  min-height: 43px;
-  white-space: nowrap;
-  width: 26px;
-  font-family:Maplestory Bold;
-  font-size:25px;
-}
-
-.request-page .text-14 {
-  align-self: flex-end;
-  letter-spacing: 0;
-  line-height: 58.8px;
-  margin-left: 201px;
-  min-height: 56px;
-  white-space: nowrap;
-  width: 398px;
-  font-family:Maplestory Bold;
-  font-size:45px;
-}
-
-.request-page .config {
-  letter-spacing: 0;
-  line-height: 39.2px;
-  margin-bottom: 8.36px;
-  margin-left: 324px;
-  min-height: 22px;
-  text-align: center;
-  white-space: nowrap;
-  width: 201px;
-  font-family:Maplestory Bold;
-  font-size:30px;
-}
-
-.request-page .overlap-group6 {
-  align-items: flex-start;
-  background-image: url(../img/rectangle-337.svg);
-  background-size: 100% 100%;
-  display: flex;
-  height: 91px;
-  margin-top: 15px;
-  min-width: 1271px;
-  padding: 16.7px 46.0px;
-}
-
-.request-page .number-5 {
-  margin-top: 6.32px;
-  min-height: 28px;
-  white-space: nowrap;
-  width: 10px;
-  font-family:Maplestory Bold;
-  font-size:25px;
-}
-
-.request-page .text-13 {
-  align-self: flex-end;
-  letter-spacing: 0;
-  line-height: 58.8px;
-  margin-left: 215px;
-  min-height: 56px;
-  white-space: nowrap;
-  width: 398px;
-  font-family:Maplestory Bold;
-  font-size:45px;
-}
-
-.request-page .pong {
-  letter-spacing: 0;
-  line-height: 39.2px;
-  margin-left: 350px;
-  margin-top: 5.32px;
-  min-height: 22px;
-  text-align: center;
-  white-space: nowrap;
-  width: 140px;
-  font-family:Maplestory Bold;
-  font-size:30px;
-}
-
-.request-page .overlap-group5 {
-  align-items: center;
-  background-image: url(../img/rectangle-341.svg);
-  background-size: 100% 100%;
-  display: flex;
-  height: 88px;
-  margin-left: 9.57px;
-  margin-top: 12px;
-  min-width: 1269px;
-  padding: 12px 39.4px;
-}
-
-.request-page .number-6 {
-  margin-bottom: 8.1px;
-  min-height: 28px;
-  white-space: nowrap;
-  width: 10px;
-  font-family:Maplestory Bold;
-  font-size:25px;
-}
-
-.request-page .text-12 {
-  align-self: flex-start;
-  letter-spacing: 0;
-  line-height: 58.8px;
-  margin-left: 212px;
-  min-height: 56px;
-  white-space: nowrap;
-  width: 398px;
-  font-family:Maplestory Bold;
-  font-size:45px;
-  
-}
-
-.request-page .shadow {
-  letter-spacing: 0;
-  line-height: 39.2px;
-  margin-bottom: 7.68px;
-  margin-left: 352px;
-  min-height: 22px;
-  text-align: center;
-  white-space: nowrap;
-  width: 140px;
-  font-family:Maplestory Bold;
-  font-size:30px;
-}
-
-.request-page .date {
-  left: 1055px;
-  letter-spacing: 0;
-  line-height: 32.7px;
-  position: absolute;
-  top: 363px;
-  white-space: nowrap;
-  width: 137px;
-  font-family:Maplestory Bold;
-  font-size:25px;
-}
-
-.request-page .date-1 {
-  left: 1055px;
-  top: 459px;
-  font-family:Maplestory Bold;
-  font-size:25px;
-}
-
-.request-page .date-2 {
-  left: 1055px;
-  top: 562px;
-  font-family:Maplestory Bold;
-  font-size:25px;
-}
-
-.request-page .date-3 {
-  left: 1055px;
-  top: 673px;
-  font-family:Maplestory Bold;
-  font-size:25px;
-}
-
-.request-page .date-4 {
-  left: 1055px;
-  top: 778px;
-  font-family:Maplestory Bold;
-  font-size:25px;
-}
-
-.request-page .date-5 {
-  left: 1056px;
-  top: 882px;
-  font-family:Maplestory Bold;
-  font-size:25px;
-}
-
-.request-page .date-6 {
-  left: 1055px;
-  top: 985px;
-  font-family:Maplestory Bold;
-  font-size:25px;
-}
-
-.request-page .date-7 {
-  letter-spacing: 0;
-  line-height: 32.7px;
-  position: absolute;
-  white-space: nowrap;
-  width: 137px;
-  font-family:Maplestory Bold;
-  font-size:25px;
-}
-
-.request-page .number-7 {
-  letter-spacing: 0;
-  line-height: 52.3px;
-  font-family:Maplestory Bold;
-  font-size:25px;
 }
