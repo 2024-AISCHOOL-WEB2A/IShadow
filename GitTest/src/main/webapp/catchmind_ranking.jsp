@@ -44,7 +44,7 @@
             <div class="gText">처음으로</div>
           </div>
           <div class="overlap-group1" onclick="reTry()">
-            <img class="image-1" src="assets/img/--------.png" alt="image" />
+            <img class="image-1" src="assets/img/catchmind_ranking/--------.png" alt="image" />
             <div class="view-1 view-2"></div>
             <div class="gText">다시하기</div>
           </div>

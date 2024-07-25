@@ -20,7 +20,7 @@
       <div class="board-inpage-admin1-1 screen">
         <div class="overlap-group2">
           <div class="board-inpage-admin1">
-            <img class="rectangle-45" src="assets/img/rectangle-45.png" alt="Rectangle 45" />
+            <img class="rectangle-45" src="assets/img/board_inpage_admin/rectangle-45.png" alt="Rectangle 45" />
             <div class="flex-row">
               <img class="x1" src="assets/img/---1.png" alt="1" />
               <div class="overlap-group">
@@ -46,9 +46,9 @@
               <h1 class="title">USER</h1>
               <div class="rectangle-46"></div>
               <div class="text-1 single-linebody-base">/</div>
-              <img class="image-5" src="assets/img/image-5.png" alt="image 5" />
-              <img class="line-9 line" src="assets/img/line-9.svg" alt="Line 9" />
-              <img class="line-11 line" src="assets/img/line-11.svg" alt="Line 11" />
+              <img class="image-5" src="assets/img/board_inpage_admin/image-5.png" alt="image 5" />
+              <img class="line-9 line" src="assets/img/board_inpage_admin/line-9.svg" alt="Line 9" />
+              <img class="line-11 line" src="assets/img/board_inpage_admin/line-11.svg" alt="Line 11" />
               <div class="text-6">삭제하기</div>
             </div>
           </div>
