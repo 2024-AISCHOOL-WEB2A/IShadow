@@ -15,6 +15,7 @@ import com.aischool.model.PostDAO;
 /**
  * Servlet implementation class PostCommentsAll2
  */
+// 게시물 상세 보기
 @WebServlet("/PostsCommentAll")
 public class PostsCommentAll extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -24,8 +25,12 @@ public class PostsCommentAll extends HttpServlet {
 	 */
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		PostDAO postDao = new PostDAO();
-		//전체 게시글 표출
-		ArrayList<PostComments> postscomment = postDao.PostsComments();
+		int idx = Integer.parseInt(request.getParameter("post_idx"));
+		// 게시물 조회수 카운트
+		postDao.plusBoardView(idx);
+
+		//게시물 상세보기
+		ArrayList<PostComments> postscomment = postDao.PostsComments(idx);
 		int size = postscomment.size();
 		for(int i=0;i<size;i++) {
 			System.out.println(
@@ -33,12 +38,10 @@ public class PostsCommentAll extends HttpServlet {
 					postscomment.get(i).getPost_idx()+
 					postscomment.get(i).getCmt_content()+
 					postscomment.get(i).getCreated_at()+
-					postscomment.get(i).getU_id()+
-					postscomment.get(i).getHint_1()+
-					postscomment.get(i).getHint_2()+
-					postscomment.get(i).getHint_3()+
-					postscomment.get(i).getPost_answer());
+					postscomment.get(i).getU_id()
+					);
 		}
+
 		postDao.close();
 	}
 
