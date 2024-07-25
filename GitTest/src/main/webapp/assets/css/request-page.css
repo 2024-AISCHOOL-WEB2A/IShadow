@@ -38,12 +38,21 @@
   display: flex;
   justify-content: space-between;
   padding: 10px 0;
+  margin-bottom: 10px; 
 }
 
 .request-page .header-item {
   color: white;
   font-family: 'Maplestory Bold';
   font-size: 25px;
+}
+
+.request-page .header-item:nth-child(4) {
+  margin-right: 120px; /* user name을 왼쪽으로 이동 */
+}
+
+.request-page .header-item:nth-child(1) {
+  margin-left: 20px; /* 게시글 번호를 오른쪽으로 이동 */
 }
 
 .request-page .group-2613114 {
@@ -70,19 +79,22 @@
 .request-page .text-7 {
   font-family: 'Maplestory Bold';
   font-size: 25px;
-  width: 40%;
+  width: 35%;
+  margin-left: 90px; /* 제목을 오른쪽으로 이동 */
 }
 
 .request-page .date {
   font-family: 'Maplestory Bold';
   font-size: 25px;
-  width: 25%;
+  width: 20%;
+  margin-left: -260px; /* Date를 왼쪽으로 이동 */
 }
 
 .request-page .user-name {
   font-family: 'Maplestory Bold';
   font-size: 25px;
-  width: 25%;
+  width: 20%;
+  margin-right: -50px; /* user name을 오른쪽으로 이동 */
 }
 
 .request-page .text-1 {

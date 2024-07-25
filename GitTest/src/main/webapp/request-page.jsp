@@ -80,8 +80,7 @@
           </div>
          
           <img class="x1" src="assets/img/---1.png" alt="1" />
-<<<<<<< HEAD
-=======
+
           <div class="group-2613114">
             <div class="overlap-group2">
               <img class="rectangle-325" src="assets/img/request_page/rectangle-325.svg" alt="Rectangle 325" />
@@ -132,7 +131,7 @@
           <div class="date-4 date-7 Maplestory-bold-black-32px">23/02/2024</div>
           <div class="date-5 date-7 Maplestory-bold-black-32px">22/05/2024</div>
           <div class="date-6 date-7 Maplestory-bold-black-32px">23/07/2024</div>
->>>>>>> branch 'main' of https://github.com/2024-AISCHOOL-WEB2A/IShadow.git
+
         </div>
       </div>
     </div>
