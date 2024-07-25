@@ -25,18 +25,16 @@ public class PostsSelectAll extends HttpServlet {
 		PostDAO postDao = new PostDAO();
 		//전체 게시글 표출
 		ArrayList<Post> posts = postDao.postSelectAll();
-//		response.sendRedirect("desktop-1.jsp");
-		
-//		System.out.println("번호 제목 작성자 작성일자 첨부 조회수");
-//		int size = posts.size();
-//		for(int i=0;i<size;i++) {
-//			System.out.println(posts.get(i).getIdx()+" "+
-//			posts.get(i).getTitle()+" "+
-//			posts.get(i).getUser()+" "+
-//			posts.get(i).getCreate_at()+" "+
-//			posts.get(i).getFile()+" "+
-//			posts.get(i).getViews()+"\n");			
-//		}
+
+		int size = posts.size();
+		for(int i=0;i<size;i++) {
+			System.out.println(posts.get(i).getIdx()+" "+
+			posts.get(i).getTitle()+" "+
+			posts.get(i).getUser()+" "+
+			posts.get(i).getCreate_at()+" "+
+			posts.get(i).getFile()+" "+
+			posts.get(i).getViews()+"\n");			
+		}
 
 		postDao.close();
 	}

@@ -1,5 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
+<%@page import="com.aischool.model.Stories"%>
+<%@page import="java.util.ArrayList"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -142,6 +144,8 @@
           console.error('Error accessing webcam:', err);
         }
       }
+      
+      $index = sessionStorage.getItem('index');
     </script>
   </head>
   <body onload="init()">
@@ -151,6 +155,17 @@
       <div class="circles">
         <div class="circle" id="story-quiz">
           <!-- 동화에 대한 문제 화면을 여기에 추가 -->
+        <% 
+			ArrayList<Stories> choicedStory = (ArrayList<Stories>)session.getAttribute("choicedStory");
+			if(session.getAttribute("index")==null){%>
+				<img src="<%=choicedStory.get(0).getStoryImage()%>">	
+	    <%  
+	    	}else{
+	    		int index = (int)session.getAttribute("index");
+	    		System.out.println(index + "25일 525");
+	    %>	
+	    		<img src="<%=choicedStory.get(0).getStoryImage()%>">
+        <%  }%>
         </div>
         <img class="image" src="assets/img/----.svg" alt="image" />
         <div class="circle red">

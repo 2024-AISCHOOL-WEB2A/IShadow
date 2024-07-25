@@ -7,16 +7,20 @@ public class Stories {
 	private String anser;
 	private int next_story_idx;
 	private String hint;
+	private String storyName;
+	private String storyImage;
 	
 	public Stories() {};
 	
-	public Stories(int idx, String video, String anser, int next_story_idx, String hint) {
-		super();
+	public Stories(int idx, String video, String anser, int next_story_idx, String hint
+			, String storyName, String storyImage) {
 		this.idx = idx;
 		this.video = video;
 		this.anser = anser;
 		this.next_story_idx = next_story_idx;
 		this.hint = hint;
+		this.storyName = storyName;
+		this.storyImage = storyImage;
 	}
 
 	public int getIdx() {
@@ -57,6 +61,22 @@ public class Stories {
 
 	public void setHint(String hint) {
 		this.hint = hint;
+	}
+
+	public String getStoryName() {
+		return storyName;
+	}
+
+	public void setStoryName(String storyName) {
+		this.storyName = storyName;
+	}
+
+	public String getStoryImage() {
+		return storyImage;
+	}
+
+	public void setStoryImage(String storyImage) {
+		this.storyImage = storyImage;
 	}
 	
 }

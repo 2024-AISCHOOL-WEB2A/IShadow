@@ -15,11 +15,13 @@
     <link rel="stylesheet" type="text/css" href="assets/css/globals.css" />
   </head>
   <body style="margin: 0; background: #000000">
+       <%@ include file="header.jsp"%>
     <input type="hidden" id="anPageName" name="page" value="mypage" />
     <div class="container-center-horizontal">
       <div class="mypage screen">
         <div class="overlap-group9">
-          <img class="zcc-4 animate-enter1" src="assets/img/zcc-4.png" alt="zcc 4" />
+      
+
           <a href="board-inpage.html">
             <div class="link link-6">
               <div class="overlap-group">
@@ -101,36 +103,10 @@
               </div>
             </div></a
           >
-          <div class="group-2613108">
-            <div class="group-2613107">
-              <img class="frame" src="assets/img/my_page/frame-6.svg" alt="Frame" />
-              <img class="image-9" src="assets/img/my_page/image-9.png" alt="image 9" />
-              <img class="frame-1" src="assets/img/my_page/frame-3.svg" alt="Frame" />
-              <img class="image-9-1" src="assets/img/my_page/image-9-1.png" alt="image 9" />
-            </div>
-            <div class="text-container single-linebody-base">
-              <div class="text valign-text-middle">동화</div>
-              <div class="text-1 valign-text-middle">캐치마인드</div>
-              <div class="text-9 valign-text-middle">공유하기</div>
-            </div>
+         
+            
           </div>
-          <div class="overlap-group8">
-            <div class="text-91 valign-text-middle single-linebody-base">게시판</div>
-            <div class="group-2613110">
-              <div class="group-2613107">
-                <img class="frame" src="assets/img/frame-8.svg" alt="Frame" />
-                <img class="image-9" src="assets/img/image-9.png" alt="image 9" />
-                <img class="frame-1" src="assets/img/frame-3.svg" alt="Frame" />
-                <img class="image-9-1" src="assets/img/image-9-1.png" alt="image 9" />
-              </div>
-              <div class="text-container-1 single-linebody-base">
-                <div class="text valign-text-middle">동화</div>
-                <div class="text-1 valign-text-middle">캐치마인드</div>
-                <div class="text-9 valign-text-middle">공유하기</div>
-              </div>
-            </div>
-          </div>
-          <img class="a-1" src="assets/img/my_page/--a-1.png" alt="a 1" />
+     
         </div>
       </div>
     </div>
