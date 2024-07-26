@@ -9,7 +9,7 @@
 <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
 <meta name="og:type" content="website" />
 <meta name="twitter:card" content="photo" />
-<link rel="stylesheet" type="text/css" href="assets/css/stroy-ending-page.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/story-ending-page.css" />
 <link rel="stylesheet" type="text/css" href="assets/css/styleguide.css" />
 <link rel="stylesheet" type="text/css" href="assets/css/globals.css" />
 </head>
