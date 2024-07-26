@@ -22,6 +22,29 @@
       body {
         font-family: 'Maplestory Bold', sans-serif;
       }
+      .uploadbtn {
+        display: inline;
+        width: 114px;
+        height: 50px;
+        margin: 664	px auto;
+        background-color: #ffffff;
+        color: white;
+        font-size: 18px;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        position: relative;
+        z-index: 1000;
+        left:1499px;
+        top:663px;
+        opacity:80%;
+        color:#000000;
+        
+        
+      }
+      .uploadbtn:hover {
+        background-color: #45a049;
+      }
     </style>
 </head>
 <body style="margin: 0">
@@ -37,6 +60,7 @@
             alt="Create a high-resolution illustration for a presentation thumbnail with a _The L s-1584004691 1"
           />
             <%@ include file="header.jsp"%>
+            
           <div class="rectangle-355">
             <div class="table-header">
               <div class="header-item">게시글 번호</div>
@@ -64,10 +88,11 @@
                 }
             %>
           </div>
+          
+          <!-- 새로운 버튼 추가 -->
+          <div><input type="button" class="uploadbtn" name="uploadbtn" value="업로드"></div>
+          
           <h1 class="text-1">해줘요</h1>
-       
-         
-         
 
           <div class="group-2613114">
             <div class="overlap-group2">
