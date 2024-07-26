@@ -101,12 +101,13 @@ html, body {
 	overflow: hidden;
 	background-color: red;
 	margin-top: 0px; /* Ensure red circle is not affected */
+	position: relative;
 }
 
 .buttons {
 	position: absolute;
-	bottom: 20px;
-	right: 20px;
+	bottom: 20%;
+	right: -20%;
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
@@ -130,6 +131,7 @@ html, body {
 	align-items: center;
 	overflow: hidden;
 	border-radius: 50%;
+	position: absolute;
 }
 
 #webcam-container video {
@@ -137,6 +139,7 @@ html, body {
 	height: 100%;
 	object-fit: cover;
 	border-radius: 50%;
+	
 }
 
 .image {
@@ -144,6 +147,20 @@ html, body {
 	height: 350px; /* Adjust this height as needed */
 	margin: 0 -100px;
 	/* Further adjust negative margin to move the image closer to the circles */
+}
+.storyHint{
+	position: absolute;
+	display: none;
+	width: 70%;
+	height: 70%;
+	opacity: 50%;
+}
+.hintToggle{
+	position: absolute;
+	width: 5%;
+	height: 5%;
+	right: 7.5%;
+	bottom: 20%;
 }
 </style>
 <script
@@ -246,6 +263,15 @@ html, body {
             }
         }
     }
+    function hintToggle() {
+        let toggle = document.querySelector(".storyHint");
+      //toggle.style.display가 초기 상태에서는 인라인 스타일로 설정되지 않기 때문에 처음 버튼을 누르면 ""가 나옴
+        if (toggle.style.display === "none" || toggle.style.display === "") {
+            toggle.style.display = "block";
+        } else {
+            toggle.style.display = "none";
+        }
+    }
 </script>
 </head>
 <body onload="init()">
@@ -258,11 +284,13 @@ html, body {
 			<img class="image" src="assets/img/----.svg" alt="image" />
 			<div class="circle red">
 				<div id="webcam-container"></div>
+				<img class="storyHint" src="<%=choicedStory.get(story_idx).getHint()%>">
 			</div>
 			<div class="buttons">
 				<button class="button" onclick="skipQuestion()">넘어 가기</button>
 			</div>
 		</div>
+		<button class="hintToggle" onclick="hintToggle()">힌트보기</button>
 	</div>
 </body>
 </html>
