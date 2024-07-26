@@ -23,8 +23,7 @@
           <div class="mask-group"></div>
           <h1 class="text-1">관리자 페이지</h1>
           <div class="overlap-group-container">
-          <div><input type="button" class="profile button" name="btn" value="button"></div>
-            <div class="overlap-group1"><div class="text-2">게시판</div>
+            <div class="overlap-group1"><div class="text-2">게시판</div></div>
             <div class="overlap-group-2"><div class="text-3">로그 아웃</div></div>
           </div>
         </div>
@@ -65,13 +64,13 @@
             <div class="config poppins-bold-white-16px">CONFIG</div>
             <div class="overlap-group14"><div class="text poppins-bold-white-14px">삭제하기</div></div>
           </div>
-          <div class="overlap-group-1">
+          <div class="overlap-group">
             <div class="number-5 poppins-bold-white-14px">6</div>
             <div class="date-5 date-7 poppins-normal-white-16px">22/03/2019</div>
             <div class="pong poppins-bold-white-16px">PONG</div>
             <div class="overlap-group15"><div class="text poppins-bold-white-14px">삭제하기</div></div>
           </div>
-          <div class="overlap-group-1">
+          <div class="overlap-group">
             <div class="number-6 poppins-bold-white-16px">7</div>
             <div class="date-6 date-7 poppins-normal-white-16px">12/04/2024</div>
             <div class="shadow poppins-bold-white-16px">SHADOW</div>

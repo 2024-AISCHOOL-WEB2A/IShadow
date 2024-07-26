@@ -30,6 +30,18 @@ video {
 	width: 100%;
 	height: 100%;
 }
+
+#videoSkip {
+	position: relative;
+	z-index: 100;
+	display: inline;
+	border: 1px solid lime;
+	border-radius: 40%;
+	background-color: white;
+	padding: 1%;
+	left: 90%;
+	top: 50%;
+}
 </Style>
 <body style="margin: 0; background: #000000">
 	<input type="hidden" id="anPageName" name="page" value="video" />
@@ -40,70 +52,102 @@ video {
 				<!-- header -->
 				<%@ include file="header.jsp"%>
 
-				<a href="story-quiz.jsp">
-					<div class="link-sns_item">
-						<div class="text-64 valign-text-middle">넘어가기</div>
-					</div>
-				</a>
+				<%
+				ArrayList<Stories> choicedStory = (ArrayList<Stories>) session.getAttribute("choicedStory");
+				int idx = 0;
+				System.out.println("영성 출력 전 " + request.getParameter("story_idx"));
+				if (choicedStory != null && !choicedStory.isEmpty()) {
+				%>
+				<%
+				if (request.getParameter("story_idx") == null) {
+				%>
+				<button id="videoSkip" class="text-64 valign-text-middle"
+					onclick="idxSelectorBtn(<%=idx%>)">넘어가기</button>
+
 				<!--영상 들어갈 자리-->
 				<div class="rectangle-7">
-					<%
-					ArrayList<Stories> choicedStory = (ArrayList<Stories>) session.getAttribute("choicedStory");
-					int idx = 0;
-					if (choicedStory != null && !choicedStory.isEmpty()) {
-					%>
-						<%if (request.getParameter("story_idx") == null) {%>
-							<video class="choicedStory" autoplay="autoplay" 
-							src="<%=choicedStory.get(idx).getVideo()%>" onended="idxSelector(<%=idx%>)">
-							</video>
-						<%}
-						else{
-							idx += Integer.parseInt(request.getParameter("story_idx"));
-						%>
-							<video class="choicedStory" autoplay="autoplay" 
-							src="<%=choicedStory.get(idx).getVideo()%>" onended="idxSelector(<%=idx%>)">
-							</video>
-						<%}%>
+					<video id="storyVideo" class="choicedStory"
+						src="<%=choicedStory.get(idx).getVideo()%>"
+						onended="idxSelector(<%=idx%>)" autoplay="autoplay">
+					</video>
 					<%
 					} else {
+					idx += Integer.parseInt(request.getParameter("story_idx"));
+					System.out.println("다음 동화 " + idx);
 					%>
+					<button id="videoSkip" class="text-64 valign-text-middle"
+						onclick="idxSelectorBtn(<%=idx%>)">넘어가기</button>
+					<div class="rectangle-7">
+						<video id="storyVideo" class="choicedStory"
+							src="<%=choicedStory.get(idx).getVideo()%>"
+							onended="idxSelector(<%=idx%>)" autoplay="autoplay">
+						</video>
+						<%
+						}
+						%>
+						<%
+						} else {
+						%>
 						<p>비디오를 로드할 수 없습니다....</p>
-					<%
-					}
-					%>
+						<%
+						}
+						%>
+					</div>
+					<img class="x1" src="assets/img/---1.png" alt="1" />
 				</div>
-				<img class="x1" src="assets/img/---1.png" alt="1" />
 			</div>
 		</div>
-	</div>
-	<script>
+		<script>
 	/* 영상 idx 정보 넘겨주기 */
-    function idxSelector(idx){
-    	/* sessionStorage.setItem('index', idx);
-    	alert(idx);
-    	window.location.href = "story-quiz.jsp"; */
-    	
-    	let form = document.createElement("form");
-    	form.method = "POST";
-    	<%
-    		if(idx != choicedStory.size()){%>
-    			form.action = "story-quiz.jsp";	
-    	<%  }else{%>
-    			form.action = story-ending-page.jsp
-    	<%  }%>
-    	let input = document.createElement("input");
-    	input.type="hidden";
-    	input.name = "story_idx";
-    	input.value = idx;
-    	
-    	form.appendChild(input);
-    	document.body.appendChild(form);
-    	console.log(input.value, "실행은 됐냐");
-    	form.submit();
+    function idxSelector(idx) {
+    // 1초 지연 후 폼 제출
+    setTimeout(() => {
+        let form = document.createElement("form");
+        form.method = "POST";
+        <%System.out.println("idx: " + idx);
+if (idx != (choicedStory.size() - 1)) {%>
+                form.action = "story-quiz.jsp";    
+        <%} else {%>
+                form.action = "story-ending-page.jsp";
+        <%}%>
+        let input = document.createElement("input");
+        input.type = "hidden";
+        input.name = "story_idx";
+        input.value = idx;
+        
+        form.appendChild(input);
+        document.body.appendChild(form);
+        form.submit();
+    }, 1000);
+}
+	//스킾버튼용
+    function idxSelectorBtn(idx) {
+        // 1초 지연 후 폼 제출
+       
+            let form = document.createElement("form");
+            form.method = "POST";
+            <%System.out.println("idx: " + idx);
+if (idx != (choicedStory.size() - 1)) {%>
+                    form.action = "story-quiz.jsp";    
+            <%} else {%>
+                    form.action = "story-ending-page.jsp";
+            <%}%>
+            let input = document.createElement("input");
+            input.type = "hidden";
+            input.name = "story_idx";
+            input.value = idx;
+            
+            form.appendChild(input);
+            document.body.appendChild(form);
+            form.submit();
     }
-    
-    
-    
+    // 1초 지연 후 동영상 재생(필요하면 사용) autoplay지우고 이거 사용하면 됨
+   /*  document.addEventListener("DOMContentLoaded", function() {
+        setTimeout(() => {
+            document.getElementById("storyVideo").play();
+        }, 1000);
+    }); */
+
       function ShowOnScroll() {
         this.toShow = [];
         this.nextEventY = undefined;

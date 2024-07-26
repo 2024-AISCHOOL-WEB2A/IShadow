@@ -15,9 +15,12 @@
     <link rel="stylesheet" type="text/css" href="assets/css/globals.css" />
   </head>
   <body style="margin: 0; background: #000000">
+   <%@ include file="header.jsp"%>
   	
     <input type="hidden" id="anPageName" name="page" value="request-page-post" />
+    
     <div class="container-center-horizontal">
+    
       <div class="request-page-post screen">
         <div class="overlap-group">
           <h1 class="text-5">해줘요</h1>

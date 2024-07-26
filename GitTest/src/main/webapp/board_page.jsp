@@ -1,6 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ page import="java.util.ArrayList"%>
+<%@ page import="com.aischool.model.Post"%>
+<%
+	ArrayList<Post> posts = (ArrayList<Post>)request.getAttribute("getPosts");
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,6 +17,16 @@
 <link rel="stylesheet" type="text/css" href="assets/css/board_page.css" />
 <link rel="stylesheet" type="text/css" href="assets/css/board_page.css" />
 <link rel="stylesheet" type="text/css" href="assets/css/board_page.css" />
+<script>
+ 	function searchPosts(){
+		let frm = document.searchfrm;
+		let searchVal = searchfrm.searchVal;
+		if(searchVal.value == "" || searchVal.value == null){
+			alert("텍스트를 입력 해주세요.");
+			return;
+		}
+	}
+</script>
 </head>
 <body style="margin: 0; background: #000000">
 	<div class="desktop-1">
@@ -20,41 +34,46 @@
 			<!-- header -->
 			<%@ include file="header.jsp"%>
 			<h1 class="text-55">커뮤니티</h1>
-			<div class="search-container">
-				<input type="text" class="search-input" placeholder="검색어를 입력하세요" />
-				<button class="search-button">
-					<img class="icon-magnifying-glass"
-						src="assets/img/board_page/search_icon.png" alt="돋보기" />
-				</button>
-			</div>
-
+				<div class="search-container">
+					<form method="get" action="PostsSearch">
+						<input type="text" name="searchVal" class="search-input" placeholder="검색어를 입력하세요" />
+						<button class="search-button" onclick="searchPosts();">
+							<img class="icon-magnifying-glass"
+								src="assets/img/board_page/search_icon.png" alt="돋보기" />
+						</button>
+					</form>
+				</div>
 			<div class="group-2613103">
 				<%
-                    // ArrayList 설정
-                    ArrayList<String[]> items = new ArrayList<String[]>();
-                    items.add(new String[]{"assets/img/QA.png", "제목 1"});
-                    items.add(new String[]{"assets/img/image2.jpg", "제목 2"});
-                    items.add(new String[]{"assets/img/image3.jpg", "제목 3"});
-                    items.add(new String[]{"assets/img/image4.jpg", "제목 4"});
-                    items.add(new String[]{"assets/img/image5.jpg", "제목 5"});
-                    items.add(new String[]{"assets/img/image6.jpg", "제목 6"});
-
-                    // 동적 생성
-                    for (String[] item : items) {
-                        String imgSrc = item[0];
-                        String title = item[1];
+					/* // ArrayList 설정
+	                ArrayList<String[]> items = new ArrayList<String[]>();
+	                items.add(new String[]{"assets/img/QA.png", "제목 1"});
+	                items.add(new String[]{"assets/img/image2.jpg", "제목 2"});
+	                items.add(new String[]{"assets/img/image3.jpg", "제목 3"});
+	                items.add(new String[]{"assets/img/image4.jpg", "제목 4"});
+	                items.add(new String[]{"assets/img/image5.jpg", "제목 5"});
+	                items.add(new String[]{"assets/img/image6.jpg", "제목 6"});
+	
+	                // 동적 생성
+	                for (String[] item : items) {
+	                    String imgSrc = item[0];
+	                    String title = item[1]; */
+                	if(!posts.isEmpty()){
+               			int size = posts.size();
+                   		for(int i=0; i<size; i++) {
                 %>
 				<div class="group-2613103-item board">
 					<a href="board-inpage.jsp">
 						<div class="link">
 							<div class="overlap-group"
-								style="background-image: url(<%= imgSrc %>);"></div>
+								style="background-image: url(<%= posts.get(i).getFile() %>);"></div>
 						</div>
 					</a>
-					<div class="title"><%= title %></div>
+					<div class="title"><%= posts.get(i).getTitle() %></div>
 				</div>
 				<%
-                    }
+                  		}
+                   	}
                 %>
 			</div>
 		</div>
