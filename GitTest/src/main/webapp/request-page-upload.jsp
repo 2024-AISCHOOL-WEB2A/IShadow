@@ -4,8 +4,6 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <!--<meta name=description content="This site was generated with Anima. www.animaapp.com"/>-->
-    <!-- <link rel="shortcut icon" type=image/png href="https://animaproject.s3.amazonaws.com/home/favicon.png" /> -->
     <meta name="viewport" content="width=1920, maximum-scale=1.0" />
     <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
     <meta name="og:type" content="website" />
@@ -26,13 +24,16 @@
               <div class="text-2 text">제목</div>
               <div class="text-3 text">작성자</div>
               <div class="overlap-group">
-                <img class="rectangle-325" src="assets/img/rectangle-325.svg" alt="Rectangle 325" />
-                <img class="rectangle-331" src="assets/img/rectangle-331.svg" alt="Rectangle 331" />
+                <img class="rectangle-325" src="assets/img/request_page/rectangle-325.svg" alt="Rectangle 325" />
+                <img class="rectangle-331" src="assets/img/request_page/rectangle-331.svg" alt="Rectangle 331" />
                 <div class="group-2613115">
-                  <div class="group-2613115-item">아기상어 넣어줘요</div>
+                  <input class="group-2613115-item" type="text" placeholder="제목을 입력하세요" />
                   <div class="group-2613115-item">NLNH</div>
                 </div>
-                <img class="rectangle-333" src="assets/img/rectangle-333-1.svg" alt="Rectangle 333" />
+                <div class="content-container">
+                  <img class="rectangle-333-overlay" src="assets/img/rectangle-333-1.svg" alt="Rectangle 333 Overlay" />
+                  <textarea class="rectangle-333" placeholder="내용을 입력하세요"></textarea>
+                </div>
                 <div class="text-5 text">취소</div>
                 <div class="rectangle-43"></div>
                 <div class="text-6 text">등록</div>
@@ -44,4 +45,3 @@
     </div>
   </body>
 </html>
-	
