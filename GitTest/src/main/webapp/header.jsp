@@ -23,7 +23,7 @@
 	align-items: center;
 	width: 100%;
 	padding: 10px 20px;
-	background-color: rgba(0, 0, 0, 0.7);
+	background-color: ;
 	position: relative;
 	color: white; /* Set the text color to white */
 	font-family: 'Maplestory Bold'; /* Apply the Maplestory font */
