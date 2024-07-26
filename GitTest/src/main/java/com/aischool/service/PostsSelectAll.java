@@ -26,6 +26,7 @@ public class PostsSelectAll extends HttpServlet {
 		PostDAO postDao = new PostDAO();
 		//전체 게시글 표출
 		ArrayList<Post> posts = postDao.postSelectAll();
+		postDao.close();
 		
 		request.setAttribute("getPosts", posts);
 
@@ -42,7 +43,6 @@ public class PostsSelectAll extends HttpServlet {
 //			posts.get(i).getViews()+"\n");			
 //		}
 
-		postDao.close();
 	}
 
 }
