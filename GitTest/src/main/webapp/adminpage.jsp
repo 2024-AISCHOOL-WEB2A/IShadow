@@ -23,7 +23,8 @@
           <div class="mask-group"></div>
           <h1 class="text-1">관리자 페이지</h1>
           <div class="overlap-group-container">
-            <div class="overlap-group1"><div class="text-2">게시판</div></div>
+          <div><input type="button" class="profile button" name="btn" value="button"></div>
+            <div class="overlap-group1"><div class="text-2">게시판</div>
             <div class="overlap-group-2"><div class="text-3">로그 아웃</div></div>
           </div>
         </div>

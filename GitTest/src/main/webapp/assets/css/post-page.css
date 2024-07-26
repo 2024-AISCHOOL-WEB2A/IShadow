@@ -1,19 +1,19 @@
 /* screen - post-page */
 
 .post-page {
-  align-items: flex-start;
-  background-color: var(--white);
+align-items: center;
+  background-image: url(../img/background.png);
+  background-position: 50% 50%;
+  background-size: cover;
   display: flex;
-  height: 71.11vw;
-  width: 100.0vw;
+  flex-direction: column;
+  min-height: 71.11vw;
+  padding: 2.01vw 5.25vw;
+  width: 102.78vw;
 }
 
-.post-page .overlap-group1 {
-  height: 71.25vw;
-  margin-top: -0.14vw;
-  position: relative;
-  width: 100.0vw;
-}
+
+
 
 .post-page .zcc-1 {
   display: block;
@@ -26,21 +26,8 @@
   width: 100.0vw;
 }
 
-.post-page .zcc-1.animate-enter3 {
-  animation: animate-enter3-frames 3.00s ease-in-out 0.00s 1 normal forwards;
-  display: block;
-  opacity: 0;
-  transform: translate(1.74vw, 0);
-}
 
-@keyframes animate-enter3-frames {
-  from{opacity: 0;
-transform: translate(25px, 0);
-}
-to{opacity: 1;
-transform: translate(0,0);
-}
-}
+
 
 .post-page .rectangle-24 {
   background-color: var(--soapstone);
@@ -251,25 +238,8 @@ transform: translate(0,0);
   width: 30.69vw;
 }
 
-.post-page .text-72 {
-  color: var(--white);
-  font-weight: 400;
-  height: 1.11vw;
-  left: 18.61vw;
-  line-height: 1.11vw;
-  position: absolute;
-  text-align: center;
-  top: 7.15vw;
-  white-space: nowrap;
-}
 
-.post-page .group-2613107 {
-  align-items: center;
-  display: flex;
-  gap: 3.54vw;
-  height: 6.04vw;
-  min-width: 30.21vw;
-}
+
 
 .post-page .frame {
   align-self: flex-end;
@@ -278,12 +248,6 @@ transform: translate(0,0);
   width: 6.04vw;
 }
 
-.post-page .text-container {
-  align-items: flex-start;
-  align-self: flex-end;
-  display: flex;
-  min-width: 28.4vw;
-}
 
 .post-page .text-73 {
   color: var(--white);

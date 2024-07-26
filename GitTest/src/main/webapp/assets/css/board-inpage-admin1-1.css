@@ -18,7 +18,7 @@
   height: 1080px;
   justify-content: flex-end;
   min-width: 1920px;
-  padding: 28px 197px;
+  padding: 0px 197px;
 }
 
 .board-inpage-admin1-1 .board-inpage-admin1 {
@@ -28,6 +28,7 @@
   height: 1024px;
   overflow: hidden;
   width: 1440px;
+  position: relative;
 }
 
 .board-inpage-admin1-1 .rectangle-45 {
@@ -37,26 +38,10 @@
   width: 993px;
 }
 
-.board-inpage-admin1-1 .flex-row {
-  align-items: flex-start;
-  display: flex;
-  gap: 227px;
-  height: 133px;
-  margin-top: 4987px;
-  min-width: 941px;
-}
-
 .board-inpage-admin1-1 .x1 {
   height: 90px;
   object-fit: cover;
   width: 272px;
-}
-
-.board-inpage-admin1-1 .overlap-group {
-  align-self: flex-end;
-  height: 119px;
-  position: relative;
-  width: 442px;
 }
 
 .board-inpage-admin1-1 .text-2 {
@@ -69,25 +54,6 @@
   text-align: center;
   top: 103px;
   white-space: nowrap;
-}
-
-.board-inpage-admin1-1 .group-2613110 {
-  align-items: flex-start;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  left: 0;
-  min-height: 119px;
-  position: absolute;
-  top: 0;
-  width: 442px;
-}
-
-.board-inpage-admin1-1 .group-2613107 {
-  align-items: center;
-  display: flex;
-  gap: 51px;
-  min-width: 435px;
 }
 
 .board-inpage-admin1-1 .frame {
@@ -157,13 +123,6 @@
   white-space: nowrap;
 }
 
-.board-inpage-admin1-1 .overlap-group1 {
-  height: 956px;
-  margin-top: 29px;
-  position: relative;
-  width: 1440px;
-}
-
 .board-inpage-admin1-1 .zcc-4 {
   height: 956px;
   left: 0;
@@ -181,12 +140,14 @@
 }
 
 @keyframes animate-enter-frames {
-  from{opacity: 0;
-transform: translate(25px, 0);
-}
-to{opacity: 1;
-transform: translate(0,0);
-}
+  from {
+    opacity: 0;
+    transform: translate(25px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
 }
 
 .board-inpage-admin1-1 .rectangle-43 {
@@ -195,7 +156,7 @@ transform: translate(0,0);
   height: 73px;
   left: 245px;
   position: absolute;
-  top: 74px;
+  top: 125px;
   width: 212px;
 }
 
@@ -208,7 +169,7 @@ transform: translate(0,0);
   letter-spacing: 0;
   line-height: 24px;
   position: absolute;
-  top: 97px;
+  top: 150px;
   white-space: nowrap;
 }
 
@@ -218,7 +179,7 @@ transform: translate(0,0);
   height: 73px;
   left: 979px;
   position: absolute;
-  top: 74px;
+  top: 125px;
   width: 212px;
 }
 
@@ -237,7 +198,7 @@ transform: translate(0,0);
   left: 212px;
   object-fit: cover;
   position: absolute;
-  top: 159px;
+  top: 250px;
   width: 979px;
 }
 
@@ -258,7 +219,7 @@ transform: translate(0,0);
   letter-spacing: 0;
   line-height: 24px;
   position: absolute;
-  top: 97px;
+  top: 150px;
   white-space: nowrap;
 }
 
