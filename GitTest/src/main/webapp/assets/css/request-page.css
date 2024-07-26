@@ -74,6 +74,9 @@
   font-family: 'Maplestory Bold';
   font-size: 25px;
   width: 10%;
+  display: flex; /* Add this */
+  justify-content: center; /* Center horizontally */
+  align-items: center;
 }
 
 .request-page .text-7 {

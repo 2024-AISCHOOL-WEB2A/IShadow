@@ -16,41 +16,26 @@
   </head>
   <body style="margin: 0">
     <input type="hidden" id="anPageName" name="page" value="board-inpage-admin1-1" />
+          
     <div class="container-center-horizontal">
+
       <div class="board-inpage-admin1-1 screen">
+     
         <div class="overlap-group2">
+         
           <div class="board-inpage-admin1">
             <img class="rectangle-45" src="assets/img/board_inpage_admin/rectangle-45.png" alt="Rectangle 45" />
-            <div class="flex-row">
-              <img class="x1" src="assets/img/---1.png" alt="1" />
-              <div class="overlap-group">
-                <div class="text-2 valign-text-middle single-linebody-base">게시판</div>
-                <div class="group-2613110">
-                  <div class="group-2613107">
-                    <img class="frame" src="assets/img/frame-2.svg" alt="Frame" />
-                    <img class="image-9" src="assets/img/image-9.png" alt="image 9" />
-                    <img class="frame-1" src="assets/img/frame-3.svg" alt="Frame" />
-                    <img class="image-9-1" src="assets/img/image-9-1.png" alt="image 9" />
-                  </div>
-                  <div class="text-container single-linebody-base">
-                    <div class="text-3 valign-text-middle">동화</div>
-                    <div class="text-4 valign-text-middle">캐치마인드</div>
-                    <div class="text-5 valign-text-middle">공유하기</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="overlap-group1">
-              <div class="zcc-4 animate-enter"></div>
-              <div class="rectangle-43"></div>
-              <h1 class="title">USER</h1>
-              <div class="rectangle-46"></div>
-              <div class="text-1 single-linebody-base">/</div>
-              <img class="image-5" src="assets/img/board_inpage_admin/image-5.png" alt="image 5" />
-              <img class="line-9 line" src="assets/img/board_inpage_admin/line-9.svg" alt="Line 9" />
-              <img class="line-11 line" src="assets/img/board_inpage_admin/line-11.svg" alt="Line 11" />
-              <div class="text-6">삭제하기</div>
-            </div>
+        
+            <div class="zcc-4 animate-enter">  <%@ include file="header.jsp"%></div>
+              
+            <div class="rectangle-43"></div>
+            <h1 class="title">USER</h1>
+            <div class="rectangle-46"></div>
+            <div class="text-1 single-linebody-base">/</div>
+            <img class="image-5" src="assets/img/board_inpage_admin/image-5.png" alt="image 5" />
+            <img class="line-9 line" src="assets/img/board_inpage_admin/line-9.svg" alt="Line 9" />
+            <img class="line-11 line" src="assets/img/board_inpage_admin/line-11.svg" alt="Line 11" />
+            <div class="text-6">삭제하기</div>
           </div>
         </div>
       </div>
