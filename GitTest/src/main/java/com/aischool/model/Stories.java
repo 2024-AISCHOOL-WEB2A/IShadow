@@ -31,7 +31,7 @@ public class Stories {
 		this.idx = idx;
 	}
 
-	public String getViedo() {
+	public String getVideo() {
 		return video;
 	}
 

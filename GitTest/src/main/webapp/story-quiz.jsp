@@ -2,6 +2,15 @@
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+ArrayList<Stories> choicedStory = (ArrayList<Stories>)session.getAttribute("choicedStory"); 
+int story_idx = 0;
+if (choicedStory != null && !choicedStory.isEmpty()) {
+    if (request.getParameter("story_idx") != null) {
+        story_idx = Integer.parseInt(request.getParameter("story_idx"));
+    }
+}
+%>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -122,30 +131,99 @@
         margin: 0 -100px; /* Further adjust negative margin to move the image closer to the circles */
       }
     </style>
-    <script>
-      async function init() {
-        const video = document.createElement('video');
-        video.setAttribute('autoplay', '');
-        video.setAttribute('playsinline', '');
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/pose@0.8/dist/teachablemachine-pose.min.js"></script>
+    <script type="text/javascript">
+    const URL = "model/";
+    let model, webcam, ctx, labelContainer, maxPredictions;
 
-        const constraints = {
-          video: {
-            width: 700, /* Adjusted size to match the red circle */
-            height: 700, /* Adjusted size to match the red circle */
-            facingMode: 'user'
-          }
-        };
+    async function init() {
+        const modelURL = URL + "model.json";
+        const metadataURL = URL + "metadata.json";
 
-        try {
-          const stream = await navigator.mediaDevices.getUserMedia(constraints);
-          video.srcObject = stream;
-          document.getElementById('webcam-container').appendChild(video);
-        } catch (err) {
-          console.error('Error accessing webcam:', err);
+        model = await tmPose.load(modelURL, metadataURL);
+        maxPredictions = model.getTotalClasses();
+
+        const size = 620; // Size of the red circle
+        const flip = true; 
+        webcam = new tmPose.Webcam(size, size, flip); 
+        await webcam.setup(); 
+        await webcam.play();
+        window.requestAnimationFrame(loop);
+
+        const webcamContainer = document.getElementById("webcam-container");
+        const canvas = document.createElement("canvas");
+        canvas.width = size;
+        canvas.height = size;
+        canvas.style.width = "100%";
+        canvas.style.height = "100%";
+        webcamContainer.appendChild(canvas);
+
+        ctx = canvas.getContext("2d");
+        /* 라벨은 필요 없어서 일단 주석 */
+        /* labelContainer = document.getElementById("label-container");
+            if (labelContainer) {
+                for (let i = 0; i < maxPredictions; i++) { 
+                    labelContainer.appendChild(document.createElement("div"));
+                }
+            } */
+        
+    }
+
+    async function loop(timestamp) {
+        webcam.update(); 
+        await predict();
+        window.requestAnimationFrame(loop);
+    }
+
+    async function predict() {
+        const { pose, posenetOutput } = await model.estimatePose(webcam.canvas);
+        const prediction = await model.predict(posenetOutput);
+        
+        let maxProbability = 0;
+        let bestMatch = "";
+
+       /*  for (let i = 0; i < maxPredictions; i++) {
+        	// 정확도가 75% 이상인 클래스 찾기
+            if (prediction[i].probability >= 0.75) {
+                highConfidenceClass = prediction[i].className;
+            } */
+                /* 라벨은 필요 없어서 일단 주석 */
+            /* const classPrediction = prediction[i].className 
+            + ": " + prediction[i].probability.toFixed(2);
+             labelContainer.childNodes[i].innerHTML = classPrediction;  */
         }
-      }
-      
-      $index = sessionStorage.getItem('index');
+        for (let i = 0; i < maxPredictions; i++) {
+
+            if (prediction[i].probability > maxProbability) {
+                maxProbability = prediction[i].probability;
+                bestMatch = prediction[i].className;
+            }
+        }
+
+        drawPose(pose);
+        
+        const story_answer = <%=choicedStory.get(story_idx).getAnser()%>;
+        if (maxProbability > 0.75 && bestMatch.toLowerCase() === story_answer.toLowerCase()) {
+        	window.location.href = "story-ending-page.jsp";
+        }
+     // 정확도가 75% 이상인 클래스가 존재하고, 해당 클래스의 이름이 story_answer와 같다면 다음 페이지로 이동
+        <%-- const story_answer = <%=choicedStory.get(story_idx).getAnser()%>; // 정답 클래스 이름을 여기에 입력
+        if (highConfidenceClass && highConfidenceClass === story_answer) {
+            window.location.href = "story-ending-page.jsp";
+        } --%>
+    }
+
+    function drawPose(pose) {
+        if (webcam.canvas) {
+            ctx.drawImage(webcam.canvas, 0, 0);
+            if (pose) {
+                const minPartConfidence = 0.5;
+                tmPose.drawKeypoints(pose.keypoints, minPartConfidence, ctx);
+                tmPose.drawSkeleton(pose.keypoints, minPartConfidence, ctx);
+            }
+        }
+    }
     </script>
   </head>
   <body onload="init()">
@@ -155,23 +233,16 @@
       <div class="circles">
         <div class="circle" id="story-quiz">
           <!-- 동화에 대한 문제 화면을 여기에 추가 -->
-        <% 
-			ArrayList<Stories> choicedStory = (ArrayList<Stories>)session.getAttribute("choicedStory");
-			if(session.getAttribute("index")==null){%>
-				<img src="<%=choicedStory.get(0).getStoryImage()%>">	
-	    <%  
-	    	}else{
-	    		int index = (int)session.getAttribute("index");
-	    		System.out.println(index + "25일 525");
-	    %>	
-	    		<img src="<%=choicedStory.get(0).getStoryImage()%>">
-        <%  }%>
+          
+			<img src="<%= choicedStory.get(story_idx).getStoryImage() %>">	
         </div>
         <img class="image" src="assets/img/----.svg" alt="image" />
         <div class="circle red">
-          <div id="webcam-container"></div>
-          <div id="label-container"></div>
-        </div>
+          <div id="webcam-container">
+          </div>
+          
+          <!-- <div id="label-container"></div>
+        </div> 라벨은 필요 없어서 일단 주석-->
       </div>
       <div class="buttons">
         <a href="story-ending-page.jsp"><button class="button">넘어 가기</button></a>

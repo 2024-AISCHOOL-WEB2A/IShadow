@@ -36,7 +36,7 @@ public class ChoiceStory extends HttpServlet {
 			session.setAttribute("choicedStory", stories);
 			session.setAttribute("idx", idx);
 			response.sendRedirect("video.jsp");
-			System.out.println(stories.get(0).getViedo());
+			System.out.println(stories.get(0).getVideo());
 			System.out.println("동화 선택 했다");
 		}else {
 			response.sendRedirect("story-choice.jsp");

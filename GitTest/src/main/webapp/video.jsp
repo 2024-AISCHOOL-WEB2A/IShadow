@@ -52,22 +52,22 @@ video {
 					int idx = 0;
 					if (choicedStory != null && !choicedStory.isEmpty()) {
 					%>
-						<%if (request.getParameter("idx") == null) {%>
+						<%if (request.getParameter("story_idx") == null) {%>
 							<video class="choicedStory" autoplay="autoplay" 
-							src="<%=choicedStory.get(idx).getViedo()%>" onended="idxSelector(<%=idx%>)">
+							src="<%=choicedStory.get(idx).getVideo()%>" onended="idxSelector(<%=idx%>)">
 							</video>
 						<%}
 						else{
-							idx += Integer.parseInt(request.getParameter("idx"));
+							idx += Integer.parseInt(request.getParameter("story_idx"));
 						%>
 							<video class="choicedStory" autoplay="autoplay" 
-							src="<%=choicedStory.get(idx).getViedo()%>" onended="idxSelector()">
+							src="<%=choicedStory.get(idx).getVideo()%>" onended="idxSelector(<%=idx%>)">
 							</video>
 						<%}%>
 					<%
 					} else {
 					%>
-					<p>비디오를 로드할 수 없습니다....</p>
+						<p>비디오를 로드할 수 없습니다....</p>
 					<%
 					}
 					%>
@@ -79,9 +79,27 @@ video {
 	<script>
 	/* 영상 idx 정보 넘겨주기 */
     function idxSelector(idx){
-    	sessionStorage.setItem('index', idx);
+    	/* sessionStorage.setItem('index', idx);
     	alert(idx);
-    	window.location.href = "story-quiz.jsp";
+    	window.location.href = "story-quiz.jsp"; */
+    	
+    	let form = document.createElement("form");
+    	form.method = "POST";
+    	<%
+    		if(idx != choicedStory.size()){%>
+    			form.action = "story-quiz.jsp";	
+    	<%  }else{%>
+    			form.action = story-ending-page.jsp
+    	<%  }%>
+    	let input = document.createElement("input");
+    	input.type="hidden";
+    	input.name = "story_idx";
+    	input.value = idx;
+    	
+    	form.appendChild(input);
+    	document.body.appendChild(form);
+    	console.log(input.value, "실행은 됐냐");
+    	form.submit();
     }
     
     
