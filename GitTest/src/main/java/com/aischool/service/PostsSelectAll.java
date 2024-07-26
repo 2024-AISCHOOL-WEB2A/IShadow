@@ -3,6 +3,7 @@ package com.aischool.service;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -25,16 +26,21 @@ public class PostsSelectAll extends HttpServlet {
 		PostDAO postDao = new PostDAO();
 		//전체 게시글 표출
 		ArrayList<Post> posts = postDao.postSelectAll();
+		
+		request.setAttribute("getPosts", posts);
 
-		int size = posts.size();
-		for(int i=0;i<size;i++) {
-			System.out.println(posts.get(i).getIdx()+" "+
-			posts.get(i).getTitle()+" "+
-			posts.get(i).getUser()+" "+
-			posts.get(i).getCreate_at()+" "+
-			posts.get(i).getFile()+" "+
-			posts.get(i).getViews()+"\n");			
-		}
+		RequestDispatcher dis = request.getRequestDispatcher("board_page.jsp");
+		dis.forward(request, response);
+		
+//		int size = posts.size();
+//		for(int i=0;i<size;i++) {
+//			System.out.println(posts.get(i).getIdx()+" "+
+//			posts.get(i).getTitle()+" "+
+//			posts.get(i).getUser()+" "+
+//			posts.get(i).getCreate_at()+" "+
+//			posts.get(i).getFile()+" "+
+//			posts.get(i).getViews()+"\n");			
+//		}
 
 		postDao.close();
 	}

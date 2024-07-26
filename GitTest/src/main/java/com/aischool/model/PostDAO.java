@@ -181,4 +181,32 @@ public class PostDAO {
 		}
 
 	}
+    // 게시물 검색
+    public ArrayList<Post> postSearch(String s) {
+    	ArrayList<Post> posts = new ArrayList<Post>();
+    	try {
+			String sql = "select * from Insa5_SpringA_hacksim_2.posts where post_title like '%"+s+"%';";
+
+			pst = conn.prepareStatement(sql);	
+			rs = pst.executeQuery();
+			Post post;
+			while (rs.next()) {
+				post = new Post();
+				post.setIdx(rs.getInt(1)); 
+				post.setTitle(rs.getString(2)); 
+				post.setFile(rs.getString(3));
+				post.setCreate_at(rs.getDate(4));
+				post.setViews(rs.getInt(5));;
+				post.setAnswer(rs.getString(6));
+				post.setUser(rs.getString(7));
+				posts.add(post);
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+
+		}
+    	return posts;
+	}
 }

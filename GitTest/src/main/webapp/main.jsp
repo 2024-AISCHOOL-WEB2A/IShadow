@@ -144,7 +144,7 @@
                         <div class="view"></div>
                     </a>
                     <!-- 게시판 -->
-                    <a href="board_page.jsp">
+                    <a href="PostsSelectAll">
                         <div class="view"></div>
                     </a>
                     <!-- QA -->
