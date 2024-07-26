@@ -160,14 +160,6 @@ if (choicedStory != null && !choicedStory.isEmpty()) {
         webcamContainer.appendChild(canvas);
 
         ctx = canvas.getContext("2d");
-        /* 라벨은 필요 없어서 일단 주석 */
-        /* labelContainer = document.getElementById("label-container");
-            if (labelContainer) {
-                for (let i = 0; i < maxPredictions; i++) { 
-                    labelContainer.appendChild(document.createElement("div"));
-                }
-            } */
-        
     }
 
     async function loop(timestamp) {
@@ -183,18 +175,7 @@ if (choicedStory != null && !choicedStory.isEmpty()) {
         let maxProbability = 0;
         let bestMatch = "";
 
-       /*  for (let i = 0; i < maxPredictions; i++) {
-        	// 정확도가 75% 이상인 클래스 찾기
-            if (prediction[i].probability >= 0.75) {
-                highConfidenceClass = prediction[i].className;
-            } */
-                /* 라벨은 필요 없어서 일단 주석 */
-            /* const classPrediction = prediction[i].className 
-            + ": " + prediction[i].probability.toFixed(2);
-             labelContainer.childNodes[i].innerHTML = classPrediction;  */
-        }
         for (let i = 0; i < maxPredictions; i++) {
-
             if (prediction[i].probability > maxProbability) {
                 maxProbability = prediction[i].probability;
                 bestMatch = prediction[i].className;
@@ -202,16 +183,11 @@ if (choicedStory != null && !choicedStory.isEmpty()) {
         }
 
         drawPose(pose);
-        
-        const story_answer = <%=choicedStory.get(story_idx).getAnser()%>;
+
+        const story_answer = "<%= choicedStory.get(story_idx).getAnser() %>"; 
         if (maxProbability > 0.75 && bestMatch.toLowerCase() === story_answer.toLowerCase()) {
-        	window.location.href = "story-ending-page.jsp";
-        }
-     // 정확도가 75% 이상인 클래스가 존재하고, 해당 클래스의 이름이 story_answer와 같다면 다음 페이지로 이동
-        <%-- const story_answer = <%=choicedStory.get(story_idx).getAnser()%>; // 정답 클래스 이름을 여기에 입력
-        if (highConfidenceClass && highConfidenceClass === story_answer) {
             window.location.href = "story-ending-page.jsp";
-        } --%>
+        }
     }
 
     function drawPose(pose) {
@@ -228,21 +204,15 @@ if (choicedStory != null && !choicedStory.isEmpty()) {
   </head>
   <body onload="init()">
     <div class="container">
-      <!-- header -->
       <%@ include file="header.jsp" %>
       <div class="circles">
         <div class="circle" id="story-quiz">
-          <!-- 동화에 대한 문제 화면을 여기에 추가 -->
-          
-			<img src="<%= choicedStory.get(story_idx).getStoryImage() %>">	
+            <img src="<%= choicedStory.get(story_idx).getStoryImage() %>">    
         </div>
         <img class="image" src="assets/img/----.svg" alt="image" />
         <div class="circle red">
           <div id="webcam-container">
           </div>
-          
-          <!-- <div id="label-container"></div>
-        </div> 라벨은 필요 없어서 일단 주석-->
       </div>
       <div class="buttons">
         <a href="story-ending-page.jsp"><button class="button">넘어 가기</button></a>
