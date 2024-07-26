@@ -26,7 +26,7 @@
         display: inline;
         width: 114px;
         height: 50px;
-        margin: 664	px auto;
+        margin: 664   px auto;
         background-color: #ffffff;
         color: white;
         font-size: 18px;
@@ -46,6 +46,11 @@
         background-color: #45a049;
       }
     </style>
+    <script type="text/javascript">
+        function redirectToUpload() {
+            window.location.href = 'request-page-upload.jsp';
+        }
+    </script>
 </head>
 <body style="margin: 0">
   
@@ -90,7 +95,7 @@
           </div>
           
           <!-- 새로운 버튼 추가 -->
-          <div><input type="button" class="uploadbtn" name="uploadbtn" value="업로드"></div>
+           <div><input type="button" class="uploadbtn" name="uploadbtn" value="업로드" onclick="redirectToUpload()"></div>
           
           <h1 class="text-1">해줘요</h1>
 
