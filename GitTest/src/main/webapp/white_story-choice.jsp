@@ -45,7 +45,7 @@ html, body {
 function submitForm(name) {
     let form = document.createElement('form');
     form.method = 'POST';
-    form.action = 'ChoiceStory';
+    form.action = 'WhiteChoiceStory';
 
     let input = document.createElement('input');
     input.type = 'hidden';

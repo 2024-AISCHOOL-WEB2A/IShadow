@@ -1,0 +1,103 @@
+/* screen - main-u4370u4458u4358u4455u4523 */
+@font-face {
+    font-family: 'Maplestory Bold';
+    src: url('../font/Maplestory Bold.ttf') format('truetype');
+}
+
+.main-u4370u4458u4358u4455u4523 {
+  align-items: flex-start;
+  background-color: var(--white);
+  display: flex;
+  height: 71.11vw;
+  overflow: hidden;
+  width: 100.0vw;
+}
+
+.main-u4370u4458u4358u4455u4523 .overlap-group {
+  align-items: center;
+  background-image: url(../img/white_background.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* 추가: 수직 중앙 정렬 */
+  min-height: 71.11vw;
+  padding: 2.01vw 5.25vw;
+  width: 102.78vw;
+}
+
+.main-u4370u4458u4358u4455u4523 .shadow {
+  color: var(--white);
+  font-family: var(--font-family-inter);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-right: 2.75vw;
+  margin-top: 0;
+  min-height: 8.06vw;
+  min-width: 37.64vw;
+  text-align: center;
+}
+
+.main-u4370u4458u4358u4455u4523 .view-container {
+  align-items: flex-start;
+  display: flex;
+  gap: 3.61vw;
+  margin-right: 2.75vw;
+  margin-top: 1.53vw;
+  min-width: 37.64vw;
+}
+
+.main-u4370u4458u4358u4455u4523 .view {
+  border-radius: 5.07vw;
+  cursor: pointer;
+  height: 10.14vw;
+  width: 10.14vw;
+}
+
+.main-u4370u4458u4358u4455u4523 .view-1 {
+  background-color: var(--alto);
+  border-radius: 5.07vw;
+  height: 10.14vw;
+  width: 10.14vw;
+}
+
+.main-u4370u4458u4358u4455u4523 .link-sns_item {
+  align-items: flex-start;
+  align-self: flex-end;
+  background-color: var(--goldenrod);
+  border: 0.07vw solid;
+  border-color: var(--mercury);
+  border-radius: 0.56vw;
+  cursor: pointer;
+  display: flex;
+  height: 3.47vw;
+  justify-content: flex-end;
+  margin-top: 18.54vw;
+  min-width: 15.97vw;
+  padding: 0.83vw 3.4vw;
+}
+
+.main-u4370u4458u4358u4455u4523 .text-28 {
+  color: var(--jrnavercomnero);
+  font-family: var(--font-family-crimson_text);
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  height: 1.67vw;
+  letter-spacing: -0.03vw;
+  line-height: 1.67vw;
+  white-space: nowrap;
+}
+.main-u4370u4458u4358u4455u4523 .view-text {
+    font-family: 'Maplestory Bold', sans-serif;
+    font-size: 1.5em;
+    margin-top: 10px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.main-u4370u4458u4358u4455u4523 .shadow {
+   color: #ffffff;
+   font-size:10em;
+   font-family: 'Maplestory Bold', sans-serif;
+}
