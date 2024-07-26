@@ -107,31 +107,30 @@
 }
 
 .catchmind .image {
-  height: 33.89vw;
-  left: 29.24vw;
+  height: 30vw;
+  left: 18vw;
   position: absolute;
-  top: 21.74vw;
-  width: 33.75vw;
+  top: 12vw;
+  width: 55vw;
 }
 
 .catchmind .view {
   background-color: var(--white);
-  border-radius: 24.13vw;
-  height: 48.26vw;
-  left: 44.58vw;
+  border-radius: 24.35vw;
+  height: 40vw;
+  left: 50.58vw;
   position: absolute;
-  top: 11.74vw;
-  width: 48.26vw;
+  width: 40vw;
 }
 
 .catchmind .view-1 {
   background-color: var(--alto);
   border-radius: 15.69vw;
-  height: 31.39vw;
-  left: 8.19vw;
+  height: 25vw;
+  left: 10vw;
   position: absolute;
-  top: 28.54vw;
-  width: 31.39vw;
+  top: 20vw;
+  width: 25vw;
 }
 
 .catchmind .group-5 {
@@ -139,10 +138,10 @@
   display: flex;
   gap: 0.14vw;
   height: 6.94vw;
-  left: 6.25vw;
+  left: 9vw;
   min-width: 35.28vw;
   position: absolute;
-  top: 19.44vw;
+  top: 12vw;
 }
 
 .catchmind .rectangle {
@@ -157,7 +156,7 @@
   height: 3.47vw;
   left: 6.25vw;
   position: absolute;
-  top: 15.21vw;
+  top: 8vw;
   width: 40.83vw;
 }
 
