@@ -59,7 +59,7 @@
             src="assets/img/white_background.png"
             alt="Create a high-resolution illustration for a presentation thumbnail with a _The L s-1584004691 1"
           />
-            <%@ include file="header.jsp"%>
+            <%@ include file="white_header.jsp"%>
             
           <div class="rectangle-355">
             <div class="table-header">

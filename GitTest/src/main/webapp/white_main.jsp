@@ -184,20 +184,20 @@ body, html {
                   </div>
                </a>
                <!-- 게시판 -->
-               <a href="board_page.jsp">
+               <a href="white_board_page.jsp">
                   <div class="view">
                      <img src="assets/img/main/planet_4.png">
                      <div class="view-text">게시판</div>
                   </div>
                </a>
                <!-- QA -->
-               <a href="qaAllSelect">
+               <a href="WhiteQaAllSelect">
                   <div class="view">
                      <img src="assets/img/main/planet_5.png">
                      <div class="view-text">QA</div>
                   </div>
                </a>
-            </div>
+            </div>	
 
          </div>
       </div>
