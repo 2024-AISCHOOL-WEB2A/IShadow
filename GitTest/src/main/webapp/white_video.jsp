@@ -40,7 +40,7 @@ video {
 				<!-- header -->
 				<%@ include file="header.jsp"%>
 
-				<a href="story-quiz.jsp">
+				<a href="white_story-quiz.jsp">
 					<div class="link-sns_item">
 						<div class="text-64 valign-text-middle">넘어가기</div>
 					</div>
@@ -87,7 +87,7 @@ video {
     	form.method = "POST";
     	<%
     		if(idx != choicedStory.size()){%>
-    			form.action = "story-quiz.jsp";	
+    			form.action = "white_story-quiz.jsp";	
     	<%  }else{%>
     			form.action = story-ending-page.jsp
     	<%  }%>

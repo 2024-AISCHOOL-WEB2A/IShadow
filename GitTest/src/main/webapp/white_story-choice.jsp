@@ -68,19 +68,19 @@ function submitForm(name) {
                 
                 <!-- 동화선택 -->
                 <div class="view-container">
-                    <a href="ChoiceStory">
+                    <a href="WhiteChoiceStory">
                         <div class="view-1">
                             <img class="ellipse-1" src="assets/img/ellipse-1@2x.png" alt="Ellipse 1" />
                             <h1 class="text-40">빨간 모자</h1>
                         </div>
                     </a>
-                    <a href="ChoiceStory">
+                    <a href="WhiteChoiceStory">
                         <div class="view-1">
                             <img class="ellipse-1" src="assets/img/Heungbun and Nolbun.png" alt="Ellipse 1" />
                             <h1 class="text-40">흥부 놀부</h1>
                         </div>
                     </a>
-                    <a href="ChoiceStory">
+                    <a href="WhiteChoiceStory">
                         <div class="view-1">
                             <img class="ellipse-1" src="assets/img/ellipse-1-2@2x.png" alt="Ellipse 1" />
                             <h1 class="text-40">플란다스의 개</h1>
@@ -95,7 +95,7 @@ function submitForm(name) {
                             <input class="hiddenName" type="hidden" name="해와 달이 된 오누이">
                         </div>
                     </div>
-                    <a href="ChoiceStory">
+                    <a href="WhiteChoiceStory">
                         <div class="view-1">
                             <img class="ellipse-1" src="assets/img/ellipse-1-4@2x.png" alt="Ellipse 1" />
                             <div class="text-40">토끼와 거북이</div>
