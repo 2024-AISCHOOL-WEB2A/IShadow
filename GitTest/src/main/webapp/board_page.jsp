@@ -15,8 +15,6 @@
 <meta name="og:type" content="website" />
 <meta name="twitter:card" content="photo" />
 <link rel="stylesheet" type="text/css" href="assets/css/board_page.css" />
-<link rel="stylesheet" type="text/css" href="assets/css/board_page.css" />
-<link rel="stylesheet" type="text/css" href="assets/css/board_page.css" />
 <script>
  	function searchPosts(){
 		let frm = document.searchfrm;
@@ -45,20 +43,7 @@
 				</div>
 			<div class="group-2613103">
 				<%
-                    /* // ArrayList 설정
-                    ArrayList<String[]> items = new ArrayList<String[]>();
-                    items.add(new String[]{"assets/img/QA.png", "제목 1"});
-                    items.add(new String[]{"assets/img/image2.jpg", "제목 2"});
-                    items.add(new String[]{"assets/img/image3.jpg", "제목 3"});
-                    items.add(new String[]{"assets/img/image4.jpg", "제목 4"});
-                    items.add(new String[]{"assets/img/image5.jpg", "제목 5"});
-                    items.add(new String[]{"assets/img/image6.jpg", "제목 6"});
-
-                    // 동적 생성
-                    for (String[] item : items) {
-                        String imgSrc = item[0];
-                        String title = item[1]; */
-                    if(!posts.isEmpty()){
+                    if(posts != null && !posts.isEmpty()){
                    		int size = posts.size();
                    		for(int i=0; i<size; i++) {
                 %>

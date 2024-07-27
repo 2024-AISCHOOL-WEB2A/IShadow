@@ -1,3 +1,4 @@
+<%@page import="com.aischool.model.Login"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -137,7 +138,7 @@
 	// 로그아웃 처리
 	if (request.getMethod().equalsIgnoreCase("post") && request.getParameter("logout") != null) {
 		session.invalidate(); // 세션을 무효화하여 로그인 상태를 해제
-		response.sendRedirect(request.getRequestURI()); // 페이지를 새로 고침
+		response.sendRedirect("main.jsp"); // 메인 페이지로 리다이렉트
 		return; // 이후 코드 실행을 중지
 	}
 %>
@@ -178,16 +179,13 @@
 
 	<!-- 오른쪽: 로그인/로그아웃 버튼 및 인사말 -->
 	<div class="header-right">
-		<%
-			// 세션 유효성 확인
-			String loginMember = null;
-			if (session != null) {
-				loginMember = (String) session.getAttribute("login_member");
-			}
+		<% 
+			Login loginMember = (Login) session.getAttribute("login_member");
+			if (loginMember != null) { 
+			    String nick = loginMember.getU_nick();
 		%>
-		<% if (loginMember != null) { %>
 			<div class="greeting">
-				<%= loginMember %>님 안녕하세요
+				<%= nick %>님 안녕하세요
 			</div>
 			<form method="post" style="display:inline;">
 				<button type="submit" name="logout" class="logout-button">로그아웃</button>

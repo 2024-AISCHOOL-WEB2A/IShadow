@@ -55,8 +55,9 @@ public class LoginDAO {
             if (rs.next()) {
                 String u_id = rs.getString("u_id");
                 String u_pw = rs.getString("u_pw");
+                String u_nick = rs.getString("u_pw");
 
-                mem = new Login(u_id, u_pw);
+                mem = new Login(u_id, u_pw, u_nick);
             }
         } catch (SQLException e) {
             e.printStackTrace();
