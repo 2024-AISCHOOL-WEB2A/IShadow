@@ -66,7 +66,7 @@ public class PostDAO {
     public ArrayList<Post> postSelectAll() {
     	ArrayList<Post> posts = new ArrayList<Post>();
 		try {
-			String sql = "select * from Insa5_SpringA_hacksim_2.posts order by post_idx desc";
+			String sql = "select * from posts p join users u on p.u_idx = u.u_id where u.u_exit = 'F'";
 			
 			pst = conn.prepareStatement(sql);
 
@@ -209,4 +209,23 @@ public class PostDAO {
 		}
     	return posts;
 	}
+	public int postDlete(String deletePost) {
+		
+		int cnt = 0;
+		connect();
+		
+		try {
+			String sql = "DELETE FROM posts WHERE post_idx = ?";
+			pst = conn.prepareStatement(sql);
+			pst.setString(1, deletePost);
+			cnt = pst.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			close();
+		}
+		
+		return cnt;
+	}
+	
 }
