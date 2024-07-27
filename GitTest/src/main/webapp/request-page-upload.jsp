@@ -1,12 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="com.aischool.model.Login" %>
 <%
     // 세션에서 로그인한 사용자 정보 가져오기
     Login loginMemberPage = (Login) session.getAttribute("login_member");
-    String u_id = "";
+    String author = "";
     if (loginMemberPage != null) {
-        u_id = loginMemberPage.getU_id(); // u_id 값으로 설정
+        author = loginMemberPage.getU_id();
     }
 %>
 <!DOCTYPE html>
@@ -28,44 +27,44 @@
 
         .form-container {
             width: 100%;
-            max-width: 800px; /* 크기를 키움 */
+            max-width: 800px;
             margin: 0 auto;
-            padding: 40px; /* 패딩을 키움 */
-            background-color: transparent; /* 투명 배경 */
-            border-radius: 20px; /* 더 둥글게 */
-            border: 2px solid yellow; /* 노란색 경계 */
+            padding: 40px;
+            background-color: transparent;
+            border-radius: 20px;
+            border: 2px solid yellow;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            color: white; /* 기본 텍스트 색상 흰색 */
-            font-family: 'Maplestory Bold'; /* 메이플체 */
+            color: white;
+            font-family: 'Maplestory Bold';
         }
 
         .form-group {
-            margin-bottom: 20px; /* 간격을 키움 */
+            margin-bottom: 20px;
         }
 
         .form-group label {
             display: block;
-            margin-bottom: 10px; /* 간격을 키움 */
+            margin-bottom: 10px;
             font-weight: bold;
-            font-size: 18px; /* 폰트 크기를 키움 */
-            color: white; /* 라벨 텍스트 색상 흰색 */
+            font-size: 18px;
+            color: white;
         }
 
         .form-group input,
         .form-group textarea {
             width: 100%;
-            padding: 15px; /* 패딩을 키움 */
-            border: 2px solid yellow; /* 노란색 경계 */
-            border-radius: 20px; /* 더 둥글게 */
+            padding: 15px;
+            border: 2px solid yellow;
+            border-radius: 20px;
             box-sizing: border-box;
-            font-size: 16px; /* 폰트 크기를 키움 */
-            background-color: transparent; /* 투명 배경 */
-            color: white; /* 텍스트 색상 흰색 */
-            font-family: 'Maplestory Bold'; /* 메이플체 */
+            font-size: 16px;
+            background-color: transparent;
+            color: white;
+            font-family: 'Maplestory Bold';
         }
 
         .form-group textarea {
-            height: 200px; /* 텍스트 영역의 높이를 키움 */
+            height: 200px;
         }
 
         .buttons {
@@ -74,18 +73,18 @@
         }
 
         .btn {
-            padding: 15px 30px; /* 패딩을 키움 */
+            padding: 15px 30px;
             border: none;
-            border-radius: 20px; /* 더 둥글게 */
+            border-radius: 20px;
             cursor: pointer;
-            font-size: 18px; /* 폰트 크기를 키움 */
-            font-family: 'Maplestory Bold'; /* 메이플체 */
+            font-size: 18px;
+            font-family: 'Maplestory Bold';
         }
 
         .btn-cancel {
             background-color: transparent;
             color: white;
-            border: 2px solid yellow; /* 노란색 경계 */
+            border: 2px solid yellow;
         }
 
         .btn-submit {
@@ -103,14 +102,14 @@
                 <%@ include file="header.jsp" %>
                 <h1 class="text-1 text" style="color: white;">해줘요</h1>
                 <div class="form-container">
-                    <form action="qaAllSelect" method="post">
+                    <form action="qaAllSelect" method="post" accept-charset="UTF-8">
                         <div class="form-group">
                             <label for="title">제목</label>
                             <input type="text" id="title" name="title" placeholder="제목을 입력하세요" required>
                         </div>
                         <div class="form-group">
-                            <label for="u_id">작성자</label>
-                            <input type="text" id="u_id" name="u_id" value="<%= u_id %>" readonly>
+                            <label for="author">작성자</label>
+                            <input type="text" id="author" name="author" value="<%= author %>" readonly>
                         </div>
                         <div class="form-group">
                             <label for="content">내용</label>

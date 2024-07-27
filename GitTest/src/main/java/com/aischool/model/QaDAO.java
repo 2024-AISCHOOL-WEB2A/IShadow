@@ -13,7 +13,7 @@ public class QaDAO {
         Connection conn = null;
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            String url = "jdbc:mysql://project-db-stu3.smhrd.com:3307/Insa5_SpringA_hacksim_2";
+            String url = "jdbc:mysql://project-db-stu3.smhrd.com:3307/Insa5_SpringA_hacksim_2?useUnicode=true&characterEncoding=UTF-8";
             String user = "Insa5_SpringA_hacksim_2";
             String password = "aischool2";
 
@@ -71,7 +71,7 @@ public class QaDAO {
             preparedStatement.setString(2, qa.getQa_content());
             preparedStatement.setString(3, qa.getU_id());
             preparedStatement.setTimestamp(4, Timestamp.valueOf(qa.getQa_d_at())); // Timestamp 사용
-            preparedStatement.setString(5, "");  // admin_comment를 빈 문자열로 설정
+            preparedStatement.setString(5, qa.getAdmin_comment());
             
             preparedStatement.executeUpdate();
         }

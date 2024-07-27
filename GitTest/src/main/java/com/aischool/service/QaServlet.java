@@ -39,17 +39,18 @@ public class QaServlet extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8"); // 요청의 인코딩 설정
         String title = request.getParameter("title");
         String content = request.getParameter("content");
-        String u_id = request.getParameter("u_id");
+        String author = request.getParameter("author");
 
         // 디버깅 로그 추가
-        System.out.println("u_id: " + u_id);
+        System.out.println("author: " + author);
         System.out.println("title: " + title);
         System.out.println("content: " + content);
 
         Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-        Qa newQa = new Qa(0, title, content, timestamp.toString(), u_id, ""); // 관리자 댓글은 빈 문자열로 설정
+        Qa newQa = new Qa(0, title, content, timestamp.toString(), author, ""); // 관리자 댓글은 빈 문자열로 설정
 
         try {
             qaDAO.insertQa(newQa);
