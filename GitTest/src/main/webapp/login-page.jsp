@@ -1,9 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8"%>
-<%@page import="com.aischool.model.Login"%>
-<%
-
-%>
+<%@ page import="com.aischool.model.Login" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,7 +29,7 @@
                      <img class="rectangle-8" src="assets/img/login_page/rectangle-8.svg" alt="Rectangle 8" />
                   </div>
                   <div class="text">
-                     <input type="text" name="email" class="email" placeholder="ID을 입력하세요">
+                     <input type="text" name="u_id" class="email" placeholder="ID을 입력하세요">
                   </div>
                </div>
             </div>
@@ -43,7 +40,7 @@
                      <img class="rectangle-8" src="assets/img/login_page/rectangle-8.svg" alt="Rectangle 8" />
                   </div>
                   <div class="text">
-                     <input type="password" name="pw" class="pw" placeholder="PW를 입력하세요">
+                     <input type="password" name="u_pw" class="pw" placeholder="PW를 입력하세요">
                   </div>
                </div>
             </div>
@@ -62,15 +59,15 @@
         let body = document.body;
         let iD_Input = document.createElement("input");
         let pW_Input = document.createElement("input");
-        form.action="LoginService";
-        form.method="POST";
+        form.action = "LoginService";
+        form.method = "POST";
         
         iD_Input.type = "hidden";
         pW_Input.type = "hidden";
-        iD_Input.name ="email";
-        pW_Input.name ="pw";
-        iD_Input.value= iD.value;
-        pW_Input.value= pW.value;
+        iD_Input.name = "u_id";
+        pW_Input.name = "u_pw";
+        iD_Input.value = iD.value;
+        pW_Input.value = pW.value;
         form.appendChild(iD_Input);
         form.appendChild(pW_Input);
         body.appendChild(form);
