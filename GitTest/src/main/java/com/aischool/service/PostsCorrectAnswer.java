@@ -1,7 +1,6 @@
 package com.aischool.service;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -10,15 +9,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.aischool.model.PostComments;
 import com.aischool.model.PostDAO;
 
 /**
- * Servlet implementation class PostCommentsAll2
+ * Servlet implementation class PostsCorrectAnswer
  */
-// 게시물 상세 보기
-@WebServlet("/PostsCommentAll")
-public class PostsCommentAll extends HttpServlet {
+@WebServlet("/PostsCorrectAnswer")
+public class PostsCorrectAnswer extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
@@ -26,20 +23,12 @@ public class PostsCommentAll extends HttpServlet {
 	 */
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		PostDAO postDao = new PostDAO();
-		int idx = Integer.parseInt(request.getParameter("idx"));
-		// 게시물 조회수 카운트
-		postDao.plusBoardView(idx);
-
-		//게시물 상세보기
-		ArrayList<PostComments> postscomment = postDao.PostsComments(idx);
+		int cnt = postDao.postAnswer(Integer.parseInt(request.getParameter("idx")), 
+				request.getParameter("input"));
 
 		postDao.close();
-
-		request.setAttribute("getPostComment", postscomment);
-		RequestDispatcher dis = request.getRequestDispatcher("board-inpage.jsp");
-		dis.forward(request, response);
-		
-
+		String result = (cnt > 0) ? "ok" : "";
+		response.getWriter().print(result);
 	}
 
 }

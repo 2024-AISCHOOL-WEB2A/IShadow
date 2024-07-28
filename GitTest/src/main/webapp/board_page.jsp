@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+   pageEncoding="UTF-8"%>
 <%@ page import="java.util.ArrayList"%>
 <%@ page import="com.aischool.model.Post"%>
 <%
-	ArrayList<Post> posts = (ArrayList<Post>)request.getAttribute("getPosts");
+   ArrayList<Post> posts = (ArrayList<Post>)request.getAttribute("getPosts");
 %>
 <!DOCTYPE html>
 <html>
@@ -11,40 +11,43 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="shortcut icon" type="image/png"
-	href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
+   href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
 <meta name="og:type" content="website" />
 <meta name="twitter:card" content="photo" />
 <link rel="stylesheet" type="text/css" href="assets/css/board_page.css" />
 <link rel="stylesheet" type="text/css" href="assets/css/board_page.css" />
 <link rel="stylesheet" type="text/css" href="assets/css/board_page.css" />
 <script>
- 	function searchPosts(){
-		let frm = document.searchfrm;
-		let searchVal = searchfrm.searchVal;
-		if(searchVal.value == "" || searchVal.value == null){
-			alert("텍스트를 입력 해주세요.");
-			return;
-		}
-	}
+    function searchPosts(){
+      let searchVal = document.getElementById("searchVal");
+      if(searchVal.value == "" || searchVal.value == null){
+         alert("텍스트를 입력 해주세요.");
+         return;
+      }
+   }
 </script>
 </head>
 <body style="margin: 0; background: #000000">
-	<div class="desktop-1">
-		<div class="overlap-group4">
-			<!-- header -->
-			<%@ include file="header.jsp"%>
-			<h1 class="text-55">커뮤니티</h1>
-				<div class="search-container">
-					<form method="get" action="PostsSearch">
-						<input type="text" name="searchVal" class="search-input" placeholder="검색어를 입력하세요" />
-						<button class="search-button" onclick="searchPosts();">
-							<img class="icon-magnifying-glass"
-								src="assets/img/board_page/search_icon.png" alt="돋보기" />
-						</button>
-					</form>
-				</div>
-			<div class="group-2613103">
-				<%
+   <div class="desktop-1">
+   <input type="hidden" id="anPageName" name="page" value="request-page" />
+    
+      <div class="overlap-group4">
+       
+         <!-- header -->
+         <%@ include file="header.jsp"%>
+         <h1 class="text-55">커뮤니티</h1>
+         <div style="text-align:center;"><input type="button" class="uploadbtn" name="uploadbtn" value="업로드" onclick="redirectToUpload()"></div>
+            <div class="search-container">
+               <form method="get" action="PostsSearch">
+                  <input type="text" id="searchVal" name="searchVal" class="search-input" placeholder="검색어를 입력하세요" />
+                  <button class="search-button" onclick="searchPosts();">
+                     <img class="icon-magnifying-glass"
+                        src="assets/img/board_page/search_icon.png" alt="돋보기" />
+                  </button>
+               </form>
+            </div>
+         <div class="group-2613103">
+            <%
                     /* // ArrayList 설정
                     ArrayList<String[]> items = new ArrayList<String[]>();
                     items.add(new String[]{"assets/img/QA.png", "제목 1"});
@@ -59,26 +62,27 @@
                         String imgSrc = item[0];
                         String title = item[1]; */
                     if(!posts.isEmpty()){
-                   		int size = posts.size();
-                   		for(int i=0; i<size; i++) {
+                         int size = posts.size();
+                         for(int i=0; i<size; i++) {
                 %>
-				<div class="group-2613103-item board">
-					<a href="board-inpage.jsp">
-						<div class="link">
-							<div class="overlap-group"
-								style="background-image: url(<%= posts.get(i).getFile() %>);"></div>
-						</div>
-					</a>
-					<div class="title"><%= posts.get(i).getTitle() %></div>
-				</div>
-				<%
-                  		}
-                   	}
+            <form method="get" action="PostsCommentAll" onclick="this.submit();">
+	            	<input type="hidden" name="idx" value="<%= posts.get(i).getIdx() %>">
+	           		<div class="group-2613103-item board">
+		                  <div class="link">
+		                     <div class="overlap-group"
+		                        style="background-image: url(<%= posts.get(i).getFile() %>);" onclick="testclick();"></div>
+		                  </div>
+		               <div class="title"><%= posts.get(i).getTitle() %></div>
+	            	</div>
+	            </form>
+            <%
+                        }
+                      }
                 %>
-			</div>
-		</div>
-	</div>
-	<script>
+         </div>
+      </div>
+   </div>
+   <script>
         function ShowOnScroll() {
             this.toShow = [];
             this.nextEventY = undefined;
