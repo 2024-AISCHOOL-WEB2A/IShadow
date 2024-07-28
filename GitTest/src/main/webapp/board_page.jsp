@@ -17,8 +17,7 @@
 <link rel="stylesheet" type="text/css" href="assets/css/board_page.css" />
 <script>
  	function searchPosts(){
-		let frm = document.searchfrm;
-		let searchVal = searchfrm.searchVal;
+		let searchVal = document.getElementById("searchVal");
 		if(searchVal.value == "" || searchVal.value == null){
 			alert("텍스트를 입력 해주세요.");
 			return;
@@ -34,7 +33,7 @@
 			<h1 class="text-55">커뮤니티</h1>
 				<div class="search-container">
 					<form method="get" action="PostsSearch">
-						<input type="text" name="searchVal" class="search-input" placeholder="검색어를 입력하세요" />
+						<input type="text" id="searchVal" name="searchVal" class="search-input" placeholder="검색어를 입력하세요" />
 						<button class="search-button" onclick="searchPosts();">
 							<img class="icon-magnifying-glass"
 								src="assets/img/board_page/search_icon.png" alt="돋보기" />
@@ -47,15 +46,16 @@
                    		int size = posts.size();
                    		for(int i=0; i<size; i++) {
                 %>
-				<div class="group-2613103-item board">
-					<a href="board-inpage.jsp">
-						<div class="link">
-							<div class="overlap-group"
-								style="background-image: url(<%= posts.get(i).getFile() %>);"></div>
-						</div>
-					</a>
-					<div class="title"><%= posts.get(i).getTitle() %></div>
-				</div>
+				<form method="get" action="PostsCommentAll" onclick="this.submit();">
+	            	<input type="hidden" name="idx" value="<%= posts.get(i).getIdx() %>">
+	           		<div class="group-2613103-item board">
+		                  <div class="link">
+		                     <div class="overlap-group"
+		                        style="background-image: url(<%= posts.get(i).getFile() %>);" onclick="testclick();"></div>
+		                  </div>
+		               <div class="title"><%= posts.get(i).getTitle() %></div>
+	            	</div>
+	            </form>
 				<%
                   		}
                    	}
