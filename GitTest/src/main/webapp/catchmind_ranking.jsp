@@ -38,7 +38,7 @@
             alt="Create a high-resolution illustration for a presentation thumbnail with a _The L s-1584004691 2"
           />
           <%@ include file="header.jsp" %>
-          <div class="overlap-group" onclick="mover">
+          <div class="overlap-group" onclick="moveMain()">
             <img class="image" src="assets/img/------.png" alt="image" />
             <div class="view view-2"></div>
             <div class="gText">처음으로</div>
@@ -51,22 +51,20 @@
           <div class="ranking-container">
             <h1 class="title">Ranking</h1>
             <div class="group-11">
+            <%for(int i = 1; i <= ranking.size(); i++){ %>
               <div class="ranking-item">
-                <div class="rank-time">1st <%=ranking.get(0).getTime()%></div>
-                <div class="rank-name"><%=ranking.get(0).getNickName()%></div>
+                <div class="rank-time">
+                	<span style="border: 1px solid white; width: 300px;">
+                		<%=i%>st <%=ranking.get(i-1).getTime()%>
+                	</span>
+                </div>
+                <div class="rank-name">
+                	<span>
+                		<%=ranking.get(i-1).getNickName()%>
+                	</span>
+                </div>
               </div>
-              <div class="ranking-item">
-                <div class="rank-time">2nd <%=ranking.get(1).getTime()%></div>
-                <div class="rank-name"><%=ranking.get(1).getNickName()%></div>
-              </div>
-              <div class="ranking-item">
-                <div class="rank-time">3rd <%=ranking.get(2).getTime()%></div>
-                <div class="rank-name"><%=ranking.get(2).getNickName()%></div>
-              </div>
-              <div class="ranking-item">
-                <div class="rank-time">4th <%=ranking.get(3).getTime()%></div>
-                <div class="rank-name"><%=ranking.get(3).getNickName()%></div>
-              </div>
+            <%} %>
             </div>
           </div>
         </div>

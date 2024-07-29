@@ -110,7 +110,7 @@
   height: 30vw;
   left: 18vw;
   position: absolute;
-  top: 12vw;
+  top: 16vw;
   width: 55vw;
 }
 
@@ -121,6 +121,7 @@
   left: 50.58vw;
   position: absolute;
   width: 40vw;
+  border: 3px solid #ffcd38;	
 }
 
 .catchmind .view-1 {
@@ -131,6 +132,7 @@
   position: absolute;
   top: 25vw;
   width: 25vw;
+  border: 3px solid #ffcd38;
 }
 
 .catchmind .group-5 {
