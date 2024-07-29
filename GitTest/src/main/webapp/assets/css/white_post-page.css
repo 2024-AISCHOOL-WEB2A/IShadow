@@ -1,0 +1,345 @@
+/* screen - post-page */
+@font-face {
+    font-family: 'Maplestory Bold';
+    src: url('../font/Maplestory Bold.ttf') format('truetype');
+}
+.post-page {
+align-items: center;
+  background-image: url(../img/white_background.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  min-height: 71.11vw;
+  padding: 2.01vw 5.25vw;
+  width: 102.78vw;
+}
+
+
+.title{
+    width: 100%;
+    height: 7.5vh;
+    box-sizing: border-box;
+    padding: 10px; /* 원하는 만큼 패딩을 조정 */
+    font-size: 1.2em; /* 글자 크기 조정 */
+    border: 1px solid #ccc; /* 보더 스타일 조정 */
+}
+.fileupload{
+    width: 100%;
+    height: 6.8vh;
+    box-sizing: border-box;
+    padding: 10px; /* 원하는 만큼 패딩을 조정 */
+    font-size: 1.2em; /* 글자 크기 조정 */
+    border: 1px solid #ccc; /* 보더 스타일 조정 */
+}
+.inputanswer{
+    width: 100%;
+    height: 6.5vh;
+    box-sizing: border-box;
+    padding: 10px; /* 원하는 만큼 패딩을 조정 */
+    font-size: 1.2em; /* 글자 크기 조정 */
+    border: 1px solid #ccc; /* 보더 스타일 조정 */
+}
+.firstFeature{
+    width: 100%;
+    height: 16.5vh;
+    box-sizing: border-box;
+    padding: 10px; /* 원하는 만큼 패딩을 조정 */
+    font-size: 1.2em; /* 글자 크기 조정 */
+    border: 1px solid #faf7f7; /* 보더 스타일 조정 */
+    border-radius:1.81vw;
+}
+.secondFeature{
+    width: 100%;
+    height: 16.5vh;
+    box-sizing: border-box;
+    padding: 10px; /* 원하는 만큼 패딩을 조정 */
+    font-size: 1.2em; /* 글자 크기 조정 */
+    border: 1px solid #faf7f7; /* 보더 스타일 조정 */
+     border-radius:1.81vw;
+}
+.thirdFeature{
+    width: 100%;
+    height: 16.5vh;
+    box-sizing: border-box;
+    padding: 10px; /* 원하는 만큼 패딩을 조정 */
+    font-size: 1.2em; /* 글자 크기 조정 */
+    border: 1px solid #faf7f7; /* 보더 스타일 조정 */
+     border-radius:1.81vw;
+}
+
+.post-page .zcc-1 {
+  display: block;
+  height: 71.11vw;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0.14vw;
+  transform: translate(1.74vw, 0);
+  width: 100.0vw;
+}
+
+
+.post-page #profile{
+   left:10px
+}
+
+.post-page .rectangle-24 {
+  background-color: var(--soapstone);
+  height: 3.12vw;
+  left: 28.06vw;
+  position: absolute;
+  top: 18.96vw;
+  width: 7.92vw;
+}
+
+.post-page .text-65 {
+  color: var(--jrnavercomnero);
+  font-weight: 400;
+  left: 29.79vw;
+  line-height: 1.11vw;
+  position: absolute;
+  font-size:24px;
+  top: 19.93vw;
+  width: 5.35vw;
+  font-family: 'Maplestory Bold';
+}
+
+.post-page .rectangle-25 {
+  background-color: #fffafa;
+  height: 3.1vw;
+  left: 37.01vw;
+  position: absolute;
+  top: 18.96vw;
+  width: 25.14vw;
+}
+
+.post-page .rectangle-26 {
+  background-color: var(--soapstone);
+  height: 3.32vw;
+  left: 63.19vw;
+  position: absolute;
+  top: 18.96vw;
+  width: 7.92vw;
+}
+
+.post-page .browse {
+  color: var(--jrnavercomnero);
+  font-weight: 400;
+  left: 64.93vw;
+  line-height: 1.11vw;
+  position: absolute;
+  top: 19.93vw;
+  width: 6.11vw;
+}
+
+.post-page .rectangle-27 {
+  background-color: var(--white);
+  height: 3.47vw;
+  left: 28.06vw;
+  position: absolute;
+  top: 11.6vw;
+  width: 7.92vw;
+}
+
+.post-page .text-66 {
+  color: var(--jrnavercomnero);
+  font-weight: 400;
+  left: 30.04vw;
+  line-height: 1.11vw;
+  position: absolute;
+  font-size:24px;
+  top: 12.64vw;
+  white-space: nowrap;
+  width: 5.35vw;
+  font-family: 'Maplestory Bold';
+}
+
+.post-page .rectangle-28 {
+  background-color: #f9f3f3;
+  border-radius: 1.6vw;
+  height: 7.92vw;
+  left: 27.99vw;
+  position: absolute;
+  top: 31.18vw;
+  width: 43.06vw;
+}
+
+.post-page .rectangle-29 {
+  background-color: var(--soapstone);
+  border-radius: 1.81vw;
+  height: 7.92vw;
+  left: 28.06vw;
+  position: absolute;
+  top: 43.47vw;
+  width: 43.06vw;
+   flex-direction: row;
+     display: flex;
+  flex-direction: row; /* 가로로 배치 */
+  justify-content: space-between; /* 요소 사이의 간격을 균등하게 */
+}
+
+.post-page .rectangle-30 {
+  background-color: var(--soapstone);
+  border-radius: 2.15vw;
+  height: 7.92vw;
+  left: 27.99vw;
+  position: absolute;
+  top: 55.69vw;
+  width: 43.06vw;
+}
+
+.post-page .rectangle-31 {
+  background-color: var(--alto);
+  height: 3.47vw;
+  left: 37.01vw;
+  position: absolute;
+  top: 11.6vw;
+  width: 34.03vw;
+}
+
+.post-page .text-67 {
+  color: var(--soapstone);
+  font-weight: 400;
+  left: 29.58vw;
+  line-height: 1.11vw;
+  position: absolute;
+  top: 29.24vw;
+  width: 16.9vw;
+  font-family: 'Maplestory Bold';
+}
+
+.post-page .text-68 {
+  color: #faf7f7;
+  font-weight: 400;
+  font-family: 'Maplestory Bold';
+  left: 29.65vw;
+  line-height: 1.11vw;
+  position: absolute;
+  top: 41.46vw;
+  width: 7.57vw;
+}
+
+.post-page .text-69 {
+  color: var(--soapstone);
+  font-weight: 400;
+  left: 29.65vw;
+  line-height: 1.11vw;
+  position: absolute;
+  font-family: 'Maplestory Bold';
+  top: 53.75vw;
+  width: 7.92vw;
+}
+
+.post-page .rectangle-32 {
+  background-color: var(--soapstone);
+  height: 3.19vw;
+  left: 27.99vw;
+  position: absolute;
+  top: 23.89vw;
+  width: 8.06vw;
+}
+
+.post-page .text-70 {
+  color: var(--jrnavercomnero);
+  font-weight: 400;
+  left: 29.79vw;
+  line-height: 1.11vw;
+  position: absolute;
+  font-size:24px;
+  top: 24.86vw;
+  white-space: nowrap;
+  width: 5.9vw;
+  font-family: 'Maplestory Bold';
+}
+
+.post-page .rectangle-36 {
+  background-color: #fef9f9;
+  height: 2.64vw;
+  left: 65.56vw;
+  position: absolute;
+  top: 66.25vw;
+  width: 4.79vw;
+}
+
+.post-page .text-71 {
+  color: var(--jrnavercomnero);
+  font-weight: 400;
+  font-family: 'Maplestory Bold';
+  left: 66.25vw;
+  line-height: 1.11vw;
+  position: absolute;
+  top: 67vw;
+  width: 4.1vw;
+}
+
+.post-page .rectangle-33 {
+  background-color: #fff8f8;
+  height: 3.06vw;
+  left: 37.01vw;
+  position: absolute;
+  top: 24.03vw;
+  width: 33.96vw;
+}
+
+.post-page .rectangle-63 {
+  background-color: var(--white);
+  border-radius: 0.69vw;
+  height: 61.25vw;
+  left: 22.57vw;
+  mix-blend-mode: overlay;
+  position: absolute;
+  top: 7.64vw;
+  width: 54.79vw;
+}
+
+.post-page .overlap-group {
+  height: 8.26vw;
+  left: 32.29vw;
+  position: absolute;
+  top: 0;
+  width: 30.69vw;
+}
+
+
+
+
+.post-page .frame {
+  align-self: flex-end;
+  height: 5.9vw;
+  margin-bottom: 0;
+  width: 6.04vw;
+}
+
+
+.post-page .text-73 {
+  color: var(--white);
+  font-weight: 400;
+  height: 1.11vw;
+  line-height: 1.11vw;
+  min-width: 2.08vw;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.post-page .text-74 {
+  color: var(--white);
+  font-weight: 400;
+  height: 1.11vw;
+  line-height: 1.11vw;
+  margin-left: 4.86vw;
+  min-width: 5.14vw;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.post-page .text-75 {
+  color: var(--white);
+  font-weight: 400;
+  height: 1.11vw;
+  line-height: 1.11vw;
+  margin-left: 12.22vw;
+  min-width: 4.1vw;
+  text-align: center;
+  white-space: nowrap;
+}
