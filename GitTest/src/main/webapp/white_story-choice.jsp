@@ -64,7 +64,7 @@ function submitForm(name) {
         <div class="stroy-choice screen">
             <div class="flex-col">
             	<!-- header -->
-                <%@ include file="header.jsp" %>
+                <%@ include file="white_header.jsp" %>
                 
                 <!-- 동화선택 -->
                 <div class="view-container">

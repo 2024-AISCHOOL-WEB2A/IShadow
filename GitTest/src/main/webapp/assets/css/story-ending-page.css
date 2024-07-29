@@ -108,28 +108,28 @@
   text-align: center;
   white-space: nowrap;
 }
+
 .stroy-ending-page .group-3 {
-    align-items: flex-start;
-    cursor: pointer;
-    display: flex;
-    height: 20.21vw;
-    left: 54.24vw;
-    min-width: 18.61vw;
-    position: absolute;
-    top: 17vw; /* 위치를 위로 조정 */
+  align-items: flex-start;
+  cursor: pointer;
+  display: flex;
+  height: 20.21vw;
+  left: 54.24vw;
+  min-width: 18.61vw;
+  position: absolute;
+  top: 17vw; /* 위치를 위로 조정 */
 }
 
 .stroy-ending-page .group-4 {
-    align-items: flex-start;
-    cursor: pointer;
-    display: flex;
-    height: 20.21vw;
-    left: 26.81vw;
-    min-width: 18.61vw;
-    position: absolute;
-    top: 17vw; /* 위치를 위로 조정 */
+  align-items: flex-start;
+  cursor: pointer;
+  display: flex;
+  height: 20.21vw;
+  left: 26.81vw;
+  min-width: 18.61vw;
+  position: absolute;
+  top: 17vw; /* 위치를 위로 조정 */
 }
-
 
 .stroy-ending-page .overlap-group {
   border-radius: 3.26vw;

@@ -38,7 +38,7 @@ video {
 			<div class="overlap-group1">
 
 				<!-- header -->
-				<%@ include file="header.jsp"%>
+				<%@ include file="white_header.jsp"%>
 
 				<a href="white_story-quiz.jsp">
 					<div class="link-sns_item">
@@ -72,7 +72,7 @@ video {
 					}
 					%>
 				</div>
-				<img class="x1" src="assets/img/---1.png" alt="1" />
+				
 			</div>
 		</div>
 	</div>
@@ -81,7 +81,7 @@ video {
     function idxSelector(idx){
     	/* sessionStorage.setItem('index', idx);
     	alert(idx);
-    	window.location.href = "story-quiz.jsp"; */
+    	window.location.href = "white_story-quiz.jsp"; */
     	
     	let form = document.createElement("form");
     	form.method = "POST";

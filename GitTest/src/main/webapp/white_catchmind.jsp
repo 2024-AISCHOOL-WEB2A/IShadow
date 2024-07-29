@@ -236,9 +236,9 @@ opacity
 	<div class="container-center-horizontal">
 		<div class="catchmind screen">
 			<div class="overlap-group1">
-				<img class="background-2" src="assets/img/background.png"
+				<img class="background-2" src="assets/img/white_background.png"
 					alt="background 2" />
-				<%@ include file="header.jsp"%>
+				<%@ include file="white_header.jsp"%>
 				<img class="image" src="assets/img/----.svg" alt="image" />
 				<div class="view">
 					<div id="loading">로딩 중...</div>

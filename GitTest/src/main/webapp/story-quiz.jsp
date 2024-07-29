@@ -102,25 +102,39 @@ html, body {
 	background-color: red;
 	margin-top: 0px; /* Ensure red circle is not affected */
 	position: relative;
+	z-index: 2; /* Higher z-index to be on top */
+}
+
+#story-quiz {
+	z-index: 3; /* Higher z-index to be on top */
+}
+
+.image {
+	z-index: 1; /* Lower z-index to be below story-quiz */
+	width: auto;
+	height: 350px; /* Adjust this height as needed */
+	margin: 0 -100px;
+	/* Further adjust negative margin to move the image closer to the circles */
 }
 
 .buttons {
 	position: absolute;
-	bottom: 20%;
-	right: -20%;
+	bottom: 5%;
+	right: 5%;
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
 }
 
-.button {
-	background-color: #ffd700;
-	padding: 10px 20px;
+.button, .hintToggle {
+	background: none;
 	border: none;
-	border-radius: 5px;
-	color: black;
-	font-size: 16px;
+	color: white;
+	font-family: Arial;
+	font-size: 20px;
+	font-weight: bold;
 	cursor: pointer;
+	text-decoration: none;
 }
 
 #webcam-container {
@@ -139,15 +153,8 @@ html, body {
 	height: 100%;
 	object-fit: cover;
 	border-radius: 50%;
-	
 }
 
-.image {
-	width: auto;
-	height: 350px; /* Adjust this height as needed */
-	margin: 0 -100px;
-	/* Further adjust negative margin to move the image closer to the circles */
-}
 .storyHint{
 	position: absolute;
 	display: none;
@@ -156,11 +163,7 @@ html, body {
 	opacity: 50%;
 }
 .hintToggle{
-	position: absolute;
-	width: 5%;
-	height: 5%;
-	right: 7.5%;
-	bottom: 20%;
+	position: relative;
 }
 </style>
 <script
@@ -286,11 +289,11 @@ html, body {
 				<div id="webcam-container"></div>
 				<img class="storyHint" src="<%=choicedStory.get(story_idx).getHint()%>">
 			</div>
-			<div class="buttons">
-				<button class="button" onclick="skipQuestion()">넘어 가기</button>
-			</div>
 		</div>
-		<button class="hintToggle" onclick="hintToggle()">힌트보기</button>
+		<div class="buttons">
+			<button class="button" onclick="skipQuestion()">넘어 가기</button>
+			<button class="hintToggle" onclick="hintToggle()">힌트보기</button>
+		</div>
 	</div>
 </body>
 </html>

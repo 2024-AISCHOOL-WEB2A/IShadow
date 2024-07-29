@@ -32,15 +32,16 @@ video {
 }
 
 #videoSkip {
-	position: relative;
+	position: fixed;
 	z-index: 100;
-	display: inline;
-	border: 1px solid lime;
-	border-radius: 40%;
-	background-color: white;
-	padding: 1%;
-	left: 90%;
-	top: 50%;
+	border: none;
+	background: none;
+	color: white;
+	font-size: 20px;
+	font-family: 'Maplestory Bold', sans-serif;
+	cursor: pointer;
+	right: 20px;
+	bottom: 20px;
 }
 </Style>
 <body style="margin: 0; background: #000000">
@@ -61,8 +62,6 @@ video {
 				<%
 				if (request.getParameter("story_idx") == null) {
 				%>
-				<button id="videoSkip" class="text-64 valign-text-middle"
-					onclick="idxSelectorBtn(<%=idx%>)">넘어가기</button>
 
 				<!--영상 들어갈 자리-->
 				<div class="rectangle-7">
@@ -75,8 +74,6 @@ video {
 					idx += Integer.parseInt(request.getParameter("story_idx"));
 					System.out.println("다음 동화 " + idx);
 					%>
-					<button id="videoSkip" class="text-64 valign-text-middle"
-						onclick="idxSelectorBtn(<%=idx%>)">넘어가기</button>
 					<div class="rectangle-7">
 						<video id="storyVideo" class="choicedStory"
 							src="<%=choicedStory.get(idx).getVideo()%>"
@@ -93,7 +90,8 @@ video {
 						}
 						%>
 					</div>
-					<img class="x1" src="assets/img/---1.png" alt="1" />
+					<button id="videoSkip" class="text-64 valign-text-middle"
+						onclick="idxSelectorBtn(<%=idx%>)">넘어가기</button>
 				</div>
 			</div>
 		</div>
