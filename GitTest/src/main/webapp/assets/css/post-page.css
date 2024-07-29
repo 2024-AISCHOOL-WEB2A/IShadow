@@ -1,5 +1,8 @@
 /* screen - post-page */
-
+@font-face {
+    font-family: 'Maplestory Bold';
+    src: url('../font/Maplestory Bold.ttf') format('truetype');
+}
 .post-page {
 align-items: center;
   background-image: url(../img/background.png);
@@ -13,7 +16,58 @@ align-items: center;
 }
 
 
-
+.title{
+    width: 100%;
+    height: 7.5vh;
+    box-sizing: border-box;
+    padding: 10px; /* 원하는 만큼 패딩을 조정 */
+    font-size: 1.2em; /* 글자 크기 조정 */
+    color:#000000;
+    border: 1px solid #ccc; /* 보더 스타일 조정 */
+}
+.fileupload{
+    width: 100%;
+    height: 6.8vh;
+    box-sizing: border-box;
+    padding: 10px; /* 원하는 만큼 패딩을 조정 */
+    font-size: 1.2em; /* 글자 크기 조정 */
+    border: 1px solid #ccc; /* 보더 스타일 조정 */
+}
+.inputanswer{
+    width: 100%;
+    height: 6.5vh;
+    box-sizing: border-box;
+    padding: 10px; /* 원하는 만큼 패딩을 조정 */
+    font-size: 1.2em; /* 글자 크기 조정 */
+    border: 1px solid #ccc; /* 보더 스타일 조정 */
+}
+.firstFeature{
+    width: 100%;
+    height: 16.5vh;
+    box-sizing: border-box;
+    padding: 10px; /* 원하는 만큼 패딩을 조정 */
+    font-size: 1.2em; /* 글자 크기 조정 */
+    border: 1px solid #ccc; /* 보더 스타일 조정 */
+    border-radius:1.81vw;
+}
+.secondFeature{
+    width: 100%;
+    height: 16.5vh;
+    box-sizing: border-box;
+    padding: 10px; /* 원하는 만큼 패딩을 조정 */
+    font-size: 1.2em; /* 글자 크기 조정 */
+    border: 1px solid #ccc; /* 보더 스타일 조정 */
+     border-radius:1.81vw;
+}
+.thirdFeature{
+    width: 100%;
+    height: 16.5vh;
+    box-sizing: border-box;
+    padding: 10px; /* 원하는 만큼 패딩을 조정 */
+    font-size: 1.2em; /* 글자 크기 조정 */
+    border: 1px solid #ccc; /* 보더 스타일 조정 */
+     border-radius:1.81vw;
+}
 
 .post-page .zcc-1 {
   display: block;
@@ -27,7 +81,9 @@ align-items: center;
 }
 
 
-
+.post-page #profile{
+   left:10px
+}
 
 .post-page .rectangle-24 {
   background-color: var(--soapstone);
@@ -44,27 +100,66 @@ align-items: center;
   left: 29.79vw;
   line-height: 1.11vw;
   position: absolute;
+  font-size:24px;
   top: 19.93vw;
   width: 5.35vw;
+  font-family: 'Maplestory Bold';
 }
 
 .post-page .rectangle-25 {
   background-color: #fffafa;
-  height: 3.4vw;
+  height: 3.1vw;
   left: 37.01vw;
   position: absolute;
   top: 18.96vw;
   width: 25.14vw;
 }
-
-.post-page .rectangle-26 {
-  background-color: var(--soapstone);
-  height: 3.82vw;
-  left: 63.19vw;
-  position: absolute;
-  top: 18.96vw;
-  width: 7.92vw;
+@font-face {
+    font-family: 'SBAggroL';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroL.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
+* {font-family: 'SBAggroL';}
+
+input {-webkit-border-radius: 0; border-radius: 0; -webkit-appearance: none; -moz-appearance: none; appearance: none; border:0; background-color:transparent;}
+
+.container{
+  background-color: blue;
+  border: 0.35vw solid;
+  border-color: #ffffff;
+  border-radius: 2.15vw;
+  height: 3.92vw;
+  left: 62.99vw;
+  position: absolute;
+  top: 67.69vw;
+  width: 8.06vw;
+  color:#ffffff;}
+  
+.uploadText{
+   color:#ffffff;
+   size:28px;
+   font-family:'Maplestory Bold';
+    transform: translateY(20px);
+    position:relative;
+    left:590px;
+    top:894px;
+    font-size:30px;
+    
+}
+
+
+.filebox {display: flex; gap: 10px;
+          margin-left:89px;
+          margin-top:240px;
+          width:488px;}
+.filebox input {border: 1px solid #dbdbdb; background-color: #fff; font-size: 16px;}
+.filebox .upload-name {max-width:500px; width: 100%; height: 36px; padding: 4.5px 15px; pointer-events: none;}
+.filebox .file {position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; border: 0; white-space: nowrap; clip: rect(0, 0, 0, 0);}
+.filebox .file:focus + label {background-color: #000; color: #fff;}
+.filebox .upload-button {display: inline-flex; align-items:center; margin-left:-82px; justify-content: center; flex-shrink: 0; padding: 4.5px 15px; border: 1px solid #000; color: #000; background-color:#0B77ff; cursor: pointer; line-height: 1; transition: all 0.3s;}
+.filebox .upload-button:hover, .filebox .upload-button:focus {background-color: #000; color: #fff;}
+   
 
 .post-page .browse {
   color: var(--jrnavercomnero);
@@ -77,27 +172,29 @@ align-items: center;
 }
 
 .post-page .rectangle-27 {
-  background-color: var(--alto);
+  background-color: #ffffff;
   height: 3.47vw;
   left: 28.06vw;
   position: absolute;
   top: 11.6vw;
-  width: 8.33vw;
+  width: 7.92vw;
 }
 
 .post-page .text-66 {
   color: var(--jrnavercomnero);
   font-weight: 400;
-  left: 31.04vw;
+  left: 30.04vw;
   line-height: 1.11vw;
   position: absolute;
+  font-size:24px;
   top: 12.64vw;
   white-space: nowrap;
   width: 5.35vw;
+  font-family: 'Maplestory Bold';
 }
 
 .post-page .rectangle-28 {
-  background-color: #f9f3f3;
+  background-color: #ffffff;
   border: 0.35vw solid;
   border-color: #e9ec50;
   border-radius: 1.6vw;
@@ -118,6 +215,10 @@ align-items: center;
   position: absolute;
   top: 43.47vw;
   width: 43.06vw;
+   flex-direction: row;
+     display: flex;
+  flex-direction: row; /* 가로로 배치 */
+  justify-content: space-between; /* 요소 사이의 간격을 균등하게 */
 }
 
 .post-page .rectangle-30 {
@@ -133,7 +234,7 @@ align-items: center;
 }
 
 .post-page .rectangle-31 {
-  background-color: var(--alto);
+  background-color: white;
   height: 3.47vw;
   left: 37.01vw;
   position: absolute;
@@ -148,12 +249,14 @@ align-items: center;
   line-height: 1.11vw;
   position: absolute;
   top: 29.24vw;
-  width: 5.9vw;
+  width: 16.9vw;
+  font-family: 'Maplestory Bold';
 }
 
 .post-page .text-68 {
   color: #faf7f7;
   font-weight: 400;
+  font-family: 'Maplestory Bold';
   left: 29.65vw;
   line-height: 1.11vw;
   position: absolute;
@@ -167,6 +270,7 @@ align-items: center;
   left: 29.65vw;
   line-height: 1.11vw;
   position: absolute;
+  font-family: 'Maplestory Bold';
   top: 53.75vw;
   width: 7.92vw;
 }
@@ -186,12 +290,14 @@ align-items: center;
   left: 29.79vw;
   line-height: 1.11vw;
   position: absolute;
+  font-size:24px;
   top: 24.86vw;
   white-space: nowrap;
   width: 5.9vw;
+  font-family: 'Maplestory Bold';
 }
 
-.post-page .rectangle-36 {
+.post-page .upload {
   background-color: #fef9f9;
   height: 2.64vw;
   left: 65.56vw;
@@ -199,14 +305,37 @@ align-items: center;
   top: 66.25vw;
   width: 4.79vw;
 }
+.btnBlueGreen.btnBorder {
+  box-shadow: 0px 0px 0px 0px #21825B;
+}
+
+.btnBlueGreen.btnBorder:hover {
+  box-shadow: 0px 0px 0px 5px #21825B;
+}
+a.button {
+  display: block;
+  position: relative;
+  float: left;
+  width: 120px;
+  padding: 0;
+  margin: 10px 20px 10px 0;
+  font-weight: 600;
+  text-align: center;
+  line-height: 50px;
+  color: #FFF;
+  border-radius: 5px;
+  transition: all 0.2s ;
+  
+}
 
 .post-page .text-71 {
   color: var(--jrnavercomnero);
   font-weight: 400;
+  font-family: 'Maplestory Bold';
   left: 66.25vw;
   line-height: 1.11vw;
   position: absolute;
-  top: 66.74vw;
+  top: 67vw;
   width: 4.1vw;
 }
 
