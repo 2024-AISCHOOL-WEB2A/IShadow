@@ -12,7 +12,7 @@
 	top: 0;
 	width: 100%;
 	z-index: 1000;
-	background: rgba(0, 0, 0, 0.7); /* 배경색 추가 */
+	/* 배경색 추가 */
 	color: white;
 	padding: 10px 0; /* 패딩 추가 */
 	text-align: center; /* 텍스트 가운데 정렬 */
