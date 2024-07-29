@@ -322,7 +322,7 @@ opacity
     let cnt = 0;
     let timeLeft = 0;
     let timerId;
-    let duration = 1; // 타이머 시간 (초)
+    let duration = 60; // 타이머 시간 (초)
     let currentGameIndex = 0;
     let gameEnded = false;
     let transformEnabled = false;
