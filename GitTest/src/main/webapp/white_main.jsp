@@ -184,7 +184,7 @@ body, html {
                   </div>
                </a>
                <!-- 게시판 -->
-               <a href="white_board_page.jsp">
+               <a href="WhitePostsSelectAll">
                   <div class="view">
                      <img src="assets/img/main/planet_4.png">
                      <div class="view-text">게시판</div>
