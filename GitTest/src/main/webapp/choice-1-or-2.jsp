@@ -30,22 +30,28 @@ html, body {
 	align-items: center; /* 수직 중앙 정렬 */
 	height: 100vh; /* 부모 컨테이너의 높이를 100%로 설정 */
 	position: relative;
-	bottom: 220px; /* 요소를 아래로 100px 이동 */
+	bottom: 15%; /* 요소를 아래로 200px 이동 */
 }
 
 
 .text-105, .text-106 {
-	color: white; /* 텍스트 색상을 흰색으로 설정 */
-	font-family: 'Maplestory Bold', sans-serif; /* 폰트 패밀리 추가 */
-	text-align: center; /* 텍스트 중앙 정렬 */
+  color: white; /* 텍스트 색상을 흰색으로 설정 */
+  font-family: 'Maplestory Bold', sans-serif; /* 폰트 패밀리 추가 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+  margin: 0; /* 기본 여백 제거 */
+  position: relative; /* 위치 설정 */
+  font-size: 100px; /* 글자 크기 조정 (예: 24px) */
 }
 
 .rectangle-5, .rectangle-4 {
-	width: 200px; /* 버튼의 너비 조정 */
-	height: 50px; /* 버튼의 높이 조정 */
-	background-color: rgba(255, 255, 255, 0.2); /* 버튼 배경색과 투명도 조정 */
-	border-radius: 10px; /* 버튼의 모서리를 둥글게 조정 */
-	margin-top: 10px; /* 텍스트와 버튼 간격 조정 */
+  width: 200px; /* 버튼의 너비 조정 */
+  height: 50px; /* 버튼의 높이 조정 */
+  background-color: rgba(255, 255, 255, 0.2); /* 버튼 배경색과 투명도 조정 */
+  border-radius: 10px; /* 버튼의 모서리를 둥글게 조정 */
+  margin-top: 10px; /* 텍스트와 버튼 간격 조정 */
+  display: flex; /* Flexbox 사용 */
+  justify-content: center; /* 수평 중앙 정렬 */
+  align-items: center; /* 수직 중앙 정렬 */
 }
 
 a:hover .rectangle-5, a:hover .rectangle-4 {
