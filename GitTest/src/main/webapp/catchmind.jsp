@@ -48,6 +48,7 @@ canvas {
 	border-radius: 50%;
 	overflow: hidden;
 	clip-path: circle(50%);
+	top: 10vw;
 }
 
 .view canvas {
@@ -62,7 +63,7 @@ canvas {
 	position: absolute;
 	width: 20%;
 	height: 20%;
-	top: 80%;
+	top: 100%;
 	left: 10%;
 	background-color: #e0e0e0;
 	border-radius: 20px;
@@ -220,7 +221,7 @@ opacity
 
 #toggleButton {
     position: absolute;
-    top: 5%;
+    top: 75%;
     left: 5%;
     padding: 10px 20px;
     background-color: #007bff;
@@ -233,12 +234,13 @@ opacity
 </head>
 <body style="margin: 0; background: #ffffff">
 	<input type="hidden" id="anPageName" name="page" value="catchmind" />
+	
 	<div class="container-center-horizontal">
 		<div class="catchmind screen">
 			<div class="overlap-group1">
+			<%@ include file="header.jsp"%>
 				<img class="background-2" src="assets/img/background.png"
 					alt="background 2" />
-				<%@ include file="header.jsp"%>
 				<img class="image" src="assets/img/----.svg" alt="image" />
 				<div class="view">
 					<div id="loading">로딩 중...</div>
@@ -461,7 +463,7 @@ opacity
         }
 
         // 정답 판별
-        if (maxProbability > 0.75 && bestMatch.toLowerCase() === games[currentGameIndex].ans.toLowerCase()) {
+        if (maxProbability > 0.50 && bestMatch.toLowerCase() === games[currentGameIndex].ans.toLowerCase()) {
             currentGameIndex++;
             setTimeout(() => {
                 loadImage();
