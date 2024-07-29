@@ -17,6 +17,12 @@ ArrayList<Ranking> ranking = (ArrayList<Ranking>) request.getAttribute("ranking"
 <link rel="stylesheet" type="text/css" href="assets/css/catchmindu95ranking.css" />
 <link rel="stylesheet" type="text/css" href="assets/css/styleguide.css" />
 <link rel="stylesheet" type="text/css" href="assets/css/globals.css" />
+<style>
+	.header-container {
+	position: relative; /* z-index 적용을 위해 position 설정 */
+	z-index: 10; /* 적절한 z-index 값 설정 */
+}
+</style>
 </head>
 <body style="margin: 0; background: #000000">
     <script>
@@ -32,7 +38,9 @@ ArrayList<Ranking> ranking = (ArrayList<Ranking>) request.getAttribute("ranking"
         <div class="catchmindu95ranking screen">
             <div class="overlap-group3">
                 <img class="create-a-high-resolu" src="assets/img/background.png" alt="background" />
-                <%@ include file="header.jsp"%>
+                <div class="header-container">
+					<%@ include file="header.jsp"%>
+				</div>
                 <div class="ranking-container">
                     <h1 class="title">Ranking</h1>
                     <div class="group-11">
