@@ -21,7 +21,8 @@ public class InsertRanking extends HttpServlet {
 
     protected void service(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
+    	
+    	request.setCharacterEncoding("UTF-8");
         String nickName = request.getParameter("nickName");
         String hiddenTimeParam = request.getParameter("hiddenTime");
         Date date = new Date(); 
@@ -29,7 +30,6 @@ public class InsertRanking extends HttpServlet {
         RankingDAO dao = new RankingDAO();
         int cnt = dao.insertRanking(nickName, hiddenTimeParam, date);
 
-        request.setCharacterEncoding("UTF-8");
 
         if (cnt > 0) {
             response.sendRedirect("SelectRanking");

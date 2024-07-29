@@ -140,9 +140,13 @@ keyframes fadeOut { 0% {
 
 
 
+
+
 %
 {
 opacity
+
+
 
 
 
@@ -152,7 +156,11 @@ opacity
 
 
 
+
+
 0
+
+
 
 
 ;
@@ -259,8 +267,7 @@ opacity
 		<div class="catchmind screen">
 			<div class="overlap-group1">
 				<img class="background-2" src="assets/img/background.png"
-					alt="background 2" /> 
-				<img class="image" src="assets/img/----.svg"
+					alt="background 2" /> <img class="image" src="assets/img/----.svg"
 					alt="image" />
 				<div class="header-container">
 					<%@ include file="header.jsp"%>
@@ -317,7 +324,7 @@ opacity
 	<script async src="https://docs.opencv.org/4.x/opencv.js"></script>
 
 	<script type="text/javascript">
-    // 게임 관련 변수들 초기화
+    // 9게임 관련 변수들 초기화
     let games = [];
     let cnt = 0;
     let timeLeft = 0;
@@ -329,6 +336,7 @@ opacity
 
     // 서버로부터 전달된 게임 리스트를 자바스크립트 배열로 변환
     <%Games game;
+request.setCharacterEncoding("UTF-8");
 ArrayList<Games> gamesList = (ArrayList<Games>) request.getAttribute("games");
 for (int i = 0; i < gamesList.size(); i++) {
 	game = gamesList.get(i);%>
