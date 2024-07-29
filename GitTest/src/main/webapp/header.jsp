@@ -23,7 +23,7 @@
 }
 
 .img-medium {
-  width: 80px !important;
+  width: 100px !important;
   height: auto !important;
 }
 

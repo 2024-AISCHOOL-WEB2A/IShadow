@@ -34,7 +34,7 @@
   left: 197px;
   padding: 20px;
   position: absolute;
-  top: 265px;
+  top: px;
   width: 1418px;
 }
 
@@ -87,7 +87,7 @@
   font-family: 'Maplestory Bold';
   font-size: 25px;
   width: 35%;
-  margin-left: 90px; /* 제목을 오른쪽으로 이동 */
+  margin-left: 20px; /* 제목을 오른쪽으로 이동 */
 }
 
 .request-page .date {

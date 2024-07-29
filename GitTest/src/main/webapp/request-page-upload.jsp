@@ -25,46 +25,55 @@
             src: url('assets/font/Maplestory Light.ttf') format('truetype');
         }
 
-        .form-container {
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
             width: 100%;
-            max-width: 800px;
+            overflow: hidden;
+        }
+
+        .form-container {
+            width: 80%; /* 이전보다 작은 크기로 설정 */
+            max-width: 900px; /* 최대 너비 설정 */
             margin: 0 auto;
-            padding: 40px;
-            background-color: transparent;
+            padding: 30px; /* 패딩을 조금 줄임 */
+            background-color: rgba(0, 0, 0, 0.8); /* 검정 배경색에 불투명도 추가 */
             border-radius: 20px;
             border: 2px solid yellow;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             color: white;
             font-family: 'Maplestory Bold';
+            margin-top: 150px; /* 위쪽 여백 추가 */
         }
 
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 15px; /* 그룹 간격을 조금 줄임 */
         }
 
         .form-group label {
             display: block;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             font-weight: bold;
-            font-size: 18px;
+            font-size: 20px; /* 글씨 크기 증가 */
             color: white;
         }
 
         .form-group input,
         .form-group textarea {
             width: 100%;
-            padding: 15px;
+            padding: 15px; /* 패딩 증가 */
             border: 2px solid yellow;
             border-radius: 20px;
             box-sizing: border-box;
-            font-size: 16px;
+            font-size: 18px; /* 글씨 크기 증가 */
             background-color: transparent;
             color: white;
             font-family: 'Maplestory Bold';
         }
 
         .form-group textarea {
-            height: 200px;
+            height: 250px; /* 높이 증가 */
         }
 
         .buttons {
@@ -73,11 +82,11 @@
         }
 
         .btn {
-            padding: 15px 30px;
+            padding: 15px 30px; /* 패딩 증가 */
             border: none;
             border-radius: 20px;
             cursor: pointer;
-            font-size: 18px;
+            font-size: 18px; /* 글씨 크기 증가 */
             font-family: 'Maplestory Bold';
         }
 
@@ -100,7 +109,6 @@
             <div class="overlap-group3">
                 <!-- header -->
                 <%@ include file="header.jsp" %>
-                <h1 class="text-1 text" style="color: white;">해줘요</h1>
                 <div class="form-container">
                     <form action="qaAllSelect" method="post" accept-charset="UTF-8">
                         <div class="form-group">
