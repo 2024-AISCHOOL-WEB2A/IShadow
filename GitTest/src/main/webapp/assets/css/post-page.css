@@ -1,5 +1,8 @@
 /* screen - post-page */
-
+@font-face {
+    font-family: 'Maplestory Bold';
+    src: url('../font/Maplestory Bold.ttf') format('truetype');
+}
 .post-page {
 align-items: center;
   background-image: url(../img/background.png);
@@ -13,7 +16,57 @@ align-items: center;
 }
 
 
-
+.title{
+    width: 100%;
+    height: 7.5vh;
+    box-sizing: border-box;
+    padding: 10px; /* 원하는 만큼 패딩을 조정 */
+    font-size: 1.2em; /* 글자 크기 조정 */
+    border: 1px solid #ccc; /* 보더 스타일 조정 */
+}
+.fileupload{
+    width: 100%;
+    height: 6.8vh;
+    box-sizing: border-box;
+    padding: 10px; /* 원하는 만큼 패딩을 조정 */
+    font-size: 1.2em; /* 글자 크기 조정 */
+    border: 1px solid #ccc; /* 보더 스타일 조정 */
+}
+.inputanswer{
+    width: 100%;
+    height: 6.5vh;
+    box-sizing: border-box;
+    padding: 10px; /* 원하는 만큼 패딩을 조정 */
+    font-size: 1.2em; /* 글자 크기 조정 */
+    border: 1px solid #ccc; /* 보더 스타일 조정 */
+}
+.firstFeature{
+    width: 100%;
+    height: 16.5vh;
+    box-sizing: border-box;
+    padding: 10px; /* 원하는 만큼 패딩을 조정 */
+    font-size: 1.2em; /* 글자 크기 조정 */
+    border: 1px solid #ccc; /* 보더 스타일 조정 */
+    border-radius:1.81vw;
+}
+.secondFeature{
+    width: 100%;
+    height: 16.5vh;
+    box-sizing: border-box;
+    padding: 10px; /* 원하는 만큼 패딩을 조정 */
+    font-size: 1.2em; /* 글자 크기 조정 */
+    border: 1px solid #ccc; /* 보더 스타일 조정 */
+     border-radius:1.81vw;
+}
+.thirdFeature{
+    width: 100%;
+    height: 16.5vh;
+    box-sizing: border-box;
+    padding: 10px; /* 원하는 만큼 패딩을 조정 */
+    font-size: 1.2em; /* 글자 크기 조정 */
+    border: 1px solid #ccc; /* 보더 스타일 조정 */
+     border-radius:1.81vw;
+}
 
 .post-page .zcc-1 {
   display: block;
@@ -27,7 +80,9 @@ align-items: center;
 }
 
 
-
+.post-page #profile{
+   left:10px
+}
 
 .post-page .rectangle-24 {
   background-color: var(--soapstone);
@@ -44,13 +99,15 @@ align-items: center;
   left: 29.79vw;
   line-height: 1.11vw;
   position: absolute;
+  font-size:24px;
   top: 19.93vw;
   width: 5.35vw;
+  font-family: 'Maplestory Bold';
 }
 
 .post-page .rectangle-25 {
   background-color: #fffafa;
-  height: 3.4vw;
+  height: 3.1vw;
   left: 37.01vw;
   position: absolute;
   top: 18.96vw;
@@ -59,7 +116,7 @@ align-items: center;
 
 .post-page .rectangle-26 {
   background-color: var(--soapstone);
-  height: 3.82vw;
+  height: 3.32vw;
   left: 63.19vw;
   position: absolute;
   top: 18.96vw;
@@ -82,18 +139,20 @@ align-items: center;
   left: 28.06vw;
   position: absolute;
   top: 11.6vw;
-  width: 8.33vw;
+  width: 7.92vw;
 }
 
 .post-page .text-66 {
   color: var(--jrnavercomnero);
   font-weight: 400;
-  left: 31.04vw;
+  left: 30.04vw;
   line-height: 1.11vw;
   position: absolute;
+  font-size:24px;
   top: 12.64vw;
   white-space: nowrap;
   width: 5.35vw;
+  font-family: 'Maplestory Bold';
 }
 
 .post-page .rectangle-28 {
@@ -118,6 +177,10 @@ align-items: center;
   position: absolute;
   top: 43.47vw;
   width: 43.06vw;
+   flex-direction: row;
+     display: flex;
+  flex-direction: row; /* 가로로 배치 */
+  justify-content: space-between; /* 요소 사이의 간격을 균등하게 */
 }
 
 .post-page .rectangle-30 {
@@ -148,12 +211,14 @@ align-items: center;
   line-height: 1.11vw;
   position: absolute;
   top: 29.24vw;
-  width: 5.9vw;
+  width: 16.9vw;
+  font-family: 'Maplestory Bold';
 }
 
 .post-page .text-68 {
   color: #faf7f7;
   font-weight: 400;
+  font-family: 'Maplestory Bold';
   left: 29.65vw;
   line-height: 1.11vw;
   position: absolute;
@@ -167,6 +232,7 @@ align-items: center;
   left: 29.65vw;
   line-height: 1.11vw;
   position: absolute;
+  font-family: 'Maplestory Bold';
   top: 53.75vw;
   width: 7.92vw;
 }
@@ -186,9 +252,11 @@ align-items: center;
   left: 29.79vw;
   line-height: 1.11vw;
   position: absolute;
+  font-size:24px;
   top: 24.86vw;
   white-space: nowrap;
   width: 5.9vw;
+  font-family: 'Maplestory Bold';
 }
 
 .post-page .rectangle-36 {
@@ -203,10 +271,11 @@ align-items: center;
 .post-page .text-71 {
   color: var(--jrnavercomnero);
   font-weight: 400;
+  font-family: 'Maplestory Bold';
   left: 66.25vw;
   line-height: 1.11vw;
   position: absolute;
-  top: 66.74vw;
+  top: 67vw;
   width: 4.1vw;
 }
 

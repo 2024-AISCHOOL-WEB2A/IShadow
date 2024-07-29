@@ -66,7 +66,8 @@ public class PostDAO {
     public ArrayList<Post> postSelectAll() {
     	ArrayList<Post> posts = new ArrayList<Post>();
 		try {
-			String sql = "select * from Insa5_SpringA_hacksim_2.posts order by post_idx desc";
+			String sql = "select * from posts p join users u on p.u_idx = u.u_id where u.u_exit = 'F'"
+					+ "order by post_idx desc";
 			
 			pst = conn.prepareStatement(sql);
 
@@ -97,9 +98,10 @@ public class PostDAO {
     public ArrayList<PostComments> PostsComments(int idx) {
     	ArrayList<PostComments> postcomments = new ArrayList<PostComments>();
     	try {
-			String sql = "SELECT cmt_idx, post_idx, cmt_content, created_at, u_id\n"
-					+ "  FROM Insa5_SpringA_hacksim_2.post_comments\n"
-					+ "  WHERE post_idx = "+idx+";";
+			String sql = "SELECT src.cmt_idx, src.post_idx, src.cmt_content, src.created_at, src.u_id,"
+					+ "trg.hint_1, trg.hint_2, trg.hint_3, trg.post_answer"
+					+ "  FROM Insa5_SpringA_hacksim_2.post_comments src join Insa5_SpringA_hacksim_2.posts trg\n"
+					+ "  on src.post_idx = trg.post_idx WHERE trg.post_idx = "+idx+";";
 			pst = conn.prepareStatement(sql);
 			rs = pst.executeQuery();
 			PostComments postcomment;
@@ -110,10 +112,10 @@ public class PostDAO {
 				postcomment.setCmt_content(rs.getString(3));
 				postcomment.setCreated_at(rs.getDate(4));
 				postcomment.setU_id(rs.getString(5));
-//				postcomment.setHint_1(rs.getString(6));
-//				postcomment.setHint_2(rs.getString(7));
-//				postcomment.setHint_3(rs.getString(8));
-//				postcomment.setPost_answer(rs.getString(9));
+				postcomment.setHint_1(rs.getString(6));
+				postcomment.setHint_2(rs.getString(7));
+				postcomment.setHint_3(rs.getString(8));
+				postcomment.setPost_answer(rs.getString(9));
 				postcomments.add(postcomment);
 			}
 
@@ -185,7 +187,8 @@ public class PostDAO {
     public ArrayList<Post> postSearch(String s) {
     	ArrayList<Post> posts = new ArrayList<Post>();
     	try {
-			String sql = "select * from Insa5_SpringA_hacksim_2.posts where post_title like '%"+s+"%';";
+			String sql = "select * from Insa5_SpringA_hacksim_2.posts where post_title like '%"+s+"%'"
+					+ "order by post_idx desc;";
 
 			pst = conn.prepareStatement(sql);	
 			rs = pst.executeQuery();
@@ -208,5 +211,39 @@ public class PostDAO {
 
 		}
     	return posts;
+	}
+	public int postDlete(String deletePost) {
+		
+		int cnt = 0;
+		connect();
+		
+		try {
+			String sql = "DELETE FROM posts WHERE post_idx = ?";
+			pst = conn.prepareStatement(sql);
+			pst.setString(1, deletePost);
+			cnt = pst.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			close();
+		}
+		
+		return cnt;
+	}
+	// 게시물 정답 맞추기
+	public int postAnswer(int idx, String ans) {
+		int rowcount = 0;
+		try {
+			String sql = "select count(*) from Insa5_SpringA_hacksim_2.posts \n"
+					+ "where post_idx = "+idx+" and post_answer = '"+ans+"';";
+			pst = conn.prepareStatement(sql);
+			rs = pst.executeQuery();
+			if(rs.next()) rowcount = rs.getInt(1);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+//			close();
+		}
+		return rowcount;
 	}
 }

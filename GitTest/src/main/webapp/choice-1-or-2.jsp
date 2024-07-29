@@ -65,7 +65,7 @@ a:hover .rectangle-5, a:hover .rectangle-4 {
 				<a href="catchmind.jsp">
 					<div class="text-105">둘이서</div>
 					<div class="rectangle-5 rectangle"></div>
-				</a> <a href="catchmind.jsp">
+				</a> <a href="GameStart">
 					<div class="text-106">혼자서</div>
 					<div class="rectangle-4 rectangle"></div>
 				</a>
