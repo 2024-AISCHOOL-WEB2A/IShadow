@@ -14,7 +14,7 @@ import com.aischool.model.Stories;
 import com.aischool.model.StoriesDAO;
 
 /**
- * Servlet implementation class ChoiceStory
+ * Servlet implementation class WhiteChoiceStory
  */
 @WebServlet("/WhiteChoiceStory")
 public class WhiteChoiceStory extends HttpServlet {
