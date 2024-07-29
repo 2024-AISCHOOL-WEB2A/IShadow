@@ -1,75 +1,122 @@
-/* screen - input-score */
+@font-face {
+  font-family: 'Maplestory Bold';
+  src: url('../font/Maplestory Bold.ttf') format('truetype');
+}
 
 .input-score {
   align-items: center;
-  background-color: #02173a;
+  background-color: #333333;
   display: flex;
   flex-direction: column;
-  height: 67.99vw;
-  padding: 5.43vw 16.97vw;
-  width: 100.0vw;
+  justify-content: center;
+  height: 100vh;
+  padding: 2vw; /* 패딩 크기 줄이기 */
+  width: 100vw;
+}
+
+.container-box {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 1.5rem; /* 패딩 크기 줄이기 */
+  max-width: 400px; /* 컨테이너 박스의 최대 너비 줄이기 */
+  width: 90%; /* 컨테이너 박스의 너비를 화면에 맞추기 */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 .input-score .title {
-  color: var(--white);
-  font-family: var(--font-family-inter);
-  font-size: 14.48vw;
+  color: #02173a;
+  font-family: 'Maplestory Bold', sans-serif !important;
+  font-size: 1.5rem; /* 폰트 크기 줄이기 */
   font-weight: 400;
   letter-spacing: 0;
   line-height: normal;
-  margin-right: 0.11vw;
-  margin-top: 8.82vw;
-  min-height: 17.53vw;
-  min-width: 60.52vw;
-  text-align: center;
+  margin: 1rem 0;
 }
 
 .input-score .overlap-group1 {
   align-items: flex-start;
-  align-self: flex-end;
-  height: 15.16vw;
-  margin-top: 5.43vw;
-  min-width: 61.88vw;
-  padding: 4.98vw 3.05vw;
+  align-self: center;
+  height: auto;
+  margin: 0.8rem 0; /* 마진 크기 줄이기 */
+  min-width: auto;
+  padding: 0.8rem; /* 패딩 크기 줄이기 */
+  background-color: #FECC6D;
+  border-radius: 10px;
 }
 
 .input-score .text-50 {
-  font-size: 4.07vw;
-  min-height: 4.98vw;
-  min-width: 36.09vw;
+  font-size: 0.9rem; /* 폰트 크기 줄이기 */
+  min-height: auto;
+  min-width: auto;
+  font-family: 'Maplestory Bold', sans-serif !important;
+  cursor: pointer;
+}
+
+.input-score .input-field {
+  display: none;
+  font-size: 0.9rem; /* 폰트 크기 줄이기 */
+  min-height: auto;
+  min-width: auto;
+  font-family: 'Maplestory Bold', sans-serif !important;
+  padding: 0.5rem;
+  border: 1px solid #333333;
+  border-radius: 5px;
 }
 
 .input-score .group-2 {
-  align-items: flex-start;
+  align-items: center;
   cursor: pointer;
   display: flex;
-  margin-left: 0.23vw;
-  margin-top: 5.2vw;
-  min-width: 15.61vw;
+  justify-content: center;
+  margin: 0.8rem 0; /* 마진 크기 줄이기 */
+  min-width: auto;
+  border-radius: 10px;
+  padding: 0.8rem 1.5rem; /* 패딩 크기 줄이기 */
 }
 
 .input-score .overlap-group {
   align-items: center;
-  height: 4.98vw;
-  min-width: 15.38vw;
-  padding: 0 5.6vw;
+  height: auto;
+  min-width: auto;
+  border-radius: 10px;
+  background-color: #333333;
+  margin-top: 0.8rem; /* 마진 크기 줄이기 */
+  border: 3px solid #FECC6D;
+  padding: 0.8rem; /* 패딩 크기 줄이기 */
 }
 
 .input-score .text-49 {
-  font-size: var(--font-size-xl);
-  min-height: 2.71vw;
+  font-size: 0.9rem; /* 폰트 크기 줄이기 */
   white-space: nowrap;
-  width: 4.19vw;
+  width: auto;
+  color: #FECC6D;
+  font-family: 'Maplestory Bold', sans-serif !important;
 }
 
 .input-score .overlap {
-  background-color: var(--alto);
+  height:6.7vw;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  padding: 0.8rem; /*   패딩 크기 줄이기 */
+}
+
+.input-score .overlap3 {
+  background-color: #FF9B50;
+  display: flex;
+  height:2vw;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  padding: 0.8rem; /* 패딩 크기 줄이기 */
+  width:86px;
 }
 
 .input-score .text {
-  color: var(--jrnavercomnero);
-  font-family: var(--font-family-inter);
+  color: #333333;
+  font-family: 'Inter', sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: normal;
