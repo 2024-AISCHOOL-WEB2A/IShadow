@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.aischool.model.Paging;
 import com.aischool.model.Post;
 import com.aischool.model.PostDAO;
 
@@ -20,28 +21,27 @@ import com.aischool.model.PostDAO;
 @WebServlet("/PostsSelectAll")
 public class PostsSelectAll extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+
+	protected void service(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
 		PostDAO postDao = new PostDAO();
-		//전체 게시글 표출
-		ArrayList<Post> posts = postDao.postSelectAll();
-		postDao.close();
+		Paging paging = new Paging();
+
+		int pageCount = paging.getPageCount(1, postDao.getPostsCount());
+		int currentPage = Integer.parseInt(request.getParameter("pageNum"));
+		int pageSize = 1;
+		ArrayList<Post> posts = postDao.postSelectAll(currentPage, pageSize);
+
+		String myPage = paging.pageIndexList(currentPage, pageCount, "PostsSelectAll");
 		
+		postDao.close();
+
 		request.setAttribute("getPosts", posts);
+		request.setAttribute("myPage", myPage);
 
 		RequestDispatcher dis = request.getRequestDispatcher("board_page.jsp");
 		dis.forward(request, response);
-		
-//		int size = posts.size();
-//		for(int i=0;i<size;i++) {
-//			System.out.println(posts.get(i).getIdx()+" "+
-//			posts.get(i).getTitle()+" "+
-//			posts.get(i).getUser()+" "+
-//			posts.get(i).getCreate_at()+" "+
-//			posts.get(i).getFile()+" "+
-//			posts.get(i).getViews()+"\n");			
-//		}
 
 	}
 

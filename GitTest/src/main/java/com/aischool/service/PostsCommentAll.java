@@ -27,19 +27,14 @@ public class PostsCommentAll extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		PostDAO postDao = new PostDAO();
 		int idx = Integer.parseInt(request.getParameter("idx"));
-		// 게시물 조회수 카운트
-		postDao.plusBoardView(idx);
 
-		//게시물 상세보기
 		ArrayList<PostComments> postscomment = postDao.PostsComments(idx);
 
-		postDao.close();
-
 		request.setAttribute("getPostComment", postscomment);
+		
 		RequestDispatcher dis = request.getRequestDispatcher("board-inpage.jsp");
 		dis.forward(request, response);
 		
-
 	}
 
 }

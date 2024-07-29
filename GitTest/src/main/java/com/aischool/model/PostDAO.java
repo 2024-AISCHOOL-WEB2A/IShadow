@@ -61,8 +61,7 @@ public class PostDAO {
 			e.printStackTrace();
 		}
 	}
-
-    //게시물의 모든 정보를 가져오는 메소드
+    //게시물의 모든 정보 가져오기
     public ArrayList<Post> postSelectAll() {
     	ArrayList<Post> posts = new ArrayList<Post>();
 		try {
@@ -93,9 +92,42 @@ public class PostDAO {
 
 		return posts;
 	}
-    
+
+    //게시물의 모든 정보를 가져오는 메소드 : 페이징 테스트
+    public ArrayList<Post> postSelectAll(int startRow, int pageSize) {
+    	ArrayList<Post> posts = new ArrayList<Post>();
+		try {
+			String sql = "select * from posts p join users u on p.u_idx = u.u_id where u.u_exit = 'F'"
+					+ "order by post_idx desc limit "+(startRow-1)+","+pageSize+";";
+			
+			pst = conn.prepareStatement(sql);
+
+			rs = pst.executeQuery();
+			Post post;
+			while (rs.next()) {
+				post = new Post();
+				post.setIdx(rs.getInt(1)); 
+				post.setTitle(rs.getString(2)); 
+				post.setFile(rs.getString(3));
+				post.setCreate_at(rs.getDate(4));
+				post.setViews(rs.getInt(5));;
+				post.setAnswer(rs.getString(6));
+				post.setUser(rs.getString(7));
+				posts.add(post);
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+//			close();
+		}
+
+		return posts;
+	}
+
     // 게시판 상세 보기
     public ArrayList<PostComments> PostsComments(int idx) {
+    	plusBoardView(idx);
     	ArrayList<PostComments> postcomments = new ArrayList<PostComments>();
     	try {
 			String sql = "SELECT src.cmt_idx, src.post_idx, src.cmt_content, src.created_at, src.u_id,"
@@ -122,7 +154,7 @@ public class PostDAO {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}finally {
-//			close();
+			close();
 		}
 
 		return postcomments;
@@ -145,6 +177,26 @@ public class PostDAO {
 //			close();
 		}
 
+    }
+    //게시물 개수 카운트
+    public int getPostsCount() {
+    	int postCnt = 0;
+    	try {
+			String sql = "SELECT count(post_idx) FROM posts p JOIN users u ON p.u_idx = u.u_id WHERE u.u_exit = 'F';";
+			pst = conn.prepareStatement(sql);
+			rs = pst.executeQuery();
+		
+			while (rs.next()) {
+				postCnt = rs.getInt(1);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+//			close();
+		}
+    	
+    	return postCnt;
+    	
     }
     
     //게시판 번호 확인
@@ -187,8 +239,8 @@ public class PostDAO {
     public ArrayList<Post> postSearch(String s) {
     	ArrayList<Post> posts = new ArrayList<Post>();
     	try {
-			String sql = "select * from Insa5_SpringA_hacksim_2.posts where post_title like '%"+s+"%'"
-					+ "order by post_idx desc;";
+			String sql = "select * from posts p join users u on p.u_idx = u.u_id where post_title like '%"+s+"%'"
+					+ "and u.u_exit = 'F' order by post_idx desc;";
 
 			pst = conn.prepareStatement(sql);	
 			rs = pst.executeQuery();

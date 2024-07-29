@@ -188,7 +188,7 @@ body, html {
                   </div>
                </a>
                <!-- 게시판 -->
-               <a href="PostsSelectAll">
+               <a href="PostsSelectAll?pageNum=1">
                   <div class="view">
                      <img src="assets/img/main/planet_4.png">
                      <div class="view-text">게시판</div>

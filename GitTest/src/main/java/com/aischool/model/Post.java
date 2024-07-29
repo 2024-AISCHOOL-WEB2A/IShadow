@@ -16,6 +16,15 @@ public class Post {
 	private String hint3;
 	
 	public Post() {};
+	public Post(int idx, String title, String file, Date create_at, int views, String answer, String user) {
+		this.idx = idx;
+		this.title = title;
+		this.file = file;
+		this.create_at = create_at;
+		this.views = views;
+		this.answer = answer;
+		this.user = user;
+	}
 	public Post(int idx, String title, String file, Date create_at, int views, String answer, String user, String hint1,
 			String hint2, String hint3) {
 		super();
