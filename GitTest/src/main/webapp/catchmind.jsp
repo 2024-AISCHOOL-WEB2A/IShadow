@@ -48,6 +48,7 @@ canvas {
 	border-radius: 50%;
 	overflow: hidden;
 	clip-path: circle(50%);
+	top: 10vw;
 }
 
 .view canvas {
@@ -62,7 +63,7 @@ canvas {
 	position: absolute;
 	width: 20%;
 	height: 20%;
-	top: 80%;
+	top: 100%;
 	left: 10%;
 	background-color: #e0e0e0;
 	border-radius: 20px;
@@ -135,11 +136,34 @@ keyframes fadeOut { 0% {
 }
 
 100
+
+
+
+
+
+
 %
 {
 opacity
+
+
+
+
+
+
 :
-0;
+
+
+
+
+
+
+0
+
+
+
+
+;
 }
 }
 .modal {
@@ -219,34 +243,43 @@ opacity
 }
 
 #toggleButton {
-    position: absolute;
-    top: 5%;
-    left: 5%;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+	position: absolute;
+	top: 75%;
+	left: 5%;
+	padding: 10px 20px;
+	background-color: #007bff;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.header-container {
+	position: relative; /* z-index 적용을 위해 position 설정 */
+	z-index: 10; /* 적절한 z-index 값 설정 */
 }
 </style>
 </head>
 <body style="margin: 0; background: #ffffff">
 	<input type="hidden" id="anPageName" name="page" value="catchmind" />
+
 	<div class="container-center-horizontal">
 		<div class="catchmind screen">
 			<div class="overlap-group1">
 				<img class="background-2" src="assets/img/background.png"
-					alt="background 2" />
-				<%@ include file="header.jsp"%>
-				<img class="image" src="assets/img/----.svg" alt="image" />
+					alt="background 2" /> <img class="image" src="assets/img/----.svg"
+					alt="image" />
+				<div class="header-container">
+					<%@ include file="header.jsp"%>
+				</div>
 				<div class="view">
 					<div id="loading">로딩 중...</div>
 					<canvas id="canvasOutput" willReadFrequently="true"></canvas>
 					<canvas id="canvas" willReadFrequently="true"></canvas>
 					<div id="label-container"></div>
 				</div>
-				<button id="toggleButton" onclick="toggleTransform()">Toggle Transform</button>
+				<button id="toggleButton" onclick="toggleTransform()">Toggle
+					Transform</button>
 				<div class="view-1">
 					<img id="quiz-image" src="" alt="quiz image" style="display: none;" />
 				</div>
@@ -284,32 +317,35 @@ opacity
 		</div>
 	</div>
 
-	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/pose@0.8/dist/teachablemachine-pose.min.js"></script>
-    <script async src="https://docs.opencv.org/4.x/opencv.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/@teachablemachine/pose@0.8/dist/teachablemachine-pose.min.js"></script>
+	<script async src="https://docs.opencv.org/4.x/opencv.js"></script>
 
-<script type="text/javascript">
-    // 게임 관련 변수들 초기화
+	<script type="text/javascript">
+    // 9게임 관련 변수들 초기화
     let games = [];
     let cnt = 0;
     let timeLeft = 0;
     let timerId;
-    let duration = 1000; // 타이머 시간 (초)
+    let duration = 1; // 타이머 시간 (초)
     let currentGameIndex = 0;
     let gameEnded = false;
     let transformEnabled = false;
 
     // 서버로부터 전달된 게임 리스트를 자바스크립트 배열로 변환
-    <% Games game;
-    ArrayList<Games> gamesList = (ArrayList<Games>) request.getAttribute("games");
-    for (int i = 0; i < gamesList.size(); i++) {
-        game = gamesList.get(i); %>
+    <%Games game;
+request.setCharacterEncoding("UTF-8");
+ArrayList<Games> gamesList = (ArrayList<Games>) request.getAttribute("games");
+for (int i = 0; i < gamesList.size(); i++) {
+	game = gamesList.get(i);%>
         games.push({
-            id: <%= game.getIdx() %>,
-            qes: "<%= game.getQes_img() %>",
-            ans: "<%= game.getAns() %>"
+            id: <%=game.getIdx()%>,
+            qes: "<%=game.getQes_img()%>",
+            ans: "<%=game.getAns()%>"
         });
-    <% } %>
+    <%}%>
 
     // 타이머 시작 함수
     function startTimer() {
@@ -461,7 +497,7 @@ opacity
         }
 
         // 정답 판별
-        if (maxProbability > 0.75 && bestMatch.toLowerCase() === games[currentGameIndex].ans.toLowerCase()) {
+        if (maxProbability > 0.50 && bestMatch.toLowerCase() === games[currentGameIndex].ans.toLowerCase()) {
             currentGameIndex++;
             setTimeout(() => {
                 loadImage();
