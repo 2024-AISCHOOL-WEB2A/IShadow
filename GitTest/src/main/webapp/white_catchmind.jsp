@@ -1,315 +1,419 @@
 <%@page import="com.aischool.model.Games"%>
 <%@page import="java.util.ArrayList"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-   pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=1440, maximum-scale=1.0" />
-<link rel="shortcut icon" type="image/png"
-   href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
+<link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
 <meta name="og:type" content="website" />
 <meta name="twitter:card" content="photo" />
 <link rel="stylesheet" type="text/css" href="assets/css/white_catchmind.css" />
 <link rel="stylesheet" type="text/css" href="assets/css/styleguide.css" />
 <link rel="stylesheet" type="text/css" href="assets/css/globals.css" />
 <style>
-.html, body {
-   margin: 0;
-   padding: 0;
-   height: 100%;
-   width: 100%;
-   overflow: hidden;
+/* 전체 페이지와 body 설정 */
+html, body {
+    margin: 0; /* 기본 여백 제거 */
+    padding: 0; /* 기본 패딩 제거 */
+    height: 100%; /* 높이 100% */
+    width: 100%; /* 너비 100% */
+    overflow: hidden; /* 스크롤바 숨김 */
 }
 
+/* 퀴즈 이미지 스타일 */
 .quiz img {
-   max-width: 100%;
-   height: auto;
+    max-width: 100%; /* 최대 너비 100% */
+    height: auto; /* 높이는 자동 조절 */
 }
 
+/* 캔버스 스타일 */
 canvas {
-   display: block;
-   margin: auto;
-   border-radius: 50%;
-   clip-path: circle(50%);
+    display: block; /* 블록 요소로 표시 */
+    margin: auto; /* 가운데 정렬 */
+    border-radius: 50%; /* 테두리를 둥글게 */
+    clip-path: circle(50%); /* 원형으로 자르기 */
 }
 
+/* 정답 맞춘 경우의 스타일 */
 .correct {
-   background-color: #d4edda;
-   transition: background-color 0.5s;
+    background-color: #d4edda; /* 배경색 설정 */
+    transition: background-color 0.5s; /* 배경색 전환 효과 */
 }
 
+/* 웹캠 뷰 컨테이너 스타일 */
 .view {
-   position: relative;
-   width: 48.26vw;
-   height: 48.26vw;
-   margin: auto;
-   border-radius: 50%;
-   overflow: hidden;
-   clip-path: circle(50%);
+    position: relative; /* 상대 위치 설정 */
+    width: 48.26vw; /* 너비 설정 */
+    height: 48.26vw; /* 높이 설정 */
+    margin: auto; /* 가운데 정렬 */
+    border-radius: 50%; /* 테두리를 둥글게 */
+    overflow: hidden; /* 넘치는 부분 숨기기 */
+    clip-path: circle(50%); /* 원형으로 자르기 */
+    top: 10vw; /* 상단 여백 설정 */
 }
 
+/* 웹캠 뷰 캔버스 스타일 */
 .view canvas {
-   width: 100%;
-   height: 100%;
-   position: absolute;
-   top: 0;
-   left: 0;
+    width: 100%; /* 너비 100% */
+    height: 100%; /* 높이 100% */
+    position: absolute; /* 절대 위치 설정 */
+    top: 0; /* 상단 여백 0 */
+    left: 0; /* 왼쪽 여백 0 */
 }
 
+/* 퀴즈 이미지 컨테이너 스타일 */
 .view-1 {
-   position: absolute;
-   width: 20%;
-   height: 20%;
-   top: 80%;
-   left: 10%;
-   background-color: #e0e0e0;
-   border-radius: 20px;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+    position: absolute; /* 절대 위치 설정 */
+    width: 20%; /* 너비 20% */
+    height: 20%; /* 높이 20% */
+    top: 100%; /* 상단 여백 100% */
+    left: 10%; /* 왼쪽 여백 10% */
+    background-color: #e0e0e0; /* 배경색 설정 */
+    border-radius: 20px; /* 테두리를 둥글게 */
+    display: flex; /* 플렉스 박스 설정 */
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
 }
 
+/* 퀴즈 이미지 스타일 */
 .view-1 img {
-   max-width: 80%;
-   max-height: 80%;
-   object-fit: contain;
-   border-radius: 20px;
+    max-width: 80%; /* 최대 너비 80% */
+    max-height: 80%; /* 최대 높이 80% */
+    object-fit: contain; /* 이미지 비율 유지 */
+    border-radius: 20px; /* 테두리를 둥글게 */
 }
 
+/* 퀴즈 정답 표시 컨테이너 스타일 */
 .group-5 {
-   position: absolute;
-   width: 30%;
-   height: 10%;
-   top: 10%;
-   left: 10%;
-   display: flex;
-   justify-content: space-around;
+    position: absolute; /* 절대 위치 설정 */
+    width: 30%; /* 너비 30% */
+    height: 10%; /* 높이 10% */
+    top: 10%; /* 상단 여백 10% */
+    left: 10%; /* 왼쪽 여백 10% */
+    display: flex; /* 플렉스 박스 설정 */
+    justify-content: space-around; /* 요소 간 공간 분배 */
 }
 
+/* 퀴즈 정답 이미지 스타일 */
 .rectangle {
-   width: 18%;
-   height: auto;
+    width: 18%; /* 너비 18% */
+    height: auto; /* 높이는 자동 조절 */
 }
 
+/* 타이머 바 컨테이너 스타일 */
 .rectangle-11 {
-   position: absolute;
-   width: 40%;
-   height: 5%;
-   top: 15%;
-   left: 10%;
-   background-color: #ffffff80;
-   border-radius: 10px;
-   overflow: hidden;
+    position: absolute; /* 절대 위치 설정 */
+    width: 40%; /* 너비 40% */
+    height: 5%; /* 높이 5% */
+    top: 15%; /* 상단 여백 15% */
+    left: 10%; /* 왼쪽 여백 10% */
+    background-color: #ffffff80; /* 반투명 배경색 */
+    border-radius: 10px; /* 테두리를 둥글게 */
+    overflow: hidden; /* 넘치는 부분 숨기기 */
 }
 
+/* 타이머 바 스타일 */
 .timer-bar {
-   height: 100%;
-   background-color: #ffffff;
-   transition: width 0.1s linear;
+    height: 100%; /* 높이 100% */
+    background-color: #ff0000; /* 배경색 설정 */
+    transition: width 0.1s linear; /* 너비 전환 효과 */
 }
 
+/* 타이머 표시 텍스트 스타일 */
 .time-display {
-   position: absolute;
-   width: 100%;
-   text-align: center;
-   font-size: 1.5em;
-   color: #000;
-   top: -30px;
+    position: absolute; /* 절대 위치 설정 */
+    width: 100%; /* 너비 100% */
+    text-align: center; /* 가운데 정렬 */
+    font-size: 1.5em; /* 폰트 크기 설정 */
+    color: #000; /* 텍스트 색상 설정 */
+    top: -30px; /* 상단 여백 설정 */
 }
 
+/* 어두운 정답 이미지 필터 효과 */
 .rectangle-dark {
-   filter: grayscale(100%) brightness(50%);
-   transition: filter 0.5s;
+    filter: grayscale(100%) brightness(50%); /* 회색조 및 밝기 조절 */
+    transition: filter 0.5s; /* 필터 전환 효과 */
 }
 
+/* 밝은 정답 이미지 필터 효과 */
 .rectangle-light {
-   filter: grayscale(0%) brightness(100%);
-   transition: filter 0.5s;
+    filter: grayscale(0%) brightness(100%); /* 회색조 및 밝기 조절 */
+    transition: filter 0.5s; /* 필터 전환 효과 */
 }
 
-@
-keyframes fadeOut { 0% {
-   opacity: 1;
+/* 모달 창 페이드 아웃 효과 */
+@keyframes fadeOut {
+    0% {
+        opacity: 1; /* 초기 투명도 설정 */
+    }
+    100% {
+        opacity: 0; /* 최종 투명도 설정 */
+    }
 }
 
-100
-%
-{
-opacity
-:
-0;
-}
-}
+/* 모달 창 스타일 */
 .modal {
-   display: none;
-   position: fixed;
-   z-index: 1;
-   left: 0;
-   top: 0;
-   width: 100%;
-   height: 100%;
-   overflow: auto;
-   background-color: rgb(0, 0, 0);
-   background-color: rgba(0, 0, 0, 0.4);
-   display: flex;
-   justify-content: center;
-   align-items: center;
+    display: none; /* 기본적으로 숨김 */
+    position: fixed; /* 고정 위치 설정 */
+    z-index: 1; /* z-index 설정 */
+    left: 0; /* 왼쪽 여백 0 */
+    top: 0; /* 상단 여백 0 */
+    width: 100%; /* 너비 100% */
+    height: 100%; /* 높이 100% */
+    overflow: auto; /* 넘치는 부분 스크롤 */
+    background-color: rgba(0, 0, 0, 0.4); /* 반투명 배경색 */
+    display: flex; /* 플렉스 박스 설정 */
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
 }
 
+/* 모달 창 컨텐츠 스타일 */
 .modal-content {
-   background-color: #001f3f;
-   padding: 20px;
-   border: 1px solid #888;
-   width: 80%;
-   max-width: 400px;
-   text-align: center;
-   border-radius: 10px;
+    background-color: #F4EEFF; /* 배경색 설정 */
+    padding: 1.5rem; /* 패딩 크기 줄이기 */
+    max-width: 400px; /* 컨테이너 박스의 최대 너비 줄이기 */
+    width: 90%; /* 컨테이너 박스의 너비를 화면에 맞추기 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 그림자 설정 */
+    text-align: center; /* 텍스트 가운데 정렬 */
+    border-radius: 15px; /* 모서리 둥글게 설정 */
 }
 
+/* 모달 창 내 텍스트 스타일 */
 .modal-content p {
-   color: #fff;
-   font-size: 2em;
-   margin: 0;
+    color: #A6B1E1; /* 텍스트 색상 설정 */
+    font-size: 5rem; /* 폰트 크기 줄이기 */
+    font-family: 'Maplestory Bold', sans-serif !important; /* 폰트 설정 */
+    margin: 1rem 0; /* 외부 여백 설정 */
+    background-color: #DCD6F7;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
+/* 닫기 버튼 스타일 */
 .close {
-   color: #aaa;
-   float: right;
-   font-size: 28px;
-   font-weight: bold;
+    color: #aaa; /* 텍스트 색상 설정 */
+    float: right; /* 오른쪽 정렬 */
+    font-size: 28px; /* 폰트 크기 설정 */
+    font-weight: bold; /* 폰트 두께 설정 */
 }
 
+/* 닫기 버튼 호버 및 포커스 효과 */
 .close:hover, .close:focus {
-   color: black;
-   text-decoration: none;
-   cursor: pointer;
+    color: black; /* 텍스트 색상 설정 */
+    text-decoration: none; /* 밑줄 제거 */
+    cursor: pointer; /* 커서 모양 설정 */
 }
 
+/* 입력 컨테이너 스타일 */
 .input-container {
-   margin-top: 20px;
-   text-align: center;
+    margin-top: 20px; /* 상단 여백 설정 */
+    text-align: center; /* 텍스트 가운데 정렬 */
 }
 
-.input-container input {
-   width: 80%;
-   padding: 10px;
-   border-radius: 5px;
-   border: 1px solid #ccc;
+/* 텍스트 입력 필드 스타일 */
+.input-container input[type="text"] {
+    display: none; /* 기본적으로 숨김 */
+    font-size: 0.9rem; /* 폰트 크기 줄이기 */
+    min-height: 3%; /* 최소 높이 자동 */
+    min-width: 5%; /* 최소 너비 자동 */
+    font-family: 'Maplestory Bold', sans-serif !important; /* 폰트 설정 */
+    padding: 0.5rem; /* 패딩 설정 */
+    border: 1px solid #333333; /* 테두리 설정 */
+    border-radius: 5px; /* 모서리 둥글게 설정 */
 }
 
+/* 제출 버튼 스타일 */
 .input-container input[type="submit"] {
-   margin-top: 10px;
-   padding: 10px 20px;
-   border: none;
-   border-radius: 5px;
-   background-color: #007bff;
-   color: white;
-   cursor: pointer;
+    margin-top: 10px; /* 상단 여백 설정 */
+    padding: 10px 20px; /* 패딩 설정 */
+    border: none; /* 테두리 없음 */
+    border-radius: 5px; /* 모서리 둥글게 설정 */
+    background-color: #424874; /* 배경색 설정 */
+    color: white; /* 텍스트 색상 설정 */
+    cursor: pointer; /* 커서 모양 설정 */
+    font-family: 'Maplestory Bold', sans-serif !important; /* 폰트 설정 */
 }
 
-#loading {
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   font-size: 1.5em;
-   color: #333;
+/* 입력 안내 텍스트 스타일 */
+.text-50 {
+    font-size: 1.5rem; /* 폰트 크기 줄이기 */
+    min-height: auto; /* 최소 높이 자동 */
+    min-width: auto; /* 최소 너비 자동 */
+    font-family: 'Maplestory Bold', sans-serif !important; /* 폰트 설정 */
+    cursor: pointer; /* 커서 모양 설정 */
 }
 
-#toggleButton {
-    position: absolute;
-    top: 5%;
-    left: 5%;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+/* 그룹 컨테이너 스타일 */
+.group-2 {
+    align-items: center; /* 수직 가운데 정렬 */
+    cursor: pointer; /* 커서 모양 설정 */
+    display: flex; /* 플렉스 박스 설정 */
+    justify-content: center; /* 수평 가운데 정렬 */
+    margin: 0.8rem 0; /* 마진 설정 */
+    min-width: auto; /* 최소 너비 자동 */
+    border-radius: 10px; /* 모서리 둥글게 설정 */
+    padding: 0.8rem 1.5rem; /* 패딩 설정 */
 }
+
+/* 오버랩 그룹 스타일 */
+.overlap-group {
+    align-items: center; /* 수직 가운데 정렬 */
+    height: auto; /* 높이 자동 */
+    min-width: auto; /* 최소 너비 자동 */
+    border-radius: 10px; /* 모서리 둥글게 설정 */
+    background-color: #333333; /* 배경색 설정 */
+    margin-top: 0.8rem; /* 상단 여백 설정 */
+    border: 3px solid #FECC6D; /* 테두리 설정 */
+    padding: 0.8rem; /* 패딩 설정 */
+}
+
+/* 텍스트 스타일 */
+.text-49 {
+    font-size: 0.9rem; /* 폰트 크기 줄이기 */
+    white-space: nowrap; /* 텍스트 줄 바꿈 없음 */
+    width: auto; /* 너비 자동 */
+    color: #FECC6D; /* 텍스트 색상 설정 */
+    font-family: 'Maplestory Bold', sans-serif !important; /* 폰트 설정 */
+}
+
+/* 오버랩 스타일 */
+.overlap {
+    height: 6.7vw; /* 높이 설정 */
+    display: flex; /* 플렉스 박스 설정 */
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+    border-radius: 10px; /* 모서리 둥글게 설정 */
+    padding: 0.8rem; /* 패딩 설정 */
+}
+
+/* 오버랩 스타일 (변형) */
+.overlap3 {
+    background-color: #FF9B50; /* 배경색 설정 */
+    display: flex; /* 플렉스 박스 설정 */
+    height: 2vw; /* 높이 설정 */
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+    border-radius: 10px; /* 모서리 둥글게 설정 */
+    padding: 0.8rem; /* 패딩 설정 */
+    width: 86px; /* 너비 설정 */
+}
+
+/* 기본 텍스트 스타일 */
+.text {
+    color: #333333; /* 텍스트 색상 설정 */
+    font-family: 'Inter', sans-serif; /* 폰트 설정 */
+    font-weight: 400; /* 폰트 두께 설정 */
+    letter-spacing: 0; /* 자간 설정 */
+    line-height: normal; /* 줄 높이 설정 */
+    text-align: center; /* 텍스트 가운데 정렬 */
+}
+
+/* 헤더 컨테이너 스타일 */
+.header-container {
+    position: relative; /* 상대 위치 설정 */
+    z-index: 10; /* z-index 설정 */
+}
+
+/* 입력 컨테이너 스타일 (수정됨) */
+.input-container {
+    display: flex; /* 플렉스 박스 설정 */
+    flex-direction: column; /* 수직 방향 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+}
+
+/* 입력 필드 스타일 (수정됨) */
+.input-container .input-field {
+    display: none; /* 기본적으로 숨김 */
+    font-size: 0.9rem; /* 폰트 크기 설정 */
+    font-family: 'Maplestory Bold', sans-serif; /* 폰트 설정 */
+    padding: 0.5rem; /* 패딩 설정 */
+    border: 1px solid #333333; /* 테두리 설정 */
+    border-radius: 5px; /* 모서리 둥글게 설정 */
+    width: 100%; /* 너비 설정 */
+    text-align: center; /* 텍스트 가운데 정렬 */
+}
+
 </style>
 </head>
 <body style="margin: 0; background: #ffffff">
-   <input type="hidden" id="anPageName" name="page" value="catchmind" />
-   <div class="container-center-horizontal">
-      <div class="catchmind screen">
-         <div class="overlap-group1">
-            <img class="background-2" src="assets/img/white_background.png"
-               alt="background 2" />
-            <%@ include file="white_header.jsp"%>
-            <img class="image" src="assets/img/----.svg" alt="image" />
-            <div class="view">
-               <div id="loading">로딩 중...</div>
-               <canvas id="canvasOutput" willReadFrequently="true"></canvas>
-               <canvas id="canvas" willReadFrequently="true"></canvas>
-               <div id="label-container"></div>
-            </div>
-            <button id="toggleButton" onclick="toggleTransform()">Toggle Transform</button>
-            <div class="view-1">
-               <img id="quiz-image" src="" alt="quiz image" style="display: none;" />
-            </div>
-            <div class="group-5">
-               <img class="rectangle rectangle-dark"
-                  src="assets/img/catchmind/rectangle-6.png" alt="Rectangle 6" /> <img
-                  class="rectangle rectangle-dark"
-                  src="assets/img/catchmind/rectangle-6.png" alt="Rectangle 9" /> <img
-                  class="rectangle rectangle-dark"
-                  src="assets/img/catchmind/rectangle-6.png" alt="Rectangle 7" /> <img
-                  class="rectangle rectangle-dark"
-                  src="assets/img/catchmind/rectangle-6.png" alt="Rectangle 8" /> <img
-                  class="rectangle rectangle-dark"
-                  src="assets/img/catchmind/rectangle-6.png" alt="Rectangle 10" />
-            </div>
-            <div class="rectangle-11">
-               <div class="timer-bar" id="timer-bar"></div>
-               <div class="time-display" id="time-display">0초</div>
-            </div>
-         </div>
-      </div>
-   </div>
-   <div id="myModal" class="modal">
-      <div class="modal-content">
-         <span class="close" onclick="closeModal()">&times;</span>
-         <p id="modal-time-display">00m 00s</p>
-         <div class="input-container">
-            <form action="InsertRanking" method="post" id="rankingForm">
-               <!--required는 필수 입력-->
-               <input type="text" placeholder="닉네임을 입력하세요." name="nickName"
-                  required> <input type="hidden" id="hidden-time"
-                  name="hiddenTime"> <input type="submit" value="등록">
-            </form>
-         </div>
-      </div>
-   </div>
+	<input type="hidden" id="anPageName" name="page" value="catchmind" />
 
-   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/pose@0.8/dist/teachablemachine-pose.min.js"></script>
-    <script async src="https://docs.opencv.org/4.x/opencv.js"></script>
+	<div class="container-center-horizontal">
+		<div class="catchmind screen">
+			<div class="overlap-group1">
+				<img class="background-2" src="assets/img/white_background.png" alt="background 2" /> 
+				<img class="image" src="assets/img/----.svg" alt="image" />
+				<div class="header-container">
+					<%@ include file="white_header.jsp"%>
+				</div>
+				<div class="view">
+					<div id="loading">로딩 중...</div>
+					<canvas id="canvasOutput" willReadFrequently="true"></canvas>
+					<canvas id="canvas" willReadFrequently="true"></canvas>
+					<div id="label-container"></div>
+				</div>
+				<button id="toggleButton" onclick="toggleTransform()">Toggle Transform</button>
+				<div class="view-1">
+					<img id="quiz-image" src="" alt="quiz image" style="display: none;" />
+				</div>
+				<div class="group-5">
+					<img class="rectangle rectangle-dark" src="assets/img/catchmind/rectangle-6.png" alt="Rectangle 6" /> 
+					<img class="rectangle rectangle-dark" src="assets/img/catchmind/rectangle-6.png" alt="Rectangle 9" /> 
+					<img class="rectangle rectangle-dark" src="assets/img/catchmind/rectangle-6.png" alt="Rectangle 7" /> 
+					<img class="rectangle rectangle-dark" src="assets/img/catchmind/rectangle-6.png" alt="Rectangle 8" /> 
+					<img class="rectangle rectangle-dark" src="assets/img/catchmind/rectangle-6.png" alt="Rectangle 10" />
+				</div>
+				<div class="rectangle-11">
+					<div class="timer-bar" id="timer-bar"></div>
+					<div class="time-display" id="time-display">0초</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="myModal" class="modal">
+		<div class="modal-content">
+			<span class="close" onclick="closeModal()">&times;</span>
+			<p id="modal-time-display">00m 00s</p>
+			<div class="input-container">
+				<form action="InsertRanking" method="post" id="rankingForm">
+					<!--required는 필수 입력-->
+					<div class="text-50" onclick="showInput()">닉네임을 입력하세요.</div>
+					<input type="text" placeholder="닉네임을 입력하세요" name="nickName" class="input-field" onblur="hideInput()" required>
+					<input type="hidden" id="hidden-time" name="hiddenTime"> 
+					<input type="submit" value="등록">
+				</form>
+			</div>
+		</div>
+	</div>
 
-<script type="text/javascript">
+	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/pose@0.8/dist/teachablemachine-pose.min.js"></script>
+	<script async src="https://docs.opencv.org/4.x/opencv.js"></script>
+
+	<script type="text/javascript">
     // 게임 관련 변수들 초기화
     let games = [];
     let cnt = 0;
     let timeLeft = 0;
     let timerId;
-    let duration = 1000; // 타이머 시간 (초)
+    let duration = 1; // 타이머 시간 (초)
     let currentGameIndex = 0;
     let gameEnded = false;
     let transformEnabled = false;
 
     // 서버로부터 전달된 게임 리스트를 자바스크립트 배열로 변환
-    <% Games game;
-    ArrayList<Games> gamesList = (ArrayList<Games>) request.getAttribute("games");
-    for (int i = 0; i < gamesList.size(); i++) {
-        game = gamesList.get(i); %>
+    <%Games game;
+request.setCharacterEncoding("UTF-8");
+ArrayList<Games> gamesList = (ArrayList<Games>) request.getAttribute("games");
+for (int i = 0; i < gamesList.size(); i++) {
+	game = gamesList.get(i);%>
         games.push({
-            id: <%= game.getIdx() %>,
-            qes: "<%= game.getQes_img() %>",
-            ans: "<%= game.getAns() %>"
+            id: <%=game.getIdx()%>,
+            qes: "<%=game.getQes_img()%>",
+            ans: "<%=game.getAns()%>"
         });
-    <% } %>
+    <%}%>
 
     // 타이머 시작 함수
     function startTimer() {
@@ -461,7 +565,7 @@ opacity
         }
 
         // 정답 판별
-        if (maxProbability > 0.75 && bestMatch.toLowerCase() === games[currentGameIndex].ans.toLowerCase()) {
+        if (maxProbability > 0.50 && bestMatch.toLowerCase() === games[currentGameIndex].ans.toLowerCase()) {
             currentGameIndex++;
             setTimeout(() => {
                 loadImage();
@@ -626,6 +730,20 @@ opacity
         document.getElementById('loading').style.display = 'none';
         document.getElementById('myModal').style.display = 'none';
         onOpenCvReady(); // OpenCV가 준비되었을 때 초기화 함수 호출
+    }
+
+    // 입력 필드와 안내 텍스트 전환 함수
+    function showInput() {
+        document.querySelector('.text-50').style.display = 'none';
+        document.querySelector('.input-field').style.display = 'block';
+        document.querySelector('.input-field').focus();
+    }
+    
+    function hideInput() {
+        if (document.querySelector('.input-field').value === '') {
+            document.querySelector('.input-field').style.display = 'none';
+            document.querySelector('.text-50').style.display = 'block';
+        }
     }
 </script>
 
