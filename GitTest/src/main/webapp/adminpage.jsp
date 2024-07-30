@@ -62,7 +62,7 @@ ArrayList<Post> posts = (ArrayList<Post>) request.getAttribute("getPosts");
 				for (int i = 0; i < posts.size(); i++) {
 				%>
 				<div class="overlap-group3">
-					<div class="number-1 poppins-bold-white-16px"><%=posts.get(i).getIdx()%></div>
+					<div class="number-1 poppins-bold-white-16px"><%=i+1%></div>
 					<div class="date poppins-normal-white-16px"><%=posts.get(i).getCreate_at()%></div>
 					<div class="nlnh poppins-bold-white-16px"><%=posts.get(i).getUser()%></div>
 					<div class="overlap-group10">
