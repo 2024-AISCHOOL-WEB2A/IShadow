@@ -31,7 +31,7 @@ public class PostsSelectAll extends HttpServlet {
 		int pageCount = paging.getPageCount(1, postDao.getPostsCount());
 		int currentPage = Integer.parseInt(request.getParameter("pageNum"));
 		int pageSize = 1;
-		ArrayList<Post> posts = postDao.postSelectAll(currentPage, pageSize);
+		ArrayList<Post> posts = postDao.postSelectAll();
 
 		String myPage = paging.pageIndexList(currentPage, pageCount, "PostsSelectAll");
 		
