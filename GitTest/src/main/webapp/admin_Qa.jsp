@@ -55,7 +55,7 @@ ArrayList<Qa> qa = (ArrayList<Qa>) request.getAttribute("listQA");
                 <div class="overlap-group">
                     <div class="a"><%=i+1%></div>
                     <div class="nlnh">
-                    	<a href="#" style="color: white">
+                    	<a href="admin_QA_detail.jsp?qa_idx=<%=qa.get(i).getQa_idx()%>" style="color: white">
                     		<%=qa.get(i).getQa_title()%>
                     	</a>
                     </div>
