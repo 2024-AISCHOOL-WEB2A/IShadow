@@ -197,7 +197,7 @@ body, html {
                      <div class="view-text">QA</div>
                   </div>
                </a>
-            </div>	
+            </div>   
 
          </div>
       </div>
