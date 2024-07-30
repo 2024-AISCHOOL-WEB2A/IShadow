@@ -171,7 +171,7 @@ html, body {
 <script
 	src="https://cdn.jsdelivr.net/npm/@teachablemachine/pose@0.8/dist/teachablemachine-pose.min.js"></script>
 <script type="text/javascript">
-    const URL = "model/";
+    const URL = "moddd/";
     let model, webcam, ctx, labelContainer, maxPredictions;
 
     async function init() {
