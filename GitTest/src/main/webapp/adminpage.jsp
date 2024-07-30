@@ -26,6 +26,7 @@ ArrayList<Post> posts = (ArrayList<Post>) request.getAttribute("getPosts");
     object-fit: cover; /* 이미지가 부모 영역을 꽉 채우도록 설정 */
     object-position: center; /* 이미지 중앙 정렬 */
 }
+
 </style>
 </head>
 <body style="margin: 0; background: #1e0338">
@@ -62,7 +63,7 @@ ArrayList<Post> posts = (ArrayList<Post>) request.getAttribute("getPosts");
 				for (int i = 0; i < posts.size(); i++) {
 				%>
 				<div class="overlap-group3">
-					<div class="number-1 poppins-bold-white-16px"><%=posts.get(i).getIdx()%></div>
+					<div class="number-1 poppins-bold-white-16px"><%=i+1%></div>
 					<div class="date poppins-normal-white-16px"><%=posts.get(i).getCreate_at()%></div>
 					<div class="nlnh poppins-bold-white-16px"><%=posts.get(i).getUser()%></div>
 					<div class="overlap-group10">

@@ -1,371 +1,205 @@
-/* screen - admin-select-user */
+/* Maplestory Bold 폰트 임포트 */
 @font-face {
     font-family: 'Maplestory Bold';
     src: url('../font/Maplestory Bold.ttf') format('truetype');
 }
+
+/* 전체 페이지 스타일 */
 .admin-select-user {
-  align-items: flex-start;
-  background-color: #1e0338;
   display: flex;
   flex-direction: column;
-  height: 832px;
-  padding: 41px 485px;
-  width: 1920px;
+  align-items: center;
+  background-color: #1e0338;
+  height: 100vh; /* 화면 전체 높이 */
+  width: 100%; /* 너비를 100%로 설정 */
+  padding-top: 20px; /* 상단 여백 추가 */
+  margin-top: 6%;
 }
 
-.admin-select-user .flex-row {
-  height: 287px;
-  margin-left: 1px;
-  min-width: 832px;
-}
-
-.admin-select-user .id {
-  color: var(--white);
-  font-family: var(--font-family-museumclassic-medium);
-  font-size: var(--font-size-m);
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 26.1px;
-  font-family:'Maplestory Bold';
-  width: 160px;
-}
-
-.admin-select-user .flex-col {
-  align-self: flex-start;
+/* 중앙 정렬 컨테이너 */
+.central-container {
+  display: flex;
   flex-direction: column;
-  margin-left: 94px;
-  min-height: 286px;
-  width: 301px;
+  align-items: center;
+  width: 100%;
 }
 
+/* 프로필 이미지와 관리자 페이지 텍스트 중앙 정렬 */
 .admin-select-user .overlap-group-3 {
-  height: 178px;
-  position: relative;
-  width: 221px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
+/* 프로필 이미지 영역의 원형 배경 */
 .admin-select-user .ellipse-6 {
-  background-color: var(--alto);
+  background-color: #d8d8d8;
   border-radius: 60px;
   height: 120px;
-  left: 51px;
-  position: absolute;
-  top: 0;
   width: 120px;
 }
 
+/* 관리자 페이지 타이틀 텍스트 */
 .admin-select-user .text-1 {
-  color: #ffffff;
-  font-family:'Maplestory Bold';
+  color: #DCD6F7;
+  font-family: 'Maplestory Bold';
   font-size: 32px;
   font-weight: 500;
-  left:13px;
-  letter-spacing: 0;
-  line-height: 58.8px;
-  position: absolute;
-  top: 119px;
+  margin-top: 20px;
   white-space: nowrap;
 }
 
+/* 게시판과 로그아웃 버튼을 가로로 배치 */
 .admin-select-user .overlap-group-container {
-  align-items: flex-start;
   display: flex;
-  gap: 65px;
-  margin-top: 1px;
-  min-width: 221px;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
+/* 게시판 버튼 스타일 */
 .admin-select-user .overlap-group7 {
-  align-items: flex-start;
-  background-color: var(--jrnavercomnero);
+  background-color: #424874;
   border-radius: 30px;
-  display: flex;
-  height: 42px;
-  min-width: 78px;
   padding: 10px 22px;
 }
 
+/* 게시판 버튼 텍스트 스타일 */
 .admin-select-user .text {
   letter-spacing: 0;
   line-height: 19.6px;
-  min-height: 20px;
   white-space: nowrap;
-  font-family:'Maplestory Bold';
-  color:#ffffff
- 
+  font-family: 'Maplestory Bold';
+  color: #ffffff;
 }
 
+/* 로그아웃 버튼 스타일 */
 .admin-select-user .overlap-group4 {
-  align-items: flex-start;
-  background-color: red;
+  background-color: #424874;
   border-radius: 30px;
-  display: flex;
-  height: 42px;
-  min-width: 78px;
   padding: 10px 15px;
 }
 
-.admin-select-user .text-3 {
-  align-self: flex-start;
-  letter-spacing: 0;
-  line-height: 24.5px;
-  margin-top: 40px;
-  min-height: 25px;
-  width: 160px;
-  color:#ffffff;
-  font-family:'Maplestory Bold';
-}
-
-.admin-select-user .place {
-  letter-spacing: 0;
-  line-height: 24.5px;
-  margin-bottom: 1px;
-  margin-left: 46px;
-  min-height: 25px;
-  min-width: 40px;
-  white-space: nowrap;
-  font-family:'Maplestory Bold';
-  color:#ffffff;
-  
-}
-
-.admin-select-user .text-4 {
-  letter-spacing: 0;
-  line-height: 24.5px;
-  margin-bottom: 1px;
-  margin-left: 161px;
-  min-height: 25px;
-  min-width: 30px;
-  white-space: nowrap;
-  font-family:'Maplestory Bold';
-  color:#ffffff
-  
-}
-
-.admin-select-user .line-12 {
-  height: 1px;
-  margin-top: 2px;
-  object-fit: cover;
-  width: 891px;
-}
-
-.admin-select-user .overlap-group6 {
-  align-items: flex-start;
-  background-color: var(--alto);
-  border-radius: 30px;
+/* 구분선 바로 위에 위치하는 텍스트들 */
+.header-row {
   display: flex;
-  height: 58px;
-  margin-left: 1px;
-  margin-top: 27px;
-  min-width: 890px;
-  padding: 15px 29px;
-}
-
-.admin-select-user .a {
-  letter-spacing: 0;
-  line-height: 26.1px;
-  min-width: 12px;
-  font-family:'Maplestory Bold';
-  white-space: nowrap;
-}
-
-.admin-select-user .nlnh {
-  letter-spacing: 0;
-  line-height: 26.1px;
-  margin-left: 213px;
-  min-width: 45px;
-  font-family:'Maplestory Bold';
-  white-space: nowrap;
-}
-
-.admin-select-user .date {
-  letter-spacing: 0;
-  line-height: 26.1px;
-  margin-left: 275px;
-  min-width: 93px;
-  font-family:'Maplestory Bold';
-  white-space: nowrap;
-}
-
-.admin-select-user .overlap-group {
-  align-items: flex-start;
-  background-color: var(--jrnavercomblack);
-  border-radius: 30px;
-  display: flex;
-  height: 27px;
-  margin-left: 111px;
-  min-width: 78px;
-  padding: 3px 16px;
-}
-
-.admin-select-user .overlap-group-1 {
-  align-items: flex-start;
-  background-color: var(--alto);
-  border-radius: 30px;
-  display: flex;
-  height: 58px;
-  margin-left: 1px;
-  margin-top: 27px;
-  min-width: 890px;
-  padding: 15px 27px;
-}
-
-.admin-select-user .b {
-  letter-spacing: 0;
-  line-height: 26.1px;
-  min-width: 11px;
-  font-family:'Maplestory Bold';
-  white-space: nowrap;
-}
-
-.admin-select-user .nlnh1 {
-  letter-spacing: 0;
-  line-height: 26.1px;
-  margin-left: 216px;
-  min-width: 51px;
-  font-family:'Maplestory Bold';
-  white-space: nowrap;
-}
-
-.admin-select-user .date-1 {
-  margin-left: 269px;
-  font-family:'Maplestory Bold';
-  min-width: 97px;
-}
-
-.admin-select-user .overlap-group9 {
+  justify-content: space-between;
   align-items: center;
-  align-self: center;
-  background-image: url(../img/rectangle-365.svg);
-  background-size: 100% 100%;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 10px;
+  padding: 0 16px; /* 좌우 여백 추가 */
+}
+
+/* 회원 ID 텍스트 스타일 */
+.header-row .id {
+  color: #ffffff;
+  font-family: 'Maplestory Bold';
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26.1px;
+}
+
+/* 닉네임 텍스트 스타일 */
+.header-row .text-3 {
+  color: #ffffff;
+  font-family: 'Maplestory Bold';
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26.1px;
+}
+
+/* DATE 텍스트 스타일 */
+.header-row .place {
+  color: #ffffff;
+  font-family: 'Maplestory Bold';
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26.1px;
+}
+
+/* 삭제 텍스트 스타일 */
+.header-row .text-4 {
+  color: #ffffff;
+  font-family: 'Maplestory Bold';
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26.1px;
+}
+
+/* 구분선 스타일 */
+.line-12 {
+  height: 1px;
+  object-fit: cover;
+  width: 100%;
+  max-width: 1200px; /* 최대 너비 설정 */
+  margin-bottom: 20px; /* 하단 여백 추가 */
+}
+
+/* 사용자 정보 행 스타일 */
+.overlap-group {
   display: flex;
-  height: 27px;
-  margin-left: 107px;
-  min-width: 78px;
-  padding: 0 16px;
-}
-
-.admin-select-user .text-6 {
-  letter-spacing: 0;
-  line-height: 19.6px;
-  min-height: 20px;
-  min-width: 46px;
-  white-space: nowrap;
-  font-family:'Maplestory Bold';
-  color:#ffffff
-}
-
-.admin-select-user .overlap-group-2 {
-  align-items: flex-start;
-  background-color: var(--alto);
+  align-items: center;
+  justify-content: space-between;
+  background-color: #424874;
   border-radius: 30px;
-  display: flex;
   height: 58px;
-  margin-left: 1px;
-  margin-top: 28px;
-  min-width: 890px;
-  padding: 14px 27px;
+  width: 100%; /* 너비를 100%로 설정 */
+  max-width: 1200px; /* 최대 너비 설정 */
+  padding: 0 16px;
+  margin-bottom: 10px; /* 하단 여백 추가 */
 }
 
-.admin-select-user .c {
-  letter-spacing: 0;
+/* 사용자 ID 스타일 */
+.overlap-group .a {
+  color: #ffffff;
+  font-family: 'Maplestory Bold';
+  font-size: 16px;
+  font-weight: 500;
   line-height: 26.1px;
-  min-width: 11px;
-  font-family:'Maplestory Bold';
   white-space: nowrap;
 }
 
-.admin-select-user .nlnh2 {
-  letter-spacing: 0;
+/* 사용자 닉네임 스타일 */
+.overlap-group .nlnh {
+  color: #ffffff;
+  font-family: 'Maplestory Bold';
+  font-size: 16px;
+  font-weight: 500;
   line-height: 26.1px;
-  margin-left: 216px;
-  font-family:'Maplestory Bold';
-  min-width: 55px;
   white-space: nowrap;
 }
 
-.admin-select-user .date-2 {
-  margin-left: 265px;
-  font-family:'Maplestory Bold';
-  min-width: 94px;
+/* 가입일자 스타일 */
+.overlap-group .date {
+  color: #ffffff;
+  font-family: 'Maplestory Bold';
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26.1px;
+  white-space: nowrap;
 }
 
-.admin-select-user .overlap-group10 {
-  align-items: flex-start;
-  background-color: var(--jrnavercomblack);
+/* 삭제하기 버튼 스타일 */
+.overlap-group .overlap-group9 {
+  background-color: #A6B1E1;
   border-radius: 30px;
+  padding: 0 16px;
+  height: 38px; /* 버튼 높이 설정 */
   display: flex;
-  height: 27px;
-  margin-left: 110px;
-  min-width: 78px;
-  padding: 2px 16px;
+  align-items: center;
+  justify-content: center;
 }
 
-.admin-select-user .d {
-  letter-spacing: 0;
-  line-height: 26.1px;
-  min-width: 12px;
-  font-family:'Maplestory Bold';
+/* 삭제하기 버튼 텍스트 스타일 */
+.overlap-group .text-6 {
+  color: #424874;
+  font-family: 'Maplestory Bold';
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.6px;
   white-space: nowrap;
-}
-
-.admin-select-user .nlnh3 {
-  letter-spacing: 0;
-  line-height: 26.1px;
-  margin-left: 215px;
-  font-family:'Maplestory Bold';
-  min-width: 55px;
-  white-space: nowrap;
-}
-
-.admin-select-user .date-3 {
-  margin-left: 265px;
-  font-family:'Maplestory Bold';
-  min-width: 93px;
-}
-
-.admin-select-user .e {
-  letter-spacing: 0;
-  line-height: 26.1px;
-  min-width: 11px;
-  font-family:'Maplestory Bold';
-  white-space: nowrap;
-}
-
-.admin-select-user .nlnh4 {
-  letter-spacing: 0;
-  line-height: 26.1px;
-  font-family:'Maplestory Bold';
-  margin-left: 216px;
-  min-width: 56px;
-  white-space: nowrap;
-}
-
-.admin-select-user .date-4 {
-  margin-left: 264px;
-  font-family:'Maplestory Bold';
-  min-width: 98px;
-}
-
-.admin-select-user .overlap-group12 {
-  align-items: flex-start;
-  background-color: var(--jrnavercomblack);
-  border-radius: 30px;
-  display: flex;
-  height: 27px;
-  margin-left: 106px;
-  min-width: 78px;
-  padding: 3px 16px;
-}
-
-.admin-select-user .date-5 {
-  letter-spacing: 0;
-  line-height: 26.1px;
-  white-space: nowrap;
-  font-family:'Maplestory Bold';
-}
-
-.admin-select-user .flex {
-  align-items: flex-end;
-  display: flex;
 }

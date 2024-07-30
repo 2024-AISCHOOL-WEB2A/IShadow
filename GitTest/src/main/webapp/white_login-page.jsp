@@ -1,152 +1,134 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="com.aischool.model.Login"%>
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <!--<meta name=description content="This site was generated with Anima. www.animaapp.com"/>-->
-    <!-- <link rel="shortcut icon" type=image/png href="https://animaproject.s3.amazonaws.com/home/favicon.png" /> -->
-    <meta name="viewport" content="width=1440, maximum-scale=1.0" />
-    <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
-    <meta name="og:type" content="website" />
-    <meta name="twitter:card" content="photo" />
-    <link rel="stylesheet" type="text/css" href="assets/css/white_login-page.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/styleguide.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/globals.css" />
-  </head>
-  <body style="margin: 0; background: #000000">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=1440, maximum-scale=1.0" />
+<link rel="shortcut icon" type="image/png"
+    href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
+<meta name="og:type" content="website" />
+<meta name="twitter:card" content="photo" />
+<link rel="stylesheet" type="text/css" href="assets/css/white_login-page.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/styleguide.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/globals.css" />
+<style>
+    @font-face {
+        font-family: 'Maplestory Bold';
+        src: url('assets/font/Maplestory Bold.ttf') format('truetype');
+    }
+    body, input, button {
+        font-family: 'Maplestory Bold', sans-serif !important; /* 폰트 패밀리 추가 */
+        color: white !important;
+    }
+    body {
+        margin: 0 !important;
+        background: url('assets/img/white_background.png') no-repeat center center fixed !important; /* 배경 이미지 추가 */
+        overflow: hidden !important; /* 스크롤 없애기 */
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        height: 100vh !important;
+    }
+    .overlap-group2 {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        background: rgba(255, 255, 255, 0.8) !important;
+        padding: 40px !important; /* 패딩 증가 */
+        border: 2px solid #4bed !important; /* 노란색 외곽선 추가 */
+        border-radius: 15px !important;
+        width: 600px !important; /* 너비 증가 */
+    }
+    .title {
+        font-size: 42px !important; /* 크기 증가 */
+        font-family: 'Maplestory Bold', sans-serif !important; /* 폰트 패밀리 추가 */
+        margin-bottom: 30px !important; /* 간격 증가 */
+        color: #55bbeedd; /* 색상 */
+    }
+    .input-field {
+        width: 100% !important;
+        font-family: 'Maplestory Bold', sans-serif; /* 폰트 패밀리 추가 */
+        padding: 25px !important; /* 패딩 증가 */
+        margin: 20px 0 !important; /* 간격 증가 */
+        box-sizing: border-box !important;
+        border: 2px solid #55bbeedd !important;
+        border-radius: 15px !important;
+        font-size: 24px !important; /* 크기 증가 */
+        
+    }
+    .button {
+        width: 100% !important;
+        font-family: 'Maplestory Bold', sans-serif; /* 폰트 패밀리 추가 */
+        padding: 25px !important; /* 패딩 증가 */
+        margin: 20px 0 !important; /* 간격 증가 */
+        box-sizing: border-box !important;
+        border: 2px solid #55bbeedd !important;
+        border-radius: 15px !important;
+        background: #55bbeedd !important;
+        color: white !important;
+        font-size: 24px !important; /* 크기 증가 */
+        cursor: pointer !important;
+    }
+    .link-buttons {
+        display: flex !important;
+        justify-content: space-between !important;
+        width: 100% !important;
+        font-family: 'Maplestory Bold', sans-serif; /* 폰트 패밀리 추가 */
+    }
+    .link-button {
+        font-family: 'Maplestory Bold', sans-serif; /* 폰트 패밀리 추가 */
+        flex: 1 !important;
+        padding: 25px !important; /* 패딩 증가 */
+        margin: 0 10px !important; /* 간격 증가 */
+        box-sizing: border-box !important;
+        border: 2px solid #55bbeedd !important;
+        border-radius: 15px !important;
+        background: none !important;
+        font-size: 18px !important; /* 크기 증가 */
+        text-align: center !important;
+        cursor: pointer !important;
+        color: #55bbeedd;
+    }
+</style>
+</head>
+<body>
     <input type="hidden" id="anPageName" name="page" value="login-page" />
-    <div class="container-center-horizontal">
-      <div class="login-page screen">
-        <div class="overlap-group2">
-          <img class="zcc-2 animate-enter4" src="assets/img/zcc-1-1.png" alt="zcc 2" />
-          <div class="btndefault"><div class="text-76 text-1">로그인</div></div>
-          <div class="loginidstate3">
-            <div class="overlap-group">
-              <div class="group-3">
-                <div class="ellipse-5"></div>
-                <img class="rectangle-8" src="assets/img/login_page/rectangle-8.svg" alt="Rectangle 8" />
-              </div>
-              <div class="text">아이디</div>
-            </div>
-          </div>
-          <div class="loginidstate3-1">
-            <div class="overlap-group">
-              <div class="group-3">
-                <div class="ellipse-5"></div>
-                <img class="rectangle-8" src="assets/img/login_page/rectangle-8.svg" alt="Rectangle 8" />
-              </div>
-              <div class="text">비밀번호</div>
-            </div>
-          </div>
-          <div class="rectangle-65"></div>
-          <div class="text-78 text-1">회원 가입</div>
-          <div class="rectangle-66"></div>
-          <div class="text-79 text-1">비밀번호 찾기</div>
+    <div class="overlap-group2">
+        <div class="title">아이 Shadow</div>
+        <input type="text" name="u_id" class="input-field email" placeholder="아이디를 입력하세요">
+        <input type="password" name="u_pw" class="input-field pw" placeholder="비밀번호를 입력하세요">
+        <input type="button" value="로그인" class="button" onclick="Login()">
+        <div class="link-buttons">
+            <div class="link-button" onclick="location.href='white_register.jsp'">회원 가입</div>
+            <div class="link-button" onclick="location.href='white_find_id.jsp'">아이디 찾기</div>
+            <div class="link-button" onclick="location.href='white_find_password.jsp'">비밀번호 찾기</div>
         </div>
-      </div>
     </div>
     <script>
-      function ShowOnScroll() {
-        this.toShow = [];
-        this.nextEventY = undefined;
-      }
+        function Login() {
+            let iD = document.getElementsByClassName("email")[0];
+            let pW = document.getElementsByClassName("pw")[0];
+            let form = document.createElement("form");
+            let body = document.body;
+            let iD_Input = document.createElement("input");
+            let pW_Input = document.createElement("input");
+            form.action = "LoginService";
+            form.method = "POST";
 
-      ShowOnScroll.prototype.show = function (e) {
-        e.style.display = "";
-      };
-
-      ShowOnScroll.prototype.hide = function (e) {
-        e.style.display = "none";
-      };
-
-      ShowOnScroll.prototype.getTop = function (e) {
-        if (e.Top != undefined && e.Top != 0) {
-          return e.Top;
+            iD_Input.type = "hidden";
+            pW_Input.type = "hidden";
+            iD_Input.name = "u_id";
+            pW_Input.name = "u_pw";
+            iD_Input.value = iD.value;
+            pW_Input.value = pW.value;
+            form.appendChild(iD_Input);
+            form.appendChild(pW_Input);
+            body.appendChild(form);
+            form.submit();
         }
-        var top = 0;
-        var iter = e;
-        do {
-          top += iter.offsetTop || 0;
-          iter = iter.offsetParent;
-        } while (iter);
-        e.Top = top;
-        return top;
-      };
-
-      ShowOnScroll.prototype.onScroll = function () {
-        var screenBottom = window.pageYOffset + window.innerHeight;
-        if (this.nextEventY == undefined || this.nextEventY > screenBottom) {
-          return;
-        }
-        this.nextEventY = undefined;
-        for (var i = 0; i < this.toShow.length; i++) {
-          var e = this.toShow[i];
-          var top = this.getTop(e);
-          if (top < screenBottom) {
-            this.show(e);
-            this.toShow.shift();
-            i--;
-          } else {
-            this.nextEventY = top;
-            break;
-          }
-        }
-      };
-
-      ShowOnScroll.prototype.resetScrolling = function () {
-        // Clear state
-        var screenBottom = window.pageYOffset + window.innerHeight;
-        for (var i = 0; i < this.toShow.length; i++) {
-          var e = this.toShow[i];
-          this.show(e);
-        }
-        this.toShow = [];
-        this.nextEventY == undefined;
-
-        // Collect items
-        var itemsToShowOnScroll = Array.prototype.slice.call(document.getElementsByTagName("*"));
-        itemsToShowOnScroll = itemsToShowOnScroll.filter(function (e) {
-          return e.getAttribute("show-on-scroll") != undefined;
-        });
-        var getTop = this.getTop;
-        itemsToShowOnScroll.sort(function (a, b) {
-          return getTop(a) - getTop(b);
-        });
-        for (var i = 0; i < itemsToShowOnScroll.length; i++) {
-          var e = itemsToShowOnScroll[i];
-          var top = this.getTop(e);
-          if (top < screenBottom) {
-            continue;
-          }
-          this.toShow.push(e);
-          this.hide(e);
-          this.nextEventY = this.nextEventY != undefined ? this.nextEventY : top;
-        }
-      };
-
-      ShowOnScroll.prototype.handleEvent = function (e) {
-        switch (e.type) {
-          case "scroll":
-            this.onScroll();
-            break;
-          case "resize":
-            this.resetScrolling();
-            break;
-        }
-      };
-
-      ShowOnScroll.prototype.init = function () {
-        this.resetScrolling();
-        window.addEventListener("scroll", this);
-        window.addEventListener("resize", this);
-      };
-
-      // After anima-src
-      setTimeout(function () {
-        var instShowOnScroll = new ShowOnScroll();
-        instShowOnScroll.init();
-      }, 250);
     </script>
-  </body>
+</body>
 </html>

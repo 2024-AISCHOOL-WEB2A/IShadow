@@ -1,14 +1,14 @@
 <%@page import="com.aischool.model.Games"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+   pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=1440, maximum-scale=1.0" />
 <link rel="shortcut icon" type="image/png"
-	href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
+   href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
 <meta name="og:type" content="website" />
 <meta name="twitter:card" content="photo" />
 <link rel="stylesheet" type="text/css" href="assets/css/white_catchmind.css" />
@@ -16,122 +16,122 @@
 <link rel="stylesheet" type="text/css" href="assets/css/globals.css" />
 <style>
 .html, body {
-	margin: 0;
-	padding: 0;
-	height: 100%;
-	width: 100%;
-	overflow: hidden;
+   margin: 0;
+   padding: 0;
+   height: 100%;
+   width: 100%;
+   overflow: hidden;
 }
 
 .quiz img {
-	max-width: 100%;
-	height: auto;
+   max-width: 100%;
+   height: auto;
 }
 
 canvas {
-	display: block;
-	margin: auto;
-	border-radius: 50%;
-	clip-path: circle(50%);
+   display: block;
+   margin: auto;
+   border-radius: 50%;
+   clip-path: circle(50%);
 }
 
 .correct {
-	background-color: #d4edda;
-	transition: background-color 0.5s;
+   background-color: #d4edda;
+   transition: background-color 0.5s;
 }
 
 .view {
-	position: relative;
-	width: 48.26vw;
-	height: 48.26vw;
-	margin: auto;
-	border-radius: 50%;
-	overflow: hidden;
-	clip-path: circle(50%);
+   position: relative;
+   width: 48.26vw;
+   height: 48.26vw;
+   margin: auto;
+   border-radius: 50%;
+   overflow: hidden;
+   clip-path: circle(50%);
 }
 
 .view canvas {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
 }
 
 .view-1 {
-	position: absolute;
-	width: 20%;
-	height: 20%;
-	top: 80%;
-	left: 10%;
-	background-color: #e0e0e0;
-	border-radius: 20px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+   position: absolute;
+   width: 20%;
+   height: 20%;
+   top: 80%;
+   left: 10%;
+   background-color: #e0e0e0;
+   border-radius: 20px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
 .view-1 img {
-	max-width: 80%;
-	max-height: 80%;
-	object-fit: contain;
-	border-radius: 20px;
+   max-width: 80%;
+   max-height: 80%;
+   object-fit: contain;
+   border-radius: 20px;
 }
 
 .group-5 {
-	position: absolute;
-	width: 30%;
-	height: 10%;
-	top: 10%;
-	left: 10%;
-	display: flex;
-	justify-content: space-around;
+   position: absolute;
+   width: 30%;
+   height: 10%;
+   top: 10%;
+   left: 10%;
+   display: flex;
+   justify-content: space-around;
 }
 
 .rectangle {
-	width: 18%;
-	height: auto;
+   width: 18%;
+   height: auto;
 }
 
 .rectangle-11 {
-	position: absolute;
-	width: 40%;
-	height: 5%;
-	top: 15%;
-	left: 10%;
-	background-color: #ffffff80;
-	border-radius: 10px;
-	overflow: hidden;
+   position: absolute;
+   width: 40%;
+   height: 5%;
+   top: 15%;
+   left: 10%;
+   background-color: #ffffff80;
+   border-radius: 10px;
+   overflow: hidden;
 }
 
 .timer-bar {
-	height: 100%;
-	background-color: #ff0000;
-	transition: width 0.1s linear;
+   height: 100%;
+   background-color: #ffffff;
+   transition: width 0.1s linear;
 }
 
 .time-display {
-	position: absolute;
-	width: 100%;
-	text-align: center;
-	font-size: 1.5em;
-	color: #000;
-	top: -30px;
+   position: absolute;
+   width: 100%;
+   text-align: center;
+   font-size: 1.5em;
+   color: #000;
+   top: -30px;
 }
 
 .rectangle-dark {
-	filter: grayscale(100%) brightness(50%);
-	transition: filter 0.5s;
+   filter: grayscale(100%) brightness(50%);
+   transition: filter 0.5s;
 }
 
 .rectangle-light {
-	filter: grayscale(0%) brightness(100%);
-	transition: filter 0.5s;
+   filter: grayscale(0%) brightness(100%);
+   transition: filter 0.5s;
 }
 
 @
 keyframes fadeOut { 0% {
-	opacity: 1;
+   opacity: 1;
 }
 
 100
@@ -143,79 +143,79 @@ opacity
 }
 }
 .modal {
-	display: none;
-	position: fixed;
-	z-index: 1;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	overflow: auto;
-	background-color: rgb(0, 0, 0);
-	background-color: rgba(0, 0, 0, 0.4);
-	display: flex;
-	justify-content: center;
-	align-items: center;
+   display: none;
+   position: fixed;
+   z-index: 1;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   overflow: auto;
+   background-color: rgb(0, 0, 0);
+   background-color: rgba(0, 0, 0, 0.4);
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
 .modal-content {
-	background-color: #001f3f;
-	padding: 20px;
-	border: 1px solid #888;
-	width: 80%;
-	max-width: 400px;
-	text-align: center;
-	border-radius: 10px;
+   background-color: #001f3f;
+   padding: 20px;
+   border: 1px solid #888;
+   width: 80%;
+   max-width: 400px;
+   text-align: center;
+   border-radius: 10px;
 }
 
 .modal-content p {
-	color: #fff;
-	font-size: 2em;
-	margin: 0;
+   color: #fff;
+   font-size: 2em;
+   margin: 0;
 }
 
 .close {
-	color: #aaa;
-	float: right;
-	font-size: 28px;
-	font-weight: bold;
+   color: #aaa;
+   float: right;
+   font-size: 28px;
+   font-weight: bold;
 }
 
 .close:hover, .close:focus {
-	color: black;
-	text-decoration: none;
-	cursor: pointer;
+   color: black;
+   text-decoration: none;
+   cursor: pointer;
 }
 
 .input-container {
-	margin-top: 20px;
-	text-align: center;
+   margin-top: 20px;
+   text-align: center;
 }
 
 .input-container input {
-	width: 80%;
-	padding: 10px;
-	border-radius: 5px;
-	border: 1px solid #ccc;
+   width: 80%;
+   padding: 10px;
+   border-radius: 5px;
+   border: 1px solid #ccc;
 }
 
 .input-container input[type="submit"] {
-	margin-top: 10px;
-	padding: 10px 20px;
-	border: none;
-	border-radius: 5px;
-	background-color: #007bff;
-	color: white;
-	cursor: pointer;
+   margin-top: 10px;
+   padding: 10px 20px;
+   border: none;
+   border-radius: 5px;
+   background-color: #007bff;
+   color: white;
+   cursor: pointer;
 }
 
 #loading {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	font-size: 1.5em;
-	color: #333;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   font-size: 1.5em;
+   color: #333;
 }
 
 #toggleButton {
@@ -232,59 +232,59 @@ opacity
 </style>
 </head>
 <body style="margin: 0; background: #ffffff">
-	<input type="hidden" id="anPageName" name="page" value="catchmind" />
-	<div class="container-center-horizontal">
-		<div class="catchmind screen">
-			<div class="overlap-group1">
-				<img class="background-2" src="assets/img/white_background.png"
-					alt="background 2" />
-				<%@ include file="white_header.jsp"%>
-				<img class="image" src="assets/img/----.svg" alt="image" />
-				<div class="view">
-					<div id="loading">로딩 중...</div>
-					<canvas id="canvasOutput" willReadFrequently="true"></canvas>
-					<canvas id="canvas" willReadFrequently="true"></canvas>
-					<div id="label-container"></div>
-				</div>
-				<button id="toggleButton" onclick="toggleTransform()">Toggle Transform</button>
-				<div class="view-1">
-					<img id="quiz-image" src="" alt="quiz image" style="display: none;" />
-				</div>
-				<div class="group-5">
-					<img class="rectangle rectangle-dark"
-						src="assets/img/catchmind/rectangle-6.png" alt="Rectangle 6" /> <img
-						class="rectangle rectangle-dark"
-						src="assets/img/catchmind/rectangle-6.png" alt="Rectangle 9" /> <img
-						class="rectangle rectangle-dark"
-						src="assets/img/catchmind/rectangle-6.png" alt="Rectangle 7" /> <img
-						class="rectangle rectangle-dark"
-						src="assets/img/catchmind/rectangle-6.png" alt="Rectangle 8" /> <img
-						class="rectangle rectangle-dark"
-						src="assets/img/catchmind/rectangle-6.png" alt="Rectangle 10" />
-				</div>
-				<div class="rectangle-11">
-					<div class="timer-bar" id="timer-bar"></div>
-					<div class="time-display" id="time-display">0초</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div id="myModal" class="modal">
-		<div class="modal-content">
-			<span class="close" onclick="closeModal()">&times;</span>
-			<p id="modal-time-display">00m 00s</p>
-			<div class="input-container">
-				<form action="InsertRanking" method="post" id="rankingForm">
-					<!--required는 필수 입력-->
-					<input type="text" placeholder="닉네임을 입력하세요." name="nickName"
-						required> <input type="hidden" id="hidden-time"
-						name="hiddenTime"> <input type="submit" value="등록">
-				</form>
-			</div>
-		</div>
-	</div>
+   <input type="hidden" id="anPageName" name="page" value="catchmind" />
+   <div class="container-center-horizontal">
+      <div class="catchmind screen">
+         <div class="overlap-group1">
+            <img class="background-2" src="assets/img/white_background.png"
+               alt="background 2" />
+            <%@ include file="white_header.jsp"%>
+            <img class="image" src="assets/img/----.svg" alt="image" />
+            <div class="view">
+               <div id="loading">로딩 중...</div>
+               <canvas id="canvasOutput" willReadFrequently="true"></canvas>
+               <canvas id="canvas" willReadFrequently="true"></canvas>
+               <div id="label-container"></div>
+            </div>
+            <button id="toggleButton" onclick="toggleTransform()">Toggle Transform</button>
+            <div class="view-1">
+               <img id="quiz-image" src="" alt="quiz image" style="display: none;" />
+            </div>
+            <div class="group-5">
+               <img class="rectangle rectangle-dark"
+                  src="assets/img/catchmind/rectangle-6.png" alt="Rectangle 6" /> <img
+                  class="rectangle rectangle-dark"
+                  src="assets/img/catchmind/rectangle-6.png" alt="Rectangle 9" /> <img
+                  class="rectangle rectangle-dark"
+                  src="assets/img/catchmind/rectangle-6.png" alt="Rectangle 7" /> <img
+                  class="rectangle rectangle-dark"
+                  src="assets/img/catchmind/rectangle-6.png" alt="Rectangle 8" /> <img
+                  class="rectangle rectangle-dark"
+                  src="assets/img/catchmind/rectangle-6.png" alt="Rectangle 10" />
+            </div>
+            <div class="rectangle-11">
+               <div class="timer-bar" id="timer-bar"></div>
+               <div class="time-display" id="time-display">0초</div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="myModal" class="modal">
+      <div class="modal-content">
+         <span class="close" onclick="closeModal()">&times;</span>
+         <p id="modal-time-display">00m 00s</p>
+         <div class="input-container">
+            <form action="InsertRanking" method="post" id="rankingForm">
+               <!--required는 필수 입력-->
+               <input type="text" placeholder="닉네임을 입력하세요." name="nickName"
+                  required> <input type="hidden" id="hidden-time"
+                  name="hiddenTime"> <input type="submit" value="등록">
+            </form>
+         </div>
+      </div>
+   </div>
 
-	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/pose@0.8/dist/teachablemachine-pose.min.js"></script>
     <script async src="https://docs.opencv.org/4.x/opencv.js"></script>
 
