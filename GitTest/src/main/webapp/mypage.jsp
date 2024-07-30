@@ -21,92 +21,87 @@
       <div class="mypage screen">
         <div class="overlap-group9">
       
-
           <a href="board-inpage.html">
             <div class="link link-6">
               <div class="overlap-group">
-                <div class="x1719813394355jpg"></div>
+                <div class="mypost_cat"></div>
                 <div class="background background-2">
                   <div class="emphasis">
-                    <div class="text-8 valign-text-middle arial-black-white-17-6px">애창동요</div>
+                    <div class="text-8 valign-text-middle arial-black-white-17-6px">고양이</div>
                   </div>
                 </div>
               </div>
-            </div></a
-          ><a href="board-inpage.jsp">
+            </div></a>
+          <a href="board-inpage.jsp">
             <div class="link-1 link-6">
               <div class="overlap-group">
-                <div class="x1719813394355jpg"></div>
+                <div class="mypost_wolf" alt="1" ></div>
                 <div class="background background-2">
                   <div class="emphasis">
-                    <div class="text-8 valign-text-middle arial-black-white-17-6px">애창동요</div>
+                    <div class="text-8 valign-text-middle arial-black-white-17-6px">늑대</div>
                   </div>
                 </div>
               </div>
-            </div></a
-          >
-          <div class="overlap-group2">
-            <div class="rectangle-59"></div>
-            <div class="text-8-1 valign-text-middle">더보기</div>
+            </div></a>
+          <div class="overlap-group9">
+            <div class="text-8-1 valign-text-middle">나의 게시글</div>
           </div>
-          <div class="overlap-group3">
-            <div class="rectangle-59"></div>
-            <div class="text-8-1 valign-text-middle">더보기</div>
-          </div>
+          
           <img class="line-2" src="assets/img/my_page/line-2.svg" alt="Line 2" />
           <div class="rectangle-61"></div>
           <h1 class="nlnh">NLNH님 안녕하세요!</h1>
           <div class="rectangle-62"></div>
-          <div class="ellipse-22"></div>
+          <h1 class="text12">"이 도끼가 네 도끼이냐?"</h1>
+          <div class="ellipse-22">
+            <img src="assets/img/profile1.png" alt="assets/img/ㅁㅁ.png">
+          </div>
+
           <a href="board-inpage.jsp">
             <div class="link-2 link-6">
               <div class="overlap-group">
-                <div class="x1713773510791png"></div>
+                <div class="mypost_crab"></div>
                 <div class="background-1 background-2">
                   <div class="emphasis">
-                    <div class="text-8 valign-text-middle arial-black-white-17-6px">생활동요</div>
+                    <div class="text-8 valign-text-middle arial-black-white-17-6px">꽃게</div>
                   </div>
                 </div>
               </div>
-            </div></a
-          ><a href="board-inpage.jsp">
+            </div></a>
+          <a href="board-inpage.jsp">
             <div class="link-3 link-6">
-              <div class="overlap-group">
-                <div class="x1713773510791png"></div>
+              <div class="overlap-group4">
+                <div class="mypost_duck"></div>
                 <div class="background-1 background-2">
                   <div class="emphasis">
-                    <div class="text-8 valign-text-middle arial-black-white-17-6px">생활동요</div>
+                    <div class="text-8 valign-text-middle arial-black-white-17-6px">달팽이</div>
                   </div>
                 </div>
               </div>
-            </div></a
-          ><a href="board-inpage.jsp">
+            </div></a>
+          <a href="board-inpage.jsp">
             <div class="link-4 link-6">
-              <div class="overlap-group">
-                <div class="x1713773510791png"></div>
+              <div class="overlap-group5">
+                <div class="mypost_can"></div>
                 <div class="background-1 background-2">
                   <div class="emphasis">
-                    <div class="text-8 valign-text-middle arial-black-white-17-6px">생활동요</div>
+                    <div class="text-8 valign-text-middle arial-black-white-17-6px">오리</div>
                   </div>
                 </div>
               </div>
-            </div></a
-          ><a href="board-inpage.jsp">
+            </div></a>
+          <a href="board-inpage.jsp">
             <div class="link-5 link-6">
-              <div class="overlap-group">
-                <div class="x1713773510791png"></div>
+              <div class="overlap-group6">
+                <div class="mypost_snail"></div>
                 <div class="background-1 background-2">
                   <div class="emphasis">
-                    <div class="text-8 valign-text-middle arial-black-white-17-6px">생활동요</div>
+                    <div class="text-8 valign-text-middle arial-black-white-17-6px">캔</div>
                   </div>
                 </div>
               </div>
-            </div></a
-          >
+            </div></a>
          
-            
-          </div>
-     
+         
         </div>
       </div>
     </div>

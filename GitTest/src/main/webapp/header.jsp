@@ -119,6 +119,8 @@
   cursor: pointer;
   text-decoration: underline;
 }
+.mypage_link{
+ text-decoration: none;}
 
 .logout-button:hover {
   color: #c82333;
@@ -185,7 +187,7 @@
 			    String nick = loginMember.getU_nick();
 		%>
 			<div class="greeting">
-				<%= nick %>님 안녕하세요
+				<a href="mypage.jsp" class=mypage_link><%= nick %>님 안녕하세요
 			</div>
 			<form method="post" style="display:inline;">
 				<button type="submit" name="logout" class="logout-button">로그아웃</button>
