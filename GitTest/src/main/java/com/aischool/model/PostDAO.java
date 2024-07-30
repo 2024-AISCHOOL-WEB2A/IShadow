@@ -218,21 +218,24 @@ public class PostDAO {
     	return boardNum;
     }
     //게시물 등록 메소드
-    public void postInsert(Post post) {
+    public int postInsert(Post post) {
+    	int cnt = 0;
     	try {
 			String sql = "insert into Insa5_SpringA_hacksim_2.posts values("
-					+ ""+post.getIdx()+post.getTitle()+post.getFile()+
-					"now()"+post.getViews()+post.getAnswer()+post.getUser()+
-					post.getHint1()+post.getHint2()+post.getHint3()+");";
+					+post.getIdx()+",'"+post.getTitle()+"','"+post.getFile()+"',"+
+					"now()"+","+post.getViews()+",'"+post.getAnswer()+"','"+post.getUser()+"','"+
+					post.getHint1()+"','"+post.getHint2()+"','"+post.getHint3()+"');";
 
 			pst = conn.prepareStatement(sql);
-			pst.executeUpdate();			
+			cnt = pst.executeUpdate();			
 
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}finally {
 //			close();
 		}
+
+		return cnt;
 
 	}
     // 게시물 검색
