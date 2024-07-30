@@ -16,7 +16,7 @@
 <link rel="stylesheet" type="text/css" href="assets/css/styleguide.css" />
 <link rel="stylesheet" type="text/css" href="assets/css/globals.css" />
 </head>
-<body style="margin: 0;  ">
+<body style="margin: 0;">
    <input type="hidden" id="anPageName" name="page" value="post-page" />
 
    <div class="container-center-horizontal">
