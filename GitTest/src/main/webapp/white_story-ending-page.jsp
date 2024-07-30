@@ -22,6 +22,7 @@ html, body {
 	width: 100%;
 	overflow: hidden;
 }
+
 .overlap-group {
 	position: relative;
 	width: 200px; /* Adjust size as needed */
@@ -50,7 +51,7 @@ html, body {
 	margin-top: 5%; /* Adjust this value to move the image down */
 	left: 0;
 }
-.image-1 {
+.image-121 {
 	width: 65%;
 	height: auto;
 	position: absolute;
@@ -82,7 +83,7 @@ html, body {
 						<a href="story-choice.jsp">
 							<div class="overlap-group">
 								<div class="rectangle"></div>
-								<img class="image-1" src="assets/img/--------.png" alt="image" />
+								<img class="image-1" src="assets/img/catchmind_ranking/--------.png" alt="image" />
 								<div class="text-48 inter-normal-white-40px">다시하기</div>
 							</div>
 						</a>

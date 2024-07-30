@@ -56,10 +56,15 @@ html, body {
 	position: relative;
 	margin-top: 5%; /* Adjust this value to move the image down */
 }
-.image-1 {
-	width: 65%;
-	height: auto;
-	position: relative;
+.image-121 {
+	eight: 11.46vw;
+    left: 9.03vw;
+    object-fit: cover;
+    position: absolute;
+    top: 2.64vw;
+    width: 10.42vw;
+    top: 104px;
+	
 }
 .text-48-centered {
 	text-align: center;
