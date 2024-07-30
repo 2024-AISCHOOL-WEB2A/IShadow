@@ -36,7 +36,7 @@ ArrayList<Post> posts = (ArrayList<Post>) request.getAttribute("getPosts");
                         </div>
                         <div class="overlap-group4">
                             <div class="text">
-                                <a href="#" style="color: #DCD6F7">Qa게시판</a>
+                                <a href="AdminQaSelectAll" style="color: #DCD6F7">Qa게시판</a>
                             </div>
                         </div>
                     </div>
