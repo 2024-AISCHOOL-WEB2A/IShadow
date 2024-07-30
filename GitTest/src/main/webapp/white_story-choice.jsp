@@ -91,7 +91,7 @@ function submitForm(name) {
                     <div onclick="submitForm(this.querySelector('.hiddenName').name)">
                         <div class="view-1">
                             <img class="ellipse-1" src="assets/img/ellipse-1-3@2x.png" alt="Ellipse 1" />
-                            <div class="text-40">해와 달이된 오누이></div>
+                            <div class="text-40">해와 달이된 오누이</div>
                             <input class="hiddenName" type="hidden" name="해와 달이 된 오누이">
                         </div>
                     </div>

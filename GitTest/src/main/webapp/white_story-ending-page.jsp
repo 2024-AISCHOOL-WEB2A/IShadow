@@ -9,7 +9,7 @@
 <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
 <meta name="og:type" content="website" />
 <meta name="twitter:card" content="photo" />
-<link rel="stylesheet" type="text/css" href="assets/css/story-ending-page.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/white_story-ending-page.css" />
 <link rel="stylesheet" type="text/css" href="assets/css/styleguide.css" />
 <link rel="stylesheet" type="text/css" href="assets/css/globals.css" />
 </head>
@@ -67,23 +67,23 @@ html, body {
 			<div class="overlap-group-1">
 				<img class="background-2" src="assets/img/white_background.png" alt="background 2" />
 				<!-- header -->
-				<%@ include file="header.jsp"%>
+				<%@ include file="white_header.jsp"%>
 
 				<div>
 					<div class="group-3">
-						<a href="main.jsp">
+						<a href="white_main.jsp">
 							<div class="overlap-group">
 								<div class="rectangle"></div>
-								<img class="image" src="assets/img/------.png" alt="image" />
+								<img class="image" src="assets/img/white_gohome.png" alt="image" />
 								<h1 class="text-48 inter-normal-white-40px">처음으로</h1>
 							</div>
 						</a>
 					</div>
 					<div class="group-4">
-						<a href="story-choice.jsp">
+						<a href="white_story-choice.jsp">
 							<div class="overlap-group">
 								<div class="rectangle"></div>
-								<img class="image-1" src="assets/img/catchmind_ranking/--------.png" alt="image" />
+								<img class="image-1" src="assets/img/white_replay.png" alt="image" />
 								<div class="text-48 inter-normal-white-40px">다시하기</div>
 							</div>
 						</a>
