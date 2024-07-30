@@ -37,7 +37,7 @@ public class AdminQaSelectAll extends HttpServlet {
         }
 
         request.setAttribute("listQA", listQA);
-        request.getRequestDispatcher("/request-page.jsp").forward(request, response);
+        request.getRequestDispatcher("admin_Qa.jsp").forward(request, response);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -56,7 +56,7 @@ public class AdminQaSelectAll extends HttpServlet {
 
         try {
             qaDAO.insertQa(newQa);
-            response.sendRedirect("qaAllSelect");
+            response.sendRedirect("admin_Qa.jsp");
         } catch (SQLException e) {
             e.printStackTrace();
             request.setAttribute("error", "데이터베이스에 저장하는 동안 오류가 발생했습니다.");

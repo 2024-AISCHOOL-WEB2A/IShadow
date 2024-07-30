@@ -1,9 +1,9 @@
-<%@page import="com.aischool.model.User"%>
+<%@page import="com.aischool.model.Qa"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
-ArrayList<User> users = (ArrayList<User>) request.getAttribute("users");
+ArrayList<Qa> qa = (ArrayList<Qa>) request.getAttribute("listQA");
 %>
 <!DOCTYPE html>
 <html>
@@ -27,7 +27,7 @@ ArrayList<User> users = (ArrayList<User>) request.getAttribute("users");
             <div class="central-container">
                 <div class="overlap-group-3">
                     <div class="ellipse-6"></div>
-                    <h1 class="text-1">관리자 페이지</h1>
+                    <h1 class="text-1">Q&A 게시판</h1>
                     <div class="overlap-group-container">
                         <div class="overlap-group7">
                             <div class="text">
@@ -36,29 +36,32 @@ ArrayList<User> users = (ArrayList<User>) request.getAttribute("users");
                         </div>
                         <div class="overlap-group4">
                             <div class="text">
-                                <a href="#" style="color: #DCD6F7">로그아웃</a>
+                                <a href="AdminUserSelectAll" style="color: #DCD6F7">유저 조회</a>
                             </div>
                         </div>
                         
                     </div>
                 </div>
                 <div class="header-row">
-                    <div class="id">회원 ID</div>
-                    <div class="text-3">닉네임</div>
-                    <div class="place">DATE</div>
+                    <div class="id">번호</div>
+                    <div class="text-3">제목</div>
+                    <div class="place">작성자</div>
                     <div class="text-4">삭제</div>
                 </div>
                 <img class="line-12" src="assets/img/line-12.svg" alt="Line 12" />
                 <%
-                for (int i = 0; i < users.size(); i++) {
+                for (int i = 0; i < qa.size(); i++) {
                 %>
                 <div class="overlap-group">
-                    <div class="a"><%=users.get(i).getId()%></div>
-                    <div class="nlnh"><%=users.get(i).getNick()%></div>
-                    <div class="date"><%=users.get(i).getJoindate()%></div>
+                    <div class="a"><%=i+1%></div>
+                    <div class="nlnh">
+                    	<a href="#" style="color: white">
+                    		<%=qa.get(i).getQa_title()%>
+                    	</a>
+                    </div>
+                    <div class="date"><%=qa.get(i).getU_id()%></div>
                     <div class="overlap-group9">
-                        <div class="text-6"
-                            onclick="userDelete('<%=users.get(i).getId()%>')">삭제하기</div>
+                        <div class="text-6">삭제하기</div>
                     </div>
                 </div>
                 <%
