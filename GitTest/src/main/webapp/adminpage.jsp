@@ -26,6 +26,7 @@ ArrayList<Post> posts = (ArrayList<Post>) request.getAttribute("getPosts");
     object-fit: cover; /* 이미지가 부모 영역을 꽉 채우도록 설정 */
     object-position: center; /* 이미지 중앙 정렬 */
 }
+
 </style>
 </head>
 <body style="margin: 0; background: #1e0338">

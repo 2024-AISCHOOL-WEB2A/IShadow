@@ -31,6 +31,7 @@
   height: 120px;
   width: 120px;
   position: relative; /* 위치 설정 */
+  
 }
 
 .admin-page1 .text-1 {
@@ -68,7 +69,8 @@
 	height: 27px;
 	min-width: 91px;
 	padding: 4px 7px;
-	background-color: red;
+	background-color: #F4EEFF;
+	border-radius: 15%;
 }
 /*게시판 텍스트 영역  */
 .admin-page1 .text-2 {
@@ -93,8 +95,9 @@
 	height: 27px;
 	min-width: 91px;
 	padding: 4px 22px;
-	background-color: #ffffff;
+	background-color: #F4EEFF;
 	width: 110px;
+	border-radius: 15%;
 }
 
 .admin-page1 .text-3 {
@@ -154,7 +157,7 @@
 
 .admin-page1 .overlap-group3 {
 	align-items: center;
-	background-color: var(--tolopea);
+	background-color: #424874;
 	border: 1px solid;
 	border-color: var(--white);
 	border-radius: 100px;
@@ -203,7 +206,7 @@
 	font-size: 25px;
 	color: #ffffff;
 }
-
+/*삭제하기 영역  */
 .admin-page1 .overlap-group10 {
 	align-items: flex-end;
 	align-self: flex-end;
@@ -226,7 +229,7 @@
 	text-align: center;
 	width: 70px;
 	font-family: Maplestory Bold;
-	font-size: 15px;
+	font-size: 18px;
 	color: #424874;
 }
 
