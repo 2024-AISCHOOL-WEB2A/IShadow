@@ -35,8 +35,13 @@ public class LoginService extends HttpServlet {
             // 로그인한 회원정보를 서버에 저장 -> 세션
             HttpSession session = request.getSession();
             session.setAttribute("login_member", member2);
-            response.sendRedirect("main.jsp");
-            System.out.println("로그인 성공");
+            if (member2.getU_type().equals("A")) {
+                response.sendRedirect("admin-select-user.jsp");
+                System.out.println("관리자 로그인 성공");
+            } else {
+                response.sendRedirect("main.jsp");
+                System.out.println("로그인 성공");
+            }
         } else {
             response.sendRedirect("login.jsp?error=1");
             System.out.println("로그인 실패");

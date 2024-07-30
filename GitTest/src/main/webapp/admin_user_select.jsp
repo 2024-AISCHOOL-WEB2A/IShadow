@@ -27,18 +27,19 @@ ArrayList<User> users = (ArrayList<User>) request.getAttribute("users");
             <div class="central-container">
                 <div class="overlap-group-3">
                     <div class="ellipse-6"></div>
-                    <h1 class="text-1">관리자 페이지</h1>
+                    <h1 class="text-1">유저 조회</h1>
                     <div class="overlap-group-container">
                         <div class="overlap-group7">
                             <div class="text">
-                                <a href="AdminPostSelectAll" style="color: #DCD6F7">게시판</a>
+                                <a href="AdminPostSelectAll" style="color: #DCD6F7">게시글 조회</a>
                             </div>
                         </div>
                         <div class="overlap-group4">
                             <div class="text">
-                                <a href="#" style="color: #DCD6F7">로그아웃</a>
+                                <a href="AdminQaSelectAll" style="color: #DCD6F7">Qa게시판</a>
                             </div>
                         </div>
+                        
                     </div>
                 </div>
                 <div class="header-row">

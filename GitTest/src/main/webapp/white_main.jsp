@@ -108,10 +108,10 @@ body, html {
 }
 
 .modal-content {
-   background-color: #d3d3d3; /* 회색 배경색 */
+   background-color: #ffffff; /* 흰색 배경색 */
    margin: auto;
    padding: 20px;
-   border: 1px solid #888;
+   border: 1px solid #ffffff;
    border-radius: 15px; /* 둥근 모서리 */
    width: 80%;
    max-width: 500px;
@@ -119,7 +119,7 @@ body, html {
 }
 
 .close {
-   color: #aaa;
+   color: #4bed;
    float: right;
    font-size: 28px;
    font-weight: bold;
@@ -132,7 +132,7 @@ body, html {
 }
 
 .modal-btn {
-   background-color: #4CAF50;
+   background-color: #4bed;
    color: white;
    padding: 14px 20px;
    margin: 15px 0;
@@ -165,7 +165,7 @@ body, html {
                <!-- 튜토리얼 -->
                <a href="javascript:void(0);" id="tutorial-btn">
                   <div class="view">
-                     <img src="assets/img/main/planet_1.png">
+                     <img src="assets/img/cloud1.png">
                      <div class="view-text">튜토리얼</div>
                   </div>
                </a>

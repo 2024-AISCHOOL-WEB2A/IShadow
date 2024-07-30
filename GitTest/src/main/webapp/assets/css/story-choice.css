@@ -58,6 +58,8 @@
   height: 15vw;
   margin-right: 0.14vw;
   object-fit: cover;
+  position:relative;
+  top:90px;
   width: 15vw;
 }
 
@@ -208,6 +210,8 @@
     min-height: 2.08vw;
     min-width: 13.82vw;
     text-align: center;
+    position:relative;
+    top:80px;
     white-space: nowrap;
     font-family: 'Maplestory Bold', sans-serif; /* 폰트 패밀리 추가 */
     color: var(--white);

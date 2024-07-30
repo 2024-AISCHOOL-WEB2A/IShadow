@@ -68,11 +68,16 @@ html, body {
 	position: relative;
 	margin-top: 5%; /* 이미지 아래로 이동 조정 */
 }
+<<<<<<< HEAD
 
 .image-1 {
+=======
+.image-121 {
+>>>>>>> branch 'main' of https://github.com/2024-AISCHOOL-WEB2A/IShadow.git
 	width: 65%;
 	height: auto;
 	position: relative;
+	
 }
 
 .text-48-centered {

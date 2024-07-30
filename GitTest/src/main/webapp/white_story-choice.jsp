@@ -40,13 +40,24 @@ html, body {
     margin-right: 0.14vw;
     object-fit: cover;
 }
+.flex-col {
+    position: relative;
+}
+.sticky-header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #000000;
+    width: 100%;
+}
 </style>
 <script>
 function submitForm(name) {
     let form = document.createElement('form');
     form.method = 'POST';
     form.action = 'WhiteChoiceStory';
-
+    
     let input = document.createElement('input');
     input.type = 'hidden';
     input.name = 'story';
@@ -60,11 +71,14 @@ function submitForm(name) {
 </head>
 <body style="margin: 0; background: #000000">
     <input type="hidden" id="anPageName" name="page" value="stroy-choice" />
+
     <div class="container-center-horizontal">
-        <div class="stroy-choice screen">
+        <div class="stroy-choice screen" style="padding-top: 0px">
             <div class="flex-col">
-            	<!-- header -->
-                <%@ include file="white_header.jsp" %>
+                <!-- header -->
+                <div class="sticky-header">
+                    <%@ include file="white_header.jsp" %>
+                </div>
                 
                 <!-- 동화선택 -->
                 <div class="view-container">
@@ -91,11 +105,11 @@ function submitForm(name) {
                     <div onclick="submitForm(this.querySelector('.hiddenName').name)">
                         <div class="view-1">
                             <img class="ellipse-1" src="assets/img/ellipse-1-3@2x.png" alt="Ellipse 1" />
-                            <div class="text-40">해와 달이된 오누이></div>
+                            <div class="text-40">해와 달이된 오누이</div>
                             <input class="hiddenName" type="hidden" name="해와 달이 된 오누이">
                         </div>
                     </div>
-                    <a href="WhiteChoiceStory">
+                    <a href="ChoiceStory">
                         <div class="view-1">
                             <img class="ellipse-1" src="assets/img/ellipse-1-4@2x.png" alt="Ellipse 1" />
                             <div class="text-40">토끼와 거북이</div>

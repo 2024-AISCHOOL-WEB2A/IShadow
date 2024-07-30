@@ -105,4 +105,27 @@ public class QaDAO {
             preparedStatement.executeUpdate();
         }
     }
+
+	public int insertComment(String comment, int idx) {
+
+		Qa qa = null;
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet rs = null;
+        int cnt = 0;
+        
+        try {
+            connection = connect();
+            preparedStatement = connection.prepareStatement("UPDATE QA SET admin_comment = ? WHERE qa_idx = ?");
+            preparedStatement.setString(1, comment);
+            preparedStatement.setInt(2, idx);
+            cnt = preparedStatement.executeUpdate();
+              
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            close(connection, preparedStatement, rs);
+        }
+		return cnt;
+	}
 }

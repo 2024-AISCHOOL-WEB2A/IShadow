@@ -119,6 +119,8 @@
   cursor: pointer;
   text-decoration: underline;
 }
+.mypage_link{
+ text-decoration: none;}
 
 .logout-button:hover {
   color: #c82333;

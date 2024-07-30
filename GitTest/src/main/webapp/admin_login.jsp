@@ -73,9 +73,11 @@ body {
 	<div class="login-container">
 		<h2>관리자 페이지</h2> <!-- 관리자 페이지 텍스트 추가 -->
 		<h1>아이 shadow</h1>
-		<input type="text" placeholder="아이디" /> 
-		<input type="password" placeholder="비밀번호" />
-		<button>로그인하기</button>
+		<form action="AdminLoginService" method="post"> <!-- 폼 추가 -->
+			<input type="text" name="u_id" placeholder="아이디" required /> 
+			<input type="password" name="u_pw" placeholder="비밀번호" required />
+			<button type="submit">로그인하기</button>
+		</form>
 	</div>
 </body>
 </html>

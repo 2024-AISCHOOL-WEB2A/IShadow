@@ -1,5 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ page import="com.aischool.model.Qa"%>
+<%@ page import="com.aischool.model.QaDAO"%>
+<%
+int qa_idx = Integer.parseInt(request.getParameter("qa_idx"));
+QaDAO qaDAO = new QaDAO();
+Qa qa = qaDAO.selectQaById(qa_idx);
+String adminComment = qa.getAdmin_comment();
+if (adminComment == null || adminComment.trim().isEmpty()) {
+    adminComment = "관리자가 확인중에 있습니다.";
+}
+%>
+	
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -97,26 +109,35 @@ button {
 	<div class="overlap-group">
 		<div class="section">
 			<div class="label">제목</div>
-			<div class="value">test 제목</div>
+			<div class="value"><%=qa.getQa_title()%></div>
 		</div>
 		<div class="section">
 			<div class="label">작성자</div>
-			<div class="value">test 작성자</div>
+			<div class="value"><%=qa.getQa_idx()%></div>
 		</div>
 		<div class="section">
 			<div class="label">작성일</div>
-			<div class="value">00년 00월 00일</div>
+			<div class="value"><%=qa.getQa_d_at()%></div>
 		</div>
 		<div class="section section-large">
 			<div class="label">내용</div>
-			<div class="value value-large">test 내용</div>
+			<div class="value value-large"><%=qa.getQa_content()%></div>
 		</div>
 		<div class="section input-section">
 			<div class="label">관리자 댓글</div>
-			<input type="text" placeholder="관리자 댓글을 입력하세요">
-			<button>등록</button>
+			<form action="InsertComment" class="comment">
+				<input type="hidden" value="<%=qa.getQa_idx()%>" name="idx">
+				<input type="text" placeholder="관리자 댓글을 입력하세요" name="comment">
+				<button onclick="action()">등록</button>
+			</form>
 		</div>
 	</div>
+<script>
+	function action(){
+		let form = document.querySelector(".comment");
+		form.submit();
+	}
+</script>
 </body>
 </html>
 	

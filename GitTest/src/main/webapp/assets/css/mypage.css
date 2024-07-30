@@ -1,5 +1,7 @@
 /* screen - mypage */
-
+@font-face {
+    font-family: 'Maplestory Bold';
+    src: url('../font/Maplestory Bold.ttf') format('truetype');}
 .mypage {
   align-items: flex-start;
   background-color: var(--jrnavercomnero);
@@ -10,7 +12,7 @@
 
 .mypage .overlap-group9 {
   align-items: center;
-  background-image: url(../img/white_background.png);
+  background-image: url(../img/background.png);
   background-position: 50% 50%;
   background-size: cover;
   display: flex;
@@ -63,8 +65,53 @@ transform: translate(0,0);
   width: 12.85vw;
 }
 
-.mypage .x1719813394355jpg {
-  background-image: url(../img/1719813394355-jpg@2x.png);
+.mypage .mypost_cat {
+  background-image: url(../img/my_page/my_page_cat.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 7.43vw;
+  margin-left: -0.07vw;
+  margin-top: -0.07vw;
+  width: 12.85vw;
+}
+.mypage .mypost_wolf {
+  background-image: url(../img/my_page/my_page_wolf.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 7.43vw;
+  margin-left: -0.07vw;
+  margin-top: -0.07vw;
+  width: 12.85vw;
+}
+.mypage .mypost_can {
+  background-image: url(../img/my_page/my_page_can.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 7.43vw;
+  margin-left: -0.07vw;
+  margin-top: -0.07vw;
+  width: 12.85vw;
+}
+.mypage .mypost_snail {
+  background-image: url(../img/my_page/my_page_snail.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 7.43vw;
+  margin-left: -0.07vw;
+  margin-top: -0.07vw;
+  width: 12.85vw;
+}
+.mypage .mypost_crab {
+  background-image: url(../img/my_page/my_page_crab.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 7.43vw;
+  margin-left: -0.07vw;
+  margin-top: -0.07vw;
+  width: 12.85vw;
+}
+.mypage .mypost_duck {
+  background-image: url(../img/my_page/my_page_duck.png);
   background-position: 50% 50%;
   background-size: cover;
   height: 7.43vw;
@@ -74,7 +121,7 @@ transform: translate(0,0);
 }
 
 .mypage .background {
-  background-color: #9aaebf;
+  background-color: #f2aa3e;
 }
 
 .mypage .emphasis {
@@ -88,6 +135,7 @@ transform: translate(0,0);
   height: 1.25vw;
   letter-spacing: -0.04vw;
   line-height: 1.25vw;
+  font-size:25px;
   margin-top: -0.07vw;
   text-align: center;
   width: 4.38vw;
@@ -113,6 +161,7 @@ transform: translate(0,0);
   left: 0;
   position: absolute;
   top: 0;
+  bottom:25px;
   width: 4.44vw;
 }
 
@@ -148,33 +197,47 @@ transform: translate(0,0);
 }
 
 .mypage .rectangle-61 {
-  background-color: #ffffffd4;
+  background-color: #FECC6D;
   height: 2.99vw;
   left: 39.51vw;
   position: absolute;
   top: 9.38vw;
+  border-radius:30px;
   width: 31.94vw;
 }
 
 .mypage .nlnh {
   color: var(--jrnavercomnero);
-  font-family: var(--font-family-inter);
-  font-size: var(--font-size-xxxl);
+  font-family: 'Maplestory Bold';
+  font-size: 32px;
   font-weight: 400;
   left: 40.14vw;
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
-  top: 9.17vw;
+  top: 9.5vw;
+  white-space: nowrap;
+}
+.mypage .text12 {
+  color: var(--jrnavercomnero);
+  font-family: 'Maplestory Bold';
+  font-size: 32px;
+  font-weight: 400;
+  left: 40.14vw;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 16vw;
   white-space: nowrap;
 }
 
 .mypage .rectangle-62 {
-  background-color: #ffffffd4;
+  background-color: #FECC6D;
   height: 2.99vw;
   left: 39.51vw;
   position: absolute;
   top: 15.42vw;
+  border-radius:30px;
   width: 32.01vw;
 }
 
@@ -182,10 +245,19 @@ transform: translate(0,0);
   background-color: var(--white);
   border-radius: 6.18vw/5.03vw;
   height: 10.07vw;
-  left: 19.93vw;
+  left: 17.93vw;
+  display:flew;
+  align-items:center;
+  justify-content: center;
+  overflow:hidden;
   position: absolute;
   top: 8.82vw;
   width: 12.36vw;
+}
+.ellipse-22 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .mypage .link-2 {

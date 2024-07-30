@@ -16,13 +16,13 @@
 .main-u4370u4458u4358u4455u4523 .overlap-group {
   align-items: center;
   background-image: url(../img/white_background.png);
-  background-position: 50% 50%;
+  background-position: 100% 100%;
   background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center; /* 추가: 수직 중앙 정렬 */
-  min-height: 71.11vw;
-  padding: 2.01vw 5.25vw;
+  min-height: 57.11vw;
+  padding: 0vw 0vw;
   width: 102.78vw;
 }
 
