@@ -7,6 +7,7 @@ import java.util.List;
 public class QaDAO {
 
     private static final String SELECT_ALL_QA = "SELECT * FROM QA";
+    private static final String SELECT_QA_BY_ID = "SELECT * FROM QA WHERE qa_idx = ?";
     private static final String INSERT_QA_SQL = "INSERT INTO QA (qa_title, qa_content, u_id, qa_d_at, admin_comment) VALUES (?, ?, ?, ?, ?)";
 
     private Connection connect() {
@@ -64,6 +65,34 @@ public class QaDAO {
         return qaList;
     }
     
+    public Qa selectQaById(int qa_idx) {
+        Qa qa = null;
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet rs = null;
+
+        try {
+            connection = connect();
+            preparedStatement = connection.prepareStatement(SELECT_QA_BY_ID);
+            preparedStatement.setInt(1, qa_idx);
+            rs = preparedStatement.executeQuery();
+            
+            if (rs.next()) {
+                String qa_title = rs.getString("qa_title");
+                String qa_content = rs.getString("qa_content");
+                String qa_d_at = rs.getTimestamp("qa_d_at").toString(); // Timestamp를 문자열로 변환
+                String u_id = rs.getString("u_id");
+                String admin_comment = rs.getString("admin_comment");
+                qa = new Qa(qa_idx, qa_title, qa_content, qa_d_at, u_id, admin_comment);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            close(connection, preparedStatement, rs);
+        }
+        return qa;
+    }
+
     public void insertQa(Qa qa) throws SQLException {
         try (Connection connection = connect();
              PreparedStatement preparedStatement = connection.prepareStatement(INSERT_QA_SQL)) {
