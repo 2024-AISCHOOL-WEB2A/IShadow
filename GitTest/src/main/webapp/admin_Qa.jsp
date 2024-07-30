@@ -1,9 +1,9 @@
-<%@page import="com.aischool.model.Post"%>
+<%@page import="com.aischool.model.Qa"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
-ArrayList<Post> posts = (ArrayList<Post>) request.getAttribute("getPosts");
+ArrayList<Qa> qa = (ArrayList<Qa>) request.getAttribute("listQA");
 %>
 <!DOCTYPE html>
 <html>
@@ -27,18 +27,19 @@ ArrayList<Post> posts = (ArrayList<Post>) request.getAttribute("getPosts");
             <div class="central-container">
                 <div class="overlap-group-3">
                     <div class="ellipse-6"></div>
-                    <h1 class="text-1">게시글 조회</h1>
+                    <h1 class="text-1">Q&A 게시판</h1>
                     <div class="overlap-group-container">
                         <div class="overlap-group7">
                             <div class="text">
-                                <a href="AdminUserSelectAll" style="color: #DCD6F7">유저 조회</a>
+                                <a href="AdminPostSelectAll" style="color: #DCD6F7">게시글 조회</a>
                             </div>
                         </div>
                         <div class="overlap-group4">
                             <div class="text">
-                                <a href="AdminQaSelectAll" style="color: #DCD6F7">Qa게시판</a>
+                                <a href="AdminUserSelectAll" style="color: #DCD6F7">유저 조회</a>
                             </div>
                         </div>
+                        
                     </div>
                 </div>
                 <div class="header-row">
@@ -49,12 +50,16 @@ ArrayList<Post> posts = (ArrayList<Post>) request.getAttribute("getPosts");
                 </div>
                 <img class="line-12" src="assets/img/line-12.svg" alt="Line 12" />
                 <%
-                for (int i = 0; i < posts.size(); i++) {
+                for (int i = 0; i < qa.size(); i++) {
                 %>
                 <div class="overlap-group">
                     <div class="a"><%=i+1%></div>
-                    <div class="nlnh"><%=posts.get(i).getTitle()%></div>
-                    <div class="date"><%=posts.get(i).getUser()%></div>
+                    <div class="nlnh">
+                    	<a href="admin_QA_detail.jsp?qa_idx=<%=qa.get(i).getQa_idx()%>" style="color: white">
+                    		<%=qa.get(i).getQa_title()%>
+                    	</a>
+                    </div>
+                    <div class="date"><%=qa.get(i).getU_id()%></div>
                     <div class="overlap-group9">
                         <div class="text-6">삭제하기</div>
                     </div>
