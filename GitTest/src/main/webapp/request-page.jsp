@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ page import="java.util.List" %>
 <%@ page import="com.aischool.model.Qa" %>
 <!DOCTYPE html>
@@ -114,7 +115,7 @@
                 <div class="group-2613114">
                     <div class="overlap-group2">
                         <div class="number"><%= qa.getQa_idx() %></div>
-                        <div class="text-7"><%= qa.getQa_title() %></div>
+                        <div class="text-7"><a href="request-page-post.jsp?qa_idx=<%= qa.getQa_idx() %>" style="color: black;"><%= qa.getQa_title() %></a></div>
                         <div class="date"><%= qa.getQa_d_at() %></div>
                         <div class="user-name"><%= qa.getU_id() %></div>
                     </div>
