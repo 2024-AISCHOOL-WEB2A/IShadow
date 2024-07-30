@@ -187,7 +187,7 @@
 			    String nick = loginMember.getU_nick();
 		%>
 			<div class="greeting">
-				<a href="mypage.jsp" class=mypage_link><%= nick %>님 안녕하세요
+				<%= nick %>님 안녕하세요
 			</div>
 			<form method="post" style="display:inline;">
 				<button type="submit" name="logout" class="logout-button">로그아웃</button>
