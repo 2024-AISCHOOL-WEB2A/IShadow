@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/globals.css" />
     <style>
         body, html {
-            margin: 0;
+            margin: 0;ㅁ
             padding: 0;
             height: 100%;
             width: 100%;

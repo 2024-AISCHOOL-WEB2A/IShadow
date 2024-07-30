@@ -16,25 +16,20 @@
 }
 
 .stroy-ending-page .flex-col {
-  align-items: flex-start;
+ 
+    align-items: center;
   background-image: url(../img/white_background.png);
-  background-position: 50% 50%;
+  background-position: 100% 100%;
   background-size: cover;
   display: flex;
   flex-direction: column;
-  gap: 0vw;
-  min-height: 50vw;
-  width: 100.0vw;
+  justify-content: center; /* 추가: 수직 중앙 정렬 */
+  min-height: 57.11vw;
+  padding: 0vw 0vw;
+  width: 102.78vw;
 }
 
-.stroy-ending-page .background-2 {
-  height: 68.96vw;
-  left: 0;
-  object-fit: cover;
-  position: absolute;
-  top: 0.14vw;
-  width: 100.0vw;
-}
+
 
 .stroy-ending-page .overlap-group-1 {
   height: 71.39vw;
