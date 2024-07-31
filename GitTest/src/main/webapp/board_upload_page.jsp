@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="com.aischool.model.Login"%>
+<%
+// 	Login loginMember = (Login) session.getAttribute("login_member");
+%>
 <!DOCTYPE html>
 <html>
   <head>
@@ -13,6 +17,108 @@
     <link rel="stylesheet" type="text/css" href="assets/css/post-page.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/styleguide.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/globals.css" />
+    <style>
+    	.title{
+		    width: 100%;
+		    height: 3.47vw;
+		    box-sizing: border-box;
+		    padding: 10px; /* 원하는 만큼 패딩을 조정 */
+		    font-size: 1.2em; /* 글자 크기 조정 */
+		    color:#000000;
+		    border: 1px solid #ccc; /* 보더 스타일 조정 */
+		}
+		.inputanswer{
+		    width: 100%;
+		    height: 3.19vw;
+		    box-sizing: border-box;
+		    padding: 10px; /* 원하는 만큼 패딩을 조정 */
+		    font-size: 1.2em; /* 글자 크기 조정 */
+		    border: 1px solid #ccc; /* 보더 스타일 조정 */
+		}
+		.filebox {
+			display: flex; 
+			gap: 10px;
+          	margin-left:89px;
+          	margin-top: 20px;
+          	width: 345px;
+          	height: 3.12vw
+         }
+         .filebox input {
+         	border: 1px solid #dbdbdb; 
+         	background-color: #fff; 
+         	font-size: 16px;
+         	top: 18.96vw;
+         	height: 3.12vw;
+         }
+         .container {
+		    background-color: blue;
+		    border: 0.35vw solid;
+		    border-color: #ffffff;
+		    border-radius: 2.15vw;
+		    height: 3.92vw;
+		    left: 62.99vw;
+		    position: absolute;
+		    top: 70.69vw;
+		    width: 8.06vw;
+		    color: #ffffff;
+		 }
+		 .uploadText {
+    		color: #ffffff;
+    		size: 15px;
+		    font-family: 'Maplestory Bold';
+		    transform: translateY(20px);
+		    position: relative;
+		    left: 325px;
+		    top: 280px;
+		    font-size: 30px;
+		 }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+    	function validation(){
+    		let arr = document.querySelectorAll("input[type='text']");
+    		for(let i=0;i<arr.length;i++){
+    			if(arr[i].value == "" || arr[i].value == null || typeof arr[i] == "undefined"){
+    				alert(arr[i].name+"을 입력 해주세요.");
+    				arr[i].focus();
+    				return;
+    			}
+    		}
+			
+    		let firstFeature = $('.firstFeature').val();
+    		let fileUpload = $('.upload-name').val();
+    		let secondFeature = $('.secondFeature').val();
+    		let user = $('#user').val();
+    		let thirdFeature = $('.thirdFeature').val();
+    		let title = $('.title').val();
+    		let inputanswer = $('.inputanswer').val();
+
+    		if(fileUpload == "" || fileUpload == null){
+    			alert("파일을 입력해주세요.");
+    			return;
+    		}
+
+    		$.ajax({
+    			type: "GET",
+    			data: "firstFeature="+firstFeature+"&fileUpload="+fileUpload
+    			+"&secondFeature="+secondFeature+"&user="+user
+    			+"&thirdFeature="+thirdFeature+"&title="+title
+    			+"&inputanswer="+inputanswer,
+    			url:"PostsInsert",
+    			success: function(result){
+    				if(result == "ok"){
+    					alert("등록완료");
+    					location="PostsSelectAll";
+    				}else{
+    					alert("등록실패");
+    				}
+    			},
+    			error: function(){
+    				alert("error");
+    			}
+    		});
+    	}
+    </script>
   </head>
   <body style="margin: 0; background: #000000 ">
     <input type="hidden" id="anPageName" name="page" value="post-page" />
@@ -21,38 +127,45 @@
       <div class="post-page screen">
         <div class="overlap-group1 single-linebody-base">
           <div class="rectangle-24"></div>
-          <div class="text-65">파일첨부</div>
-          <div class="filebox">
-            <input class="upload-name" type="text" readonly>
-            <input type="file" id="file_01" class="file" title="파일 업로드">
-            <label for="file_01" class="upload-button">파일업로드</label> 
-          </div>
-          <div class="rectangle-27"></div>
-          <div class="text-66">제목</div>
-          <div class="rectangle-28">
-            <input type="text" class="firstFeature" name="firstFeature" placeholder="Type here...">
-          </div>
-          <div class="rectangle-29">
-            <input type="text" class="secondFeature" name="secondFeature" placeholder="Type here...">
-          </div>
-          <div class="rectangle-30">
-            <input type="text" class="thirdFeature" name="thirdFeature" placeholder="Type here...">
-          </div>
-          <div class="rectangle-31">
-            <input type="text" class="title" name="title" placeholder="Type here...">
-          </div>
-          <div class="text-67">첫번째 특징</div>
-          <div class="text-68">두번째 특징</div>
-          <div class="text-69">세번째 특징</div>
-          <div class="rectangle-32"></div>
-          <div class="text-70">정답 입력</div>
-          <div class="rectangle-33">
-            <input type="text" class="inputanswer" name="inputanswer">
-          </div>
-          <div class="container">
-            <a href="" title="Button border blue/green" class="button btnBorder btnBlueGreen"></a>
-          </div>
-          <h3 class="uploadText">올리기</h3>
+          
+          <form method="post" id="boardup" action="PostsInsert">
+          	<input type="hidden" id="user" name="user" value="<%=loginMember.getU_id()%>">
+          		<div class="rectangle-27"></div>
+	          	<div class="text-66">제목</div>
+	          	<div class="rectangle-28">
+	            	<input type="text" class="firstFeature" name="firstFeature" placeholder="Type here...">
+	          	</div>
+          
+	          <div class="text-65">파일첨부</div>
+	          <div class="filebox">
+	            <input class="upload-name" name="fileUpload" readonly>
+	            <input type="file" id="file_01" class="file" title="파일 업로드">
+	            <label for="file_01" class="upload-button">파일업로드</label> 
+	          </div>
+	          
+	          <div class="rectangle-29">
+	            <input type="text" class="secondFeature" name="secondFeature" placeholder="Type here...">
+	          </div>
+	          <div class="rectangle-30">
+	            <input type="text" class="thirdFeature" name="thirdFeature" placeholder="Type here...">
+	          </div>
+	          <div class="rectangle-31">
+	            <input type="text" class="title" name="title" placeholder="Type here...">
+	          </div>
+	          <div class="text-67">첫번째 특징</div>
+	          <div class="text-68">두번째 특징</div>
+	          <div class="text-69">세번째 특징</div>
+	          <div class="rectangle-32"></div>
+	          <div class="text-70">정답 입력</div>
+	          <div class="rectangle-33">
+	            <input type="text" class="inputanswer" name="inputanswer">
+	          </div>
+	          <div class="container">
+	            <a href="" title="Button border blue/green" class="button btnBorder btnBlueGreen"></a>
+	          </div>
+	          <div class="uploadText" onclick="validation()">올리기</div>
+          </from>
+          
           <div class="overlap-group"></div>
         </div>
       </div>

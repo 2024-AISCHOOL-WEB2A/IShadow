@@ -56,6 +56,7 @@
         border: 2px solid yellow !important;
         border-radius: 15px !important;
         font-size: 24px !important; /* 크기 증가 */
+        color: black !important; /* 텍스트 색상 검은색으로 변경 */
     }
     .button {
         width: 100% !important;

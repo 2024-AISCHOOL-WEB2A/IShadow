@@ -2,6 +2,7 @@ package com.aischool.service;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -24,21 +25,23 @@ public class PostsInsert extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		PostDAO postDao = new PostDAO();
 		Post post = new Post();
-		
+		int cnt = 0;
+		String result;
 		post.setIdx(postDao.getBoardNumber());
 		post.setTitle(request.getParameter("title"));
-		post.setFile(request.getParameter("file"));
+		post.setFile(request.getParameter("fileUpload"));
 		post.setViews(1);
-		post.setAnswer(request.getParameter("answer"));
+		post.setAnswer(request.getParameter("inputanswer"));
 		post.setUser(request.getParameter("user"));
-		post.setHint1(request.getParameter("hint1"));
-		post.setHint2(request.getParameter("hint2"));
-		post.setHint3(request.getParameter("hint3"));
-		
-		postDao.postInsert(post);
-		
+		post.setHint1(request.getParameter("firstFeature"));
+		post.setHint2(request.getParameter("secondFeature"));
+		post.setHint3(request.getParameter("thirdFeature"));
+
+		cnt = postDao.postInsert(post);
 		postDao.close();
-		response.sendRedirect("board_page.jsp");
+		
+		result = (cnt > 0) ? "ok" : "";
+		response.getWriter().print(result);
 	}
 
 }
