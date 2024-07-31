@@ -107,7 +107,7 @@ body, html {
 }
 
 .modal-content {
-	background-color: #d3d3d3;
+	background-color: #ffffff;
 	margin: auto;
 	padding: 20px;
 	border: 1px solid #888;
@@ -118,7 +118,7 @@ body, html {
 }
 
 .close {
-	color: #aaa;
+	color: #4bed;
 	float: right;
 	font-size: 28px;
 	font-weight: bold;
@@ -131,7 +131,7 @@ body, html {
 }
 
 .modal-btn {
-	background-color: #4CAF50;
+	background-color: #4bed;
 	color: white;
 	padding: 14px 20px;
 	margin: 15px 0;
