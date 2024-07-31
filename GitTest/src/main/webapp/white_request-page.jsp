@@ -44,7 +44,7 @@
             border-radius: 15px;
             font-family: 'Maplestory Bold', sans-serif !important; /* 폰트 패밀리 추가 */
             margin: 0 auto; /* 가운데 정렬 */
-            margin-top: 140px; /* 위쪽 여백 추가 */
+            margin-top: -157px; /* 위쪽 여백 추가 */
             margin-left: 4%; /* 오른쪽으로 이동 */
         }
         .table-header {
