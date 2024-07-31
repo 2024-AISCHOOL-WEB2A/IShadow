@@ -11,7 +11,7 @@
 <meta name="viewport" content="width=1440, maximum-scale=1.0" />
 <link rel="shortcut icon" type="image/png"
 	href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
-<meta name="og:type" content="wㅠebsite" />
+<meta name="og:type" content="website" />
 <meta name="twitter:card" content="photo" />
 <link rel="stylesheet" type="text/css" href="assets/css/video.css" />
 <link rel="stylesheet" type="text/css" href="assets/css/styleguide.css" />

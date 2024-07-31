@@ -1,6 +1,4 @@
-/* screen - request-page-upload */
-
-.request-page-upload {
+   .request-page-upload {
   align-items: flex-start;
   background-color: var(--white);
   display: flex;
@@ -15,7 +13,6 @@
   background-size: cover;
   height: 1088px;
   margin-left: -6px;
-  margin-top: 29px;
   position: relative;
   width: 1920px;
 }
@@ -90,6 +87,7 @@
   position: absolute;
   top: 164px;
   width: 1028px;
+  z-index: 1; /* Ensure this image is behind the group-2613115-item */
 }
 
 .request-page-upload .group-2613115 {
@@ -105,6 +103,7 @@
   position: absolute;
   top: 0;
   width: 1479px;
+  z-index: 2; /* Ensure this group is in front of the rectangle-331 */
 }
 
 .request-page-upload .group-2613115-item {
@@ -116,14 +115,56 @@
   line-height: 58.8px;
   min-height: 28px;
   white-space: nowrap;
+  border: none;
+  padding: 10px;
+  background-color: transparent; /* Make the background transparent */
+  outline: none; /* Remove outline */
+  z-index: 2; /* Ensure input fields are in front of the rectangle-331 */
+}
+
+.request-page-upload .group-2613115-item[type="text"] {
+  border: 1px solid rgba(0, 0, 0, 0.2); /* Adjust border for better visibility */
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+  color: var(--jrnavercomnero);
+}
+
+.request-page-upload .group-2613115-item[type="text"]::placeholder {
+  color: rgba(0, 0, 0, 0.5); /* Placeholder color for better visibility */
 }
 
 .request-page-upload .rectangle-333 {
+  height: 358px;
+  width: 1271px;
+  border: 1px solid rgba(0, 0, 0, 0.2); /* Adjust border for better visibility */
+  border-radius: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+  color: var(--jrnavercomnero);
+  resize: none; /* Prevent resizing */
+  font-family: var(--font-family-abhaya_libre_extrabold-regular);
+  font-size: var(--font-size-m);
+  position: absolute;
+  top: 266px;
+  left: 116px;
+  z-index: 3; /* Ensure the textarea is above the overlay and the rectangle-331 */
+}
+
+.request-page-upload .rectangle-333::placeholder {
+  color: rgba(0, 0, 0, 0.5); /* Placeholder color for better visibility */
+}
+
+.request-page-upload .rectangle-333-overlay {
   height: 358px;
   left: 116px;
   position: absolute;
   top: 266px;
   width: 1271px;
+  z-index: 1; /* Ensure this overlay is below the textarea */
 }
 
 .request-page-upload .text-5 {

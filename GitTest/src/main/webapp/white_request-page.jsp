@@ -115,7 +115,7 @@
                 <div class="group-2613114">
                     <div class="overlap-group2">
                         <div class="number"><%= qa.getQa_idx() %></div>
-                        <div class="text-7"><a href="request-page-post.jsp?qa_idx=<%= qa.getQa_idx() %>" style="color: black;"><%= qa.getQa_title() %></a></div>
+                        <div class="text-7"><a href="white_request-page-post.jsp?qa_idx=<%= qa.getQa_idx() %>" style="color: black;"><%= qa.getQa_title() %></a></div>
                         <div class="date"><%= qa.getQa_d_at() %></div>
                         <div class="user-name"><%= qa.getU_id() %></div>
                     </div>

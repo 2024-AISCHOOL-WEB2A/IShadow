@@ -38,6 +38,7 @@ html, body {
     height: 15vw;
     border-radius: 50%;
     margin-right: 0.14vw;
+    top:165px;
     object-fit: cover;
 }
 .flex-col {
@@ -48,9 +49,20 @@ html, body {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background-color: #000000;
-    width: 100%;
+   
 }
+.header{
+ 
+    width: 100%;
+        display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top:-250px;
+    padding: 10px 20px;
+    background-color: ;
+    color: white;
+    font-family: 'Maplestory Bold';}
 </style>
 <script>
 function submitForm(name) {

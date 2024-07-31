@@ -20,7 +20,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center; /* 추가: 수직 중앙 정렬 */
-  min-height: 71.11vw;
+  min-height: 58.11vw;
   padding: 2.01vw 5.25vw;
   width: 102.78vw;
 }
@@ -60,7 +60,7 @@
   margin-right: 0.14vw;
   object-fit: cover;
   position:relative;
-  top:-57px;
+  top:165px;
   width: 15vw;
 }
 
@@ -212,7 +212,7 @@
     min-width: 13.82vw;
     text-align: center;
     position:relative;
-    top:-68px;
+    top:174px;
     white-space: nowrap;
     font-family: 'Maplestory Bold', sans-serif; /* 폰트 패밀리 추가 */
     color: var(--white);
