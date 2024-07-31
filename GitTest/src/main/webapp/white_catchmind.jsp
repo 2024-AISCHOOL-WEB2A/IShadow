@@ -117,7 +117,7 @@ canvas {
 /* 타이머 바 스타일 */
 .timer-bar {
     height: 100%; /* 높이 100% */
-    background-color: #ff0000; /* 배경색 설정 */
+    background-color: white; /* 배경색 설정 */
     transition: width 0.1s linear; /* 너비 전환 효과 */
 }
 
@@ -337,67 +337,67 @@ canvas {
 </style>
 </head>
 <body style="margin: 0; background: #ffffff">
-	<input type="hidden" id="anPageName" name="page" value="catchmind" />
+   <input type="hidden" id="anPageName" name="page" value="catchmind" />
 
-	<div class="container-center-horizontal">
-		<div class="catchmind screen">
-			<div class="overlap-group1">
-				<img class="background-2" src="assets/img/white_background.png" alt="background 2" /> 
-				<img class="image" src="assets/img/----.svg" alt="image" />
-				<div class="header-container">
-					<%@ include file="white_header.jsp"%>
-				</div>
-				<div class="view">
-					<div id="loading">로딩 중...</div>
-					<canvas id="canvasOutput" willReadFrequently="true"></canvas>
-					<canvas id="canvas" willReadFrequently="true"></canvas>
-					<div id="label-container"></div>
-				</div>
-				<button id="toggleButton" onclick="toggleTransform()">Toggle Transform</button>
-				<div class="view-1">
-					<img id="quiz-image" src="" alt="quiz image" style="display: none;" />
-				</div>
-				<div class="group-5">
-					<img class="rectangle rectangle-dark" src="assets/img/catchmind/rectangle-6.png" alt="Rectangle 6" /> 
-					<img class="rectangle rectangle-dark" src="assets/img/catchmind/rectangle-6.png" alt="Rectangle 9" /> 
-					<img class="rectangle rectangle-dark" src="assets/img/catchmind/rectangle-6.png" alt="Rectangle 7" /> 
-					<img class="rectangle rectangle-dark" src="assets/img/catchmind/rectangle-6.png" alt="Rectangle 8" /> 
-					<img class="rectangle rectangle-dark" src="assets/img/catchmind/rectangle-6.png" alt="Rectangle 10" />
-				</div>
-				<div class="rectangle-11">
-					<div class="timer-bar" id="timer-bar"></div>
-					<div class="time-display" id="time-display">0초</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div id="myModal" class="modal">
-		<div class="modal-content">
-			<span class="close" onclick="closeModal()">&times;</span>
-			<p id="modal-time-display">00m 00s</p>
-			<div class="input-container">
-				<form action="white_InsertRanking" method="post" id="rankingForm">
-					<!--required는 필수 입력-->
-					<div class="text-50" onclick="showInput()">닉네임을 입력하세요.</div>
-					<input type="text" placeholder="닉네임을 입력하세요" name="nickName" class="input-field" onblur="hideInput()" required>
-					<input type="hidden" id="hidden-time" name="hiddenTime"> 
-					<input type="submit" value="등록">
-				</form>
-			</div>
-		</div>
-	</div>
+   <div class="container-center-horizontal">
+      <div class="catchmind screen">
+         <div class="overlap-group1">
+            <img class="background-2" src="assets/img/white_background.png" alt="background 2" /> 
+            <img class="image" src="assets/img/----.svg" alt="image" />
+            <div class="header-container">
+               <%@ include file="white_header.jsp"%>
+            </div>
+            <div class="view">
+               <div id="loading">로딩 중...</div>
+               <canvas id="canvasOutput" willReadFrequently="true"></canvas>
+               <canvas id="canvas" willReadFrequently="true"></canvas>
+               <div id="label-container"></div>
+            </div>
+            <button id="toggleButton" onclick="toggleTransform()">Toggle Transform</button>
+            <div class="view-1">
+               <img id="quiz-image" src="" alt="quiz image" style="display: none;" />
+            </div>
+            <div class="group-5">
+               <img class="rectangle rectangle-dark" src="assets/img/catchmind/rectangle-6.png" alt="Rectangle 6" /> 
+               <img class="rectangle rectangle-dark" src="assets/img/catchmind/rectangle-6.png" alt="Rectangle 9" /> 
+               <img class="rectangle rectangle-dark" src="assets/img/catchmind/rectangle-6.png" alt="Rectangle 7" /> 
+               <img class="rectangle rectangle-dark" src="assets/img/catchmind/rectangle-6.png" alt="Rectangle 8" /> 
+               <img class="rectangle rectangle-dark" src="assets/img/catchmind/rectangle-6.png" alt="Rectangle 10" />
+            </div>
+            <div class="rectangle-11">
+               <div class="timer-bar" id="timer-bar"></div>
+               <div class="time-display" id="time-display">0초</div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="myModal" class="modal">
+      <div class="modal-content">
+         <span class="close" onclick="closeModal()">&times;</span>
+         <p id="modal-time-display">00m 00s</p>
+         <div class="input-container">
+            <form action="white_InsertRanking" method="post" id="rankingForm">
+               <!--required는 필수 입력-->
+               <div class="text-50" onclick="showInput()">닉네임을 입력하세요.</div>
+               <input type="text" placeholder="닉네임을 입력하세요" name="nickName" class="input-field" onblur="hideInput()" required>
+               <input type="hidden" id="hidden-time" name="hiddenTime"> 
+               <input type="submit" value="등록">
+            </form>
+         </div>
+      </div>
+   </div>
 
-	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/pose@0.8/dist/teachablemachine-pose.min.js"></script>
-	<script async src="https://docs.opencv.org/4.x/opencv.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/pose@0.8/dist/teachablemachine-pose.min.js"></script>
+   <script async src="https://docs.opencv.org/4.x/opencv.js"></script>
 
-	<script type="text/javascript">
+   <script type="text/javascript">
     // 게임 관련 변수들 초기화
     let games = [];
     let cnt = 0;
     let timeLeft = 0;
     let timerId;
-    let duration = 1; // 타이머 시간 (초)
+    let duration = 60; // 타이머 시간 (초)
     let currentGameIndex = 0;
     let gameEnded = false;
     let transformEnabled = false;
@@ -407,7 +407,7 @@ canvas {
 request.setCharacterEncoding("UTF-8");
 ArrayList<Games> gamesList = (ArrayList<Games>) request.getAttribute("games");
 for (int i = 0; i < gamesList.size(); i++) {
-	game = gamesList.get(i);%>
+   game = gamesList.get(i);%>
         games.push({
             id: <%=game.getIdx()%>,
             qes: "<%=game.getQes_img()%>",
@@ -474,7 +474,7 @@ for (int i = 0; i < gamesList.size(); i++) {
     }
 
     // 모델 및 웹캠 관련 변수들 초기화
-    const URL = "model/";
+    const URL = "moddd/";
     let model, webcam, ctx, labelContainer, maxPredictions;
 
     // 모델 초기화 및 웹캠 설정 함수

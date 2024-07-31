@@ -100,8 +100,8 @@
 		padding: 15px !important; /* 패딩 추가 */
 		border: 2px solid white !important;
 		border-radius: 15px !important;
-		color: white !important;
-		background: #4be !important;
+		color: #4bed !important;
+		background: white !important;
 		font-size: 24px !important; /* 글씨 크기 키움 */
 		cursor: pointer !important;
 	}
