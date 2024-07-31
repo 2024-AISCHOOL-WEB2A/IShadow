@@ -93,8 +93,8 @@
 }
 
 .login-button, .logout-button {
-  background-color: #007bff;
-  color: white;
+  background-color: white;
+  color: #4bed;
   border: none;
   padding: 10px 20px;
   font-family: 'Maplestory Bold';
@@ -105,7 +105,7 @@
 }
 
 .login-button:hover {
-  background-color: #0056b3;
+  background-color: #0af3f3;
 }
 
 .logout-button {

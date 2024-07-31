@@ -376,7 +376,7 @@ canvas {
 			<span class="close" onclick="closeModal()">&times;</span>
 			<p id="modal-time-display">00m 00s</p>
 			<div class="input-container">
-				<form action="InsertRanking" method="post" id="rankingForm">
+				<form action="white_InsertRanking" method="post" id="rankingForm">
 					<!--required는 필수 입력-->
 					<div class="text-50" onclick="showInput()">닉네임을 입력하세요.</div>
 					<input type="text" placeholder="닉네임을 입력하세요" name="nickName" class="input-field" onblur="hideInput()" required>
@@ -721,7 +721,7 @@ for (int i = 0; i < gamesList.size(); i++) {
 
     // 모달 닫기 함수
     function closeModal() {
-        window.location.href = 'SelectRanking';
+        window.location.href = 'white_SelectRanking';
     }
 
     // 페이지 로드 시 초기화 함수 호출

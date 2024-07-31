@@ -15,7 +15,7 @@
     <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
     <meta name="og:type" content="website" />
     <meta name="twitter:card" content="photo" />
-    <link rel="stylesheet" type="text/css" href="assets/css/catchmindu95ranking.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/white_catchmindu95ranking.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/styleguide.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/globals.css" />
   </head>
@@ -25,7 +25,7 @@
   		window.location.href = 'white_main.jsp';
   	}
   	function reTry(){
-  		window.location.href = 'GameStart';
+  		window.location.href = 'WhiteGameStart';
   	}
   </script>
     <input type="hidden" id="anPageName" name="page" value="catchmindu95ranking" />
@@ -34,17 +34,17 @@
         <div class="overlap-group3">
           <img
             class="create-a-high-resolu"
-            src="assets/img/background.png"
+            src="assets/img/white_background.png"
             alt="Create a high-resolution illustration for a presentation thumbnail with a _The L s-1584004691 2"
           />
           <%@ include file="white_header.jsp" %>
           <div class="overlap-group" onclick="mover">
-            <img class="image" src="assets/img/------.png" alt="image" />
+            <img class="image" src="assets/img/white_replay.png" alt="image" />
             <div class="view view-2"></div>
             <div class="gText">처음으로</div>
           </div>
           <div class="overlap-group1" onclick="reTry()">
-            <img class="image-1" src="assets/img/catchmind_ranking/--------.png" alt="image" />
+            <img class="image-1" src="assets/img/catchmind_ranking/white_gohome.png" alt="image" />
             <div class="view-1 view-2"></div>
             <div class="gText">다시하기</div>
           </div>
