@@ -99,7 +99,7 @@ html, body {
 	justify-content: center;
 	align-items: center;
 	overflow: hidden;
-	background-color: red;
+	background-color: white;
 	margin-top: 0px; /* Ensure red circle is not affected */
 	position: relative;
 	z-index: 2; /* Higher z-index to be on top */

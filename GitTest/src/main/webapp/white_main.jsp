@@ -68,7 +68,7 @@ body, html {
 }
 
 .view img {
-	width: 210px;
+	width: 280px;
 }
 
 .view-text {
@@ -202,6 +202,10 @@ input:checked+.slider {
 input:checked+.slider:before {
 	transform: translateX(26px);
 }
+#theme-label {
+    color: #ffffff; /* 흰색 텍스트 */
+}
+
 </style>
 </head>
 <body>
@@ -254,7 +258,7 @@ input:checked+.slider:before {
 			</div>
 		</div>
 	</div>
-
+<span id="theme-label">Dark Mode</span>
 	<!-- 튜토리얼 모달 -->
 	<div id="tutorialModal" class="modal">
 		<div class="modal-content">
@@ -360,34 +364,49 @@ input:checked+.slider:before {
             const toggle = document.getElementById('theme-toggle');
             const body = document.body;
             const themeLabel = document.getElementById('theme-label');
-    
+
+            // 로컬 스토리지에서 테마 상태를 가져옴
+            const savedTheme = localStorage.getItem('theme');
+            
+            if (savedTheme) {
+                if (savedTheme === 'light') {
+                    body.classList.add('light-theme');
+                    themeLabel.textContent = 'Light Mode';
+                    toggle.checked = true;
+                } else {
+                    body.classList.add('dark-theme');
+                    themeLabel.textContent = 'Dark Mode';
+                    toggle.checked = false;
+                }
+            } else {
+                // 기본 테마 설정
+                body.classList.add('light-theme');
+                themeLabel.textContent = 'Light Mode';
+                toggle.checked = true;
+            }
+
             toggle.addEventListener('change', function() {
                 if (this.checked) {
                     body.classList.remove('dark-theme');
                     body.classList.add('light-theme');
                     themeLabel.textContent = 'Light Mode';
+                    localStorage.setItem('theme', 'light');
                     setTimeout(() => {
-                        window.location.href = 'main.jsp';
-                    }, 100); // 딜레이 추가
+                        window.location.href = 'white_main.jsp';
+                    }, 500); // 딜레이 추가
                 } else {
                     body.classList.remove('light-theme');
                     body.classList.add('dark-theme');
                     themeLabel.textContent = 'Dark Mode';
+                    localStorage.setItem('theme', 'dark');
                     setTimeout(() => {
-                        window.location.href = 'white_main.jsp';
-                    }, 100); // 딜레이 추가
+                        window.location.href = 'main.jsp';
+                    }, 500); // 딜레이 추가
                 }
             });
-    
-            // 초기 로드 시 현재 테마 설정
-            if (body.classList.contains('light-theme')) {
-                toggle.checked = true;
-                themeLabel.textContent = 'Light Mode';
-            } else {
-                toggle.checked = false;
-                themeLabel.textContent = 'Dark Mode';
-            }
         });
+
+
     </script>
 </body>
 </html>
