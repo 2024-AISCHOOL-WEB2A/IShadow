@@ -76,8 +76,9 @@ function submitForm(name) {
         <div class="stroy-choice screen" style="padding-top: 0px">
             <div class="flex-col">
                 <!-- header -->
+               <%@ include file="white_header.jsp" %> 
                 <div class="sticky-header">
-                    <%@ include file="white_header.jsp" %>
+                    
                 </div>
                 
                 <!-- 동화선택 -->
