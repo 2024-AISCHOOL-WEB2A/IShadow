@@ -38,9 +38,9 @@
             max-width: 900px; /* 최대 너비 설정 */
             margin: 0 auto;
             padding: 30px; /* 패딩을 조금 줄임 */
-            background-color: rgba(0, 0, 0, 0.8); /* 검정 배경색에 불투명도 추가 */
+            background-color:rgba(255, 255, 255, 0.8); /* 검정 배경색에 불투명도 추가 */
             border-radius: 20px;
-            border: 2px solid yellow;
+            border: 2px solid #4bed;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             color: white;
             font-family: 'Maplestory Bold';
@@ -56,19 +56,19 @@
             margin-bottom: 8px;
             font-weight: bold;
             font-size: 20px; /* 글씨 크기 증가 */
-            color: white;
+            color: #4bed;
         }
 
         .form-group input,
         .form-group textarea {
             width: 100%;
             padding: 15px; /* 패딩 증가 */
-            border: 2px solid yellow;
+            border: 2px solid #4bed;
             border-radius: 20px;
             box-sizing: border-box;
             font-size: 18px; /* 글씨 크기 증가 */
             background-color: transparent;
-            color: white;
+            color: black;
             font-family: 'Maplestory Bold';
         }
 
@@ -91,14 +91,14 @@
         }
 
         .btn-cancel {
-            background-color: transparent;
-            color: white;
-            border: 2px solid yellow;
+            background-color: white;
+            color: #4bed;
+            border: 2px solid white;
         }
 
         .btn-submit {
-            background-color: yellow;
-            color: black;
+            background-color: #4bed;
+            color: white;
         }
     </style>
 </head>

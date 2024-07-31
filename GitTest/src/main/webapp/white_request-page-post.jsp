@@ -87,7 +87,7 @@ body {
 .value {
    font-size: 24px;
    font-weight: normal;
-   border: 2px solid yellow;
+   border: 2px solid white;
    border-radius: 15px;
    padding: 10px; /* Added padding */
    background: transparent;
@@ -106,7 +106,7 @@ body {
 <body>
    <!-- header -->
    <div class="header-fixed">
-      <%@ include file="header.jsp"%>
+      <%@ include file="white_header.jsp"%>
    </div>
    
    <div class="container-center-horizontal">

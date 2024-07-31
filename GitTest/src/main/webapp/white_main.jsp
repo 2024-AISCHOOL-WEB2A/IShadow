@@ -51,7 +51,7 @@ body, html {
    display: flex;
    justify-content: center;
    flex-wrap: wrap;
-   margin-top: 20px;
+   margin-top: 300px;
 }
 
 .view {
