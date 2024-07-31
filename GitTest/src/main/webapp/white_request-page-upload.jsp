@@ -108,7 +108,7 @@
         <div class="request-page-upload screen">
             <div class="overlap-group3">
                 <!-- header -->
-                <%@ include file="header.jsp" %>
+                <%@ include file="white_header.jsp" %>
                 <div class="form-container">
                     <form action="qaAllSelect" method="post" accept-charset="UTF-8">
                         <div class="form-group">
