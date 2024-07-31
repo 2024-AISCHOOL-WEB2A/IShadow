@@ -20,7 +20,7 @@
     }
     body, input, button {
         font-family: 'Maplestory Bold', sans-serif !important; /* 폰트 패밀리 추가 */
-        color: white !important;
+        color: black !important;
     }
     body {
         margin: 0 !important;
