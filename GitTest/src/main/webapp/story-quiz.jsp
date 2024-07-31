@@ -165,14 +165,96 @@ html, body {
 .hintToggle{
 	position: relative;
 }
+
+#canvasOutput{
+ position: absolute;  /* 상위 요소 대비 위치 설정 */
+    z-index: 9999;
+}
+
+#canvasOutput{
+width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	border-radius: 50%;
+	position: absolute;
+}
+#canvas{
+width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	border-radius: 50%;
+	position: absolute;
+	}
 </style>
+<script async src="https://docs.opencv.org/4.x/opencv.js"></script>
 <script
 	src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
 <script
 	src="https://cdn.jsdelivr.net/npm/@teachablemachine/pose@0.8/dist/teachablemachine-pose.min.js"></script>
-<script type="text/javascript">
+
+</head>
+<body onload="init()">
+	<div class="container">
+		<%@ include file="header.jsp"%>
+		<div class="circles">
+			<div class="circle" id="story-quiz">
+				<img src="<%=choicedStory.get(story_idx).getStoryImage()%>">
+			</div>
+			<img class="image" src="assets/img/----.svg" alt="image" />
+			<div class="circle red">
+				<div id="webcam-container">
+				
+				<canvas id="canvasOutput" willReadFrequently="true"></canvas>
+					<canvas id="canvas" willReadFrequently="true"></canvas>
+				</div>
+				<img class="storyHint" src="<%=choicedStory.get(story_idx).getHint()%>">
+			</div>
+		</div>
+		<div class="buttons">
+			<button class="button" onclick="skipQuestion()">넘어 가기</button>
+			<button class="hintToggle" onclick="hintToggle()">힌트보기</button>
+		</div>
+	</div>
+	<script type="text/javascript">
     const URL = "moddd/";
     let model, webcam, ctx, labelContainer, maxPredictions;
+    let videoInput; 
+    
+    document.addEventListener('DOMContentLoaded', onOpenCvReady());
+    
+    function onOpenCvReady() {
+        console.log("OpenCV.js is ready."); // OpenCV.js가 로드된 것을 확인
+        const canvasOutput = document.getElementById('canvasOutput');
+        const canvas = document.getElementById('canvas');
+        
+        if (!canvasOutput || !canvas) {
+            console.error("Canvas element not found!");
+            return;
+        }
+
+        // 웹캠 스트림을 설정
+        navigator.mediaDevices.getUserMedia({ video: { width: 640, height: 480 } })
+            .then(function(stream) {
+                videoInput = document.createElement('video');
+                videoInput.width = 640;
+                videoInput.height = 480;
+                videoInput.srcObject = stream;
+                videoInput.play();
+                videoInput.onloadedmetadata = function() {
+                    console.log("Video metadata loaded."); // 비디오 메타데이터가 로드된 것을 확인
+                    init(); // 초기화 함수 호출
+                };
+            })
+            .catch(function(err) {
+                console.log("An error occurred: " + err);
+            });
+    }
 
     async function init() {
         const modelURL = URL + "model.json";
@@ -189,12 +271,7 @@ html, body {
         window.requestAnimationFrame(loop);
 
         const webcamContainer = document.getElementById("webcam-container");
-        const canvas = document.createElement("canvas");
-        canvas.width = size;
-        canvas.height = size;
-        canvas.style.width = "100%";
-        canvas.style.height = "100%";
-        webcamContainer.appendChild(canvas);
+        const canvas = document.getElementById("canvas");
 
         ctx = canvas.getContext("2d");
     }
@@ -219,7 +296,7 @@ html, body {
             }
         }
 
-        drawPose(pose);
+        drawTransformedVideo();
 
         const story_answer = "<%=choicedStory.get(story_idx).getAnser()%>"; 
         if (maxProbability > 0.75 && bestMatch.toLowerCase() === story_answer.toLowerCase()) {
@@ -229,6 +306,80 @@ html, body {
             setTimeout(() => {
                 goToNext();
             }, 2000);  
+        }
+    }
+    
+    // 변환된 영상 그리기 함수
+    function drawTransformedVideo() {
+    	console.log("변환된 영상 그리기")
+        const canvasOutput = document.getElementById('canvasOutput');
+        const ctx = canvasOutput.getContext('2d');
+
+        if (videoInput) {
+            // 비디오 프레임을 캔버스에 그립니다.
+            ctx.drawImage(videoInput, 0, 0, canvasOutput.width, canvasOutput.height);
+
+            // OpenCV.js를 사용하여 이미지 데이터를 처리합니다.
+            const src = cv.imread(canvasOutput);
+            const hsv = new cv.Mat();
+            const mask = new cv.Mat();
+            const kernel = cv.Mat.ones(3, 3, cv.CV_8U);
+
+            // 영상 좌우 반전
+            cv.flip(src, src, 1);
+
+            // HSV 색 공간으로 변환
+            cv.cvtColor(src, hsv, cv.COLOR_BGR2HSV);
+
+            // 피부색 범위 설정 (HSV)
+            let lower_skin = new cv.Mat(hsv.rows, hsv.cols, hsv.type(), [0, 20, 70, 0]);
+            let upper_skin = new cv.Mat(hsv.rows, hsv.cols, hsv.type(), [20, 255, 255, 255]);
+
+            // 피부색에 대한 마스크 생성
+            cv.inRange(hsv, lower_skin, upper_skin, mask);
+
+            // 모폴로지 연산을 통해 노이즈 제거 및 손 윤곽 강화
+            cv.morphologyEx(mask, mask, cv.MORPH_CLOSE, kernel);
+            cv.morphologyEx(mask, mask, cv.MORPH_OPEN, kernel);
+
+            // 윤곽선 찾기
+            let contours = new cv.MatVector();
+            let hierarchy = new cv.Mat();
+            cv.findContours(mask, contours, hierarchy, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE);
+
+            // 빈 화면 생성 (모든 부분이 흰색)
+            let hand_shadow = new cv.Mat(canvasOutput.height, canvasOutput.width, cv.CV_8UC3, new cv.Scalar(255, 255, 255));
+
+            // 가장 큰 윤곽선 찾기 (손으로 간주)
+            if (contours.size() > 0) {
+                let maxContourIndex = 0;
+                let maxArea = cv.contourArea(contours.get(0));
+                for (let i = 1; i < contours.size(); i++) {
+                    let area = cv.contourArea(contours.get(i));
+                    if (area > maxArea) {
+                        maxArea = area;
+                        maxContourIndex = i;
+                    }
+                }
+                if (maxArea > 5000) {  // 노이즈 제거
+                    let max_contour = contours.get(maxContourIndex);
+                    cv.drawContours(hand_shadow, contours, maxContourIndex, new cv.Scalar(0, 0, 0), -1);
+                }
+            }
+
+            // 결과 영상 출력
+            cv.imshow('canvasOutput', hand_shadow);
+
+            // 메모리 해제
+            src.delete();
+            hsv.delete();
+            mask.delete();
+            lower_skin.delete();
+            upper_skin.delete();
+            contours.delete();
+            hierarchy.delete();
+            hand_shadow.delete();
+            kernel.delete();
         }
     }
 
@@ -276,24 +427,5 @@ html, body {
         }
     }
 </script>
-</head>
-<body onload="init()">
-	<div class="container">
-		<%@ include file="header.jsp"%>
-		<div class="circles">
-			<div class="circle" id="story-quiz">
-				<img src="<%=choicedStory.get(story_idx).getStoryImage()%>">
-			</div>
-			<img class="image" src="assets/img/----.svg" alt="image" />
-			<div class="circle red">
-				<div id="webcam-container"></div>
-				<img class="storyHint" src="<%=choicedStory.get(story_idx).getHint()%>">
-			</div>
-		</div>
-		<div class="buttons">
-			<button class="button" onclick="skipQuestion()">넘어 가기</button>
-			<button class="hintToggle" onclick="hintToggle()">힌트보기</button>
-		</div>
-	</div>
 </body>
 </html>
