@@ -18,6 +18,15 @@
     <link rel="stylesheet" type="text/css" href="assets/css/styleguide.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/globals.css" />
     <style>
+    body {
+			font-family: 'Maplestory Bold', sans-serif !important;
+			margin: 0;
+			background: url('assets/img/background.png') no-repeat center center
+			fixed;
+			background-size: cover;
+			overflow: auto; /* 스크롤 허용 */
+			color: white !important;
+		}
     	.title{
 		    width: 100%;
 		    height: 3.47vw;
@@ -96,7 +105,7 @@
     	
     	.form-container {
             width: 80%; /* 이전보다 작은 크기로 설정 */
-            max-width: 600px !important; /* 최대 너비 설정 */
+            max-width: 900px; /* 최대 너비 설정 */
             margin: 0 auto;
             padding: 30px; /* 패딩을 조금 줄임 */
             background-color: rgba(0, 0, 0, 0.8); /* 검정 배경색에 불투명도 추가 */
@@ -134,7 +143,7 @@
         }
 
         .form-group textarea {
-            height: 250px; /* 높이 증가 */
+            height: 150px; /* 높이 증가 */
         }
 
         .buttons {
@@ -158,7 +167,7 @@
         }
 
         .btn-submit {
-            background-color: #a2a1a0;
+            background-color: yellow;
             color: black;
         }
 
@@ -166,27 +175,32 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
     	function validation(){
-    		let arr = document.querySelectorAll("input[type='text']");
-    		for(let i=0;i<arr.length;i++){
-    			if(arr[i].value == "" || arr[i].value == null || typeof arr[i] == "undefined"){
-    				alert(arr[i].name+"을 입력 해주세요.");
-    				arr[i].focus();
-    				return;
-    			}
-    		}
-			
-    		let firstFeature = $('#firstFeature').val();
-    		let fileUpload = $('.upload-name').val();
-    		let secondFeature = $('#secondFeature').val();
-    		let user = $('#user').val();
-    		let thirdFeature = $('#thirdFeature').val();
     		let title = $('#title').val();
+    		let fileUpload = $('.upload-name').val();
     		let inputanswer = $('#inputanswer').val();
-
-    		if(fileUpload == "" || fileUpload == null){
-    			alert("파일을 입력해주세요.");
-    			return;
-    		}
+    		let firstFeature = $('#firstFeature').val();
+    		let secondFeature = $('#secondFeature').val();
+    		let thirdFeature = $('#thirdFeature').val();
+    		let user = $('#user').val();
+    		if(title == '' || title == null){
+   				alert("제목을 입력 해주세요.");
+   				return;
+   			}else if(fileUpload == '' || fileUpload == null){
+   				alert("파일을 입력 해주세요.");
+   				return;
+   			}else if(inputanswer == '' || inputanswer == null){
+   				alert("정답을 입력 해주세요.");
+   				return;
+   			}else if(firstFeature == '' || firstFeature == null){
+   				alert("첫번째 특징을 입력 해주세요.");
+   				return;
+   			}else if(secondFeature == '' || secondFeature == null){
+   				alert("두번째 특징을 입력 해주세요.");
+   				return;
+   			}else if(thirdFeature == '' || thirdFeature == null){
+   				alert("세번째 특징을 입력 해주세요.");
+   				return;
+   			}
 
     		$.ajax({
     			type: "POST",
@@ -232,18 +246,19 @@
    				<input type="text" id="inputanswer" name="inputanswer">
    			</div>
    			<div class="form-group">
-   				<label>첫번째 특징</label>
-   				<input type="text" id="firstFeature" name="firstFeature">
-   			</div>
-   			<div class="form-group">
-   				<label>두번째 특징</label>
-   				<input type="text" id="secondFeature" name="secondFeature">
-   			</div>
-   			<div class="form-group">
-   				<label>세번째 특징</label>
-   				<input type="text" id="thirdFeature" name="thirdFeature">
-   			</div>
+               	<label for="content">첫번째 특징</label>
+            	<textarea id="firstFeature" name="firstFeature" placeholder="내용을 입력하세요" required></textarea>
+            </div>
+            <div class="form-group">
+               	<label for="content">두번째 특징</label>
+            	<textarea id="secondFeature" name="secondFeature" placeholder="내용을 입력하세요" required></textarea>
+            </div>
+            <div class="form-group">
+               	<label for="content">세번째 특징</label>
+            	<textarea id="thirdFeature" name="thirdFeature" placeholder="내용을 입력하세요" required></textarea>
+            </div>
    			<div class="buttons">
+   				<button type="button" class="btn btn-cancel" onclick="window.history.back();">취소</button>
 	            <button type="button" class="btn btn-submit" onclick="validation()">등록</button>
           	</div>
    		</form>
