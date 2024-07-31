@@ -72,6 +72,96 @@
 		    top: 280px;
 		    font-size: 30px;
 		 }
+		 .overlap-group2 {
+	        display: flex !important;
+	        flex-direction: column !important;
+	        align-items: center !important;
+	        background: rgba(0, 0, 0, 0.8) !important;
+	        padding: 40px !important; /* 패딩 증가 */
+	        border: 2px solid #ffe077 !important; /* 노란색 외곽선 추가 */
+	        border-radius: 15px !important;
+	        width: 600px !important; /* 너비 증가 */
+	        height: 700px;
+    	}
+    	.input-field {
+	        width: 100% !important;
+	        font-family: 'Maplestory Bold', sans-serif; /* 폰트 패밀리 추가 */
+	        padding: 25px !important; /* 패딩 증가 */
+	        margin: 20px 0 !important; /* 간격 증가 */
+	        box-sizing: border-box !important;
+	        border: 2px solid yellow !important;
+	        border-radius: 15px !important;
+	        font-size: 24px !important; /* 크기 증가 */
+    	}
+    	
+    	.form-container {
+            width: 80%; /* 이전보다 작은 크기로 설정 */
+            max-width: 600px !important; /* 최대 너비 설정 */
+            margin: 0 auto;
+            padding: 30px; /* 패딩을 조금 줄임 */
+            background-color: rgba(0, 0, 0, 0.8); /* 검정 배경색에 불투명도 추가 */
+            border-radius: 20px;
+            border: 2px solid yellow;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            color: white;
+            font-family: 'Maplestory Bold';
+            margin-top: 150px; /* 위쪽 여백 추가 */
+        }
+
+        .form-group {
+            margin-bottom: 15px; /* 그룹 간격을 조금 줄임 */
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            font-size: 20px; /* 글씨 크기 증가 */
+            color: white;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px; /* 패딩 증가 */
+            border: 2px solid yellow;
+            border-radius: 20px;
+            box-sizing: border-box;
+            font-size: 18px; /* 글씨 크기 증가 */
+            background-color: transparent;
+            color: white;
+            font-family: 'Maplestory Bold';
+        }
+
+        .form-group textarea {
+            height: 250px; /* 높이 증가 */
+        }
+
+        .buttons {
+             display: flex; 
+            justify-content: space-between;
+        }
+
+        .btn {
+            padding: 15px 30px; /* 패딩 증가 */
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 18px; /* 글씨 크기 증가 */
+            font-family: 'Maplestory Bold';
+        }
+
+        .btn-cancel {
+            background-color: transparent;
+            color: white;
+            border: 2px solid yellow;
+        }
+
+        .btn-submit {
+            background-color: #a2a1a0;
+            color: black;
+        }
+
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
@@ -85,13 +175,13 @@
     			}
     		}
 			
-    		let firstFeature = $('.firstFeature').val();
+    		let firstFeature = $('#firstFeature').val();
     		let fileUpload = $('.upload-name').val();
-    		let secondFeature = $('.secondFeature').val();
+    		let secondFeature = $('#secondFeature').val();
     		let user = $('#user').val();
-    		let thirdFeature = $('.thirdFeature').val();
-    		let title = $('.title').val();
-    		let inputanswer = $('.inputanswer').val();
+    		let thirdFeature = $('#thirdFeature').val();
+    		let title = $('#title').val();
+    		let inputanswer = $('#inputanswer').val();
 
     		if(fileUpload == "" || fileUpload == null){
     			alert("파일을 입력해주세요.");
@@ -99,7 +189,7 @@
     		}
 
     		$.ajax({
-    			type: "GET",
+    			type: "POST",
     			data: "firstFeature="+firstFeature+"&fileUpload="+fileUpload
     			+"&secondFeature="+secondFeature+"&user="+user
     			+"&thirdFeature="+thirdFeature+"&title="+title
@@ -123,53 +213,42 @@
   <body style="margin: 0; background: #000000 ">
     <input type="hidden" id="anPageName" name="page" value="post-page" />
     <%@ include file="header.jsp"%>
-    <div class="container-center-horizontal">
-      <div class="post-page screen">
-        <div class="overlap-group1 single-linebody-base">
-          <div class="rectangle-24"></div>
-          
-          <form method="post" id="boardup" action="PostsInsert">
-          	<input type="hidden" id="user" name="user" value="<%=loginMember.getU_id()%>">
-          		<div class="rectangle-27"></div>
-	          	<div class="text-66">제목</div>
-	          	<div class="rectangle-28">
-	            	<input type="text" class="firstFeature" name="firstFeature" placeholder="Type here...">
-	          	</div>
-          
-	          <div class="text-65">파일첨부</div>
-	          <div class="filebox">
-	            <input class="upload-name" name="fileUpload" readonly>
-	            <input type="file" id="file_01" class="file" title="파일 업로드">
-	            <label for="file_01" class="upload-button">파일업로드</label> 
-	          </div>
-	          
-	          <div class="rectangle-29">
-	            <input type="text" class="secondFeature" name="secondFeature" placeholder="Type here...">
-	          </div>
-	          <div class="rectangle-30">
-	            <input type="text" class="thirdFeature" name="thirdFeature" placeholder="Type here...">
-	          </div>
-	          <div class="rectangle-31">
-	            <input type="text" class="title" name="title" placeholder="Type here...">
-	          </div>
-	          <div class="text-67">첫번째 특징</div>
-	          <div class="text-68">두번째 특징</div>
-	          <div class="text-69">세번째 특징</div>
-	          <div class="rectangle-32"></div>
-	          <div class="text-70">정답 입력</div>
-	          <div class="rectangle-33">
-	            <input type="text" class="inputanswer" name="inputanswer">
-	          </div>
-	          <div class="container">
-	            <a href="" title="Button border blue/green" class="button btnBorder btnBlueGreen"></a>
-	          </div>
-	          <div class="uploadText" onclick="validation()">올리기</div>
-          </from>
-          
-          <div class="overlap-group"></div>
-        </div>
-      </div>
-    </div>
+
+   	<div class="form-container">
+   		<form method="post" id="boardup">
+   			<input type="hidden" id="user" name="user" value="<%=loginMember.getU_id()%>">
+   			<div class="form-group">
+   				<label for="title">제목</label>
+   				<input type="text" id="title" name="title">
+   			</div>
+   			<div class="filebox">
+   				<label>파일 첨부</label>
+   				<input class="upload-name" name="fileUpload" readonly>
+           		<input type="file" id="file_01" class="file" title="파일 업로드">
+	            <label for="file_01" class="upload-button">파일업로드</label>
+   			</div>
+   			<div class="form-group">
+   				<label>정답</label>
+   				<input type="text" id="inputanswer" name="inputanswer">
+   			</div>
+   			<div class="form-group">
+   				<label>첫번째 특징</label>
+   				<input type="text" id="firstFeature" name="firstFeature">
+   			</div>
+   			<div class="form-group">
+   				<label>두번째 특징</label>
+   				<input type="text" id="secondFeature" name="secondFeature">
+   			</div>
+   			<div class="form-group">
+   				<label>세번째 특징</label>
+   				<input type="text" id="thirdFeature" name="thirdFeature">
+   			</div>
+   			<div class="buttons">
+	            <button type="button" class="btn btn-submit" onclick="validation()">등록</button>
+          	</div>
+   		</form>
+   	</div>
+
     <script>
       console.dir(document.getElementsByClassName("fileupload"));
 
