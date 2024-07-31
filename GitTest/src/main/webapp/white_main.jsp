@@ -69,7 +69,7 @@ body, html {
 }
 
 .view img {
-   width: 210px;
+   width: 280px;
 }
 
 .view-text {
@@ -138,7 +138,7 @@ body, html {
    margin: 15px 0;
    border: none;
    cursor: pointer;
-   width: 100%;
+   width: 92%;
 }
 
 .modal-btn:hover {
@@ -165,35 +165,35 @@ body, html {
                <!-- 튜토리얼 -->
                <a href="javascript:void(0);" id="tutorial-btn">
                   <div class="view">
-                     <img src="assets/img/cloud1.png">
+                     <img src="assets/img/cloud11.png">
                      <div class="view-text">튜토리얼</div>
                   </div>
                </a>
                <!-- 동화 -->
                <a href="javascript:void(0);" id="story-btn">
                   <div class="view">
-                     <img src="assets/img/main/planet_2.png">
+                     <img src="assets/img/cloud22.png">
                      <div class="view-text">동화</div>
                   </div>
                </a>
                <!-- 캐치마인드 -->
                <a href="javascript:void(0);" id="catchmind-btn">
                   <div class="view">
-                     <img src="assets/img/main/planet_3.png">
+                     <img src="assets/img/cloud88.png">
                      <div class="view-text">캐치마인드</div>
                   </div>
                </a>
                <!-- 게시판 -->
                <a href="WhitePostsSelectAll">
                   <div class="view">
-                     <img src="assets/img/main/planet_4.png">
+                     <img src="assets/img/cloud99.png">
                      <div class="view-text">게시판</div>
                   </div>
                </a>
                <!-- QA -->
                <a href="WhiteQaAllSelect">
                   <div class="view">
-                     <img src="assets/img/main/planet_5.png">
+                     <img src="assets/img/cloud66.png">
                      <div class="view-text">QA</div>
                   </div>
                </a>
@@ -206,7 +206,7 @@ body, html {
    <!-- 튜토리얼 모달 -->
    <div id="tutorialModal" class="modal">
       <div class="modal-content">
-         <span class="close">&times;</span>
+         
          <video class="modal-video" controls>
             <source src="assets/video/tutorial.mp4" type="video/mp4">
             Your browser does not support the video tag.

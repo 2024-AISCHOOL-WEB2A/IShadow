@@ -127,13 +127,13 @@
         }
 
         .modal-btn {
-            background-color: #4CAF50;
+            background-color: rgb(0, 0, 0);
             color: white;
             padding: 14px 20px;
             margin: 15px 0;
             border: none;
             cursor: pointer;
-            width: 100%;
+            width: 92%;
         }
 
         .modal-btn:hover {
@@ -253,7 +253,7 @@
     <!-- 튜토리얼 모달 -->
     <div id="tutorialModal" class="modal">
         <div class="modal-content">
-            <span class="close">&times;</span>
+            
             <video class="modal-video" controls>
                 <source src="assets/video/tutorial.mp4" type="video/mp4">
                 Your browser does not support the video tag.
