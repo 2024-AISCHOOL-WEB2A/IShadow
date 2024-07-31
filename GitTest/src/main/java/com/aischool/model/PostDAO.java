@@ -222,7 +222,7 @@ public class PostDAO {
     	int cnt = 0;
     	try {
 			String sql = "insert into Insa5_SpringA_hacksim_2.posts values("
-					+post.getIdx()+",'"+post.getTitle()+"','"+post.getFile()+"',"+
+					+post.getIdx()+",'"+post.getTitle()+"','PostImg/"+post.getFile()+"',"+
 					"now()"+","+post.getViews()+",'"+post.getAnswer()+"','"+post.getUser()+"','"+
 					post.getHint1()+"','"+post.getHint2()+"','"+post.getHint3()+"');";
 
