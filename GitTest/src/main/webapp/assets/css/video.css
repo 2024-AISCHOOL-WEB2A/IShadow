@@ -149,11 +149,11 @@ transform: translate(0,0);
   border: 1vw solid;
   border-color: #ffffff;
   border-radius: 2.08vw;
-  height: 36vw;
-  left: 25vw;
+  height: 40vw;
+  left: 0;
   position: absolute;
-  top: 9.07vw;
-  width: 50vw;
+  top: 10.07vw;
+  width: 100%;
 }
 
 .video .line-1 {

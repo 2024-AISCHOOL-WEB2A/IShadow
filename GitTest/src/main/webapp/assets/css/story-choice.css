@@ -20,6 +20,7 @@
   gap: 0vw;
   min-height: 50vw;
   width: 100.0vw;
+  height: inherit;
 }
 .stroy-choice .flex-row {
   align-items: flex-end;

@@ -95,7 +95,8 @@ video {
 				</div>
 			</div>
 		</div>
-		<script>
+	</div>
+	<script>
 	/* 영상 idx 정보 넘겨주기 */
     function idxSelector(idx) {
     // 1초 지연 후 폼 제출

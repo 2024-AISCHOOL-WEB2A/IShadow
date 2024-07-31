@@ -24,7 +24,7 @@ ArrayList<Ranking> ranking = (ArrayList<Ranking>) request.getAttribute("ranking"
 }
 </style>
 </head>
-<body style="margin: 0; background: #000000">
+<body style="margin: 0; background: #000000; overflow: hidden;">
     <script>
         function moveMain() {
             window.location.href = 'main.jsp';

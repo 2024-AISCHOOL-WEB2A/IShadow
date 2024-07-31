@@ -350,7 +350,7 @@
             window.location.href = "story-choice.jsp";
         }
         catchmindConfirmBtn.onclick = function() {
-            window.location.href = "choice-1-or-2.jsp";
+            window.location.href = "GameStart";
         }
 
         document.addEventListener('DOMContentLoaded', (event) => {

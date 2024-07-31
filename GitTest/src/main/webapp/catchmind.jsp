@@ -614,7 +614,7 @@ for (int i = 0; i < gamesList.size(); i++) {
         // drawPose(pose);
         
         // 정답 판별
-        if (maxProbability > 0.50 && bestMatch.toLowerCase() === games[currentGameIndex].ans.toLowerCase()) {
+        if (maxProbability > 0.75 && bestMatch.toLowerCase() === games[currentGameIndex].ans.toLowerCase()) {
             currentGameIndex++;
             setTimeout(() => {
                 loadImage();

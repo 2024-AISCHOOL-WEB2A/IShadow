@@ -193,7 +193,7 @@
 				<button type="submit" name="logout" class="logout-button">로그아웃</button>
 			</form>
 		<% } else { %>
-			<a href="login-page.jsp" class="login-button">로그인</a>
+			<a href="login-page.jsp" class="login-button" style="background-color: black;">로그인</a>
 		<% } %>
 	</div>
 </div>

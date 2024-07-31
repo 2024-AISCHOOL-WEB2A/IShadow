@@ -80,29 +80,31 @@ html, body {
 }
 
 .circle {
-	width: 400px; /* Adjusted size */
-	height: 400px; /* Adjusted size */
-	border-radius: 50%;
-	background-color: white;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	overflow: hidden;
-	margin-top: 150px; /* Move the white circle down */
+	width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 150px;
+    border: 3px solid #ffcd38;
 }
 
 .circle.red {
-	width: 620px; /* Adjusted size */
-	height: 620px; /* Adjusted size */
-	border-radius: 50%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	overflow: hidden;
-	background-color: red;
-	margin-top: 0px; /* Ensure red circle is not affected */
-	position: relative;
-	z-index: 2; /* Higher z-index to be on top */
+	width: 850px;
+    height: 850px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: white;
+    margin-top: 0px;
+    position: relative;
+    z-index: 2;
+    border: 3px solid #ffcd38; 
 }
 
 #story-quiz {
@@ -112,7 +114,7 @@ html, body {
 .image {
 	z-index: 1; /* Lower z-index to be below story-quiz */
 	width: auto;
-	height: 350px; /* Adjust this height as needed */
+	height: 421px; /* Adjust this height as needed */
 	margin: 0 -100px;
 	/* Further adjust negative margin to move the image closer to the circles */
 }
@@ -161,6 +163,7 @@ html, body {
 	width: 70%;
 	height: 70%;
 	opacity: 50%;
+	z-index: 999999;
 }
 .hintToggle{
 	position: relative;
@@ -191,6 +194,19 @@ width: 100%;
 	border-radius: 50%;
 	position: absolute;
 	}
+.quiz-img{
+	width: inherit;
+}
+.good {
+    position: fixed; /* 고정 위치 */
+    top: 50%; /* 화면 중앙에 오도록 설정 */
+    left: 50%; /* 화면 중앙에 오도록 설정 */
+    transform: translate(-50%, -50%); /* 화면 중앙에 오도록 설정 */
+    display: none; /* 처음에는 표시되지 않도록 설정 */
+    width: 600px; /* 필요에 따라 크기 조절 */
+    height: 800px; /* 필요에 따라 크기 조절 */
+    background-size: cover; /* 이미지 크기 조절 */
+}
 </style>
 <script async src="https://docs.opencv.org/4.x/opencv.js"></script>
 <script
@@ -204,7 +220,7 @@ width: 100%;
 		<%@ include file="header.jsp"%>
 		<div class="circles">
 			<div class="circle" id="story-quiz">
-				<img src="<%=choicedStory.get(story_idx).getStoryImage()%>">
+				<img class="quiz-img" src="<%=choicedStory.get(story_idx).getStoryImage()%>">
 			</div>
 			<img class="image" src="assets/img/----.svg" alt="image" />
 			<div class="circle red">
@@ -216,6 +232,7 @@ width: 100%;
 				<img class="storyHint" src="<%=choicedStory.get(story_idx).getHint()%>">
 			</div>
 		</div>
+		<div class="good"></div>
 		<div class="buttons">
 			<button class="button" onclick="skipQuestion()">넘어 가기</button>
 			<button class="hintToggle" onclick="hintToggle()">힌트보기</button>
@@ -300,14 +317,17 @@ width: 100%;
 
         const story_answer = "<%=choicedStory.get(story_idx).getAnser()%>"; 
         if (maxProbability > 0.75 && bestMatch.toLowerCase() === story_answer.toLowerCase()) {
-            // 화면전환이 너무 빨리 돼서 일단 맞췄다는 는낌을 배견색으로 주고 2초 지연 후 화면 전환
-            document.querySelector(".circle").style.backgroundColor = "red";
+            // 맞췄다는 느낌을 배경색으로 주고 2초 지연 후 화면 전환
+            let goodElement = document.querySelector(".good");
+            goodElement.style.backgroundImage = "url('elice/noBack_Elice.png')";
+            goodElement.style.display = "block";
 
             setTimeout(() => {
                 goToNext();
             }, 2000);  
         }
     }
+
     
     // 변환된 영상 그리기 함수
     function drawTransformedVideo() {
@@ -420,10 +440,12 @@ width: 100%;
     function hintToggle() {
         let toggle = document.querySelector(".storyHint");
       //toggle.style.display가 초기 상태에서는 인라인 스타일로 설정되지 않기 때문에 처음 버튼을 누르면 ""가 나옴
-        if (toggle.style.display === "none" || toggle.style.display === "") {
+        if ((toggle.style.display === "none" || toggle.style.display === "")) {
             toggle.style.display = "block";
+            console.log("on은 1일 때");
         } else {
             toggle.style.display = "none";
+            console.log("on은 0일 때");
         }
     }
 </script>
