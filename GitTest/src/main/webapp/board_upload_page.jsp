@@ -14,7 +14,7 @@
     <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
     <meta name="og:type" content="website" />
     <meta name="twitter:card" content="photo" />
-    <link rel="stylesheet" type="text/css" href="assets/css/post-page.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/white_post-page.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/styleguide.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/globals.css" />
     <style>
