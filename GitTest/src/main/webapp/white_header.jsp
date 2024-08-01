@@ -160,19 +160,19 @@
       <div class="header-menu">
          <div class="header-menu-item">
             <img src="assets/img/cloud22.png" alt="동화" class="img-medium" />
-            <div>동화</div>
+            <div>동화나라</div>
          </div>
          <div class="header-menu-item">
             <img src="assets/img/cloud88.png" class="img-medium"/>
-            <div>캐치마인드</div>
+            <div>게임나라</div>
          </div>
          <div class="header-menu-item">
             <img src="assets/img/cloud99.png" class="img-medium"/>
-            <div>커뮤니티</div>
+            <div>자랑나라</div>
          </div>
          <div class="header-menu-item">
             <img src="assets/img/cloud66.png" class="img-medium"/>
-            <div>Q&A</div>
+            <div>소원나라</div>
          </div>
       </div>
    </div>

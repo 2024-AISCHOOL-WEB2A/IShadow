@@ -229,28 +229,28 @@ input:checked+.slider:before {
 					<a href="javascript:void(0);" id="story-btn">
 						<div class="view">
 							<img src="assets/img/cloud22.png">
-							<div class="view-text">동화</div>
+							<div class="view-text">동화나라</div>
 						</div>
 					</a>
 					<!-- 캐치마인드 -->
 					<a href="javascript:void(0);" id="catchmind-btn">
 						<div class="view">
 							<img src="assets/img/cloud88.png">
-							<div class="view-text">캐치마인드</div>
+							<div class="view-text">게임나라</div>
 						</div>
 					</a>
 					<!-- 게시판 -->
 					<a href="WhitePostsSelectAll">
 						<div class="view">
 							<img src="assets/img/cloud99.png">
-							<div class="view-text">게시판</div>
+							<div class="view-text">자랑나라</div>
 						</div>
 					</a>
 					<!-- QA -->
 					<a href="WhiteQaAllSelect">
 						<div class="view">
 							<img src="assets/img/cloud66.png">
-							<div class="view-text">QA</div>
+							<div class="view-text">소원나라</div>
 						</div>
 					</a>
 				</div>
