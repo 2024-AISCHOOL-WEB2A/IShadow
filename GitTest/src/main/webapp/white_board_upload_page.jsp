@@ -224,7 +224,7 @@
     	}
     </script>
   </head>
-  <body  >
+  <body>
     <input type="hidden" id="anPageName" name="page" value="post-page" />
     <%@ include file="white_header.jsp"%>
 
