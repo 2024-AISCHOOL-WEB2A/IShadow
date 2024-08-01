@@ -37,6 +37,8 @@ body {
 	justify-content: center;
 	gap: 20px;
 	margin-top: 20px;
+	position: relative;
+	top: 100px;
 }
 
 .view-1, .view-2, .view-3, .view {
@@ -68,6 +70,8 @@ body {
 /*   		margin:0 auto; */
 /*   		float:left;  */
   		text-align:center;
+  		position: relative;
+    top: 232px;
   }
 /*   .pagination li { */
 /*    		display:inline-block; */
@@ -181,19 +185,19 @@ body {
 	    <div class="paging-wrap">
 			<ul class="pagination">
 			     <c:if test="${pagination.prev}">
-			         <li class="page-item"><a class="page-link" href="#"
+			         <li class="page-item"><a class="page-link" href="#" style="color: white"
 			             onClick="fn_prev('${pagination.page}', '${pagination.range}', '${pagination.rangeSize}', '${pagination.listSize}'
 			         , '${pagination.keyword}')">이전</a></li>
 			     </c:if>
 			     <c:forEach begin="${pagination.startPage}" end="${pagination.endPage}" var="idx">
 			         <li class="page-item <c:out value="${pagination.page == idx ? 'active' : ''}"/> ">
-			         <a class="page-link" href="#"
+			         <a class="page-link" href="#" style="color: white"
 			             onClick="fn_pagination('${idx}', '${pagination.range}', '${pagination.rangeSize}', '${pagination.listSize}'
 			          , '${pagination.keyword}')">
 			                 ${idx} </a></li>
 			     </c:forEach>
 			     <c:if test="${pagination.next}">
-			         <li class="page-item"><a class="page-link" href="#"
+			         <li class="page-item"><a class="page-link" href="#" style="color: white"
 			             onClick="fn_next('${pagination.range}', '${pagination.range}', '${pagination.rangeSize}', '${pagination.listSize}'
 			         , '${pagination.keyword}')">다음</a></li>
 			     </c:if>

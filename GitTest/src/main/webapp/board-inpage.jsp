@@ -117,10 +117,10 @@
 		overflow: hidden !important; /* 이미지가 컨테이너를 벗어나지 않도록 */
 	}
 	.image-5 {
-		width: 100% !important;
-		height: 100% !important;
-		object-fit: cover !important; /* 이미지가 컨테이너에 맞게 */
-		border-radius: 15px !important; /* 이미지 모서리도 둥글게 */
+		/* width: 100% !important;
+		height: 100% !important; */
+		height: 100%;
+		width: auto;
 	}
 	.button {
 		border: 2px solid yellow !important;
@@ -144,7 +144,7 @@
 			<div id="hint3" onclick="toggleHint(3)" style="flex: 1; text-align: center !important;">힌트 3</div>
 		</div>
 		<div class="image-container">
-			<img class="image-5" src="assets/img/image-5.png" alt="image 5" />
+			<img class="image-5" src="<%=postscomment.get(0).getPost_file()%>" alt="image 5" />
 		</div>
 		<div class="inline-items" style="width: 80% !important;">
 			<div style="flex: 1; text-align: center !important;">정답:</div>

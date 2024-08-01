@@ -162,7 +162,7 @@ public class PostDAO {
     	plusBoardView(idx);
     	ArrayList<PostComments> postcomments = new ArrayList<PostComments>();
     	try {
-			String sql = "SELECT post_idx, post_answer, u_idx, hint_1, hint_2, hint_3 FROM posts WHERE post_idx = "+idx+";";
+			String sql = "SELECT post_idx, post_answer, u_idx, hint_1, hint_2, hint_3, post_file FROM posts WHERE post_idx = "+idx+";";
 			pst = conn.prepareStatement(sql);
 			rs = pst.executeQuery();
 			PostComments postcomment;
@@ -174,6 +174,7 @@ public class PostDAO {
 				postcomment.setHint_1(rs.getString(4));
 				postcomment.setHint_2(rs.getString(5));
 				postcomment.setHint_3(rs.getString(6));
+				postcomment.setPost_file(rs.getString(7));
 				postcomments.add(postcomment);
 			}
 

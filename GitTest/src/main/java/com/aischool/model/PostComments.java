@@ -13,6 +13,7 @@ public class PostComments {
 	private String hint_2;
 	private String hint_3;
 	private String post_answer;
+	private String post_file;
 	
 	public int getCmt_idx() {
 		return cmt_idx;
@@ -67,6 +68,12 @@ public class PostComments {
 	}
 	public void setPost_answer(String post_answer) {
 		this.post_answer = post_answer;
+	}
+	public String getPost_file() {
+		return post_file;
+	}
+	public void setPost_file(String post_file) {
+		this.post_file = post_file;
 	}
 	
 }
