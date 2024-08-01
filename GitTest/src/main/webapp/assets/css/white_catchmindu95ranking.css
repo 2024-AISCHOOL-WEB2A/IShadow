@@ -7,10 +7,11 @@
   display: flex;
   justify-content: space-between;
   width: 90%;
-  font-family: 'Maplestory Bold', sans-serif; /* 폰트 패밀리 추가 */
-  font-size: 25px;
+  font-family: 'Maplestory Bold', sans-serif;
+  font-size: 30px;
   color: var(--white);
   text-align: center;
+  padding: 2px 0; /* 각 항목 사이의 간격을 유지 */
 }
 
 .catchmindu95ranking {
@@ -41,10 +42,11 @@
 .catchmindu95ranking .overlap-group {
   border-radius: 47px;
   height: 224px;
-  left: 1125px;
+  right: 25%;
   position: absolute;
-  top: 524px;
+  top: 64%;
   width: 205px;
+  background-color : rgb(0, 0, 0, 0.7);
 }
 
 .catchmindu95ranking .image {
@@ -64,10 +66,11 @@
 .catchmindu95ranking .overlap-group1 {
   border-radius: 47px;
   height: 220px;
-  left: 1125px;
+  right: 25%;
   position: absolute;
-  top: 276px;
+  top: 36%;
   width: 212px;
+  background-color : rgb(0, 0, 0, 0.7);
 }
 
 .catchmindu95ranking .image-1 {
@@ -86,18 +89,20 @@
 
 .catchmindu95ranking .group-11 {
   border: 7px solid;
-  border-color: var(--white);
+  border-color: white;
   border-radius: 49px;
-  height: 472px;
-  left: 524px;
+  height: 55%;
+  left: 18%;
   position: absolute;
-  top: 275px;
-  width: 505px;
+  top: 35%;
+  width: 37%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 20px; /* 요소 간 간격을 설정할 수 있습니다 */
+  background-color : #000000;
+  opacity:75%;
 }
 
 
@@ -159,7 +164,7 @@
 .catchmindu95ranking .title {
   color: var(--white);
   font-family: var(--font-family-inter);
-  font-size: 300%;
+  font-size: 600%;
   font-style: italic;
   font-weight: 700;
   left: 732px;
@@ -289,9 +294,38 @@
 
 .catchmindu95ranking .view-2 {
   border: 7px solid;
-  border-color: var(--white);
+  border-color: white;
   border-radius: 47px;
   left: 0;
   position: absolute;
   top: 0;
+}
+.catchmindu95ranking .rank-time,
+.catchmindu95ranking .rank-name {
+  flex: 1;
+}
+
+.catchmindu95ranking .rank-number {
+  flex: 0 0 10%; /* 순위는 고정된 너비를 가집니다 */
+  text-align: center; /* 왼쪽 정렬 */
+  margin-right: 45px; /* 시간과의 간격 추가 */
+  left: 3%;
+  margin-left: 20px;
+}
+
+.catchmindu95ranking .rank-time {
+  flex: 0 0 20%; /* 시간은 고정된 너비를 가집니다 */
+  text-align: center; /* 왼쪽 정렬 */
+  margin-right: 15%; /* 닉네임과의 간격 추가 */
+}
+
+.catchmindu95ranking .rank-name {
+  flex: 1; /* 닉네임은 남은 공간을 차지합니다 */
+  text-align: center; 
+}
+
+.catchmindu95ranking .overlap-group,
+.catchmindu95ranking .overlap-group1 {
+  transform: scale(1.2); /* 요소 크기를 1.2배 키움 */
+  transform-origin: top left; /* 확대/축소 기준점을 왼쪽 상단으로 설정 */
 }
