@@ -208,7 +208,7 @@
     			+"&secondFeature="+secondFeature+"&user="+user
     			+"&thirdFeature="+thirdFeature+"&title="+title
     			+"&inputanswer="+inputanswer,
-    			url:"WhitePostsInsert",
+    			url:"PostsInsert",
     			success: function(result){
     				if(result == "ok"){
     					alert("등록완료");

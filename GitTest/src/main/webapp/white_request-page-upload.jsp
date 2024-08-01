@@ -110,7 +110,7 @@
                 <!-- header -->
                 <%@ include file="white_header.jsp" %>
                 <div class="form-container">
-                    <form action="qaAllSelect" method="post" accept-charset="UTF-8">
+                    <form action="WhiteQaAllSelect" method="post" accept-charset="UTF-8">
                         <div class="form-group">
                             <label for="title">제목</label>
                             <input type="text" id="title" name="title" placeholder="제목을 입력하세요" required>

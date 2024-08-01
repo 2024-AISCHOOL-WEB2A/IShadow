@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.util.List;
 
 @WebServlet("/WhiteQaAllSelect")
@@ -35,5 +37,28 @@ public class WhiteQaServlet extends HttpServlet {
 
         request.setAttribute("listQA", listQA);
         request.getRequestDispatcher("/white_request-page.jsp").forward(request, response);
+    }
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8"); // 요청의 인코딩 설정
+        String title = request.getParameter("title");
+        String content = request.getParameter("content");
+        String author = request.getParameter("author");
+
+        // 디버깅 로그 추가
+        System.out.println("author: " + author);
+        System.out.println("title: " + title);
+        System.out.println("content: " + content);
+
+        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+        Qa newQa = new Qa(0, title, content, timestamp.toString(), author, ""); // 관리자 댓글은 빈 문자열로 설정
+
+        try {
+            qaDAO.insertQa(newQa);
+            response.sendRedirect("WhiteQaAllSelect");
+        } catch (SQLException e) {
+            e.printStackTrace();
+            request.setAttribute("error", "데이터베이스에 저장하는 동안 오류가 발생했습니다.");
+            request.getRequestDispatcher("/error-page.jsp").forward(request, response);
+        }
     }
 }
