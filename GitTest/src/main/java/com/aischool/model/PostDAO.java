@@ -93,12 +93,44 @@ public class PostDAO {
 		return posts;
 	}
 
-    //게시물의 모든 정보를 가져오는 메소드 : 페이징 테스트
-    public ArrayList<Post> postSelectAll(int startRow, int pageSize) {
+    //게시물의 모든 정보를 가져오는 메소드 : 페이징 테스트 int startRow, int pageSize  
+    public ArrayList<Post> postSelectAll(CurPage curpage) {
     	ArrayList<Post> posts = new ArrayList<Post>();
 		try {
 			String sql = "select * from posts p join users u on p.u_idx = u.u_id where u.u_exit = 'F'"
-					+ "order by post_idx desc limit "+(startRow-1)+","+pageSize+";";
+					+ "order by p.post_idx desc limit "+curpage.getStartList()+","+curpage.getListSize()+";";
+			
+			pst = conn.prepareStatement(sql);
+
+			rs = pst.executeQuery();
+			Post post;
+			while (rs.next()) {
+				post = new Post();
+				post.setIdx(rs.getInt(1)); 
+				post.setTitle(rs.getString(2)); 
+				post.setFile(rs.getString(3));
+				post.setCreate_at(rs.getDate(4));
+				post.setViews(rs.getInt(5));;
+				post.setAnswer(rs.getString(6));
+				post.setUser(rs.getString(7));
+				posts.add(post);
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+//			close();
+		}
+
+		return posts;
+	}
+    
+    public ArrayList<Post> postSelectAll(CurPage curpage, String keyword) {
+    	ArrayList<Post> posts = new ArrayList<Post>();
+		try {
+			String sql = "select * from posts p join users u on p.u_idx = u.u_id where u.u_exit = 'F'"
+					+ " and p.post_title like '%"+keyword+"%' order by p.post_idx desc limit "
+					+ curpage.getStartList()+","+curpage.getListSize()+";";
 			
 			pst = conn.prepareStatement(sql);
 
@@ -130,24 +162,18 @@ public class PostDAO {
     	plusBoardView(idx);
     	ArrayList<PostComments> postcomments = new ArrayList<PostComments>();
     	try {
-			String sql = "SELECT src.cmt_idx, src.post_idx, src.cmt_content, src.created_at, src.u_id,"
-					+ "trg.hint_1, trg.hint_2, trg.hint_3, trg.post_answer"
-					+ "  FROM Insa5_SpringA_hacksim_2.post_comments src join Insa5_SpringA_hacksim_2.posts trg\n"
-					+ "  on src.post_idx = trg.post_idx WHERE trg.post_idx = "+idx+";";
+			String sql = "SELECT post_idx, post_answer, u_idx, hint_1, hint_2, hint_3 FROM posts WHERE post_idx = "+idx+";";
 			pst = conn.prepareStatement(sql);
 			rs = pst.executeQuery();
 			PostComments postcomment;
 			while (rs.next()) {
 				postcomment = new PostComments();
-				postcomment.setCmt_idx(rs.getInt(1)); 
-				postcomment.setPost_idx(rs.getInt(2));
-				postcomment.setCmt_content(rs.getString(3));
-				postcomment.setCreated_at(rs.getDate(4));
-				postcomment.setU_id(rs.getString(5));
-				postcomment.setHint_1(rs.getString(6));
-				postcomment.setHint_2(rs.getString(7));
-				postcomment.setHint_3(rs.getString(8));
-				postcomment.setPost_answer(rs.getString(9));
+				postcomment.setPost_idx(rs.getInt(1));
+				postcomment.setPost_answer(rs.getString(2));
+				postcomment.setU_id(rs.getString(3));
+				postcomment.setHint_1(rs.getString(4));
+				postcomment.setHint_2(rs.getString(5));
+				postcomment.setHint_3(rs.getString(6));
 				postcomments.add(postcomment);
 			}
 
@@ -183,6 +209,27 @@ public class PostDAO {
     	int postCnt = 0;
     	try {
 			String sql = "SELECT count(post_idx) FROM posts p JOIN users u ON p.u_idx = u.u_id WHERE u.u_exit = 'F';";
+			pst = conn.prepareStatement(sql);
+			rs = pst.executeQuery();
+		
+			while (rs.next()) {
+				postCnt = rs.getInt(1);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+//			close();
+		}
+    	
+    	return postCnt;
+    	
+    }
+    //게시물 개수 카운트 ( 검색어 존재 )
+    public int getPostsCount(String search) {
+    	int postCnt = 0;
+    	try {
+			String sql = "SELECT count(post_idx) FROM posts p JOIN users u ON p.u_idx = u.u_id "
+					+ "WHERE u.u_exit = 'F' and p.post_title like '%"+search+"%';";
 			pst = conn.prepareStatement(sql);
 			rs = pst.executeQuery();
 		
