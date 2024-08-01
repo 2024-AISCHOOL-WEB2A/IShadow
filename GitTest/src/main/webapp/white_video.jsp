@@ -1,7 +1,7 @@
 <%@page import="com.aischool.model.Stories"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+   pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +10,7 @@
 <!-- <link rel="shortcut icon" type=image/png href="https://animaproject.s3.amazonaws.com/home/favicon.png" /> -->
 <meta name="viewport" content="width=1440, maximum-scale=1.0" />
 <link rel="shortcut icon" type="image/png"
-	href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
+   href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
 <meta name="og:type" content="website" />
 <meta name="twitter:card" content="photo" />
 <link rel="stylesheet" type="text/css" href="assets/css/white_video.css" />
@@ -19,84 +19,84 @@
 </head>
 <Style>
 html, body {
-	margin: 0;
-	padding: 0;
-	height: 100%;
-	width: 100%;
-	overflow: hidden;
+   margin: 0;
+   padding: 0;
+   height: 100%;
+   width: 100%;
+   overflow: hidden;
 }
 
 video {
-	width: 100%;
-	height: 100%;
+   width: 100%;
+   height: 100%;
 }
 
 #videoSkip {
-	position: fixed;
-	z-index: 100;
-	border: none;
-	background: none;
-	color: white;
-	font-size: 20px;
-	font-family: 'Maplestory Bold', sans-serif;
-	cursor: pointer;
-	right: 20px;
-	bottom: 20px;
+   position: fixed;
+   z-index: 100;
+   border: none;
+   background: none;
+   color: white;
+   font-size: 20px;
+   font-family: 'Maplestory Bold', sans-serif;
+   cursor: pointer;
+   right: 20px;
+   bottom: 20px;
 }
 </Style>
 <body style="margin: 0; background: #000000">
-	<input type="hidden" id="anPageName" name="page" value="video" />
-	<div class="container-center-horizontal">
-		<div class="video screen">
-			<div class="overlap-group1">
+   <input type="hidden" id="anPageName" name="page" value="video" />
+   <div class="container-center-horizontal">
+      <div class="video screen">
+         <div class="overlap-group1">
 
-				<!-- header -->
-				<%@ include file="white_header.jsp"%>
+            <!-- header -->
+            <%@ include file="white_headerheader.jsp"%>
 
-				<%
-				ArrayList<Stories> choicedStory = (ArrayList<Stories>) session.getAttribute("choicedStory");
-				int idx = 0;
-				System.out.println("영성 출력 전 " + request.getParameter("story_idx"));
-				if (choicedStory != null && !choicedStory.isEmpty()) {
-				%>
-				<%
-				if (request.getParameter("story_idx") == null) {
-				%>
+            <%
+            ArrayList<Stories> choicedStory = (ArrayList<Stories>) session.getAttribute("choicedStory");
+            int idx = 0;
+            System.out.println("영성 출력 전 " + request.getParameter("story_idx"));
+            if (choicedStory != null && !choicedStory.isEmpty()) {
+            %>
+            <%
+            if (request.getParameter("story_idx") == null) {
+            %>
 
-				<!--영상 들어갈 자리-->
-				<div class="rectangle-7">
-					<video id="storyVideo" class="choicedStory"
-						src="<%=choicedStory.get(idx).getVideo()%>"
-						onended="idxSelector(<%=idx%>)" autoplay="autoplay">
-					</video>
-					<%
-					} else {
-					idx += Integer.parseInt(request.getParameter("story_idx"));
-					System.out.println("다음 동화 " + idx);
-					%>
-					<div class="rectangle-7">
-						<video id="storyVideo" class="choicedStory"
-							src="<%=choicedStory.get(idx).getVideo()%>"
-							onended="idxSelector(<%=idx%>)" autoplay="autoplay">
-						</video>
-						<%
-						}
-						%>
-						<%
-						} else {
-						%>
-						<p>비디오를 로드할 수 없습니다....</p>
-						<%
-						}
-						%>
-					</div>
-					<button id="videoSkip" class="text-64 valign-text-middle"
-						onclick="idxSelectorBtn(<%=idx%>)">넘어가기</button>
-				</div>
-			</div>
-		</div>
-		<script>
-	/* 영상 idx 정보 넘겨주기 */
+            <!--영상 들어갈 자리-->
+            <div class="rectangle-7">
+               <video id="storyVideo" class="choicedStory"
+                  src="<%=choicedStory.get(idx).getVideo()%>"
+                  onended="idxSelector(<%=idx%>)" autoplay="autoplay">
+               </video>
+               <%
+               } else {
+               idx += Integer.parseInt(request.getParameter("story_idx"));
+               System.out.println("다음 동화 " + idx);
+               %>
+               <div class="rectangle-7">
+                  <video id="storyVideo" class="choicedStory"
+                     src="<%=choicedStory.get(idx).getVideo()%>"
+                     onended="idxSelector(<%=idx%>)" autoplay="autoplay">
+                  </video>
+                  <%
+                  }
+                  %>
+                  <%
+                  } else {
+                  %>
+                  <p>비디오를 로드할 수 없습니다....</p>
+                  <%
+                  }
+                  %>
+               </div>
+               <button id="videoSkip" class="text-64 valign-text-middle"
+                  onclick="idxSelectorBtn(<%=idx%>)">넘어가기</button>
+            </div>
+         </div>
+      </div>
+      <script>
+   /* 영상 idx 정보 넘겨주기 */
     function idxSelector(idx) {
     // 1초 지연 후 폼 제출
     setTimeout(() => {
@@ -118,7 +118,7 @@ if (idx != (choicedStory.size() - 1)) {%>
         form.submit();
     }, 1000);
 }
-	//스킾버튼용
+   //스킾버튼용
     function idxSelectorBtn(idx) {
         // 1초 지연 후 폼 제출
        

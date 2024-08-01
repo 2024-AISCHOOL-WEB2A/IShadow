@@ -357,7 +357,7 @@ input:checked+.slider:before {
             window.location.href = "white_story-choice.jsp";
         }
         catchmindConfirmBtn.onclick = function() {
-            window.location.href = "white_choice-1-or-2.jsp";
+            window.location.href = "WhiteGameStart";
         }
     
         document.addEventListener('DOMContentLoaded', (event) => {

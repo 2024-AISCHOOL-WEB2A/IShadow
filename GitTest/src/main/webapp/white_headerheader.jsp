@@ -1,0 +1,202 @@
+<%@page import="com.aischool.model.Login"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+   pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=1440, maximum-scale=1.0" />
+<link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
+<meta name="og:type" content="website" />
+<meta name="twitter:card" content="photo" />
+<link rel="stylesheet" type="text/css" href="assets/css/styleguide.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/globals.css" />
+<style>
+@font-face {
+   font-family: 'Maplestory Bold';
+   src: url('assets/font/Maplestory Light.ttf') format('truetype');
+}
+
+.img-small {
+  width: 30px !important;
+  height: auto !important;
+}
+
+.img-medium {
+  width: 100px !important;
+  height: auto !important;
+}
+
+.img-large {
+  width: 70px !important;
+  height: auto !important;
+}
+
+.header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+   padding: 10px 20px;
+   background-color: ; /* 배경색 필요 시 추가 */
+   color: white;
+   font-family: 'Maplestory Bold';
+   position:relative;
+   top:10px;
+   z-index:1000;
+}
+
+.header-left, .header-center, .header-right {
+   display: flex;
+   align-items: center;
+}
+
+.header-left {
+   flex: 1; /* 왼쪽 요소의 너비를 자동으로 조정 */
+   justify-content: flex-start; /* 왼쪽 정렬 */
+}
+
+.header-center {
+   flex: 2; /* 가운데 요소의 너비를 두 배로 조정 */
+   justify-content: center; /* 가운데 정렬 */
+}
+
+.header-right {
+   flex: 1; /* 오른쪽 요소의 너비를 자동으로 조정 */
+   justify-content: flex-end; /* 오른쪽 정렬 */
+}
+
+.header-logo {
+   height: 70px;
+}
+
+.header-menu {
+   display: flex;
+   justify-content: center;
+   flex-grow: 1;
+   gap: 40px;
+}
+
+.header-menu-item {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.header-menu-item img {
+  width: 40px;
+  height: auto;
+}
+
+.header-menu-item div {
+   margin-top: 5px;
+   font-size: 16px;
+   color: white;
+   font-family: 'Maplestory Bold';
+}
+
+.login-button, .logout-button {
+  background-color: white;
+  color: #4bed;
+  border: none;
+  padding: 10px 20px;
+  font-family: 'Maplestory Bold';
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.login-button:hover {
+  background-color: #0af3f3;
+}
+
+.logout-button {
+  background-color: transparent;
+  color: #dc3545;
+  border: none;
+  padding: 10px 20px;
+  font-family: 'Maplestory Bold';
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.logout-button:hover {
+  color: #c82333;
+}
+
+/* 인사말 스타일 */
+.greeting {
+  font-family: 'Maplestory Bold';
+  color: white;
+  font-size: 20px; /* 폰트 크기 크게 설정 */
+}
+</style>
+</head>
+<body>
+
+<%
+   // 로그아웃 처리
+   if (request.getMethod().equalsIgnoreCase("post") && request.getParameter("logout") != null) {
+      session.invalidate(); // 세션을 무효화하여 로그인 상태를 해제
+      response.sendRedirect("white_main.jsp"); // 메인 페이지로 리다이렉트
+      return; // 이후 코드 실행을 중지
+   }
+%>
+<%-- <%
+      // 세션 속성 설정 - 실제 로그인 후에 제거
+      session.setAttribute("login_member", "testUser"); // 로그인 상태를 시뮬레이션
+   %> --%>
+
+<div class="header">
+   <!-- 왼쪽: 로고 이미지 -->
+   <div class="header-left">
+      <a href="white_main.jsp"> 
+         <img class="header-logo" src="assets/img/header/logo.png" />
+      </a>
+   </div>
+
+   <!-- 가운데: 메뉴 이미지 -->
+   <div class="header-center">
+      <div class="header-menu">
+         <div class="header-menu-item">
+            <img src="assets/img/cloud22.png" alt="동화" class="img-medium" />
+            <div>동화나라</div>
+         </div>
+         <div class="header-menu-item">
+            <img src="assets/img/cloud88.png" class="img-medium"/>
+            <div>게임나라</div>
+         </div>
+         <div class="header-menu-item">
+            <img src="assets/img/cloud99.png" class="img-medium"/>
+            <div>자랑나라</div>
+         </div>
+         <div class="header-menu-item">
+            <img src="assets/img/cloud66.png" class="img-medium"/>
+            <div>소원나라</div>
+         </div>
+      </div>
+   </div>
+
+   <!-- 오른쪽: 로그인/로그아웃 버튼 및 인사말 -->
+   <div class="header-right">
+      <% 
+         Login loginMember = (Login) session.getAttribute("login_member");
+         if (loginMember != null) { 
+             String nick = loginMember.getU_nick();
+      %>
+         <div class="greeting">
+            <%= nick %>님 안녕하세요
+         </div>
+         <form method="post" style="display:inline;">
+            <button type="submit" name="logout" class="logout-button">로그아웃</button>
+         </form>
+      <% } else { %>
+         <a href="white_login-page.jsp" class="login-button">로그인</a>
+      <% } %>
+   </div>
+</div>
+</body>
+</html>
