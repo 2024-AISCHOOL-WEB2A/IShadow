@@ -134,7 +134,7 @@ body {
 		<form method="get" id="searchfrm" action="PostsSearch">
 			<input type="text" id="searchVal" name="searchVal"
 				class="search-input" placeholder="검색어를 입력하세요" />
-			<button class="search-button" onclick="searchPosts();">
+			<button type="button" class="search-button" onclick="searchPosts();">
 				<img class="icon-magnifying-glass"
 					src="assets/img/board_page/search_icon.png" alt="돋보기" />
 			</button>
@@ -219,7 +219,7 @@ body {
 	            url += "&range=" + range;
 	            url += "&listSize=" + listSize;
 	            url += "&keyword=" + search; 
-	            location.href = url;    
+	            location.href = url;
 		}
     	//다음 버튼 이벤트
     	//다음 페이지 범위의 가장 앞 페이지로 이동
@@ -236,11 +236,9 @@ body {
 
     	// 검색
 		function searchPosts() {
-			var url = "PostsSearch";
-            url += "?page=" + page;
-            url += "&range=" + range;
-            url += "&listSize=" + listSize;
-	        url += "?keyword=" + $('#searchVal').val();
+			let search = document.getElementById("searchVal");
+    		var url = "PostsSearch";
+	        url += "?keyword=" + (search.value);
 	        location.href = url;
 		}
 	</script>
