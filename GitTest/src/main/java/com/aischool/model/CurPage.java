@@ -1,16 +1,14 @@
 package com.aischool.model;
 
 public class CurPage extends Page{
-	String keyword;
+	String searchVal;
 
-	public String getKeyword() {
-		return keyword;
+	public String getSearchVal() {
+		return searchVal;
 	}
 
-	public void setKeyword(String keyword) {
-		this.keyword = keyword;
+	public void setSearchVal(String searchVal) {
+		this.searchVal = searchVal;
 	}
-
-
 	
 }

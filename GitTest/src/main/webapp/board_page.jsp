@@ -178,28 +178,28 @@ body {
 						<input class="hiddenName" type="hidden" name="<%=posts.get(i).getIdx()%>">
 					</div>
 				</div>
-		<% i++;cnt++;} %>
-			  </div>
-		<% }} 	   %>
+				<% i++;cnt++;} %>
+			  	</div>
+				<% }} 	   %>
 		 
 	    <div class="paging-wrap">
 			<ul class="pagination">
 			     <c:if test="${pagination.prev}">
 			         <li class="page-item"><a class="page-link" href="#" style="color: white"
 			             onClick="fn_prev('${pagination.page}', '${pagination.range}', '${pagination.rangeSize}', '${pagination.listSize}'
-			         , '${pagination.keyword}')">이전</a></li>
+			         , '${pagination.searchVal}')">이전</a></li>
 			     </c:if>
 			     <c:forEach begin="${pagination.startPage}" end="${pagination.endPage}" var="idx">
 			         <li class="page-item <c:out value="${pagination.page == idx ? 'active' : ''}"/> ">
 			         <a class="page-link" href="#" style="color: white"
 			             onClick="fn_pagination('${idx}', '${pagination.range}', '${pagination.rangeSize}', '${pagination.listSize}'
-			          , '${pagination.keyword}')">
+			          , '${pagination.searchVal}')">
 			                 ${idx} </a></li>
 			     </c:forEach>
 			     <c:if test="${pagination.next}">
 			         <li class="page-item"><a class="page-link" href="#" style="color: white"
 			             onClick="fn_next('${pagination.range}', '${pagination.range}', '${pagination.rangeSize}', '${pagination.listSize}'
-			         , '${pagination.keyword}')">다음</a></li>
+			         , '${pagination.searchVal}')">다음</a></li>
 			     </c:if>
 			</ul>
 		</div>
@@ -213,7 +213,7 @@ body {
 	        url += "?page=" + page;
 	        url += "&range=" + range;
 	        url += "&listSize=" + listSize;
-	        url += "&keyword=" + search;
+	        url += "&searchVal=" + search;
 	        location.href = url;
 	    }
     	//페이지 번호 클릭
@@ -222,7 +222,7 @@ body {
 	            url += "?page=" + page;
 	            url += "&range=" + range;
 	            url += "&listSize=" + listSize;
-	            url += "&keyword=" + search; 
+	            url += "&searchVal=" + search; 
 	            location.href = url;
 		}
     	//다음 버튼 이벤트
@@ -234,7 +234,7 @@ body {
 	            url += "?page=" + page;
 	            url += "&range=" + range;
 	            url += "&listSize=" + listSize;
-	            url += "&keyword=" + search;
+	            url += "&searchVal=" + search;
 	            location.href = url;
 		}
 
@@ -242,7 +242,7 @@ body {
 		function searchPosts() {
 			let search = document.getElementById("searchVal");
     		var url = "PostsSearch";
-	        url += "?keyword=" + (search.value);
+	        url += "?searchVal=" + (search.value);
 	        location.href = url;
 		}
 	</script>

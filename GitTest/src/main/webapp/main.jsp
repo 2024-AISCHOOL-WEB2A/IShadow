@@ -235,7 +235,7 @@
                         </div>
                     </a>
                     <!-- 게시판 -->
-                    <a href="PostsSelectAll?pageNum=1">
+                    <a href="PostsSelectAll">
                         <div class="view">
                             <img src="assets/img/main/planet_4.png">
                             <div class="view-text">자랑나라</div>
