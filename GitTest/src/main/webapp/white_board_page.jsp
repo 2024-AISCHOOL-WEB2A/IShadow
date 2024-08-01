@@ -101,7 +101,7 @@ body {
 	function submitForm(name) {
 		let form = document.createElement('form');
 		form.method = 'GET';
-		form.action = 'PostsCommentAll';
+		form.action = 'WhitePostsCommentAll';
 
 		let input = document.createElement('input');
 		input.type = 'hidden';
@@ -218,7 +218,7 @@ body {
 	    }
     	//페이지 번호 클릭
 	    function fn_pagination(page, range, rangeSize, listSize, search) {
-	        var url = "PostsSelectAll";
+	        var url = "WhitePostsSelectAll";
 	            url += "?page=" + page;
 	            url += "&range=" + range;
 	            url += "&listSize=" + listSize;
@@ -230,7 +230,7 @@ body {
 	    function fn_next(page, range, rangeSize, listSize, search) {
 	        var page = parseInt((range * rangeSize)) + 1;
 	        var range = parseInt(range) + 1;            
-	        var url = "PostsSelectAll";
+	        var url = "WhitePostsSelectAll";
 	            url += "?page=" + page;
 	            url += "&range=" + range;
 	            url += "&listSize=" + listSize;
@@ -241,7 +241,7 @@ body {
     	// 검색
 		function searchPosts() {
 			let search = document.getElementById("searchVal");
-    		var url = "PostsSearch";
+    		var url = "WhitePostsSearch";
 	        url += "?keyword=" + (search.value);
 	        location.href = url;
 		}

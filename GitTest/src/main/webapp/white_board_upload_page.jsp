@@ -208,11 +208,11 @@
     			+"&secondFeature="+secondFeature+"&user="+user
     			+"&thirdFeature="+thirdFeature+"&title="+title
     			+"&inputanswer="+inputanswer,
-    			url:"PostsInsert",
+    			url:"WhitePostsInsert",
     			success: function(result){
     				if(result == "ok"){
     					alert("등록완료");
-    					location="PostsSelectAll";
+    					location="WhitePostsSelectAll";
     				}else{
     					alert("등록실패");
     				}
