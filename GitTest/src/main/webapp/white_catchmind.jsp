@@ -614,7 +614,7 @@ for (int i = 0; i < gamesList.size(); i++) {
         // drawPose(pose);
         
         // 정답 판별
-        if (maxProbability > 0.75 && bestMatch.toLowerCase() === games[currentGameIndex].ans.toLowerCase()) {
+        if (maxProbability > 0.90 && bestMatch.toLowerCase() === games[currentGameIndex].ans.toLowerCase()) {
             currentGameIndex++;
             setTimeout(() => {
                 loadImage();
@@ -676,7 +676,7 @@ for (int i = 0; i < gamesList.size(); i++) {
             cv.findContours(mask, contours, hierarchy, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE);
 
             // 빈 화면 생성 (모든 부분이 흰색)
-            let hand_shadow = new cv.Mat(canvasOutput.height, canvasOutput.width, cv.CV_8UC3, new cv.Scalar(255, 255, 255));
+            let hand_shadow = new cv.Mat(canvasOutput.height, canvasOutput.width, cv.CV_8UC3, new cv.Scalar(0, 0, 0));
 
             // 가장 큰 윤곽선 찾기 (손으로 간주)
             if (contours.size() > 0) {
@@ -691,7 +691,7 @@ for (int i = 0; i < gamesList.size(); i++) {
                 }
                 if (maxArea > 5000) {  // 노이즈 제거
                     let max_contour = contours.get(maxContourIndex);
-                    cv.drawContours(hand_shadow, contours, maxContourIndex, new cv.Scalar(0, 0, 0), -1);
+                    cv.drawContours(hand_shadow, contours, maxContourIndex, new cv.Scalar(255, 255, 255), -1);
                 }
             }
 
