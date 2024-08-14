@@ -93,7 +93,7 @@ public class PostDAO {
 		return posts;
 	}
 
-    //게시물의 모든 정보를 가져오는 메소드 : 페이징 테스트 int startRow, int pageSize  
+    //게시물의 모든 정보를 가져오는 메소드 : 페이징 
     public ArrayList<Post> postSelectAll(CurPage curpage) {
     	ArrayList<Post> posts = new ArrayList<Post>();
 		try {
@@ -315,6 +315,37 @@ public class PostDAO {
 		}
     	return posts;
 	}
+    
+    // 게시물 검색 : 검색어 존재
+    public ArrayList<Post> postSearch(CurPage curpage, String s) {
+    	ArrayList<Post> posts = new ArrayList<Post>();
+    	try {
+			String sql = "select * from posts p join users u on p.u_idx = u.u_id where post_title like concat('%','"+s+"','%')"
+					+ "and u.u_exit = 'F' order by post_idx desc limit " + curpage.getStartList()+","+curpage.getListSize()+";";
+
+			pst = conn.prepareStatement(sql);	
+			rs = pst.executeQuery();
+			Post post;
+			while (rs.next()) {
+				post = new Post();
+				post.setIdx(rs.getInt(1)); 
+				post.setTitle(rs.getString(2)); 
+				post.setFile(rs.getString(3));
+				post.setCreate_at(rs.getDate(4));
+				post.setViews(rs.getInt(5));;
+				post.setAnswer(rs.getString(6));
+				post.setUser(rs.getString(7));
+				posts.add(post);
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+
+		}
+    	return posts;
+	}
+    
 	public int postDlete(String deletePost) {
 		
 		int cnt = 0;

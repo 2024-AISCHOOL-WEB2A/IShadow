@@ -1,9 +1,10 @@
-# 📎 꽃 보러 갈래?(팀명: 떡 하나 주면 안 JAVA먹지)
-![image](https://user-images.githubusercontent.com/25995055/178401309-2a2ffc86-ef45-439b-bfd8-6978312100bc.png)
+# 📎 (팀명: 떡 하나 주면 안 JAVA먹지)
+![image](https://github.com/user-attachments/assets/dfac748e-0b67-44cd-b02a-b34066dfcb45)
+
 
 
 ## 👀 서비스 소개
-* 서비스명:  꽃 개화 시기별 우리 지역 근처 데이트/드라이브 추천 장소 및 꽃 축제 추천 
+* 서비스명: 어린이를 위한 동화 기반 손동작 놀이를 제공하는 참여형 웹서비스
 * 서비스설명: 
 <br>
 
@@ -12,11 +13,37 @@
 <br>
 
 ## ⭐ 주요 기능
-* 기능1
-* 기능2
-* 기능3
-* 기능4
-* 기능5
+
+### 핵심 개발 기능
+* 어린이 맞춤 인터페이스 구현
+* 머신러닝을 활용한 콘텐츠 제공
+* openCV를 활용한 그림자 효과 구현
+<br>
+
+### 머신러닝
+![image](https://github.com/user-attachments/assets/7e5b778d-8f01-4a92-9b40-673a54f8b91b)
+<br>
+
+### 💡 개발 기능
+
+- **📚 기능1: 동화 나라**  
+  동화를 제공하는 기능으로, 다양한 동화를 통해 학습과 재미를 제공합니다.
+
+- **🎨 기능2: 게임 나라 (캐치마인드)**  
+  사용자가 참여할 수 있는 게임으로, 캐치마인드를 통해 창의력을 발휘할 수 있습니다.
+
+- **🌟 기능3: 자랑 나라 (커뮤니티)**  
+  사용자들이 자신의 성과나 작품을 자랑할 수 있는 커뮤니티 공간입니다.
+
+- **❓ 기능4: 소원 나라 (Q & A)**  
+  사용자들의 질문에 답변을 받을 수 있는 Q&A 기능입니다.
+
+- **🛠 기능5: 관리자 페이지**  
+  사이트의 콘텐츠와 사용자 관리를 위한 관리자 페이지입니다.
+
+- **🌗 기능6: 화이트 & 다크 모드**  
+  사용자의 취향에 맞게 테마를 선택할 수 있는 화이트 및 다크 모드 기능입니다.
+
 <br>
 
 ## ⛏ 기술스택
@@ -26,51 +53,47 @@
         <th>내용</th>
     </tr>
     <tr>
-        <td>사용언어</td>
+        <td>Front-End</td>
         <td>
-            <img src="https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white"/>
             <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=HTML5&logoColor=white"/>
             <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=CSS3&logoColor=white"/>
+        </td>
+    </tr>
+    <tr>
+        <td>Back-End</td>
+        <td>
+            <img src="https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white"/>
             <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white"/>
-        </td>
-    </tr>
-    <tr>
-        <td>라이브러리</td>
-        <td>
-            <img src="https://img.shields.io/badge/BootStrap-7952B3?style=for-the-badge&logo=BootStrap&logoColor=white"/>
-            <img src="https://img.shields.io/badge/KakaoMap-FFCD00?style=for-the-badge&logo=Kakao&logoColor=white"/>
-        </td>
-    </tr>
-    <tr>
-        <td>개발도구</td>
-        <td>
-            <img src="https://img.shields.io/badge/Eclipse-2C2255?style=for-the-badge&logo=Eclipse&logoColor=white"/>
-            <img src="https://img.shields.io/badge/RaskpberryPi-A22846?style=for-the-badge&logo=RaskpberryPi&logoColor=white"/>
-            <img src="https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white"/>
-            <img src="https://img.shields.io/badge/VSCode-007ACC?style=for-the-badge&logo=VisualStudioCode&logoColor=white"/>
-        </td>
-    </tr>
-    <tr>
-        <td>서버환경</td>
-        <td>
-            <img src="https://img.shields.io/badge/Apache Tomcat-D22128?style=for-the-badge&logo=Apache Tomcat&logoColor=white"/>
         </td>
     </tr>
     <tr>
         <td>데이터베이스</td>
         <td>
-            <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=Firebase&logoColor=white"/>
-            <img src="https://img.shields.io/badge/Oracle 11g-F80000?style=for-the-badge&logo=Oracle&logoColor=white"/>
+            <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=MySQL&logoColor=white"/>
+        </td>
+    </tr>
+    <tr>
+        <td>IDE & Server</td>
+        <td>
+            <img src="https://img.shields.io/badge/Eclipse-2C2255?style=for-the-badge&logo=Eclipse&logoColor=white"/>
+            <img src="https://img.shields.io/badge/VSCode-007ACC?style=for-the-badge&logo=VisualStudioCode&logoColor=white"/>
+            <img src="https://img.shields.io/badge/Apache Tomcat-D22128?style=for-the-badge&logo=Apache Tomcat&logoColor=white"/>
         </td>
     </tr>
     <tr>
         <td>협업도구</td>
         <td>
-            <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=Git&logoColor=white"/>
             <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white"/>
         </td>
     </tr>
+    <tr>
+        <td>머신러닝</td>
+        <td>
+            <img src="https://img.shields.io/badge/Teachable Machine-4285F4?style=for-the-badge&logo=Teachable Machine&logoColor=white"/>
+        </td>
+    </tr>
 </table>
+
 
 
 <br>
@@ -84,65 +107,57 @@
 <br>
 
 ## 📌 서비스 흐름도
-![image](https://user-images.githubusercontent.com/25995055/178401048-d6484bda-a2d7-40e1-998b-2bd195cd9f89.png)
+![image](https://github.com/user-attachments/assets/22077ef2-7fb3-45b1-b567-360da8d63234)
 <br>
 
 ## 📌 ER다이어그램
-![image](https://user-images.githubusercontent.com/25995055/169925318-102784c2-893f-4fd7-bec9-a54c44b669d4.png)
+![image](https://github.com/user-attachments/assets/1f2eddfe-1940-4a7b-9050-aeaa44821a82)
 <br>
 
 ## 🖥 화면 구성
 
-### 로그인/회원가입/회원괸리/회원수정/회원탈퇴
+### 동화나라 ( 동화 )
 ![image](https://user-images.githubusercontent.com/25995055/178401098-95f15a0e-a2de-415e-83d5-883bb4cb0656.png)
 <br>
 
-### 옷 정보/코디 추천(날씨, 팁, 오늘의 코디, 참고할 수 있는 코디)
-![image](https://user-images.githubusercontent.com/25995055/178401127-287e6de2-4396-49fc-a107-59c4d5cd55c7.png)
+### 게임나라 ( 캐치마인드 )
+![캐치](https://github.com/user-attachments/assets/dfee3d7d-54d2-44e8-9907-e94c695d466b)
 <br>
 
-### 일정/고객센터
-![image](https://user-images.githubusercontent.com/25995055/178401150-861f0e93-0f40-4fae-98c1-2099bf513c8d.png)
+### 자랑나라 ( 커뮤니티 )
+![자랑-나라](https://github.com/user-attachments/assets/947efcde-dffb-4021-8f36-c977e3bd3896)
+
 <br>
+
+### 소원나라 ( Q & A )
+![소원나라 (1)](https://github.com/user-attachments/assets/6d4e23f2-9276-4816-8279-0dbc7b229780)
+
+<br>
+
+### 관리자 
+![관리자](https://github.com/user-attachments/assets/8ecc05c0-5225-4fab-948e-5a631fa6e6ff)
+
+<br>
+
+### 화이트 & 다크 모드 
+![화이트-다크 (1)](https://github.com/user-attachments/assets/1eec9c94-cd54-451a-b856-aa55ef065921)
+
+<br>
+
 
 ## 👨‍👩‍👦‍👦 팀원 역할
-<table>
-  <tr>
-    <td align="center"><img src="https://item.kakaocdn.net/do/fd49574de6581aa2a91d82ff6adb6c0115b3f4e3c2033bfd702a321ec6eda72c" width="100" height="100"/></td>
-    <td align="center"><img src="https://mb.ntdtv.kr/assets/uploads/2019/01/Screen-Shot-2019-01-08-at-4.31.55-PM-e1546932545978.png" width="100" height="100"/></td>
-    <td align="center"><img src="https://mblogthumb-phinf.pstatic.net/20160127_177/krazymouse_1453865104404DjQIi_PNG/%C4%AB%C4%AB%BF%C0%C7%C1%B7%BB%C1%EE_%B6%F3%C0%CC%BE%F0.png?type=w2" width="100" height="100"/></td>
-    <td align="center"><img src="https://i.pinimg.com/236x/ed/bb/53/edbb53d4f6dd710431c1140551404af9.jpg" width="100" height="100"/></td>
-    <td align="center"><img src="https://pbs.twimg.com/media/B-n6uPYUUAAZSUx.png" width="100" height="100"/></td>
-  </tr>
-  <tr>
-    <td align="center"><strong>홍O동</strong></td>
-    <td align="center"><strong>홍O동</strong></td>
-    <td align="center"><strong>홍O동</strong></td>
-    <td align="center"><strong>홍O동</strong></td>
-    <td align="center"><strong>홍O동</strong></td>
-  </tr>
-  <tr>
-    <td align="center"><b>Frontend</b></td>
-    <td align="center"><b>Frontend</b></td>
-    <td align="center"><b>Backend</b></td>
-    <td align="center"><b>Backend</b></td>
-    <td align="center"><b>Deep Learning</b></td>
-  </tr>
-  <tr>
-    <td align="center"><a href="https://github.com/자신의username작성해주세요" target='_blank'>github</a></td>
-    <td align="center"><a href="https://github.com/자신의username작성해주세요" target='_blank'>github</a></td>
-    <td align="center"><a href="https://github.com/자신의username작성해주세요" target='_blank'>github</a></td>
-    <td align="center"><a href="https://github.com/자신의username작성해주세요" target='_blank'>github</a></td>
-    <td align="center"><a href="https://github.com/자신의username작성해주세요" target='_blank'>github</a></td>
-  </tr>
-</table>
+
+![image](https://github.com/user-attachments/assets/7e2c1958-c274-4f25-bdce-368e0d4c69f6)
+
+
+
 
 ## 🤾‍♂️ 트러블슈팅
-개념: 문제 해결을 위해 문제의 원인을 논리적이고 체계적으로 찾는 일이며 제품이나 프로세스의 운영을 재개
-프로젝트 진행하는 동안 발생했던 이슈 중 가장 기억에 남았던 문제와 해결 프로세스 나열(2~5가지 정도)
   
 * 문제1<br>
- 문제점 설명 및 해결방안
+![image](https://github.com/user-attachments/assets/23f2a94e-92b8-4648-ba78-84a1791745f9)
+
  
 * 문제2<br>
- 문제점 설명 및 해결방안
+![image](https://github.com/user-attachments/assets/09b3e489-da19-4925-b595-af19cbf7823b)
+
