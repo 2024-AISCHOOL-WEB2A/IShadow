@@ -257,8 +257,8 @@
     <div id="tutorialModal" class="modal">
         <div class="modal-content">
             
-            <video class="modal-video" controls>
-                <source src="assets/video/tutorial.mp4" type="video/mp4">
+            <video class="modal-video" controls autoplay="autoplay">
+                <source src="assets/video/123.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
             <button class="modal-btn" id="tutorial-confirm-btn">확인</button>
