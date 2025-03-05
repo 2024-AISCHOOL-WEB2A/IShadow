@@ -93,10 +93,10 @@
         </td>
     </tr>
 </table>
-
-
-
 <br>
+
+## ⚙ 시스템 아키텍처 
+![image](https://github.com/user-attachments/assets/41298180-18e2-426d-bd0a-77fadca8b821)
 
 ## 📌 서비스 흐름도
 ![image](https://github.com/user-attachments/assets/22077ef2-7fb3-45b1-b567-360da8d63234)
@@ -109,7 +109,7 @@
 ## 🖥 화면 구성
 
 ### 동화나라 ( 동화 )
-![image](https://user-images.githubusercontent.com/25995055/178401098-95f15a0e-a2de-415e-83d5-883bb4cb0656.png)
+![ezgif com-optimize](https://github.com/user-attachments/assets/c854a8b1-a6c1-4725-a43f-aa6ebebc9261)
 <br>
 
 ### 게임나라 ( 캐치마인드 )
